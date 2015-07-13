@@ -1,0 +1,1 @@
+@include('theme.unify::emails.layout.modern')
