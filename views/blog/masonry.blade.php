@@ -1,7 +1,7 @@
 @extends('theme.unify::unify')
 
 @section('styles-content')
-    <link href="{{ theme_asset('css/pages/blog_masonry_3col.css') }}" rel="stylesheet">
+    <link href="{{ theme_asset('css/pages/blog_masonry_3col.min.css') }}" rel="stylesheet">
 @stop
 
 @section('breadcrumb')

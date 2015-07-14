@@ -1,6 +1,6 @@
 @extends('theme.unify::unify')
 
-<link rel="stylesheet" href="{{ theme_asset('css/pages/blog.css') }}">
+<link rel="stylesheet" href="{{ theme_asset('css/pages/blog.min.css') }}">
 @section('styles-content')
 @stop
 

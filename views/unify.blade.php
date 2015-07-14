@@ -21,10 +21,10 @@
     <link rel="shortcut" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=cyrillic,latin">
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="{{theme_asset('plugins/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{asset('css/front/main.min.css') }}">
 
     @section('styles-style')
-        <link rel="stylesheet" href="{{theme_asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{theme_asset('css/styles.min.css') }}">
     @show
 
     {{--we preinclude the header and footer here so we can adjust the styles and scripts accordingly in the proper sections of the html--}}
@@ -34,23 +34,19 @@
 
 
     <!-- CSS Header and Footer -->
-    @yield('styles-header')
+    {{--@yield('styles-header')--}}
     @yield('styles-content')
-    @yield('styles-footer')
+    {{--@yield('styles-footer')--}}
 
     <!-- CSS Implementing Plugins -->
     @section('styles-plugins')
-        <link rel="stylesheet" href="{{theme_asset('plugins/animate.css') }}">
         <link rel="stylesheet" href="{{theme_asset('plugins/line-icons/line-icons.css') }}">
-        <link rel="stylesheet" href="{{theme_asset('plugins/font-awesome/css/font-awesome.css') }}">
         <link rel="stylesheet" href="{{theme_asset('plugins/scrollbar/css/jquery.mCustomScrollbar.css')}}">
         @show
 
-                <!-- CSS Theme -->
+        <!-- CSS Theme -->
         <link rel="stylesheet" href="{{theme_asset('css/theme-colors/default.css') }}">
 
-        <!-- CSS Customization -->
-        <link rel="stylesheet" href="{{theme_asset('/css/front/main.css') }}">
 </head>
 
 <body class="header-fixed">

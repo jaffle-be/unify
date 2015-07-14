@@ -1,7 +1,7 @@
 @extends('theme.unify::unify')
 
 @section('styles-style')
-    <link rel="stylesheet" href="{{theme_asset('css/shop.style.css') }}">
+    <link rel="stylesheet" href="{{theme_asset('css/styles.css') }}">
 @stop
 
 @section('scripts-app')

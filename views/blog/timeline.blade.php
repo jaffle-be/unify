@@ -1,7 +1,7 @@
 @extends('theme.unify::unify')
 
 @section('styles-content')
-    <link rel="stylesheet" href="{{ theme_asset('css/pages/shortcode_timeline1.css') }}">
+    <link rel="stylesheet" href="{{ theme_asset('css/pages/shortcode_timeline1.min.css') }}">
 @stop
 
 @section('breadcrumb')

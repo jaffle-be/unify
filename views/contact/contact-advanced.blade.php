@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('theme.unify::unify')
 
 @section('styles-plugins')
     @parent
@@ -12,7 +12,7 @@
 @stop
 
 @section('styles-content')
-    <link rel="stylesheet" href="{{ theme_asset('css/pages/page_contact.css') }}">
+    <link rel="stylesheet" href="{{ theme_asset('css/pages/page_contact.min.css') }}">
 @stop
 <body>
 

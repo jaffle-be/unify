@@ -1,11 +1,12 @@
-@extends('layouts.front')
+@extends('theme.unify::unify')
+
 @section('styles-plugins')
     @parent
     <link rel="stylesheet" href="{{ theme_asset('plugins/owl-carousel/owl-carousel/owl.carousel.css') }}">
 @stop
 
 @section('styles-content')
-    <link rel="stylesheet" href="{{ theme_asset('css/pages/page_contact.css') }}">
+    <link rel="stylesheet" href="{{ theme_asset('css/pages/page_contact.min.css') }}">
 @stop
 
 @section('breadcrumb')

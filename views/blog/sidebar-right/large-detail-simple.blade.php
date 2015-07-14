@@ -1,7 +1,7 @@
 @extends('theme.unify::unify')
 
 @section('styles-content')
-    <link rel="stylesheet" href="{{ theme_asset('css/pages/blog.css') }}">
+    <link rel="stylesheet" href="{{ theme_asset('css/pages/blog.min.css') }}">
 @stop
 
 @section('breadcrumb')
