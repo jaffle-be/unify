@@ -1,0 +1,40 @@
+/*Status Bar
+------------------------------------*/
+.status-bar li {
+  padding-left: 9px;
+  border-left: 1px solid #eee;
+}
+
+.status-bar li:first-child {
+  border-left: none;
+}
+
+.status-bar li i {
+  color: #72c02c;
+  margin-right: 5px;
+}
+
+.status-bar li a:hover {
+  text-decoration: none;
+}
+
+.status-bar-in {
+  padding: 10px;
+  position: relative;
+  background: #f0f0f0;
+}
+
+.status-bar-in:after {
+  width: 0;
+  height: 0;
+  top: -10px;
+  left: 50px;
+  content: " ";
+  display: block;
+  position: absolute;
+  border-bottom: 11px solid #f0f0f0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-left-style: inset; /*FF fixes*/
+  border-right-style: inset; /*FF fixes*/
+}

@@ -1,0 +1,414 @@
+/*Content Boxes
+------------------------------------*/
+/*Content Boxes v1*/
+.content-boxes-v1 {
+  text-align: center;
+}
+
+.content-boxes-v1 span {
+  display: block;
+  margin-top: 5px;
+}
+
+/*Content Boxes v2*/
+@media (max-width: 992px) {
+  .content-boxes-v2,
+  .content-boxes-v2 .text-justify {
+    text-align: center;
+  }
+
+  .content-boxes-v2 span {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+/*Content Boxes v3*/
+.content-boxes-v3 i.icon-custom {
+  top: 8px;
+  float: left;
+  position: relative;
+}
+
+.content-boxes-v3 .content-boxes-in-v3 {
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.content-boxes-v3 .content-boxes-in-v3 h3 {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 3px;
+  text-transform: capitalize;
+}
+
+.content-boxes-v3 .content-boxes-in-v3 h3 a {
+  color: #555;
+}
+
+/*Content Boxes Right v3*/
+.content-boxes-v3.content-boxes-v3-right {
+  text-align: right;
+}
+
+.content-boxes-v3.content-boxes-v3-right i.icon-custom {
+  float: right;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px){
+  .content-boxes-v3.content-boxes-v3-right {
+    text-align: inherit;
+  }
+
+  .content-boxes-v3.content-boxes-v3-right i.icon-custom {
+    float: left;
+    margin-left: 0;
+  }
+}
+
+/*Content Boxes v4*/
+.content-boxes-v4 h2 {
+  color: #555;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content-boxes-v4 a {
+  color: #777;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content-boxes-v4 i {
+  width: 25px;
+  color: #72c02c;
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+.content-boxes-in-v4 {
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.content-boxes-v4-sm i {
+  font-size: 26px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+/*Content Boxes v5*/
+.content-boxes-v5 i {
+  float: left;
+  color: #999;
+  width: 50px;
+  height: 50px;
+  padding: 11px;
+  font-size: 22px;
+  background: #eee;
+  line-height: 28px;
+  text-align: center;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.content-boxes-v5:hover i {
+  color: #fff;
+  background: #72c02c;
+}
+
+/*Content Boxes v6*/
+.content-boxes-v6 {
+  padding-top: 25px;
+  text-align: center;
+}
+
+.content-boxes-v6 i {
+  color: #fff;
+  width: 90px;
+  height: 90px;
+  padding: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  background: #dedede;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+.content-boxes-v6 i:after {
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  content: " ";
+  position: absolute;
+  border: 1px solid #dedede;
+  border-radius: 50% !important;
+}
+
+.content-boxes-v6:hover i,
+.content-boxes-v6:hover i:after {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.content-boxes-v6:hover i {
+  background: #72c02c;
+}
+
+.content-boxes-v6:hover i:after {
+  border-color: #72c02c;
+}
+
+
+/*Colored Content Boxes
+------------------------------------*/
+.service-block {
+  padding: 20px 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-block p,
+.service-block h2 {
+  color: #fff;
+}
+
+.service-block h2 a:hover{
+  text-decoration: none;
+}
+
+.service-block-light,
+.service-block-default {
+  background: #fafafa;
+  border: solid 1px #eee;
+}
+
+.service-block-default:hover {
+  box-shadow: 0 0 8px #eee;
+}
+
+.service-block-light p,
+.service-block-light h2,
+.service-block-default p,
+.service-block-default h2 {
+  color: #555;
+}
+
+.service-block-u {
+  background: #72c02c;
+}
+.service-block-blue {
+  background: #3498db;
+}
+.service-block-red {
+  background: #e74c3c;
+}
+.service-block-sea {
+  background: #1abc9c;
+}
+.service-block-grey {
+  background: #95a5a6;
+}
+.service-block-yellow {
+  background: #f1c40f;
+}
+.service-block-orange {
+  background: #e67e22;
+}
+.service-block-green {
+  background: #2ecc71;
+}
+.service-block-purple {
+  background: #9b6bcc;
+}
+.service-block-aqua {
+  background: #27d7e7;
+}
+.service-block-brown {
+  background: #9c8061;
+}
+.service-block-dark-blue {
+  background: #4765a0;
+}
+.service-block-light-green {
+  background: #79d5b3;
+}
+.service-block-dark {
+  background: #555;
+}
+.service-block-light {
+  background: #ecf0f1;
+}
+
+/*Funny Boxes
+------------------------------------*/
+.funny-boxes {
+  background: #f7f7f7;
+  padding: 20px 20px 15px;
+  -webkit-transition:all 0.3s ease-in-out;
+  -moz-transition:all 0.3s ease-in-out;
+  -o-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
+}
+
+.funny-boxes h2 {
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.funny-boxes h2 a {
+  color: #555;
+}
+
+.funny-boxes p a {
+  color: #72c02c;
+}
+
+.funny-boxes .funny-boxes-img li {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.funny-boxes .funny-boxes-img li i {
+  color: #72c02c;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+@media (max-width: 992px) {
+  .funny-boxes .funny-boxes-img li {
+    display: inline-block;
+  }
+}
+
+.funny-boxes .funny-boxes-img img {
+  margin: 5px 10px 15px 0;
+}
+
+.funny-boxes ul.funny-boxes-rating li {
+  display: inline-block;
+}
+
+.funny-boxes ul.funny-boxes-rating li i {
+  color: #f8be2c;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.funny-boxes ul.funny-boxes-rating li i:hover {
+  color: #f8be2c;
+}
+
+/*Funny Colored Boxes*/
+.funny-boxes-colored p,
+.funny-boxes-colored h2 a,
+.funny-boxes-colored .funny-boxes-img li,
+.funny-boxes-colored .funny-boxes-img li i {
+  color: #fff;
+}
+
+/*Red Funny Box*/
+.funny-boxes-red {
+  background: #e74c3c;
+}
+
+/*Dark Red Funny Box*/
+.funny-boxes-purple {
+  background: #9b6bcc;
+}
+
+/*Blue Funny Box*/
+.funny-boxes-blue {
+  background: #3498db;
+}
+
+/*Grey Funny Box*/
+.funny-boxes-grey {
+  background: #95a5a6;
+}
+
+/*Turquoise Funny Box*/
+.funny-boxes-sea {
+  background: #1abc9c;
+}
+
+/*Turquoise Top Bordered Funny Box*/
+.funny-boxes-top-sea {
+  border-top: solid 2px #1abc9c;
+}
+
+.funny-boxes-top-sea:hover {
+  border-top-color: #16a085;
+}
+
+/*Yellow Top Bordered Funny Box**/
+.funny-boxes-top-yellow {
+  border-top: solid 2px #f1c40f;
+}
+
+.funny-boxes-top-yellow:hover {
+  border-top-color: #f39c12;
+}
+
+/*Red Top Bordered Funny Box**/
+.funny-boxes-top-red {
+  border-top: solid 2px #e74c3c;
+}
+
+.funny-boxes-top-red:hover {
+  border-top-color: #c0392b;
+}
+
+/*Purple Top Bordered Funny Box**/
+.funny-boxes-top-purple {
+  border-top: solid 2px #9b6bcc;
+}
+
+.funny-boxes-top-purple:hover {
+  border-top-color: #814fb5;
+}
+
+/*Orange Left Bordered Funny Box**/
+.funny-boxes-left-orange {
+  border-left: solid 2px #e67e22;
+}
+
+.funny-boxes-left-orange:hover {
+  border-left-color: #d35400;
+}
+
+/*Green Left Bordered Funny Box**/
+.funny-boxes-left-green {
+  border-left: solid 2px #72c02c;
+}
+
+.funny-boxes-left-green:hover {
+  border-left-color: #5fb611;
+}
+
+/*Blue Left Bordered Funny Box**/
+.funny-boxes-left-blue {
+  border-left: solid 2px #3498db;
+}
+
+.funny-boxes-left-blue:hover {
+  border-left-color: #2980b9;
+}
+
+/*Dark Left Bordered Funny Box**/
+.funny-boxes-left-dark {
+  border-left: solid 2px #555;
+}
+
+.funny-boxes-left-dark:hover {
+  border-left-color: #333;
+}
