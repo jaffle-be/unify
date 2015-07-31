@@ -59,7 +59,7 @@
                     </div>
                     <!-- End Link List -->
 
-                    @include('unify::layout.footers.elements.contacts', ['contact' => $account->contactInformation->first()])
+                    @include('Unify::layout.footers.elements.contacts', ['contact' => $account->contactInformation->first()])
                 </div>
             </div>
         </div>

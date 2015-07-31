@@ -72,7 +72,7 @@
                     <!--/col-md-4-->
 
                     <div class="col-md-4">
-                        @include('unify::layout.footers.elements.contacts', ['contact' => $account->contactInformation->first()])
+                        @include('Unify::layout.footers.elements.contacts', ['contact' => $account->contactInformation->first()])
 
                         <!-- Social Links -->
                         <div class="headline"><h2>Stay Connected</h2></div>

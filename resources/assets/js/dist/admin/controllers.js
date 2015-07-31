@@ -4,11 +4,11 @@ angular.module('theme-active')
 
         ThemeService.current(function (theme) {
             me.theme = theme;
-            me.headers = theme.settings.header.options;
-            me.footers = theme.settings.footer.options;
-
             me.setSelectValue('header');
             me.setSelectValue('footer');
+            me.setSelectValue('blogOverview');
+            me.setSelectValue('blogDetail');
+            me.setSelectValue('contactLayout');
         });
 
 
@@ -18,13 +18,14 @@ angular.module('theme-active')
 
         };
 
-        this.setSelectValue = function(select)
-        {
+        this.setSelectValue = function (select) {
             var list = select + 's';
+
+            me[list] = me.theme.settings[select].options;
 
             list = me[list];
 
-            if(me.theme.settings[select].value)
+            if (me.theme.settings[select].value)
             {
                 _.each(list, function (option) {
                     if (option.id == me.theme.settings[select].value.option_id)
