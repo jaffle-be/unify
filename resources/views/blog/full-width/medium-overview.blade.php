@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('breadcrumb')
     <div class="breadcrumbs-v1">
@@ -14,10 +14,10 @@
     <div class="container content-md">
 
         @foreach($posts as $post)
-            @include('unify::blog.elements.news-3', ['post' => $post])
+            @include('Unify::blog.elements.news-3', ['post' => $post])
         @endforeach
 
-        @include('unify::blog.elements.paginators.paginator-3', ['pager' => $posts])
+        @include('Unify::blog.elements.paginators.paginator-3', ['pager' => $posts])
 
     </div>
 

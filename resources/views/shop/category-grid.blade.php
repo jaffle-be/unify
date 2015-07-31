@@ -1,4 +1,4 @@
-@extends('unify::unify-shop')
+@extends('Unify::Unify-shop')
 
 @section('styles-plugins')
     @parent
@@ -24,13 +24,13 @@
 
     <div class="content container">
         <div class="row">
-            @include('unify::shop.elements.filter-sidebar')
+            @include('Unify::shop.elements.filter-sidebar')
 
-            @include('unify::shop.elements.filter-grid')
+            @include('Unify::shop.elements.filter-grid')
         </div>
     </div>
 
-    @include('unify::shop.elements.subscribe')
+    @include('Unify::shop.elements.subscribe')
 @stop
 
 @section('scripts-plugins')

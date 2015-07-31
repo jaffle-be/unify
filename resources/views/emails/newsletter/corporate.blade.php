@@ -1,17 +1,17 @@
-@extends('unify::unify-email')
+@extends('Unify::Unify-email')
 
 
 @section('content')
 
-    @include('unify::emails.newsletter.corporate.blocks')
+    @include('Unify::emails.newsletter.corporate.blocks')
 
-    @include('unify::emails.newsletter.corporate.two-image-block')
+    @include('Unify::emails.newsletter.corporate.two-image-block')
 
     <div style="height:15px">&nbsp;</div><!-- divider -->
 
-    @include('unify::emails.newsletter.corporate.discount')
+    @include('Unify::emails.newsletter.corporate.discount')
 
-    @include('unify::emails.newsletter.corporate.three-image-block')
+    @include('Unify::emails.newsletter.corporate.three-image-block')
 
-    @include('unify::emails.newsletter.corporate.weekly-prize')
+    @include('Unify::emails.newsletter.corporate.weekly-prize')
 @stop

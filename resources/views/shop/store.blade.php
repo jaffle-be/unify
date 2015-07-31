@@ -1,4 +1,4 @@
-@extends('unify::unify-shop')
+@extends('Unify::Unify-shop')
 
 @section('styles-plugins')
     @parent
@@ -6,25 +6,25 @@
     <link rel="stylesheet" href="{{ theme_asset('plugins/revolution-slider/rs-plugin/css/settings.css') }}">
 @stop
 
-@include('unify::shop.elements.slider-home')
+@include('Unify::shop.elements.slider-home')
 
 @section('content')
 
-    @include('unify::shop.elements.product-content')
+    @include('Unify::shop.elements.product-content')
 
-    @include('unify::shop.elements.twitter')
+    @include('Unify::shop.elements.twitter')
 
     <div class="container">
-        @include('unify::shop.elements.product-service')
+        @include('Unify::shop.elements.product-service')
 
-        @include('unify::shop.elements.illustrations')
+        @include('Unify::shop.elements.illustrations')
     </div>
 
-    @include('unify::shop.elements.collection-banner')
+    @include('Unify::shop.elements.collection-banner')
 
-    @include('unify::shop.elements.sponsors')
+    @include('Unify::shop.elements.sponsors')
 
-    @include('unify::shop.elements.subscribe')
+    @include('Unify::shop.elements.subscribe')
 @stop
 
 @section('scripts-plugins')

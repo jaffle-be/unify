@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('styles-content')
 
@@ -24,7 +24,7 @@
 
     <!--=== Cube-Portfdlio ===-->
     <div class="cube-portfolio margin-bottom-20">
-        @include('unify::portfolio.elements.filters')
+        @include('Unify::portfolio.elements.filters')
 
         <div id="grid-container" class="cbp-l-grid-agency">
 
@@ -32,7 +32,7 @@
 
                 <? $image = $project->images->first() && $project->images->first()->sizes->first() ? $project->images->first()->sizes->first() : false; ?>
 
-                @include('unify::portfolio.elements.overview-item', ['image' => $image])
+                @include('Unify::portfolio.elements.overview-item', ['image' => $image])
             @endforeach
 
         </div>

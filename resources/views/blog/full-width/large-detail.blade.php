@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('styles-plugins')
     @parent
@@ -88,7 +88,7 @@
             <!-- End Blog Post Author -->
 
             <!-- Authored Blog -->
-            @include('unify::blog.elements.news-2', ['posts' => $related])
+            @include('Unify::blog.elements.news-2', ['posts' => $related])
             <!-- End Authored Blog -->
 
             <hr>

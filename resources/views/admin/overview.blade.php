@@ -9,14 +9,14 @@
             <div class="ibox">
 
                 <div class="ibox-title">
-                    <h5>{{ Lang::get('unify::admin.base-layout') }}</h5>
+                    <h5>{{ Lang::get('Unify::admin.base-layout') }}</h5>
                 </div>
 
                 <div class="ibox-content">
 
                     <div class="form-group">
 
-                        <label>{{ Lang::get('unify::admin.header') }}</label>
+                        <label>{{ Lang::get('Unify::admin.header') }}</label>
 
                         <select class="form-control" ng-model="vm.header" ng-options="header.value for header in vm.headers" ng-change="vm.save('header')"></select>
 
@@ -30,7 +30,7 @@
 
                     <div class="form-group">
 
-                        <label>{{ Lang::get('unify::admin.footer') }}</label>
+                        <label>{{ Lang::get('Unify::admin.footer') }}</label>
 
                         <select class="form-control" ng-model="vm.footer" ng-options="footer.value for footer in vm.footers" ng-change="vm.save('footer')"></select>
 

@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('breadcrumb')
     <div class="breadcrumbs-v1 text-center">

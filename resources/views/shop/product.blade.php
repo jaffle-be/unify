@@ -1,4 +1,4 @@
-@extends('unify::unify-shop')
+@extends('Unify::Unify-shop')
 
 @section('styles-plugins')
     @parent
@@ -10,17 +10,17 @@
 @stop
 
 @section('content')
-    @include('unify::shop.elements.product-detail')
+    @include('Unify::shop.elements.product-detail')
 
     <!--=== Content Medium ===-->
     <div class="content-md container">
 
-        @include('unify::shop.elements.product-service')
+        @include('Unify::shop.elements.product-service')
 
-        @include('unify::shop.elements.tabs')
+        @include('Unify::shop.elements.tabs')
     </div>
 
-    @include('unify::shop.elements.subscribe')
+    @include('Unify::shop.elements.subscribe')
 
 @stop
 

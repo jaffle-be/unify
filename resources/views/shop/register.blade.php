@@ -1,4 +1,4 @@
-@extends('unify::unify-shop')
+@extends('Unify::Unify-shop')
 
 @section('styles-style')
     <link rel="stylesheet" href="{{ theme_asset('css/shop.style.css') }}">

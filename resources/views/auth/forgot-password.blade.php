@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 <!-- CSS Page Style -->
 
 @section('styles-content')

@@ -3,7 +3,7 @@
 
 @if(isset($map) && $map)
 
-    @include('unify::contact.elements.map')
+    @include('Unify::contact.elements.map')
 
 @endif
 <ul class="list-unstyled who margin-bottom-30">

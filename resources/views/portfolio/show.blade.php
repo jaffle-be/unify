@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('styles-content')
 
@@ -83,7 +83,7 @@
 
                     @foreach($relatedProjects as $project)
                         <? $image = $project->images->first() ?>
-                        @include('unify::portfolio.elements.related-item', ['project' => $project, 'image' => $image])
+                        @include('Unify::portfolio.elements.related-item', ['project' => $project, 'image' => $image])
                     @endforeach
 
                 </div>

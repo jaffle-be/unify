@@ -33,7 +33,7 @@
     <tr>
         <td width="100%" valign="top" bgcolor="#ffffff" style="padding-top:20px">
 
-            @include('unify::emails.layout.corporate.header')
+            @include('Unify::emails.layout.corporate.header')
 
             <!-- Start Headliner-->
             <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
@@ -48,7 +48,7 @@
             @yield('content')
 
             @section('footer')
-                @include('unify::emails.layout.corporate.footer')
+                @include('Unify::emails.layout.corporate.footer')
             @show
 
         </td>

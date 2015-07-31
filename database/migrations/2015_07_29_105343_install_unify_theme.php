@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 class InstallUnifyTheme extends Migration
 {
 
-    protected $name = 'unify';
+    protected $name = 'Unify';
 
     protected $version = '1.0';
 

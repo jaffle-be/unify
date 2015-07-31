@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('styles-style')
     <link rel="stylesheet" href="{{theme_asset('css/styles.css') }}">

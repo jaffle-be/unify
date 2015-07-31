@@ -1,4 +1,4 @@
-@extends('unify::unify-shop')
+@extends('Unify::Unify-shop')
 
 @section('styles-content')
     <link rel="stylesheet" href="{{theme_asset('css/pages/log-reg-v3.min.css')}}">

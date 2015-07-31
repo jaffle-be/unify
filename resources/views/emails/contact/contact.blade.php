@@ -1,4 +1,4 @@
-@extends('unify::unify-email')
+@extends('Unify::Unify-email')
 
 @section('content')
 

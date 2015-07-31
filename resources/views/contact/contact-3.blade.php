@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('styles-plugins')
     @parent
@@ -14,7 +14,7 @@
 @stop
 
 @section('breadcrumb')
-    @include('unify::contact.elements.breadcrumbs')
+    @include('Unify::contact.elements.breadcrumbs')
 @stop
 
 
@@ -96,19 +96,19 @@
             <!--/col-md-9-->
 
             <div class="col-md-3">
-                @include('unify::contact.elements.contacts', ['map' => true, 'margin' => true, 'height' => 'map-box-space1'])
+                @include('Unify::contact.elements.contacts', ['map' => true, 'margin' => true, 'height' => 'map-box-space1'])
 
-                @include('unify::contact.elements.hours')
+                @include('Unify::contact.elements.hours')
 
 
                 {{--skip including widget for contact simple... it just don't fit into the page flow.--}}
-                {{--@include('unify::contact.elements.widget')--}}
+                {{--@include('Unify::contact.elements.widget')--}}
             </div>
             <!--/col-md-3-->
         </div>
         <!--/row-->
 
-        @include('unify::marketing.widgets.clients')
+        @include('Unify::marketing.widgets.clients')
     </div>
 @stop
 

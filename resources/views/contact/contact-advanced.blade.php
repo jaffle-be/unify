@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('styles-plugins')
     @parent
@@ -17,7 +17,7 @@
 <body>
 
 @section('breadcrumb')
-    @include('unify::contact.elements.breadcrumbs')
+    @include('Unify::contact.elements.breadcrumbs')
 @stop
 
 @section('content')
@@ -108,11 +108,11 @@
 
             <div class="col-md-3">
 
-                @include('unify::contact.elements.contacts')
+                @include('Unify::contact.elements.contacts')
 
-                @include('unify::contact.elements.hours')
+                @include('Unify::contact.elements.hours')
 
-                @include('unify::contact.elements.widget')
+                @include('Unify::contact.elements.widget')
 
 
             </div>
@@ -121,7 +121,7 @@
         <!--/row-->
     </div>
 
-    @include('unify::contact.elements.map')
+    @include('Unify::contact.elements.map')
 @stop
 
 

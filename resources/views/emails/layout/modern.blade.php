@@ -33,12 +33,12 @@
     <tr>
         <td width="100%" valign="top">
 
-            @include('unify::emails.layout.modern.header')
+            @include('Unify::emails.layout.modern.header')
 
             @yield('content')
 
             @section('footer')
-                @include('unify::emails.layout.modern.footer')
+                @include('Unify::emails.layout.modern.footer')
             @show
 
         </td>

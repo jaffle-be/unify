@@ -5,7 +5,7 @@ use Jaffle\Tools\ServiceProvider;
 class UnifyServiceProvider extends ServiceProvider
 {
 
-    protected $namespace = 'unify';
+    protected $namespace = 'Unify';
 
     /**
      * Register the service provider.

@@ -7,7 +7,7 @@ class ThemeController extends Controller
 
     public function unify()
     {
-        return view('unify::admin.overview', [
+        return view('Unify::admin.overview', [
             'theme' => $this->theme->current()
         ]);
     }

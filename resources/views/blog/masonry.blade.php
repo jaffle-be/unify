@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('styles-content')
     <link href="{{ theme_asset('css/pages/blog_masonry_3col.min.css') }}" rel="stylesheet">

@@ -1,12 +1,12 @@
-@extends('unify::unify-email')
+@extends('Unify::Unify-email')
 
 @section('content')
 
-    @include('unify::emails.newsletter.modern.top-block')
+    @include('Unify::emails.newsletter.modern.top-block')
 
-    @include('unify::emails.newsletter.modern.middle-block')
+    @include('Unify::emails.newsletter.modern.middle-block')
 
-    @include('unify::emails.newsletter.modern.bottom-block')
+    @include('Unify::emails.newsletter.modern.bottom-block')
 
 
 @stop

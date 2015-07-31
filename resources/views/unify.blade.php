@@ -29,8 +29,8 @@
 
     {{--we preinclude the header and footer here so we can adjust the styles and scripts accordingly in the proper sections of the html--}}
     {{--if we didn't do this, styles would not be in the head section, thus slowing down the site.--}}
-    @include('unify::layout.headers.' . Theme::setting('header'))
-    @include('unify::layout.footers.' . Theme::setting('footer'))
+    @include('Unify::layout.headers.' . Theme::setting('header'))
+    @include('Unify::layout.footers.' . Theme::setting('footer'))
 
 
     <!-- CSS Header and Footer -->
@@ -43,9 +43,6 @@
         <link rel="stylesheet" href="{{theme_asset('plugins/line-icons/line-icons.css') }}">
         <link rel="stylesheet" href="{{theme_asset('plugins/scrollbar/css/jquery.mCustomScrollbar.css')}}">
         @show
-
-        <!-- CSS Theme -->
-        <link rel="stylesheet" href="{{theme_asset('css/theme-colors/default.css') }}">
 
 </head>
 

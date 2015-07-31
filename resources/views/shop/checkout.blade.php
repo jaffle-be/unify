@@ -1,4 +1,4 @@
-@extends('unify::unify-shop')
+@extends('Unify::Unify-shop')
 
 @section('styles-plugins')
     @parent
@@ -413,7 +413,7 @@
     </div>
     <!--=== End Content Medium Part ===-->
 
-    @include('unify::shop.elements.subscribe')
+    @include('Unify::shop.elements.subscribe')
 
 @stop
 

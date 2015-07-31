@@ -1,4 +1,4 @@
-@extends('unify::unify-shop')
+@extends('Unify::Unify-shop')
 
 @section('styles-plugin')
     <link rel="stylesheet" href="{{ theme_asset('plugins/noUiSlider/jquery.nouislider.css') }}">
@@ -23,18 +23,18 @@
     <div class="content container">
         <div class="row">
 
-            @include('unify::shop.elements.filter-sidebar')
+            @include('Unify::shop.elements.filter-sidebar')
 
             <div class="col-md-9">
-                @include('unify::shop.elements.category-results')
+                @include('Unify::shop.elements.category-results')
 
-                @include('unify::shop.elements.filter-list')
+                @include('Unify::shop.elements.filter-list')
 
             </div>
         </div>
     </div>
 
-    @include('unify::shop.elements.subscribe')
+    @include('Unify::shop.elements.subscribe')
 @stop
 
 @section('scripts-plugins')

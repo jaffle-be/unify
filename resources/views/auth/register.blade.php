@@ -1,4 +1,4 @@
-@extends('unify::unify')
+@extends('Unify::Unify')
 
 @section('styles-content')
     <link rel="stylesheet" href="{{ asset('/assets/css/pages/page_log_reg_v1.css') }}">
