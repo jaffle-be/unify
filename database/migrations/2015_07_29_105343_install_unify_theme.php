@@ -160,11 +160,11 @@ class InstallUnifyTheme extends ThemeMigration
 
             ['value' => 'sidebar-left/large-overview'],
             ['value' => 'sidebar-left/large-overview-simple'],
-            ['value' => 'sidebar-right/large-overview'],
-            ['value' => 'sidebar-right/large-overview-simple'],
-
             ['value' => 'sidebar-left/medium-overview'],
             ['value' => 'sidebar-left/medium-overview-simple'],
+
+            ['value' => 'sidebar-right/large-overview'],
+            ['value' => 'sidebar-right/large-overview-simple'],
             ['value' => 'sidebar-right/medium-overview'],
             ['value' => 'sidebar-right/medium-overview-simple'],
 
