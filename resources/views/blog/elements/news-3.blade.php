@@ -1,14 +1,8 @@
 <!-- News v3 -->
 <div class="row margin-bottom-20">
     <div class="col-sm-5 sm-margin-bottom-20">
-
-        <?php
-
-        $img = $post->images->first() && $post->images->first()->sizes->first() ? $post->images->first()->sizes->first() : false;
-        ?>
-
         <a href="{{ route('store.blog.show', [$post]) }}">
-            <img class="img-responsive" src="{{ $img ? asset($img->path) : '' }}" alt="">
+            <img class="img-responsive" src="{{ asset($post->thumbnail(460)) }}" alt="">
         </a>
     </div>
     <div class="col-sm-7">

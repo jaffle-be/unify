@@ -3,12 +3,9 @@
     @foreach($posts as $post)
         <div class="col-sm-4">
             <div class="news-v2-badge">
-                <?php
-                $image = $post->images->first() && $post->images->first()->sizes->first() ? $post->images->first()->sizes->first() : false;
-                ?>
 
                 <a href="{{ route('store.blog.show', [$post]) }}">
-                    <img class="img-responsive" src="{{ $image ? asset($image->path) : '' }}" alt="">
+                    <img class="img-responsive" src="{{ asset($post->thumbnail(360)) }}" alt="">
                 </a>
 
                 <p>

@@ -1,22 +1,11 @@
 @extends('Unify::Unify')
 
+@section('title', Lang::get('portfolio::titles.overview'))
+
 @section('styles-content')
 
     <link rel="stylesheet" href="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css') }}">
     <link rel="stylesheet" href="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css') }}">
-
-@stop
-
-@section('breadcrumb')
-
-    <div class="breadcrumbs-v3 img-v1">
-        <div class="container text-center">
-            <p>Portfolio</p>
-
-            <h1>Portfolio 2 Columns Grid</h1>
-        </div>
-        <!--/end container-->
-    </div>
 
 @stop
 
@@ -30,9 +19,7 @@
 
             @foreach($projects as $project)
 
-                <? $image = $project->images->first() && $project->images->first()->sizes->first() ? $project->images->first()->sizes->first() : false; ?>
-
-                @include('Unify::portfolio.elements.overview-item', ['image' => $image])
+                @include('Unify::portfolio.elements.overview-item')
             @endforeach
 
         </div>

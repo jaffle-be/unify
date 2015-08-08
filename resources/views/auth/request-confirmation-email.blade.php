@@ -1,24 +1,10 @@
 @extends('Unify::Unify')
 <!-- CSS Page Style -->
 
+@section('title', Lang::get('Unify::front.confirm-email'))
+
 @section('styles-content')
     <link rel="stylesheet" href="{{ '/assets/css/pages/page_log_reg_v1.css' }}">
-@stop
-
-@section('breadcrumb')
-    <!--=== Breadcrumbs ===-->
-    <div class="breadcrumbs">
-        <div class="container">
-            <h1 class="pull-left">Login</h1>
-            <ul class="pull-right breadcrumb">
-                <li><a href="{{ route('store.home') }}">Home</a></li>
-                <li><a href="">Pages</a></li>
-                <li class="active">Login</li>
-            </ul>
-        </div>
-        <!--/container-->
-    </div><!--/breadcrumbs-->
-    <!--=== End Breadcrumbs ===-->
 @stop
 
 @section('content')

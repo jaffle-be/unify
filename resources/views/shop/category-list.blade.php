@@ -1,21 +1,9 @@
 @extends('Unify::Unify-shop')
 
+@section('title', Lang::get('Unify::front.products-by-category'))
+
 @section('styles-plugin')
     <link rel="stylesheet" href="{{ theme_asset('plugins/noUiSlider/jquery.nouislider.css') }}">
-@stop
-
-@section('breadcrumb')
-    <div class="breadcrumbs-v4">
-        <div class="container">
-            <span class="page-name">Product Filter Page</span>
-            <h1>Maecenas <span class="shop-green">enim</span> sapien</h1>
-            <ul class="breadcrumb-v4-in">
-                <li><a href="{{ route('store.home') }}">Home</a></li>
-                <li><a href="">Product</a></li>
-                <li class="active">Product Filter Page</li>
-            </ul>
-        </div>
-    </div>
 @stop
 
 @section('content')

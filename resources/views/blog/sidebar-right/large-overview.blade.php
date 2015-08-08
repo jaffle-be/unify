@@ -1,18 +1,10 @@
 @extends('Unify::Unify')
 
+@section('title', Lang::get('blog.titles.overview'))
+
 @section('styles-plugins')
     @parent
     <link rel="stylesheet" href="{{ theme_asset('plugins/fancybox/source/jquery.fancybox.css') }}">
-@stop
-
-@section('breadcrumb')
-    <div class="breadcrumbs-v1">
-        <div class="container">
-            <span>Blog Page</span>
-
-            <h1>Basic With Sidebar</h1>
-        </div>
-    </div>
 @stop
 
 @section('content')
@@ -23,6 +15,7 @@
                 <div class="col-md-9">
 
                     <? $counter = 0 ?>
+                    <? $posts->loadImageSizes(850) ?>
                     @foreach($posts as $post)
 
                     @include('Unify::blog.elements.large-overview-with-sidebar', ['counter' => $counter])
@@ -31,13 +24,7 @@
 
                     @endforeach
 
-                            <!-- Pager v2 -->
-                    <ul class="pager pager-v2 pager-md no-margin">
-                        <li class="previous"><a href="#">&larr; Older</a></li>
-                        <li class="page-amount">1 of 7</li>
-                        <li class="next"><a href="#">Newer &rarr;</a></li>
-                    </ul>
-                    <!-- End Pager v2 -->
+                        @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
                 </div>
                 <!-- End Blog All Posts -->
 

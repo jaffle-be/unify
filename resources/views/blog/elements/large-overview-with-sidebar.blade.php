@@ -7,7 +7,7 @@
                 @foreach($post->images as $image)
                     @if($img = $image->sizes->first())
                         <li class="rounded-x {{ $imgCounter == 0 ? 'active' : '' }}" data-target="#portfolio-carousel" data-slide-to="{{ $imgCounter }}"></li>
-                            <? $imgCounter++ ?>
+                        <? $imgCounter++ ?>
                     @endif
 
                 @endforeach
@@ -21,14 +21,14 @@
 
                         <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
                             <a href="{{ route('store.blog.show', [$post]) }}">
-                                <img class="img-responsive full-width" alt="" src="{{ $img ? asset($img->path) : '' }}">
+                                <img class="img-responsive full-width" alt="" src="{{ asset($image->thumbnail(850)) }}">
                             </a>
 
                             {{--<div class="carousel-caption">
                                 <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
                             </div>--}}
                         </div>
-                            <? $imgCounter++ ?>
+                        <? $imgCounter++ ?>
                     @endif
 
                 @endforeach
@@ -42,12 +42,8 @@
             </a>
         </div>
     @else
-        <?php
-
-        $img = $post->images->first() && $post->images->first()->sizes->first() ? $post->images->first()->sizes->first() : false;
-        ?>
         <a href="{{ route('store.blog.show', [$post]) }}">
-            <img class="img-responsive full-width" src="{{ $img ? asset($img->path) : '' }}" alt="">
+            <img class="img-responsive full-width" src="{{ asset($post->thumbnail(850)) }}" alt="">
         </a>
     @endif
 

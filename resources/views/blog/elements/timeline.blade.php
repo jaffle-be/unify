@@ -17,7 +17,7 @@
 
                                 <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
                                     <a href="{{ route('store.blog.show', [$post]) }}">
-                                        <img class="img-responsive" alt="" src="{{ $img ? asset($img->path) : '' }}">
+                                        <img class="img-responsive" alt="" src="{{ asset($image->thumbnail(850)) }}">
                                     </a>
 
                                     {{--<div class="carousel-caption">
@@ -42,12 +42,8 @@
 
 
             @else
-                <?php
-
-                $img = $post->images->first() && $post->images->first()->sizes->first() ? $post->images->first()->sizes->first() : false;
-                ?>
                 <a href="{{ route('store.blog.show', [$post]) }}">
-                    <img class="img-responsive" src="{{ $img ? asset($img->path) : '' }}" alt="">
+                    <img class="img-responsive" src="{{ asset($post->thumbnail(850)) }}" alt="">
                 </a>
             @endif
         </div>

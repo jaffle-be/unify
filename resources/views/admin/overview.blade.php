@@ -4,7 +4,7 @@
     <div class="row">
 
 
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-3 col-xs-12">
 
             <div class="ibox">
 
@@ -14,21 +14,10 @@
 
                 <div class="ibox-content">
 
-                    <div class="form-group">
-
-                        <label>{{ Lang::get('Unify::admin.header') }}</label>
-
-                        <select class="form-control" ng-model="vm.header" ng-options="header.value for header in vm.headers" ng-change="vm.save('header')"></select>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>{{ Lang::get('Unify::admin.footer') }}</label>
-
-                        <select class="form-control" ng-model="vm.footer" ng-options="footer.value for footer in vm.footers" ng-change="vm.save('footer')"></select>
-
-                    </div>
+                    @include('Unify::admin.setting-dropdown', ['name' => 'header'])
+                    @include('Unify::admin.setting-dropdown', ['name' => 'footer'])
+                    @include('Unify::admin.setting-dropdown', ['name' => 'breadcrumbs'])
+                    @include('Unify::admin.setting-dropdown', ['name' => 'pagination'])
 
                 </div>
 
@@ -37,7 +26,7 @@
         </div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-3 col-xs-12">
 
             <div class="ibox">
 
@@ -46,30 +35,15 @@
                 </div>
 
                 <div class="ibox-content">
-
-                    <div class="form-group">
-
-                        <label>{{ Lang::get('Unify::admin.blogOverview') }}</label>
-
-                        <select class="form-control" ng-model="vm.blogOverview" ng-options="blogOverview.value for blogOverview in vm.blogOverviews" ng-change="vm.save('blogOverview')"></select>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>{{ Lang::get('Unify::admin.blogDetail') }}</label>
-
-                        <select class="form-control" ng-model="vm.blogDetail" ng-options="blogDetail.value for blogDetail in vm.blogDetails" ng-change="vm.save('blogDetail')"></select>
-
-                    </div>
-
+                    @include('Unify::admin.setting-dropdown', ['name' => 'blogOverview'])
+                    @include('Unify::admin.setting-dropdown', ['name' => 'blogDetail'])
                 </div>
 
             </div>
         </div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-3 col-xs-12">
 
             <div class="ibox">
 
@@ -79,18 +53,33 @@
 
                 <div class="ibox-content">
 
-                    <div class="form-group">
-
-                        <label>{{ Lang::get('Unify::admin.contactLayout') }}</label>
-
-                        <select class="form-control" ng-model="vm.contactLayout" ng-options="contactLayout.value for contactLayout in vm.contactLayouts" ng-change="vm.save('contactLayout')"></select>
-
-                    </div>
+                    @include('Unify::admin.setting-dropdown', ['name' => 'contactLayout'])
 
                 </div>
 
             </div>
         </div>
+
+        <div class="col-md-6 col-lg-3 col-xs-12">
+
+            <div class="ibox">
+
+                <div class="ibox-title">
+                    <h5>{{ Lang::get('Unify::admin.team-layout') }}</h5>
+                </div>
+
+                <div class="ibox-content">
+
+                    @include('Unify::admin.setting-dropdown', ['name' => 'teamOverview'])
+                    @include('Unify::admin.setting-dropdown', ['name' => 'teamDetail'])
+                    @include('Unify::admin.setting-checkbox', ['name' => 'teamHiring'])
+                    @include('Unify::admin.setting-checkbox', ['name' => 'teamHireMe'])
+
+                </div>
+
+            </div>
+        </div>
+
 
     </div>
 

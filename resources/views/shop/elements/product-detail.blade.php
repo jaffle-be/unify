@@ -1,14 +1,6 @@
 <div class="shop-product">
 
     <div class="container">
-        <ul class="breadcrumb-v5">
-            <li><a href="{{ route('store.home') }}"><i class="fa fa-home"></i></a></li>
-            <li><a href="#">Products</a></li>
-            <li class="active">New</li>
-        </ul>
-    </div>
-
-    <div class="container">
         <div class="row">
             <div class="col-md-6 md-margin-bottom-50">
                 <div class="ms-showcase2-template">

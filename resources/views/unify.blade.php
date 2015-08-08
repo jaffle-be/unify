@@ -6,7 +6,7 @@
 <!--[if !IE]><!-->
 <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Unify - Responsive Website Template</title>
+    <title>@yield('title')</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -53,6 +53,12 @@
     @yield('header')
 
     @yield('slider')
+
+    @section('breadcrumb')
+
+        {!! Breadcrumbs::render() !!}
+
+    @stop
 
     @yield('breadcrumb')
 

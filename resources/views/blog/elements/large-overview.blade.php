@@ -1,12 +1,7 @@
-<?php
-
-$img = $post->images->first() && $post->images->first()->sizes->first() ? $post->images->first()->sizes->first() : false;
-?>
-
 <!-- Blog Posts -->
 <div class="news-v3 margin-bottom-60">
     <a href="{{ route('store.blog.show', [$post]) }}">
-        <img class="img-responsive full-width" src="{{ $img ? asset($img->path) : '' }}" alt="">
+        <img class="img-responsive full-width" src="{{ asset($post->thumbnail(1140)) }}" alt="">
     </a>
 
     <div class="news-v3-in">

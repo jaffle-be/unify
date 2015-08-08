@@ -1,25 +1,15 @@
 @extends('Unify::Unify')
 
+@section('title', Lang::get('portfolio::titles.detail'))
+
 @section('styles-content')
 
     <link rel="stylesheet" href="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css') }}">
     <link rel="stylesheet" href="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css') }}">
 
 
-@stop
-
-@section('breadcrumb')
-
-    <div class="breadcrumbs-v3 img-v1">
-        <div class="container text-center">
-            <p>Portfolio</p>
-
-            <h1>Single Item</h1>
-        </div>
-        <!--/end container-->
-    </div>
-
     @stop
+
 
     @section('content')
 
@@ -62,7 +52,8 @@
                         <li><strong>Client:</strong>{{ $project->client_name }}</li>
                         <li><strong>Date:</strong> {{ $project->date->format('d F Y') }}</li>
                         <li><strong>Categories:</strong> <a href="#">Web Design,</a> <a href="#">Graphic</a></li>
-                        <li><strong>Website:</strong> <a target="_blank" href="{{ $project->website }}">{{ $project->website }}</a></li>
+                        <li><strong>Website:</strong>
+                            <a target="_blank" href="{{ $project->website }}">{{ $project->website }}</a></li>
                         @if($project->collaborators->count())
                             <li><strong>Collaborators:</strong>
 

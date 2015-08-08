@@ -1,23 +1,16 @@
 @extends('Unify::Unify')
 
-@section('breadcrumb')
-    <div class="breadcrumbs-v1">
-        <div class="container">
-            <span>Blog Page</span>
-
-            <h1>Basic Medium Posts</h1>
-        </div>
-    </div>
-@stop
+@section('title', Lang::get('blog.titles.overview'))
 
 @section('content')
     <div class="container content-md">
 
+        <? $posts->loadImageSizes(460) ?>
         @foreach($posts as $post)
             @include('Unify::blog.elements.news-3', ['post' => $post])
         @endforeach
 
-        @include('Unify::blog.elements.paginators.paginator-3', ['pager' => $posts])
+        @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
 
     </div>
 

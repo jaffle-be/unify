@@ -1,5 +1,7 @@
 @extends('Unify::Unify')
 
+@section('title', Lang::get('contact.titles.contact'))
+
 @section('styles-plugins')
     @parent
 
@@ -15,10 +17,6 @@
     <link rel="stylesheet" href="{{ theme_asset('css/pages/page_contact.min.css') }}">
 @stop
 <body>
-
-@section('breadcrumb')
-    @include('Unify::contact.elements.breadcrumbs')
-@stop
 
 @section('content')
     <div class="container content">

@@ -1,21 +1,13 @@
 @extends('Unify::Unify')
 
+@section('title', Lang::get('blog.titles.overview'))
+
 @section('styles-plugins')
     @parent
     <link rel="stylesheet" href="{{ theme_asset('plugins/fancybox/source/jquery.fancybox.css') }}">
 @stop
 
 @section('styles-content')
-@stop
-
-@section('breadcrumb')
-    <div class="breadcrumbs-v1">
-        <div class="container">
-            <span>Blog Page</span>
-
-            <h1>Basic Medium Posts</h1>
-        </div>
-    </div>
 @stop
 
 @section('content')
@@ -28,6 +20,7 @@
             <!-- Blog All Posts -->
             <div class="col-md-9">
                 <? $counter = 0 ?>
+                <? $posts->loadImageSizes(340) ?>
                 @foreach($posts as $post)
 
                 @include('Unify::blog.elements.medium-overview', ['counter' => $counter])
@@ -36,13 +29,7 @@
 
                 @endforeach
 
-                        <!-- Pager v3 -->
-                <ul class="pager pager-v3 pager-sm no-margin-bottom">
-                    <li class="previous"><a href="#">&larr; Older</a></li>
-                    <li class="page-amount">1 of 7</li>
-                    <li class="next"><a href="#">Newer &rarr;</a></li>
-                </ul>
-                <!-- End Pager v3 -->
+                @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
 
             </div>
             <!-- End Blog All Posts -->

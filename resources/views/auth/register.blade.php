@@ -1,23 +1,9 @@
 @extends('Unify::Unify')
 
+@section('title', Lang::get('Unify::front.register'))
+
 @section('styles-content')
     <link rel="stylesheet" href="{{ asset('/assets/css/pages/page_log_reg_v1.css') }}">
-@stop
-
-@section('breadcrumb')
-    <!--=== Breadcrumbs ===-->
-    <div class="breadcrumbs">
-        <div class="container">
-            <h1 class="pull-left">Registration</h1>
-            <ul class="pull-right breadcrumb">
-                <li><a href="{{ route('store.home') }}">Home</a></li>
-                <li><a href="">Pages</a></li>
-                <li class="active">Registration</li>
-            </ul>
-        </div>
-        <!--/container-->
-    </div><!--/breadcrumbs-->
-    <!--=== End Breadcrumbs ===-->
 @stop
 
 @section('content')

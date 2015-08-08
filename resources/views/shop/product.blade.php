@@ -1,5 +1,7 @@
 @extends('Unify::Unify-shop')
 
+@section('title', Lang::get('Unify::front.product-detail'))
+
 @section('styles-plugins')
     @parent
     <link rel="stylesheet" href="{{ theme_asset('plugins/owl-carousel/owl-carousel/owl.carousel.css') }}">

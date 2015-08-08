@@ -8,7 +8,7 @@
 {{--</div>--}}
 {{--</div>--}}
 {{--<h2>--}}
-{{--<a href="blog_item_option1.html">Template comes with developer friendly and easy to customizable code</a>--}}
+{{--<a href="{{ route('store.blog.show', [$post]) }}">Template comes with developer friendly and easy to customizable code</a>--}}
 {{--</h2>--}}
 
 {{--<div class="blog-post-tags">--}}
@@ -26,10 +26,9 @@
 {{--<!--End Blog Post-->--}}
 
 
-
-    <!--Blog Post-->
-    <div class="blog margin-bottom-40">
-        @if($counter % 3 == 0)
+        <!--Blog Post-->
+<div class="blog margin-bottom-40">
+    @if($counter % 3 == 0)
         <div class="blog-img">
             <div class="carousel slide carousel-v1" id="myCarousel">
                 <div class="carousel-inner">
@@ -40,14 +39,14 @@
 
                             <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
                                 <a href="{{ route('store.blog.show', [$post]) }}">
-                                    <img alt="" src="{{ $img ? asset($img->path) : '' }}">
+                                    <img alt="" src="{{ asset($image->thumbnail(850)) }}">
                                 </a>
 
                                 {{--<div class="carousel-caption">
                                     <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
                                 </div>--}}
                             </div>
-                                <? $imgCounter++ ?>
+                            <? $imgCounter++ ?>
                         @endif
 
 
@@ -65,39 +64,35 @@
                 </div>
             </div>
         </div>
-        @else
-
-            <?php
-
-            $img = $post->images->first() && $post->images->first()->sizes->first() ? $post->images->first()->sizes->first() : false;
-            ?>
-                <div class="blog-img">
-                    <a href="{{ route('store.blog.show', [$post]) }}">
-                        <img class="img-responsive" src="{{ $img ? asset($img->path) : '' }}" alt="">
-                    </a>
-                </div>
-        @endif
-
-            <h2><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h2>
-
-        <div class="blog-post-tags">
-            <ul class="list-unstyled list-inline blog-info">
-                <li><i class="fa fa-calendar"></i> {{ $post->published_at->format('d M, Y') }}</li>
-                <li><i class="fa fa-pencil"></i> {{ $post->user->name }}</li>
-                {{--<li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>--}}
-                <li><i class="fa fa-tags"></i>
-
-                    {{ implode(', ', $post->tags->lists('name')->toArray()) }}
-
-
-                </li>
-            </ul>
+    @else
+        <div class="blog-img">
+            <a href="{{ route('store.blog.show', [$post]) }}">
+                <img class="img-responsive" src="{{ asset($post->thumbnail(1140)) }}" alt="">
+            </a>
         </div>
+    @endif
 
-        <p>{{ $post->extract }}</p>
+    <h2><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h2>
 
-        <p><a class="btn-u btn-u-small" href="{{ route('store.blog.show', [$post]) }}"><i class="fa fa-plus"></i> Read More</a></p>
+    <div class="blog-post-tags">
+        <ul class="list-unstyled list-inline blog-info">
+            <li><i class="fa fa-calendar"></i> {{ $post->published_at->format('d M, Y') }}</li>
+            <li><i class="fa fa-pencil"></i> {{ $post->user->name }}</li>
+            {{--<li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>--}}
+            <li><i class="fa fa-tags"></i>
+
+                {{ implode(', ', $post->tags->lists('name')->toArray()) }}
+
+
+            </li>
+        </ul>
     </div>
+
+    <p>{{ $post->extract }}</p>
+
+    <p><a class="btn-u btn-u-small" href="{{ route('store.blog.show', [$post]) }}"><i class="fa fa-plus"></i> Read More</a>
+    </p>
+</div>
 <!--End Blog Post-->
 
 
@@ -141,7 +136,7 @@
             </div>
         </div>
     </div>
-    <h2><a href="blog_item_option1.html">Unify Template works on all main web browsers, tablets and phones.</a>
+    <h2><a href="{{ route('store.blog.show', [$post]) }}">Unify Template works on all main web browsers, tablets and phones.</a>
     </h2>
 
     <div class="blog-post-tags">

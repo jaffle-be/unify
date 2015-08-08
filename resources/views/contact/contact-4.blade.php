@@ -1,5 +1,7 @@
 @extends('Unify::Unify')
 
+@section('title', Lang::get('contact.titles.contact'))
+
 @section('styles-plugins')
     @parent
     <link rel="stylesheet" href="{{ theme_asset('plugins/owl-carousel/owl-carousel/owl.carousel.css') }}">
@@ -7,10 +9,6 @@
 
 @section('styles-content')
     <link rel="stylesheet" href="{{ theme_asset('css/pages/page_contact.min.css') }}">
-@stop
-
-@section('breadcrumb')
-    @include('Unify::contact.elements.breadcrumbs')
 @stop
 
 @section('content')

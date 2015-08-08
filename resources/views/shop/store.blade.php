@@ -1,9 +1,14 @@
 @extends('Unify::Unify-shop')
 
+@section('title', Lang::get('Unify::front.store'))
+
 @section('styles-plugins')
     @parent
     <link rel="stylesheet" href="{{ theme_asset('plugins/owl-carousel/owl-carousel/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ theme_asset('plugins/revolution-slider/rs-plugin/css/settings.css') }}">
+@stop
+
+@section('breadcrumb')
 @stop
 
 @include('Unify::shop.elements.slider-home')

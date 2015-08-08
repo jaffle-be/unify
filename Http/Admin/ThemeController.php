@@ -1,6 +1,6 @@
 <?php namespace Themes\Unify\Http\Admin;
 
-use App\Http\Controllers\Controller;
+use App\System\Http\Controller;
 
 class ThemeController extends Controller
 {

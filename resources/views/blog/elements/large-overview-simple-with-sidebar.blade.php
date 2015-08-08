@@ -28,13 +28,12 @@
             <div class="carousel slide carousel-v1" id="myCarousel">
                 <div class="carousel-inner">
                     <? $imgCounter = 0 ?>
-                    @foreach($post->images as $image)
 
-                        @if($img = $image->sizes->first())
+                    @foreach($post->images as $image)
 
                         <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
                             <a href="{{ route('store.blog.show', [$post]) }}">
-                                <img alt="" src="{{ $img ? asset($img->path) : '' }}">
+                                <img alt="" src="{{ $image->thumbnail(850) }}">
                             </a>
 
                             {{--<div class="carousel-caption">
@@ -42,7 +41,6 @@
                             </div>--}}
                         </div>
                             <? $imgCounter++ ?>
-                        @endif
 
                     @endforeach
                 </div>
@@ -60,17 +58,11 @@
 
     @else
 
-        <?php
-
-        $img = $post->images->first() && $post->images->first()->sizes->first() ? $post->images->first()->sizes->first() : false;
-        ?>
-        @if($img)
-            <div class="blog-img">
-                <a href="{{ route('store.blog.show', [$post]) }}">
-                    <img class="img-responsive" src="{{ $img ? asset($img->path) : '' }}" alt="">
-                </a>
-            </div>
-        @endif
+        <div class="blog-img">
+            <a href="{{ route('store.blog.show', [$post]) }}">
+                <img class="img-responsive" src="{{ $post->thumbnail(850) }}" alt="">
+            </a>
+        </div>
 
     @endif
 
@@ -88,7 +80,7 @@
 <!--Blog Post-->
 <div class="blog margin-bottom-40">
     <h2>
-        <a href="blog_item_option1.html">Template comes with developer friendly and easy to customizable code</a>
+        <a href="{{ route('store.blog.show', [$post]) }}">Template comes with developer friendly and easy to customizable code</a>
     </h2>
 
     <div class="blog-post-tags">
@@ -115,7 +107,7 @@
     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
 
     <p>
-        <a class="btn-u btn-u-small" href="blog_item_option1.html"><i class="fa fa-plus-sign"></i> Read More</a>
+        <a class="btn-u btn-u-small" href="{{ route('store.blog.show', [$post]) }}"><i class="fa fa-plus-sign"></i> Read More</a>
     </p>
 </div>
 <!--End Blog Post-->--}}

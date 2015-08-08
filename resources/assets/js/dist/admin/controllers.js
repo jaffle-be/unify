@@ -6,16 +6,27 @@ angular.module('theme-active')
             me.theme = theme;
             me.setSelectValue('header');
             me.setSelectValue('footer');
+            me.setSelectValue('breadcrumbs');
+            me.setSelectValue('pagination');
             me.setSelectValue('blogOverview');
             me.setSelectValue('blogDetail');
             me.setSelectValue('contactLayout');
+            me.setSelectValue('teamOverview');
+            me.setSelectValue('teamDetail');
+            me.setCheckbox('teamHiring');
+            me.setCheckbox('teamHireMe');
         });
 
-
         this.save = function (setting) {
+            var settingObject = me.theme.settings[setting];
 
-            ThemeService.saveSetting(me.theme, me[setting]);
-
+            if(settingObject.boolean)
+            {
+                ThemeService.saveCheckbox(me.theme, settingObject, settingObject.value)
+            }
+            else{
+                ThemeService.saveSelect(me.theme, settingObject, me[setting]);
+            }
         };
 
         this.setSelectValue = function (select) {
@@ -36,9 +47,8 @@ angular.module('theme-active')
             }
         };
 
-        //Theme.show(function(theme)
-        //{
-        //    me.theme = theme
-        //});
+        this.setCheckbox = function (checkbox) {
+            me[checkbox] = me.theme.settings[checkbox];
+        };
 
     });
