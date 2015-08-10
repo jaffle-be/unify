@@ -1,6 +1,6 @@
 @extends('Unify::Unify')
 
-@section('title', Lang::get('blog.titles.detail'))
+@section('title', Lang::get('Unify::blog.titles.detail'))
 
 @section('styles-content')
     <link rel="stylesheet" href="{{ theme_asset('css/pages/blog.min.css') }}">

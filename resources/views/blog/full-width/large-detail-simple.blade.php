@@ -1,6 +1,6 @@
 @extends('Unify::Unify')
 
-@section('title', Lang::get('blog.titles.detail'))
+@section('title', Lang::get('Unify::blog.titles.detail'))
 
 @section('styles-content')
     <link rel="stylesheet" href="{{ theme_asset('css/pages/blog.min.css') }}">
@@ -22,7 +22,7 @@
             <div class="blog-post-tags">
                 <ul class="list-unstyled list-inline blog-info">
                     <li><i class="fa fa-calendar"></i> {{ $post->published_at->format('d M, Y') }}</li>
-                    <li><i class="fa fa-pencil"></i> {{$post->user->name}}</li>
+                    <li><i class="fa fa-pencil"></i> <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                     {{--<li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>--}}
                     <li><i class="fa fa-tags"></i> {{implode(', ', $post->tags->lists('name')->toArray())}}</li>
                 </ul>

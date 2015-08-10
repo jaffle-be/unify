@@ -1,6 +1,6 @@
 @extends('Unify::Unify')
 
-@section('title', Lang::get('contact.titles.contact'))
+@section('title', Lang::get('Unify::contact.titles.contact'))
 
 @section('styles-plugins')
     @parent

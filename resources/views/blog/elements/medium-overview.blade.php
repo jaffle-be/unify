@@ -50,7 +50,7 @@
     <div class="col-sm-7 news-v3">
         <div class="news-v3-in-sm no-padding">
             <ul class="list-inline posted-info">
-                <li>{{ Lang::get('blog::post-by') }} <a href="">{{ $post->user->name }}</a></li>
+                <li>{{ Lang::get('Unify::blog.post-by') }} <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                 @foreach($post->tags as $tag)
                     <li>In <a href="#">{{ $tag->name }}</a></li>
                 @endforeach

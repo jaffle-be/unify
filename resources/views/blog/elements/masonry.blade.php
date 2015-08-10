@@ -8,7 +8,7 @@
     <div class="grid-boxes-in grid-boxes-qoute">
         <div class="grid-boxes-caption grid-boxes-quote {{ $color }}">
             <p><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->extract }}</a></p>
-            <span>- {{ $post->user->name }} -</span>
+            <span>- <a class="{{ $color }}" href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a> -</span>
         </div>
     </div>
 
@@ -62,7 +62,7 @@
         <div class="grid-boxes-caption">
             <h3><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h3>
             <ul class="list-inline grid-boxes-news">
-                <li><span>{{ Lang::get('Unify::blog.by') }}</span> <a href="#">{{$post->user->name}}</a></li>
+                <li><span>{{ Lang::get('Unify::blog.by') }}</span> <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                 <li>|</li>
                 <li><i class="fa fa-clock-o"></i> {{ $post->published_at->format('d M, Y') }}</li>
                 <li>|</li>

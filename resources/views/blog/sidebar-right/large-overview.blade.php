@@ -1,6 +1,6 @@
 @extends('Unify::Unify')
 
-@section('title', Lang::get('blog.titles.overview'))
+@section('title', Lang::get('Unify::blog.titles.overview'))
 
 @section('styles-plugins')
     @parent

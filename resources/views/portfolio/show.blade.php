@@ -1,6 +1,6 @@
 @extends('Unify::Unify')
 
-@section('title', Lang::get('portfolio::titles.detail'))
+@section('title', Lang::get('Unify::portfolio.titles.detail'))
 
 @section('styles-content')
 
@@ -43,11 +43,11 @@
 
             <div class="row margin-bottom-60">
                 <div class="col-sm-8">
-                    <div class="headline"><h2>{{ Lang::get('portfolio.project-description') }}</h2></div>
+                    <div class="headline"><h2>{{ Lang::get('Unify::portfolio.project-description') }}</h2></div>
                     <p>{{ $project->description }}</p>
                 </div>
                 <div class="col-sm-4">
-                    <div class="headline"><h2>{{ Lang::get('portfolio.project-details') }}</h2></div>
+                    <div class="headline"><h2>{{ Lang::get('Unify::portfolio.project-details') }}</h2></div>
                     <ul class="list-unstyled project-details">
                         <li><strong>Client:</strong>{{ $project->client_name }}</li>
                         <li><strong>Date:</strong> {{ $project->date->format('d F Y') }}</li>
@@ -59,7 +59,7 @@
 
                                 @foreach($project->collaborators as $collaborator)
 
-                                    <a href="#">{{ $collaborator->fullname }}</a>
+                                    <a href="{{ route('store.team.show',[$collaborator]) }}">{{ $collaborator->name }}</a>
 
                                 @endforeach
 

@@ -1,7 +1,6 @@
 <? $size = isset($size) ? $size : 1280 ?>
 
-
-<div class="cbp-item graphic">
+<div class="cbp-item {{ implode(' ', $project->tags->lists('cubeportfolio')->toArray()) }}">
     <div class="cbp-caption">
         <div class="cbp-caption-defaultWrap">
             <img src="{{ asset($project->thumbnail($size)) }}" alt="">

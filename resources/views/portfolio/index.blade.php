@@ -1,6 +1,6 @@
 @extends('Unify::Unify')
 
-@section('title', Lang::get('portfolio::titles.overview'))
+@section('title', Lang::get('Unify::portfolio.titles.overview'))
 
 @section('styles-content')
 

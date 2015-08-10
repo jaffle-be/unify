@@ -21,12 +21,12 @@
                     @endif
 
                     <div class="reg-header">
-                        <h2>{{ Lang::get('users::general.register') }}</h2>
+                        <h2>{{ Lang::get('Unify::users.general.register') }}</h2>
 
-                        <p>{!! Lang::get('users::general.already-signed-up', ['url' => route('store.auth.signin.index')]) !!}</p>
+                        <p>{!! Lang::get('Unify::users.general.already-signed-up', ['url' => route('store.auth.signin.index')]) !!}</p>
                     </div>
 
-                    <label>{{ Lang::get('users::general.email') }} <span class="color-red">*</span></label>
+                    <label>{{ Lang::get('Unify::users.general.email') }} <span class="color-red">*</span></label>
                     <input name="email" id="email" value="{{Input::old('email') }}" type="text" class="form-control margin-bottom-20">
 
                     @if($errors->has('email'))
@@ -37,7 +37,7 @@
 
                     <div class="row">
                         <div class="col-sm-6">
-                            <label for="password">{{ Lang::get('users::general.password') }} <span class="color-red">*</span></label>
+                            <label for="password">{{ Lang::get('Unify::users.general.password') }} <span class="color-red">*</span></label>
                             <input name="password" id="password" type="password" class="form-control margin-bottom-20">
 
                             @if($errors->has('password'))
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="col-sm-6">
-                            <label for="password_confirmation">{{ Lang::get('users::general.password_confirmation') }} <span class="color-red">*</span></label>
+                            <label for="password_confirmation">{{ Lang::get('Unify::users.general.password_confirmation') }} <span class="color-red">*</span></label>
                             <input name="password_confirmation" id="password_confirmation" type="password" class="form-control margin-bottom-20">
                         </div>
                     </div>
@@ -57,10 +57,10 @@
 
                     <div class="row">
                         <div class="col-lg-6">
-                            <button class="btn-lg btn-u" type="submit">{{ Lang::get('users::general.register') }}</button>
+                            <button class="btn-lg btn-u" type="submit">{{ Lang::get('Unify::users.general.register') }}</button>
                         </div>
                         <div class="col-lg-6 text-right">
-                            <a class="btn-lg btn-u" href="{{ route('store.auth.signin.index') }}">{{ Lang::get('users::general.back') }}</a>
+                            <a class="btn-lg btn-u" href="{{ route('store.auth.signin.index') }}">{{ Lang::get('Unify::users.general.back') }}</a>
                         </div>
                     </div>
                 </form>

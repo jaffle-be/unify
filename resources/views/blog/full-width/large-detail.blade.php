@@ -1,6 +1,6 @@
 @extends('Unify::Unify')
 
-@section('title', Lang::get('blog.titles.detail'))
+@section('title', Lang::get('Unify::blog.titles.detail'))
 
 @section('styles-plugins')
     @parent
@@ -17,7 +17,7 @@
 
                 <div class="news-v3-in">
                     <ul class="list-inline posted-info">
-                        <li>By <a href="#">{{ $post->user->name }}</a></li>
+                        <li>By <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                         @foreach($post->tags as $tag)
                         <li>In <a href="#">{{ $tag->name }}</a></li>
                         @endforeach

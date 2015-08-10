@@ -17,12 +17,12 @@
                     <input value="{{csrf_token()}}" name="_token" type="hidden"/>
 
                     <div class="reg-header">
-                        <h2>{{ Lang::get('users::general.forgot-password') }}</h2>
+                        <h2>{{ Lang::get('Unify::users.general.forgot-password') }}</h2>
                     </div>
 
                     <div class="input-group margin-bottom-20">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input name="email" id="email" type="text" placeholder="{{ Lang::get('users::general.email') }}" value="{{ Input::old('email') }}" class="form-control">
+                        <input name="email" id="email" type="text" placeholder="{{ Lang::get('Unify::users.general.email') }}" value="{{ Input::old('email') }}" class="form-control">
                     </div>
 
                     @if($errors->has('email'))
@@ -33,11 +33,11 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <button class="btn-u btn-lg" type="submit">{{ Lang::get('users::general.submit') }}</button>
+                            <button class="btn-u btn-lg" type="submit">{{ Lang::get('Unify::users.general.submit') }}</button>
                         </div>
 
                         <div class="col-md-6">
-                            <a class="pull-right btn-u btn-lg btn-default" href="{{ route('store.auth.signin.index') }}">{{ Lang::get('users::general.back') }}</a>
+                            <a class="pull-right btn-u btn-lg btn-default" href="{{ route('store.auth.signin.index') }}">{{ Lang::get('Unify::users.general.back') }}</a>
                         </div>
                     </div>
 

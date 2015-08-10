@@ -46,7 +46,7 @@
         <ul class="list-unstyled list-inline blog-info">
             <li><i class="fa fa-calendar"></i> {{ $post->published_at->format('d M, Y') }}</li>
             <li><i class="fa fa-tags"></i> {{ implode(', ', $post->tags->lists('name')->toArray()) }}</li>
-            <li>{{ Lang::get('blog::post-by') }} <a href="">{{ $post->user->name }}</a></li>
+            <li>{{ Lang::get('Unify::blog.post-by') }} <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
         </ul>
         <p>{{ $post->extract }}</p>
 

@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('account.about-our-team'))
+@section('title', Lang::get('Unify::account.about-our-team'))
 
 @section('styles-content')
     
@@ -11,35 +11,32 @@
 @stop
 
 @section('content')
-    
 
     <!--=== Cube Portfolio ===-->
-    <div class="cube-portfolio container content-sm margin-bottom-30">
+    <div class="cube-portfolio container content margin-bottom-30">
         <div id="filters-container" class="cbp-l-filters-text no-padding">
             <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"> All </div> |
-            <div data-filter=".marketing" class="cbp-filter-item"> Marketing </div> |
-            <div data-filter=".designer" class="cbp-filter-item"> Designer </div> |
-            <div data-filter=".developer" class="cbp-filter-item"> Developer </div> |
-            <div data-filter=".support" class="cbp-filter-item"> Support </div>
+            @foreach($teams as $team)
+            <div data-filter=".{{ $team->cubeportfolio }}" class="cbp-filter-item"> {{$team->name}} </div> |
+            @endforeach
+
         </div><!--/end Filters Container-->
 
         <div id="grid-container" class="cbp-l-grid-gallery">
 
+            @foreach($memberships as $membership)
 
-
-            @foreach($account->members as $member)
-
-                <div class="cbp-item marketing designer">
-                    <a href="{{ route('store.team.show', [$member]) }}" class="cbp-caption"
+                <div class="cbp-item {{ implode(' ', $membership->teams->lists('cubeportfolio')->toArray()) }}">
+                    <a href="{{ route('store.team.show', [$membership->member]) }}" class="cbp-caption"
                        data-title="World Clock Widget<br>by Paul Flavius Nechita">
                         <div class="cbp-caption-defaultWrap">
-                            <img src="{{ asset($member->thumbnail(380) ? : 'assets/img/team/img2-md.jpg') }}" alt="">
+                            <img src="{{ asset($membership->member->thumbnail(380) ? : 'assets/img/team/img2-md.jpg') }}" alt="">
                         </div>
                         <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignLeft">
                                 <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-desc">{{$member->function}}</div>
-                                    <div class="cbp-l-caption-title text-uppercase">{{ $member->name }}</div>
+                                    <div class="cbp-l-caption-desc">{{$membership->member->function}}</div>
+                                    <div class="cbp-l-caption-title text-uppercase">{{ $membership->member->name }}</div>
                                 </div>
                             </div>
                         </div>

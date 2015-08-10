@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('account.about-our-team'))
+@section('title', Lang::get('Unify::account.about-our-team'))
 
 @section('styles-content')
 
@@ -12,7 +12,7 @@
 
     @foreach($account->teams as $team)
             <!--=== Team v5 ===-->
-    <div class="container">
+    <div class="container content">
         <div class="headline-center margin-bottom-60">
 
             <h2>{{ $team->name }}</h2>

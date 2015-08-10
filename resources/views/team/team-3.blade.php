@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('account.about-our-team'))
+@section('title', Lang::get('Unify::account.about-our-team'))
 
 @section('styles-content')
 
@@ -26,7 +26,7 @@
 
                                 <p>{{$member->bio}}
                                     <br>
-                                    <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
+                                    <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
                                 </p>
 
                                 <ul class="list-inline social-icons-v1">
@@ -56,7 +56,7 @@
 
                                 <p>{{$member->bio}}
                                     <br>
-                                    <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
+                                    <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
                                 </p>
 
                                 <ul class="list-inline social-icons-v1">
