@@ -15,6 +15,9 @@ angular.module('theme-active')
             me.setSelectValue('teamDetail');
             me.setCheckbox('teamHiring');
             me.setCheckbox('teamHireMe');
+            me.setSelectValue('portfolioColumns');
+            me.setCheckbox('portfolioGrid');
+            me.setCheckbox('portfolioSpaced');
         });
 
         this.save = function (setting) {

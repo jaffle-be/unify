@@ -80,6 +80,25 @@
             </div>
         </div>
 
+        <div class="col-md-6 col-lg-3 col-xs-12">
+
+            <div class="ibox">
+
+                <div class="ibox-title">
+                    <h5>{{ Lang::get('Unify::admin.team-layout') }}</h5>
+                </div>
+
+                <div class="ibox-content">
+
+                    @include('Unify::admin.setting-dropdown', ['name' => 'portfolioColumns'])
+                    @include('Unify::admin.setting-checkbox', ['name' => 'portfolioGrid'])
+                    @include('Unify::admin.setting-checkbox', ['name' => 'portfolioSpaced'])
+
+                </div>
+
+            </div>
+        </div>
+
 
     </div>
 

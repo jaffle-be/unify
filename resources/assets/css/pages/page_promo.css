@@ -1,0 +1,234 @@
+/*Text Colors
+------------------------------------*/
+.color-sea {
+  color: #1abc9c;
+}
+.color-red {
+  color: #e74c3c;
+}
+.color-aqua {
+  color: #27d7e7;
+}
+.color-blue {
+  color: #3498db;
+}
+.color-grey {
+  color: #95a5a6;
+}
+.color-dark {
+  color: #555555;
+}
+.color-green {
+  color: #72c02c;
+}
+.color-brown {
+  color: #9c8061;
+}
+.color-light {
+  color: #ffffff;
+}
+.color-orange {
+  color: #e67e22;
+}
+.color-yellow {
+  color: #f1c40f;
+}
+.color-green1 {
+  color: #2ecc71;
+}
+.color-purple {
+  color: #9b6bcc;
+}
+.color-inherit {
+  color: inherit;
+}
+.color-dark-blue {
+  color: #4765a0;
+}
+.color-light-grey {
+  color: #585f69;
+}
+.color-light-green {
+  color: #79d5b3;
+}
+/*Background Colors
+------------------------------------*/
+.bg-color-dark,
+.bg-color-sea,
+.bg-color-red,
+.bg-color-aqua,
+.bg-color-blue,
+.bg-color-grey,
+.bg-color-light,
+.bg-color-green,
+.bg-color-brown,
+.bg-color-orange,
+.bg-color-green1,
+.bg-color-purple,
+.bg-color-dark-blue,
+.bg-color-light-grey,
+.bg-color-light-green {
+  color: #fff;
+}
+.bg-color-white {
+  color: #555;
+}
+.bg-color-dark {
+  background-color: #555 !important;
+}
+.bg-color-white {
+  background-color: #fff !important;
+}
+.bg-color-sea {
+  background-color: #1abc9c !important;
+}
+.bg-color-red {
+  background-color: #e74c3c !important;
+}
+.bg-color-aqua {
+  background-color: #27d7e7 !important;
+}
+.bg-color-blue {
+  background-color: #3498db !important;
+}
+.bg-color-grey {
+  background-color: #95a5a6 !important;
+}
+.bg-color-light {
+  background-color: #f7f7f7 !important;
+}
+.bg-color-green {
+  background-color: #72c02c !important;
+}
+.bg-color-brown {
+  background-color: #9c8061 !important;
+}
+.bg-color-orange {
+  background-color: #e67e22 !important;
+}
+.bg-color-green1 {
+  background-color: #2ecc71 !important;
+}
+.bg-color-purple {
+  background-color: #9b6bcc !important;
+}
+.bg-color-dark-blue {
+  background-color: #4765a0 !important;
+}
+.bg-color-light-grey {
+  background-color: #585f69 !important;
+}
+.bg-color-light-green {
+  background-color: #79d5b3 !important;
+}
+.rgba-red {
+  background-color: rgba(231, 76, 60, 0.8);
+}
+.rgba-blue {
+  background-color: rgba(52, 152, 219, 0.8);
+}
+.rgba-aqua {
+  background-color: rgba(39, 215, 231, 0.8);
+}
+.rgba-yellow {
+  background-color: rgba(241, 196, 15, 0.8);
+}
+.rgba-default {
+  background-color: rgba(114, 192, 44, 0.8);
+}
+.rgba-purple {
+  background-color: rgba(155, 107, 204, 0.8);
+}
+/*Grey Backroud*/
+.bg-grey {
+  background: #f7f7f7;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+/*Promo Page
+------------------------------------*/
+/*Slider Part*/
+.fullwidthbanner-container.slider-promo {
+  max-height: 460px !important;
+}
+.slider-promo-info-bg {
+  padding: 25px 20px 20px;
+  background: url(../img/bg-black.png) repeat;
+}
+.slider-promo-info span.big-size {
+  color: #fff;
+  display: block;
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-shadow: 0 !important;
+}
+.slider-promo-info p {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+/*Promo Box*/
+.promo-box {
+  padding: 20px;
+  margin: 25px 0 20px;
+  text-align: center;
+}
+.promo-box i {
+  font-size: 50px;
+}
+.promo-box p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.promo-box strong,
+.promo-box strong a {
+  color: #555;
+  font-size: 20px;
+  display: block;
+  margin: 20px 0 15px;
+  font-weight: 200;
+}
+.promo-box:hover strong,
+.promo-box:hover strong a {
+  color: #e74c3c;
+}
+/*Promo Work*/
+.promo-work {
+  margin: 20px 0;
+}
+/*Promo Service*/
+.promo-service {
+  margin: 20px 0;
+}
+.promo-service a.btn-u {
+  margin: 0 20px 10px 0;
+}
+.promo-service .carousel {
+  margin-top: 10px;
+}
+/*Promo Elements*/
+.title-box {
+  margin: 20px 0;
+  padding: 40px 0;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: solid 1px #eee;
+}
+.title-box .title-box-text {
+  color: #555;
+  display: block;
+  font-size: 35px;
+  font-weight: 200;
+}
+.block-blockquote {
+  margin: 20px 0;
+  text-align: center;
+  border: dashed 1px #ccc;
+}
+.block-blockquote-inner {
+  padding: 15px;
+}
+.block-blockquote p {
+  font-size: 26px;
+  margin-bottom: 0;
+}

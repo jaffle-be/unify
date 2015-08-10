@@ -1,0 +1,275 @@
+/*Text Colors
+------------------------------------*/
+.color-sea {
+  color: #1abc9c;
+}
+.color-red {
+  color: #e74c3c;
+}
+.color-aqua {
+  color: #27d7e7;
+}
+.color-blue {
+  color: #3498db;
+}
+.color-grey {
+  color: #95a5a6;
+}
+.color-dark {
+  color: #555555;
+}
+.color-green {
+  color: #72c02c;
+}
+.color-brown {
+  color: #9c8061;
+}
+.color-light {
+  color: #ffffff;
+}
+.color-orange {
+  color: #e67e22;
+}
+.color-yellow {
+  color: #f1c40f;
+}
+.color-green1 {
+  color: #2ecc71;
+}
+.color-purple {
+  color: #9b6bcc;
+}
+.color-inherit {
+  color: inherit;
+}
+.color-dark-blue {
+  color: #4765a0;
+}
+.color-light-grey {
+  color: #585f69;
+}
+.color-light-green {
+  color: #79d5b3;
+}
+/*Background Colors
+------------------------------------*/
+.bg-color-dark,
+.bg-color-sea,
+.bg-color-red,
+.bg-color-aqua,
+.bg-color-blue,
+.bg-color-grey,
+.bg-color-light,
+.bg-color-green,
+.bg-color-brown,
+.bg-color-orange,
+.bg-color-green1,
+.bg-color-purple,
+.bg-color-dark-blue,
+.bg-color-light-grey,
+.bg-color-light-green {
+  color: #fff;
+}
+.bg-color-white {
+  color: #555;
+}
+.bg-color-dark {
+  background-color: #555 !important;
+}
+.bg-color-white {
+  background-color: #fff !important;
+}
+.bg-color-sea {
+  background-color: #1abc9c !important;
+}
+.bg-color-red {
+  background-color: #e74c3c !important;
+}
+.bg-color-aqua {
+  background-color: #27d7e7 !important;
+}
+.bg-color-blue {
+  background-color: #3498db !important;
+}
+.bg-color-grey {
+  background-color: #95a5a6 !important;
+}
+.bg-color-light {
+  background-color: #f7f7f7 !important;
+}
+.bg-color-green {
+  background-color: #72c02c !important;
+}
+.bg-color-brown {
+  background-color: #9c8061 !important;
+}
+.bg-color-orange {
+  background-color: #e67e22 !important;
+}
+.bg-color-green1 {
+  background-color: #2ecc71 !important;
+}
+.bg-color-purple {
+  background-color: #9b6bcc !important;
+}
+.bg-color-dark-blue {
+  background-color: #4765a0 !important;
+}
+.bg-color-light-grey {
+  background-color: #585f69 !important;
+}
+.bg-color-light-green {
+  background-color: #79d5b3 !important;
+}
+.rgba-red {
+  background-color: rgba(231, 76, 60, 0.8);
+}
+.rgba-blue {
+  background-color: rgba(52, 152, 219, 0.8);
+}
+.rgba-aqua {
+  background-color: rgba(39, 215, 231, 0.8);
+}
+.rgba-yellow {
+  background-color: rgba(241, 196, 15, 0.8);
+}
+.rgba-default {
+  background-color: rgba(114, 192, 44, 0.8);
+}
+.rgba-purple {
+  background-color: rgba(155, 107, 204, 0.8);
+}
+/*Grey Backroud*/
+.bg-grey {
+  background: #f7f7f7;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+/*Wrapping element for Sticky-Footer*/
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin-bottom: 60px;
+  /* Margin bottom by footer height */
+}
+/*Coming Soon Page
+------------------------------------*/
+/*Background Cover*/
+.coming-soon-bg-cover:before {
+  top: 0;
+  bottom: 30px;
+  z-index: -1;
+  width: 100%;
+  content: " ";
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+}
+/*Content*/
+.coming-soon-page {
+  background: #585f69;
+}
+.coming-soon {
+  margin-top: 100px;
+}
+.coming-soon {
+  padding: 20px;
+  text-align: center;
+}
+.coming-soon h1,
+.coming-soon h2,
+.coming-soon h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.coming-soon h2,
+.coming-soon h3 {
+  font-weight: 400;
+  display: inline-block;
+}
+.coming-soon h1 {
+  font-size: 45px;
+  line-height: 65px;
+}
+.coming-soon h2 {
+  font-size: 55px;
+  line-height: 60px;
+  padding: 15px 30px;
+  border: solid 4px #fff;
+}
+.coming-soon h3 {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+/* Small devices (tablets, 768px and less) */
+@media (max-width: 768px) {
+  .coming-soon h1 {
+    font-size: 40px;
+  }
+  .coming-soon h2 {
+    font-size: 45px;
+  }
+}
+/*Social*/
+.coming-soon-social {
+  margin-bottom: 0;
+}
+.coming-soon-social li {
+  margin: 0 5px;
+}
+.coming-soon-social li i {
+  color: #fff;
+  font-size: 18px;
+}
+/*Sticky-Footer
+------------------------------------*/
+.sticky-footer {
+  bottom: 0;
+  width: 100%;
+  padding-top: 25px;
+  position: absolute;
+  height: 60px;
+  /* Set the fixed height of the footer here */
+}
+@media (max-width: 767px) {
+  .sticky-footer {
+    padding-top: 0;
+  }
+  .sticky-footer .text-left,
+  .sticky-footer .text-right {
+    text-align: center;
+  }
+}
+/*Countdown
+------------------------------------*/
+#defaultCountdown {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+#defaultCountdown span.countdown_row {
+  overflow: hidden;
+}
+#defaultCountdown span.countdown-section {
+  margin: 2px;
+  width: 150px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: inline-block;
+}
+#defaultCountdown span.countdown-amount {
+  color: #fff;
+  display: block;
+  font-weight: 200;
+  font-size: 45px !important;
+  line-height: 45px !important;
+  font-family: 'Open Sans', sans-serif;
+}
+#defaultCountdown span.countdown-period {
+  color: #fff;
+  display: block;
+  font-weight: 200;
+  font-size: 14px !important;
+}
