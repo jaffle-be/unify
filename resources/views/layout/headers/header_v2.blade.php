@@ -11,20 +11,23 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <ul class="list-inline top-v2-contacts">
-                            <li>Email: <a href="mailto:info@htmlstream.com">info@htmlstream.com</a></li>
-                            <li>Call Us: +70 396 4587 99</li>
+                            <li>Email: <a href="mailto:info@htmlstream.com">{{ $account->contactInformation->first()->email }}</a></li>
+                            @if($account->contactInformation->first()->phone)
+                            <li><a href="tel:{{ $account->contactInformation->first()->phone }}">{{ $account->contactInformation->first()->phone }}</a></li>
+                            @endif
                             <li>
                                 <div class="language-bar">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <span class="heading">Languages</span>
                                     </a>
                                     <ul class="languages-dropdown" role="menu">
-                                        <li class="active">
-                                            <a href="#">English</a>
-                                        </li>
-                                        <li><a href="#">Spanish</a></li>
-                                        <li><a href="#">Russian</a></li>
-                                        <li><a href="#">German</a></li>
+                                        @foreach(config('blog.locales') as $locale)
+                                            @if(App::getLocale() == $locale)
+                                            <li class="active"><a>{{ $locale }}</a></li>
+                                            @else
+                                            <li><a href="">{{ $locale }}</a></li>
+                                            @endif
+                                        @endforeach
                                     </ul>
                                 </div>
                             </li>
@@ -32,8 +35,8 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="topbar-buttons pull-right">
-                            <a href="{{ route('store.auth.signin.index') }}" class="btn-u btn-brd btn-brd-hover btn-u-light margin-right-5">Sign In</a>
-                            <a href="{{ route('store.auth.signup.index') }}" class="btn-u">Sign Up</a>
+                            <a href="{{ route('store.shop.checkout.index') }}" class="btn-u btn-brd btn-brd-hover btn-u-light margin-right-5">Cart (3)</a>
+                            <a href="{{ route('store.shop.login') }}" class="btn-u">Login</a>
                         </div>
                     </div>
                 </div>

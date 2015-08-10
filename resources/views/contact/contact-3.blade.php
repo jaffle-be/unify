@@ -1,4 +1,4 @@
-@extends('Unify::Unify')
+@extends('Unify::unify')
 
 @section('title', Lang::get('Unify::contact.titles.contact'))
 

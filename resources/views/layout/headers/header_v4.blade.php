@@ -1,9 +1,9 @@
 @section('styles-header')
     <link rel="stylesheet" href="{{ theme_asset('css/headers/header-v4.css') }}">
-@stop
+    @stop
 
-@section('header')
-    <!--=== Header v4 ===-->
+    @section('header')
+            <!--=== Header v4 ===-->
     <div class="header-v4">
         <!-- Topbar -->
         <div class="topbar-v1">
@@ -12,22 +12,38 @@
                     <div class="col-md-6">
                         <ul class="list-inline top-v1-contacts">
                             <li>
-                                <i class="fa fa-envelope"></i> Email:
-                                <a href="mailto:info@htmlstream.com">info@htmlstream.com</a>
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:info@htmlstream.com">{{ $account->contactInformation->first()->email }}</a>
                             </li>
-                            <li>
-                                <i class="fa fa-phone"></i> Hotline: (1) 396 4587 99
-                            </li>
+                            @if($account->contactInformation->first()->phone)
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    <a href="tel:{{ $account->contactInformation->first()->phone }}">{{ $account->contactInformation->first()->phone }}</a>
+                                </li>
+                            @endif
                         </ul>
                     </div>
 
                     <div class="col-md-6">
                         <ul class="list-inline top-v1-data">
-                            <li><a href="#"><i class="fa fa-home"></i></a></li>
-                            <li><a href="#"><i class="fa fa-globe"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            <li><a href="#">Quicklinks</a></li>
-                            <li><a href="#">My Account</a></li>
+                            <li class="hoverSelector">
+                                <a href="#"><i class="fa fa-globe"></i></a>
+                                <ul class="languages hoverSelectorBlock">
+                                    @foreach(config('blog.locales') as $locale)
+                                        @if(App::getLocale() == $locale)
+                                            <li class="active">
+                                                <a href="#">{{$locale}} <i class="fa fa-check"></i></a>
+                                            </li>
+                                        @else
+                                            <li><a href="#">{{ $locale }}</a></li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="{{ route('store.shop.checkout.index') }}"><i class="fa fa-shopping-cart"></i></a>
+                            </li>
+                            <li><a href="{{ route('store.shop.login') }}">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -69,13 +85,15 @@
                     <ul class="nav navbar-nav">
                         @foreach(Menu::get('primary menu')->items as $item)
                             @if($item->children->count() == 0)
-                                <li><a href="{{ $item->url }}"  target="{{ $item->target }}">{{ $item->name }}</a></li>
+                                <li><a href="{{ $item->url }}" target="{{ $item->target }}">{{ $item->name }}</a></li>
                             @else
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
                                     <ul class="dropdown-menu">
                                         @foreach($item->children as $child)
-                                            <li><a href="{{ $child->url }}"  target="{{ $child->target }}">{{ $child->name }}</a></li>
+                                            <li>
+                                                <a href="{{ $child->url }}" target="{{ $child->target }}">{{ $child->name }}</a>
+                                            </li>
                                         @endforeach
                                     </ul>
                                 </li>

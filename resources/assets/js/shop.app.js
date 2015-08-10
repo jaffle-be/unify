@@ -30,19 +30,51 @@ var App = function () {
         jQuery('.popovers-destroy').popover('destroy');
     }
 
+    //Search Box (Header)
+    function handleSearch() {
+        jQuery('.search').click(function (event) {
+            if(jQuery('.search-btn').hasClass('fa-search')){
+                jQuery('.search-open').fadeIn(500);
+                jQuery('.search-btn').removeClass('fa-search');
+                jQuery('.search-btn').addClass('fa-times');
+            } else {
+                jQuery('.search-open').fadeOut(500);
+                jQuery('.search-btn').addClass('fa-search');
+                jQuery('.search-btn').removeClass('fa-times');
+            }
+
+            event.stopPropagation();
+        });
+    }
+
+    //function handleSearchV1() {
+    //    jQuery('.search-button').click(function (event) {
+    //        jQuery('.search-open').slideDown();
+    //    });
+    //
+    //    jQuery('.search-close').click(function (event) {
+    //        jQuery('.search-open').slideUp();
+    //    });
+    //
+    //    jQuery(window).scroll(function(){
+    //      if(jQuery(this).scrollTop() > 1) jQuery('.search-open').fadeOut('fast');
+    //    });
+    //
+    //}
+
+    //Search Box v1 (Header v5)
     function handleSearchV1() {
-        jQuery('.search-button').click(function () {
-            jQuery('.search-open').slideDown();
+        jQuery('.header-v5 .search-button').click(function () {
+            jQuery('.header-v5 .search-open').slideDown();
         });
 
-        jQuery('.search-close').click(function () {
-            jQuery('.search-open').slideUp();
+        jQuery('.header-v5 .search-close').click(function () {
+            jQuery('.header-v5 .search-open').slideUp();
         });
 
         jQuery(window).scroll(function(){
-          if(jQuery(this).scrollTop() > 1) jQuery('.search-open').fadeOut('fast');
+            if(jQuery(this).scrollTop() > 1) jQuery('.header-v5 .search-open').fadeOut('fast');
         });
-
     }
 
     function handleToggle() {
@@ -77,10 +109,10 @@ var App = function () {
     function handleHeader() {
          jQuery(window).scroll(function() {
             if (jQuery(window).scrollTop()>100){
-                jQuery(".header-fixed .header-static").addClass("header-fixed-shrink");
+                jQuery(".header-fixed .header-sticky").addClass("header-fixed-shrink");
             }
             else {
-                jQuery(".header-fixed .header-static").removeClass("header-fixed-shrink");
+                jQuery(".header-fixed .header-sticky").removeClass("header-fixed-shrink");
             }
         });
     }
@@ -94,6 +126,7 @@ var App = function () {
     return {
         init: function () {
             handleBootstrap();
+            handleSearch();
             handleSearchV1();
             handleToggle();
             handleBoxed();

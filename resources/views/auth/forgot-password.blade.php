@@ -1,4 +1,4 @@
-@extends('Unify::Unify')
+@extends('Unify::unify')
 <!-- CSS Page Style -->
 
 @section('title', Lang::get('Unify::front.forgot-password'))

@@ -20,18 +20,21 @@
                         <i class="fa fa-globe"></i>
                         <a>Languages</a>
                         <ul class="languages hoverSelectorBlock">
-                            <li class="active">
-                                <a href="#">English <i class="fa fa-check"></i></a>
-                            </li>
-                            <li><a href="#">Spanish</a></li>
-                            <li><a href="#">Russian</a></li>
-                            <li><a href="#">German</a></li>
+                            @foreach(config('blog.locales') as $locale)
+                                @if(App::getLocale() == $locale)
+                                    <li class="active">
+                                        <a href="#">{{$locale}} <i class="fa fa-check"></i></a>
+                                    </li>
+                                @else
+                                    <li><a href="#">{{ $locale }}</a></li>
+                                @endif
+                            @endforeach
                         </ul>
                     </li>
                     <li class="topbar-devider"></li>
-                    <li><a href="page_faq.html">Help</a></li>
+                    <li><a href="{{ route('store.shop.checkout.index') }}">Cart (3)</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href="page_login.html">Login</a></li>
+                    <li><a href="{{ route('store.shop.login') }}">Login</a></li>
                 </ul>
             </div>
             <!-- End Topbar -->

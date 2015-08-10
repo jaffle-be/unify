@@ -1,4 +1,4 @@
-@extends('Unify::Unify-shop')
+@extends('Unify::unify-shop')
 
 @section('title', Lang::get('Unify::front.store'))
 

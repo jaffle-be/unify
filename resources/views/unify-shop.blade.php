@@ -1,9 +1,5 @@
-@extends('Unify::Unify')
-
-@section('styles-style')
-    <link rel="stylesheet" href="{{theme_asset('css/styles.css') }}">
-@stop
+@extends('Unify::unify')
 
 @section('scripts-app')
-    <script src="{{theme_asset('js/shop.app.js')}}"></script>
+    <script src="{{theme_asset('js/app.js')}}"></script>
 @stop

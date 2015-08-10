@@ -1,10 +1,6 @@
-@extends('Unify::Unify-shop')
+@extends('Unify::unify-shop')
 
 @section('title', Lang::get('Unify::front.register'))
-
-@section('styles-style')
-    <link rel="stylesheet" href="{{ theme_asset('css/shop.style.css') }}">
-@stop
 
 @section('styles-content')
     <link rel="stylesheet" href="{{ theme_asset('css/pages/log-reg-v3.min.css') }}">
@@ -140,7 +136,7 @@
                     </form>
 
                     <div class="margin-bottom-20"></div>
-                    <p class="text-center">Already you have an account? <a href="{{ route('shop.login') }}">Sign In</a></p>
+                    <p class="text-center">Already you have an account? <a href="{{ route('store.shop.login') }}">Sign In</a></p>
                 </div>
             </div>
             <!--/end row-->

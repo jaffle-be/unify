@@ -1,9 +1,9 @@
 @section('styles-header')
     <link rel="stylesheet" href="{{ theme_asset('css/headers/header-v5.css') }}">
-@stop
+    @stop
 
-@section('header')
-    <!--=== Header v5 ===-->
+    @section('header')
+            <!--=== Header v5 ===-->
     <div class="header-v5">
         <!-- Topbar v3 -->
         <div class="topbar-v3">
@@ -21,24 +21,17 @@
                         <!-- Topbar Navigation -->
                         <ul class="left-topbar">
                             <li>
-                                <a>Currency (USD)</a>
-                                <ul class="currency">
-                                    <li class="active">
-                                        <a href="#">USD <i class="fa fa-check"></i></a>
-                                    </li>
-                                    <li><a href="#">Euro</a></li>
-                                    <li><a href="#">Pound</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a>Language (EN)</a>
+                                <a>Language ({{ App::getLocale() }})</a>
                                 <ul class="language">
-                                    <li class="active">
-                                        <a href="#">English (EN)<i class="fa fa-check"></i></a>
-                                    </li>
-                                    <li><a href="#">Spanish (SPN)</a></li>
-                                    <li><a href="#">Russian (RUS)</a></li>
-                                    <li><a href="#">German (GRM)</a></li>
+                                    @foreach(config('blog.locales') as $locale)
+                                        @if($locale == App::getLocale())
+                                            <li class="active">
+                                                <a href="#">{{ $locale }}<i class="fa fa-check"></i></a>
+                                            </li>
+                                        @else
+                                            <li><a href="#">{{ $locale }}</a></li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </li>
                         </ul>
@@ -46,9 +39,8 @@
                     </div>
                     <div class="col-sm-6">
                         <ul class="list-inline right-topbar pull-right">
-                            <li><a href="#">Account</a></li>
-                            <li><a href="shop-ui-add-to-cart.html">Wishlist (0)</a></li>
-                            <li><a href="{{ route('store.shop.login') }}">Login</a> | <a href="{{ route('store.shop.register') }}">Register</a>
+                            <li><a href="{{ route('store.shop.login') }}">Login</a> |
+                                <a href="{{ route('store.shop.register') }}">Register</a>
                             </li>
                             <li><i class="search fa fa-search search-button"></i></li>
                         </ul>
@@ -90,7 +82,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-6">
-                                            <a href="shop-ui-inner.html" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+                                            <a href="{{ route('store.shop.checkout.index' ) }}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
                                         </div>
                                         <div class="col-xs-6 text-right padding-top-5">
                                             <strong>TOTAL: $0.00</strong>
@@ -105,13 +97,15 @@
                     <ul class="nav navbar-nav">
                         @foreach(Menu::get('primary menu')->items as $item)
                             @if($item->children->count() == 0)
-                                <li><a href="{{ $item->url }}"  target="{{ $item->target }}">{{ $item->name }}</a></li>
+                                <li><a href="{{ $item->url }}" target="{{ $item->target }}">{{ $item->name }}</a></li>
                             @else
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
                                     <ul class="dropdown-menu">
                                         @foreach($item->children as $child)
-                                            <li><a href="{{ $child->url }}"  target="{{ $child->target }}">{{ $child->name }}</a></li>
+                                            <li>
+                                                <a href="{{ $child->url }}" target="{{ $child->target }}">{{ $child->name }}</a>
+                                            </li>
                                         @endforeach
                                     </ul>
                                 </li>

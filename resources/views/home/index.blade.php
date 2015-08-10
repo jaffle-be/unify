@@ -1,4 +1,4 @@
-@extends('Unify::Unify')
+@extends('Unify::unify')
 
 @section('content')
         <!--=== Content ===-->

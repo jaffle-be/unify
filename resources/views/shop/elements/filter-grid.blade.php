@@ -47,14 +47,14 @@
             <div class="col-md-4">
                 <div class="product-img product-img-brd">
                     <a href="#"><img class="full-width img-responsive" src="{{ theme_asset('img/blog/16.jpg') }}" alt=""></a>
-                    <a class="product-review" href="shop-ui-inner.html">Quick review</a>
+                    <a class="product-review" href="{{ route('store.shop.product', [$product]) }}">Quick review</a>
                     <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                     <div class="shop-rgba-dark-green rgba-banner">New</div>
                 </div>
                 <div class="product-description product-description-brd margin-bottom-30">
                     <div class="overflow-h margin-bottom-5">
                         <div class="pull-left">
-                            <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+                            <h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">Double-breasted</a></h4>
                             <span class="gender text-uppercase">Men</span>
                             <span class="gender">Suits - Blazers</span>
                         </div>
@@ -76,13 +76,13 @@
             <div class="col-md-4">
                 <div class="product-img product-img-brd">
                     <a href="#"><img class="full-width img-responsive" src="{{ theme_asset('img/blog/17.jpg') }}" alt=""></a>
-                    <a class="product-review" href="shop-ui-inner.html">Quick review</a>
+                    <a class="product-review" href="{{ route('store.shop.product', [$product]) }}">Quick review</a>
                     <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                 </div>
                 <div class="product-description product-description-brd margin-bottom-30">
                     <div class="overflow-h margin-bottom-5">
                         <div class="pull-left">
-                            <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+                            <h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">Double-breasted</a></h4>
                             <span class="gender text-uppercase">Men</span>
                             <span class="gender">Suits - Blazers</span>
                         </div>
@@ -104,13 +104,13 @@
             <div class="col-md-4">
                 <div class="product-img product-img-brd">
                     <a href="#"><img class="full-width img-responsive" src="{{ theme_asset('img/blog/18.jpg') }}" alt=""></a>
-                    <a class="product-review" href="shop-ui-inner.html">Quick review</a>
+                    <a class="product-review" href="{{ route('store.shop.product', [$product]) }}">Quick review</a>
                     <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                 </div>
                 <div class="product-description product-description-brd margin-bottom-30">
                     <div class="overflow-h margin-bottom-5">
                         <div class="pull-left">
-                            <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+                            <h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">Double-breasted</a></h4>
                             <span class="gender text-uppercase">Men</span>
                             <span class="gender">Suits - Blazers</span>
                         </div>
@@ -134,13 +134,13 @@
             <div class="col-md-4">
                 <div class="product-img product-img-brd">
                     <a href="#"><img class="full-width img-responsive" src="{{ theme_asset('img/blog/21.jpg') }}" alt=""></a>
-                    <a class="product-review" href="shop-ui-inner.html">Quick review</a>
+                    <a class="product-review" href="{{ route('store.shop.product', [$product]) }}">Quick review</a>
                     <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                 </div>
                 <div class="product-description product-description-brd margin-bottom-30">
                     <div class="overflow-h margin-bottom-5">
                         <div class="pull-left">
-                            <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+                            <h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">Double-breasted</a></h4>
                             <span class="gender text-uppercase">Men</span>
                             <span class="gender">Suits - Blazers</span>
                         </div>
@@ -161,13 +161,13 @@
             <div class="col-md-4">
                 <div class="product-img product-img-brd">
                     <a href="#"><img class="full-width img-responsive" src="{{ theme_asset('img/blog/22.jpg') }}" alt=""></a>
-                    <a class="product-review" href="shop-ui-inner.html">Quick review</a>
+                    <a class="product-review" href="{{ route('store.shop.product', [$product]) }}">Quick review</a>
                     <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                 </div>
                 <div class="product-description product-description-brd margin-bottom-30">
                     <div class="overflow-h margin-bottom-5">
                         <div class="pull-left">
-                            <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+                            <h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">Double-breasted</a></h4>
                             <span class="gender text-uppercase">Men</span>
                             <span class="gender">Suits - Blazers</span>
                         </div>
@@ -189,14 +189,14 @@
             <div class="col-md-4">
                 <div class="product-img product-img-brd">
                     <a href="#"><img class="full-width img-responsive" src="{{ theme_asset('img/blog/23.jpg') }}" alt=""></a>
-                    <a class="product-review" href="shop-ui-inner.html">Quick review</a>
+                    <a class="product-review" href="{{ route('store.shop.product', [$product]) }}">Quick review</a>
                     <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                     <div class="shop-rgba-red rgba-banner">Out of stock</div>
                 </div>
                 <div class="product-description product-description-brd">
                     <div class="overflow-h margin-bottom-5">
                         <div class="pull-left">
-                            <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+                            <h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">Double-breasted</a></h4>
                             <span class="gender text-uppercase">Men</span>
                             <span class="gender">Suits - Blazers</span>
                         </div>
@@ -220,14 +220,14 @@
             <div class="col-md-4">
                 <div class="product-img product-img-brd">
                     <a href="#"><img class="full-width img-responsive" src="{{ theme_asset('img/blog/16.jpg') }}" alt=""></a>
-                    <a class="product-review" href="shop-ui-inner.html">Quick review</a>
+                    <a class="product-review" href="{{ route('store.shop.product', [$product]) }}">Quick review</a>
                     <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                     <div class="shop-rgba-dark-green rgba-banner">New</div>
                 </div>
                 <div class="product-description product-description-brd margin-bottom-30">
                     <div class="overflow-h margin-bottom-5">
                         <div class="pull-left">
-                            <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+                            <h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">Double-breasted</a></h4>
                             <span class="gender text-uppercase">Men</span>
                             <span class="gender">Suits - Blazers</span>
                         </div>
@@ -249,13 +249,13 @@
             <div class="col-md-4">
                 <div class="product-img product-img-brd">
                     <a href="#"><img class="full-width img-responsive" src="{{ theme_asset('img/blog/17.jpg') }}" alt=""></a>
-                    <a class="product-review" href="shop-ui-inner.html">Quick review</a>
+                    <a class="product-review" href="{{ route('store.shop.product', [$product]) }}">Quick review</a>
                     <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                 </div>
                 <div class="product-description product-description-brd margin-bottom-30">
                     <div class="overflow-h margin-bottom-5">
                         <div class="pull-left">
-                            <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+                            <h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">Double-breasted</a></h4>
                             <span class="gender text-uppercase">Men</span>
                             <span class="gender">Suits - Blazers</span>
                         </div>
@@ -277,13 +277,13 @@
             <div class="col-md-4">
                 <div class="product-img product-img-brd">
                     <a href="#"><img class="full-width img-responsive" src="{{ theme_asset('img/blog/18.jpg') }}" alt=""></a>
-                    <a class="product-review" href="shop-ui-inner.html">Quick review</a>
+                    <a class="product-review" href="{{ route('store.shop.product', [$product]) }}">Quick review</a>
                     <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                 </div>
                 <div class="product-description product-description-brd margin-bottom-30">
                     <div class="overflow-h margin-bottom-5">
                         <div class="pull-left">
-                            <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
+                            <h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">Double-breasted</a></h4>
                             <span class="gender text-uppercase">Men</span>
                             <span class="gender">Suits - Blazers</span>
                         </div>
