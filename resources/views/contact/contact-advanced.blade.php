@@ -4,7 +4,7 @@
 
 @section('styles-plugins')
     @parent
-
+    <link rel="stylesheet" href="{{ theme_asset('plugins/owl-carousel/owl-carousel/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ theme_asset('plugins/sky-forms-pro/skyforms/css/sky-forms.css') }}">
     <link rel="stylesheet"
           href="{{ theme_asset('plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css') }}">
@@ -22,11 +22,9 @@
     <div class="container content">
         <div class="row margin-bottom-30">
             <div class="col-md-9 mb-margin-bottom-30">
-                <div class="headline"><h2>Contact Form</h2></div>
+                <div class="headline"><h2>{{ Theme::setting('contactFormTitle') }}</h2></div>
 
-                @if($contact->form_description)
-                <p>{{$contact->form_description}}</p>
-                @endif
+                <div class="margin-bottom-20">{{ Theme::setting('contactFormText') }}</div>
 
                 @if($success)
                     <form method="post" id="sky-form3"
@@ -112,12 +110,14 @@
 
                 @include('Unify::contact.elements.widget')
 
-
             </div>
             <!--/col-md-3-->
         </div>
         <!--/row-->
+        @include('Unify::marketing.widgets.clients')
+
     </div>
+
 
     @include('Unify::contact.elements.map')
 @stop
@@ -127,6 +127,8 @@
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/gmap/gmap.js') }}"></script>
     <script type="text/javascript"
+            src="{{ theme_asset('plugins/owl-carousel/owl-carousel/owl.carousel.js') }}"></script>
+    <script type="text/javascript"
             src="{{ theme_asset('plugins/sky-forms-pro/skyforms/js/jquery.form.min.js') }}"></script>
     <script type="text/javascript"
             src="{{ theme_asset('plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js') }}"></script>
@@ -135,10 +137,14 @@
 @section('scripts-app')
     <script type="text/javascript" src="{{ theme_asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('js/pages/page_contacts.js') }}"></script>
+    <script type="text/javascript" src="{{ theme_asset('js/pages/page_contact_advanced.js') }}"></script>
+    <script type="text/javascript" src="{{ theme_asset('js/plugins/owl-carousel.js') }}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             App.init();
+            PageContactForm.initPageContactForm();
             ContactPage.initMap();
+            OwlCarousel.initOwlCarousel();
         });
     </script>
 

@@ -6,6 +6,15 @@ angular.module('theme-active')
             me.theme = theme;
             me.setSelectValue('header');
             me.setSelectValue('footer');
+            me.setStringValue('footerPostsTitle');
+            me.setStringValue('footerLinksTitle');
+            me.setStringValue('footerTweetsTitle');
+            me.setStringValue('footerContactTitle');
+            me.setStringValue('footerSocialIconsTitle');
+            me.setStringValue('footerAboutTitle');
+            me.setStringValue('footerAboutText');
+            me.setStringValue('footerNewsletterTitle');
+            me.setStringValue('footerNewsletterText');
             me.setSelectValue('breadcrumbs');
             me.setSelectValue('pagination');
             me.setSelectValue('blogOverview');
@@ -23,16 +32,25 @@ angular.module('theme-active')
         this.save = function (setting) {
             var settingObject = me.theme.settings[setting];
 
-            if(settingObject.boolean)
+            if (settingObject.boolean)
             {
                 ThemeService.saveCheckbox(me.theme, settingObject, settingObject.value)
             }
-            else{
+            else
+            {
                 ThemeService.saveSelect(me.theme, settingObject, me[setting]);
             }
         };
 
+        this.delayedSave = function(setting)
+        {
+            var settingObject = me.theme.settings[setting];
+
+            ThemeService.delayedSave(me.theme, settingObject, me[setting]);
+        };
+
         this.setSelectValue = function (select) {
+
             var list = select + 's';
 
             me[list] = me.theme.settings[select].options;
@@ -53,5 +71,12 @@ angular.module('theme-active')
         this.setCheckbox = function (checkbox) {
             me[checkbox] = me.theme.settings[checkbox];
         };
+
+        this.setStringValue = function (control) {
+            var value = me.theme.settings[control].value ?
+                me.theme.settings[control].value : {translations: {}};
+
+            me[control] = me.theme.settings[control].value;
+        }
 
     });

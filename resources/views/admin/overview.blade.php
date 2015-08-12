@@ -1,5 +1,11 @@
-<div class="wrapper wrapper-content" ng-controller="UnifyController as vm">
+<div class="wrapper wrapper-content" ng-controller="UnifyController as vm" ng-init="vm.options = {{ system_options() }}">
 
+    <tabset>
+
+        <tab ng-repeat="locale in vm.options.locales" heading="@{{ locale.locale }}" active="vm.options.locales[locale.locale].active" select="vm.options.locale = locale.locale">
+
+        </tab>
+    </tabset>
 
     <div class="row">
 
@@ -19,6 +25,26 @@
                     @include('Unify::admin.setting-dropdown', ['name' => 'breadcrumbs'])
                     @include('Unify::admin.setting-dropdown', ['name' => 'pagination'])
 
+                </div>
+
+            </div>
+
+            <div class="ibox">
+
+                <div class="ibox-title">
+                    <h5>{{ Lang::get('Unify::admin.text-customisations') }}</h5>
+                </div>
+
+                <div class="ibox-content">
+                    @include('Unify::admin.setting-string', ['name' => 'footerContactTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'footerLinksTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'footerPostsTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'footerTweetsTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'footerSocialIconsTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'footerAboutTitle'])
+                    @include('Unify::admin.setting-text', ['name' => 'footerAboutText'])
+                    @include('Unify::admin.setting-string', ['name' => 'footerNewsletterTitle'])
+                    @include('Unify::admin.setting-text', ['name' => 'footerNewsletterText'])
                 </div>
 
             </div>
@@ -54,6 +80,11 @@
                 <div class="ibox-content">
 
                     @include('Unify::admin.setting-dropdown', ['name' => 'contactLayout'])
+                    @include('Unify::admin.setting-string', ['name' => 'contactContactTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'contactWidgetTitle'])
+                    @include('Unify::admin.setting-text', ['name' => 'contactWidgetText'])
+                    @include('Unify::admin.setting-string', ['name' => 'contactFormTitle'])
+                    @include('Unify::admin.setting-text', ['name' => 'contactFormText'])
 
                 </div>
 

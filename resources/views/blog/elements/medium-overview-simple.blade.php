@@ -44,7 +44,7 @@
     <div class="col-md-7">
         <h2><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h2>
         <ul class="list-unstyled list-inline blog-info">
-            <li><i class="fa fa-calendar"></i> {{ $post->published_at->format('d M, Y') }}</li>
+            <li><i class="fa fa-calendar"></i> {{ $post->publish_at->format('d M, Y') }}</li>
             <li><i class="fa fa-tags"></i> {{ implode(', ', $post->tags->lists('name')->toArray()) }}</li>
             <li>{{ Lang::get('Unify::blog.post-by') }} <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
         </ul>

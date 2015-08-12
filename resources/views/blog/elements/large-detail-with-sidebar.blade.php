@@ -7,7 +7,7 @@
             <ul class="list-inline posted-info">
                 <li>By <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                 <li>In <a href="#">Design</a></li>
-                <li>{{ $post->published_at->format('d M, Y') }}</li>
+                <li>{{ $post->publish_at->format('d M, Y') }}</li>
             </ul>
             <h2>{{$post->title}}</h2>
 

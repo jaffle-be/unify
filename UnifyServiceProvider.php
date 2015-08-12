@@ -1,5 +1,9 @@
 <?php namespace Themes\Unify;
 
+use App\Blog\Post;
+use App\Blog\PostTranslation;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Jaffle\Tools\ServiceProvider;
 
 class UnifyServiceProvider extends ServiceProvider
@@ -31,7 +35,26 @@ class UnifyServiceProvider extends ServiceProvider
 
     protected function listeners()
     {
+        /** @var Factory $view */
+        $this->app['view']->composer('Unify::layout.footers.*', function(View $view)
+        {
+            $translations = PostTranslation::lastPublished()->take(3)->lists('post_id');
 
+            if($translations->count() == 0)
+            {
+                $view->with('posts', []);
+
+                return;
+            }
+
+            $posts = Post::with(['translations', 'images'])
+                ->whereIn('id', $translations->toArray())
+                ->get();
+
+            $posts = $posts->sortBy('publish_at')->reverse();
+
+            $view->with('posts', $posts);
+        });
     }
 
 }

@@ -106,6 +106,8 @@
     </script>
     @show
 
+@yield('scripts-footer')
+
 <!--[if lt IE 9]>
     <script src="{{ theme_asset('plugins/respond.js') }}"></script>
     <script src="{{ theme_asset('plugins/html5shiv.js') }}"></script>

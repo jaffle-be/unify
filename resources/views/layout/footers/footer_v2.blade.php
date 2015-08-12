@@ -17,9 +17,13 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="{{ route('store.home') }}"><img id="logo-footer" class="footer-logo" src="{{ asset($account->logo()) }}" alt=""></a>
+                        <div class="headline"><h2 class="heading-sm">{{ Theme::setting('footerAboutTitle') }}</h2></div>
 
-                        <p class="margin-bottom-20">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>
+                        <p class="margin-bottom-20">{{ Theme::setting('footerAboutText') }}</p>
+
+                        <div class="headline"><h2 class="heading-sm">{{ Theme::setting('footerNewsletterTitle') }}</h2></div>
+
+                        <p>{{ Theme::setting('footerNewsletterText') }}</p>
 
                         <form class="footer-subsribe">
                             <div class="input-group">
@@ -34,13 +38,11 @@
 
                     <!-- Link List -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2 class="heading-sm">Useful Links</h2></div>
+                        <div class="headline"><h2 class="heading-sm">{{ Theme::setting('footerLinksTitle') }}</h2></div>
                         <ul class="list-unstyled link-list">
-                            <li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Latest jobs</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Community</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
+                            @foreach(Menu::get('primary menu')->items as $item)
+                            <li><a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a><i class="fa fa-angle-right"></i></li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- End Link List -->
@@ -48,7 +50,7 @@
                     <!-- Latest Tweets -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="latest-tweets">
-                            <div class="headline"><h2 class="heading-sm">Latest Tweets</h2></div>
+                            <div class="headline"><h2 class="heading-sm">{{ Theme::setting('footerTweetsTitle') }}</h2></div>
                             <div class="latest-tweets-inner">
                                 <i class="fa fa-twitter"></i>
 
@@ -75,22 +77,11 @@
 
                     <!-- Address -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2 class="heading-sm">Contact Us</h2></div>
-                        <address class="md-margin-bottom-40">
-                            <i class="fa fa-home"></i>25, Lorem Lis Street, California, US <br/>
-                            <i class="fa fa-phone"></i>Phone: 800 123 3456 <br/>
-                            <i class="fa fa-globe"></i>Website: <a href="#">www.htmlstream.com</a> <br/>
-                            <i class="fa fa-envelope"></i>Email: <a href="mailto:info@anybiz.com">info@anybiz.com</a>
-                        </address>
+
+                        @include('Unify::layout.footers.elements.contacts-1', ['contact' => $account->contactInformation->first(), 'small' => true])
 
                         <!-- Social Links -->
-                        <ul class="social-icons">
-                            <li><a href="#" data-original-title="Facebook" class="rounded-x social_facebook"></a></li>
-                            <li><a href="#" data-original-title="Twitter" class="rounded-x social_twitter"></a></li>
-                            <li><a href="#" data-original-title="Goole Plus" class="rounded-x social_googleplus"></a>
-                            </li>
-                            <li><a href="#" data-original-title="Linkedin" class="rounded-x social_linkedin"></a></li>
-                        </ul>
+                        @include('Unify::layout.footers.elements.social-icons-3')
                         <!-- End Social Links -->
                     </div>
                     <!-- End Address -->
@@ -101,9 +92,10 @@
 
         <div class="copyright">
             <div class="container">
-                <p class="text-center">2015 &copy; All Rights Reserved. Unify Theme by
-                    <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a></p>
-            </div>
+                <p class="text-center">
+                    {{ Carbon\Carbon::now()->format('Y') }} &copy; <a target="_blank" href="http://digiredo.be">Digiredo</a> All Rights Reserved.
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                </p>
         </div>
         <!--/copyright-->
     </div>

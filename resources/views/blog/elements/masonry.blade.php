@@ -64,7 +64,7 @@
             <ul class="list-inline grid-boxes-news">
                 <li><span>{{ Lang::get('Unify::blog.by') }}</span> <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                 <li>|</li>
-                <li><i class="fa fa-clock-o"></i> {{ $post->published_at->format('d M, Y') }}</li>
+                <li><i class="fa fa-clock-o"></i> {{ $post->publish_at->format('d M, Y') }}</li>
                 <li>|</li>
                 <li><a href="#"><i class="fa fa-tag"></i> {{ implode(', ', $post->tags->lists('name')->toArray()) }}</a>
                 </li>

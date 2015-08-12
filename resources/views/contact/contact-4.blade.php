@@ -30,9 +30,6 @@
 
         <div class="margin-bottom-60">
 
-            <!-- Get in Touch -->
-            <h3>Get in Touch</h3>
-
             @if($success)
                 <form method="post" id="sky-form3"
                       class="sky-form contact-style">
@@ -44,12 +41,10 @@
                 <form action="{{ route('store.contact.store') }}" method="post" id="sky-form3"
                       class="sky-form contact-style">
 
-                    @if($contact->form_description)
-                        <div class="row">
-                            <p class="col-md-7">{{ $contact->form_description }}</p>
-                        </div>
-                        <br>
-                    @endif
+                    <!-- Get in Touch -->
+                    <div class="headline"><h2>{{ Theme::setting('contactFormTitle') }}</h2></div>
+
+                    <div class="margin-bottom-20">{{ Theme::setting('contactFormText') }}</div>
 
                     {!! csrf_field() !!}
                     <input name="_id" type="hidden" value="{{ $contact->id }}"/>
@@ -118,6 +113,10 @@
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/gmap/gmap.js') }}"></script>
     <script type="text/javascript"
+            src="{{ theme_asset('plugins/sky-forms-pro/skyforms/js/jquery.form.min.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ theme_asset('plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js') }}"></script>
+    <script type="text/javascript"
             src="{{ theme_asset('plugins/owl-carousel/owl-carousel/owl.carousel.js') }}"></script>
 @stop
 
@@ -129,6 +128,7 @@
         jQuery(document).ready(function () {
             App.init();
             ContactPage.initMap();
+            ContactPage.initPageContactForm();
             OwlCarousel.initOwlCarousel();
         });
     </script>

@@ -47,21 +47,6 @@ var App = function () {
         });
     }
 
-    //function handleSearchV1() {
-    //    jQuery('.search-button').click(function (event) {
-    //        jQuery('.search-open').slideDown();
-    //    });
-    //
-    //    jQuery('.search-close').click(function (event) {
-    //        jQuery('.search-open').slideUp();
-    //    });
-    //
-    //    jQuery(window).scroll(function(){
-    //      if(jQuery(this).scrollTop() > 1) jQuery('.search-open').fadeOut('fast');
-    //    });
-    //
-    //}
-
     //Search Box v1 (Header v5)
     function handleSearchV1() {
         jQuery('.header-v5 .search-button').click(function () {

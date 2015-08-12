@@ -1,5 +1,5 @@
 <!-- Contacts -->
-<div class="headline"><h2>Contacts</h2></div>
+<div class="headline"><h2>{{ Theme::setting('contactContactTitle') }}</h2></div>
 
 @if(isset($map) && $map)
 

@@ -10495,7 +10495,7 @@ topbar including in mobile version*/
 }
 /*Dotted Map*/
 .footer-v1 .footer .map-img {
-  background: url(../../img/map-img.png) 5px 60px no-repeat;
+  background: url(../img/map-img.png) 5px 60px no-repeat;
 }
 /*Copyright*/
 .footer-v1 .copyright {
@@ -11002,7 +11002,7 @@ topbar including in mobile version*/
 .contacts-section {
   color: #fff;
   position: relative;
-  background: #333333 url(../../img/bg/3.jpg) center fixed;
+  background: #333333 url(../img/bg/3.jpg) center fixed;
   background-size: cover;
 }
 .contacts-section:after {
@@ -11021,7 +11021,7 @@ topbar including in mobile version*/
   height: 100%;
   content: " ";
   position: absolute;
-  background: url(../../img/patterns/gridtile.png) repeat;
+  background: url(../img/patterns/gridtile.png) repeat;
 }
 /*Contacts Title*/
 .contacts-section .title-v1 p,
@@ -11120,6 +11120,9 @@ topbar including in mobile version*/
 }
 /*Sky Form
 ------------------------------------*/
+.sky-form fieldset {
+  background: none !important;
+}
 /*Error State*/
 .sky-form .state-error input,
 .sky-form .state-error textarea {

@@ -1,102 +1,81 @@
 @section('styles-footer')
     <link rel="stylesheet" href="{{ theme_asset('css/footers/footer-v3.css') }}">
-@section('styles-header')
+    @section('styles-header')
 
-@section('scripts-footer')
-    <!-- JS Implementing Plugins -->
+    @section('scripts-footer')
+            <!-- JS Implementing Plugins -->
     <script type="text/javascript" src="{{ theme_asset('plugins/back-to-top.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/smoothScroll.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/jquery.parallax.js') }}"></script>
-@stop
+    @stop
 
-@section('footer')
-    <!--=== Footer v3 ===-->
+    @section('footer')
+            <!--=== Footer v3 ===-->
     <div id="footer-v3" class="footer-v3">
         <div class="footer">
             <div class="container">
                 <div class="row">
                     <!-- About -->
                     <div class="col-sm-3 md-margin-bottom-40">
-                        <a href="{{ route('store.home') }}"><img id="logo-footer" class="footer-logo" src="{{ asset($account->logo()) }}" alt=""></a>
+                        <div class="thumb-headline"><h2>{{ Theme::setting('footerAboutTitle') }}</h2></div>
 
-                        <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
+                        <p class="margin-bottom-20">{{ Theme::setting('footerAboutText') }}</p>
 
-                        <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>
+                        <div class="thumb-headline"><h2>{{ Theme::setting('footerNewsletterTitle') }}</h2></div>
+
+                        <p>{{ Theme::setting('footerNewsletterText') }}</p>
+
+                        <form class="footer-subsribe">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email Address">
+                                <span class="input-group-btn">
+                                    <button class="btn-u" type="button">Go</button>
+                                </span>
+                            </div>
+                        </form>
+
                     </div>
                     <!--/col-md-3-->
                     <!-- End About -->
 
                     <!-- Simple List -->
                     <div class="col-sm-3 md-margin-bottom-40">
-                        <div class="thumb-headline"><h2>About Unify</h2></div>
-                        <ul class="list-unstyled simple-list margin-bottom-20">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Community</a></li>
-                            <li><a href="#">Stories</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
 
-                        <div class="thumb-headline"><h2>Help &amp; Information Center</h2></div>
+                        <div class="thumb-headline"><h2>{{ Theme::setting('footerLinksTitle') }}</h2></div>
                         <ul class="list-unstyled simple-list">
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">New on Unify</a></li>
-                            <li><a href="#">Tour the New Journey</a></li>
-                            <li><a href="#">Registration Requirements</a></li>
+                            @foreach(Menu::get('primary menu')->items as $item)
+                                <li>
+                                    <a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                     <!--/col-md-3-->
 
                     <div class="col-sm-3">
-                        <div class="thumb-headline"><h2>Topics</h2></div>
-                        <ul class="list-unstyled simple-list margin-bottom-20">
-                            <li><a href="#">Bootstrap</a></li>
-                            <li><a href="#">Font Awesome</a></li>
-                            <li><a href="#">WordPress</a></li>
-                            <li><a href="#">Favicon</a></li>
-                            <li><a href="#">Javascript</a></li>
-                            <li><a href="#">iOS</a></li>
-                        </ul>
-
-                        <div class="thumb-headline"><h2>Tools &amp; Formats</h2></div>
-                        <ul class="list-unstyled simple-list">
-                            <li><a href="#">Today's Paper</a></li>
-                            <li><a href="#">Journal Community</a></li>
-                            <li><a href="#">Video Canter</a></li>
-                        </ul>
-
-                        <div class="thumb-headline"><h2>Archives</h2></div>
-                        <ul class="list-unstyled simple-list">
-                            <li><a href="#">February 2014</a></li>
-                            <li><a href="#">August 2013</a></li>
-                            <li><a href="#">December 2013r</a></li>
-                        </ul>
+                        <div class="posts">
+                            <div class="thumb-headline"><h2>{{ Theme::setting('footerPostsTitle') }}</h2></div>
+                            @foreach($posts as $post)
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        <a href="{{ route('store.blog.show', [$post]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+                                            <a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            @endforeach
+                        </div>
                     </div>
                     <!--/col-md-3-->
 
                     <div class="col-sm-3">
-                        <div class="thumb-headline"><h2>Developers</h2></div>
-                        <ul class="list-unstyled simple-list margin-bottom-20">
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">Android Development</a></li>
-                            <li><a href="#">PHP Development</a></li>
-                            <li><a href="#">Programmer</a></li>
-                            <li><a href="#">Start-up</a></li>
-                        </ul>
 
-                        <div class="thumb-headline"><h2>Digital Network</h2></div>
-                        <ul class="list-unstyled simple-list">
-                            <li><a href="#">Wrapbootstrap.com</a></li>
-                            <li><a href="#">Bootstrap.com</a></li>
-                            <li><a href="#">Fortawesome.com</a></li>
-                            <li><a href="#">Jquery.com</a></li>
-                            <li><a href="#">Wordpress.com</a></li>
-                            <li><a href="#">Unslpash.com</a></li>
-                            <li><a href="#">Github.com</a></li>
-                        </ul>
+                        <div class="thumb-headline"><h2>{{ Theme::setting('footerContactTitle') }}</h2></div>
+                        @include('Unify::layout.footers.elements.contacts-3', ['contact' => $account->contactInformation->first()])
+
                     </div>
                     <!--/col-md-3-->
                     <!-- End Simple List -->
@@ -111,8 +90,8 @@
                     <!-- Terms Info-->
                     <div class="col-md-6">
                         <p>
-                            2015 &copy; All Rights Reserved. Unify Theme by
-                            <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a> |
+                            {{ Carbon\Carbon::now()->format('Y') }} &copy;
+                            <a target="_blank" href="http://digiredo.be">Digiredo</a> All Rights Reserved.
                             <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
                         </p>
                     </div>

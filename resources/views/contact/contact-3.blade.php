@@ -19,10 +19,8 @@
     <div class="container content">
         <div class="row margin-bottom-30">
             <div class="col-md-9 mb-margin-bottom-30">
-                @if($contact->form_description)
-                    <p>{{ $contact->form_description }}</p>
-                    <br>
-                @endif
+                <div class="headline"><h2>{{ Theme::setting('contactFormTitle') }}</h2></div>
+                <div class="margin-bottom-20">{{ Theme::setting('contactFormText') }}</div>
 
                 @if($success)
                     <form method="post" id="sky-form3"
@@ -130,7 +128,7 @@
         jQuery(document).ready(function () {
             App.init();
             ContactPage.initMap();
-            LoginForm.initLoginForm();
+            ContactPage.initPageContactForm();
             OwlCarousel.initOwlCarousel();
         });
     </script>

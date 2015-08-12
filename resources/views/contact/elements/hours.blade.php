@@ -1,6 +1,5 @@
-@if($contact->hours)
-        <!-- Business Hours -->
-<div class="headline"><h2>Business Hours</h2></div>
+<!-- Business Hours -->
+<div class="headline"><h2>{{ Theme::setting('contactHoursTitle') }}</h2></div>
 <ul class="list-unstyled margin-bottom-30">
     <? $teller = 0 ?>
     @while($teller < 3)
@@ -8,4 +7,3 @@
         <? $teller++ ?>
     @endwhile
 </ul>
-@endif

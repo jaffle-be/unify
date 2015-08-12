@@ -9,8 +9,8 @@
                 </a>
 
                 <p>
-                    <span>{{ $post->published_at->format('d') }}</span>
-                    <small>{{ $post->published_at->format('M y') }}</small>
+                    <span>{{ $post->publish_at->format('d') }}</span>
+                    <small>{{ $post->publish_at->format('M y') }}</small>
                 </p>
             </div>
             <div class="news-v2-desc">

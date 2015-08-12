@@ -23,11 +23,11 @@
 
                 @include('Unify::contact.elements.map', ['height' => '250px', 'margin' => true])
 
-                @if($contact->form_description)
-                    <p>{{ $contact->form_description }}</p>
-                    <br/>
-                @endif
+                <div class="headline"><h2>{{ Theme::setting('contactFormTitle') }}</h2></div>
 
+                <div class="margin-bottom-20">
+                    {{ Theme::setting('contactFormText') }}
+                </div>
 
                 @if($success)
 
@@ -145,8 +145,8 @@
     <script type="text/javascript">
         jQuery(document).ready(function () {
             App.init();
+            ContactPage.initPageContactForm();
             ContactPage.initMap();
-            LoginForm.initLoginForm();
             OwlCarousel.initOwlCarousel();
         });
     </script>

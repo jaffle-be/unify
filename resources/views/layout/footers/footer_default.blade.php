@@ -18,13 +18,13 @@
                 <div class="row">
                     <div class="col-md-4 md-margin-bottom-40">
                         <!-- About -->
-                        <div class="headline"><h2>About</h2></div>
-                        <p class="margin-bottom-25 md-margin-bottom-40">Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals.</p>
+                        <div class="headline"><h2>{{ Theme::setting('footerAboutTitle') }}</h2></div>
+                        <p class="margin-bottom-25 md-margin-bottom-40">{{ Theme::setting('footerAboutText') }}</p>
                         <!-- End About -->
 
                         <!-- Monthly Newsletter -->
-                        <div class="headline"><h2>Monthly Newsletter</h2></div>
-                        <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+                        <div class="headline"><h2>{{ Theme::setting('footerNewsletterTitle') }}</h2></div>
+                        <p>{{ Theme::setting('footerNewsletterText') }}</p>
 
                         <form class="footer-subsribe">
                             <div class="input-group">
@@ -41,50 +41,28 @@
                     <div class="col-md-4 md-margin-bottom-40">
                         <!-- Recent Blogs -->
                         <div class="posts">
-                            <div class="headline"><h2>Recent Blog Entries</h2></div>
+                            <div class="headline"><h2>{{ Theme::setting('footerPostsTitle') }}</h2></div>
+                            @foreach($posts as $post)
                             <dl class="dl-horizontal">
-                                <dt><a href="#"><img src="{{ theme_asset('img/sliders/elastislide/6.jpg') }}" alt=""/></a></dt>
+                                <dt><a href="{{ route('store.blog.show', [$post]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a></dt>
                                 <dd>
                                     <p>
-                                        <a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a>
+                                        <a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a>
                                     </p>
                                 </dd>
                             </dl>
-                            <dl class="dl-horizontal">
-                                <dt><a href="#"><img src="{{ theme_asset('img/sliders/elastislide/10.jpg') }}" alt=""/></a></dt>
-                                <dd>
-                                    <p>
-                                        <a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a>
-                                    </p>
-                                </dd>
-                            </dl>
-                            <dl class="dl-horizontal">
-                                <dt><a href="#"><img src="{{ theme_asset('img/sliders/elastislide/11.jpg') }}" alt=""/></a></dt>
-                                <dd>
-                                    <p>
-                                        <a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a>
-                                    </p>
-                                </dd>
-                            </dl>
+                            @endforeach
                         </div>
                         <!-- End Recent Blogs -->
                     </div>
                     <!--/col-md-4-->
 
                     <div class="col-md-4">
-                        @include('Unify::layout.footers.elements.contacts', ['contact' => $account->contactInformation->first()])
+                        @include('Unify::layout.footers.elements.contacts-1', ['contact' => $account->contactInformation->first()])
 
                         <!-- Social Links -->
-                        <div class="headline"><h2>Stay Connected</h2></div>
-                        <ul class="social-icons">
-                            <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
-                            <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
-                            <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
-                            <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
-                            <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
-                            <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
-                            <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
-                        </ul>
+                        <div class="headline"><h2>{{ Theme::setting('footerSocialIconsTitle') }}</h2></div>
+                        @include('Unify::layout.footers.elements.social-icons-1')
                         <!-- End Social Links -->
                     </div>
                     <!--/col-md-4-->
@@ -98,7 +76,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p>
-                            2015 &copy; Unify. ALL Rights Reserved.
+                            {{ Carbon\Carbon::now()->format('Y') }} &copy; <a target="_blank" href="http://digiredo.be">Digiredo</a> All Rights Reserved.
                             <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
                         </p>
                     </div>

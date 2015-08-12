@@ -17,10 +17,8 @@
 
             <h2>{{ $team->name }}</h2>
 
-            <p>Phasellus vitae ipsum ex. Etiam eu vestibulum ante. <br>
-                Lorem ipsum
-                <strong>dolor</strong> sit amet, consectetur adipiscing elit. Morbi libero libero, imperdiet fringilla
-            </p>
+            {{ $team->description }}
+
         </div>
 
         <div class="row team-v5 margin-bottom-30">

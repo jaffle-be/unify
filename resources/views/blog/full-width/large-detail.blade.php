@@ -21,7 +21,7 @@
                         @foreach($post->tags as $tag)
                         <li>In <a href="#">{{ $tag->name }}</a></li>
                         @endforeach
-                        <li>Posted {{ $post->published_at->format('d M, Y') }}</li>
+                        <li>Posted {{ $post->publish_at->format('d M, Y') }}</li>
                     </ul>
                     <h2><a href="#">{{ $post->title }}</a></h2>
 
