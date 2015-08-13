@@ -1,4 +1,4 @@
-<div class="form-group">
+<div class="form-group col-md-6">
 
     <label>{{ Lang::get('Unify::admin.' . $name) }}</label>
 

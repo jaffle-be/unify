@@ -29,11 +29,13 @@
                                     <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
                                 </p>
 
-                                <ul class="list-inline social-icons-v1">
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
+                                @if($member->socialLinks)
+                                    <ul class="list-inline social-icons-v1">
+                                        @foreach($member->socialLinks->available() as $name => $url)
+                                            <li><a target="_blank" href="{{ $url }}"><i class="fa fa-{{ $name }}"></i></a></li>
+                                        @endforeach
+                                    </ul>
+                                @endif
 
                             </div>
                         </div>
@@ -59,11 +61,13 @@
                                     <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
                                 </p>
 
-                                <ul class="list-inline social-icons-v1">
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
+                                @if($member->socialLinks)
+                                    <ul class="list-inline social-icons-v1">
+                                        @foreach($member->socialLinks->available() as $name => $url)
+                                            <li><a href="{{ $url }}" target="_blank"><i class="fa fa-{{ $name }}"></i></a></li>
+                                        @endforeach
+                                    </ul>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -79,7 +83,7 @@
 
                 <? $counter++ ?>
                 @endforeach
-                <!-- End Team Blocks -->
+                        <!-- End Team Blocks -->
 
     </div>
 

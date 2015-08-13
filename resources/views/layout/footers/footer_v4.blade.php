@@ -1,6 +1,4 @@
-@section('styles-footer')
-    <link rel="stylesheet" href="{{ theme_asset('css/footers/footer-v4.css') }}">
-    @stop
+
 
     @section('scripts-footer')
             <!-- JS Implementing Plugins -->

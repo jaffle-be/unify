@@ -1,7 +1,9 @@
-<ul class="social-icons">
-    <li><a href="#" data-original-title="Facebook" class="rounded-x social_facebook"></a></li>
-    <li><a href="#" data-original-title="Twitter" class="rounded-x social_twitter"></a></li>
-    <li><a href="#" data-original-title="Goole Plus" class="rounded-x social_googleplus"></a>
-    </li>
-    <li><a href="#" data-original-title="Linkedin" class="rounded-x social_linkedin"></a></li>
-</ul>
+@if($account->socialLinks)
+    <ul class="social-icons">
+        @foreach($account->socialLinks->available() as $name => $url)
+            <li>
+                <a target="_blank" href="{{ $url }}" data-original-title="{{ ucfirst($name) }}" class="rounded-x social_{{ $name }}"></a>
+            </li>
+        @endforeach
+    </ul>
+@endif

@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css') }}">
 
 
-@stop
+    @stop
 
-@section('content')
+    @section('content')
 
 
             <!-- About Me Block -->
     <div class="container content-sm">
+        <div class="text-center margin-bottom-40">
+            <h2 class="title-v2 title-center">{{ Theme::setting('teamMemberAboutTitle') }}</h2>
+        </div>
+
         <div class="row about-me">
             <div class="col-sm-4 shadow-wrapper md-margin-bottom-40">
                 <div class="box-shadow shadow-effect-2">
@@ -28,12 +32,13 @@
                         <h2>{{$member->name}}</h2>
                         <span>{{ $member->function }}</span>
                     </div>
-                    <ul class="social-icons pull-right">
-                        <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="#"></a></li>
-                        <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="#"></a></li>
-                        <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="#"></a></li>
-                        <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="#"></a></li>
-                    </ul>
+                    @if($member->socialLinks)
+                        <ul class="social-icons pull-right">
+                            @foreach($member->socialLinks->available() as $name => $url)
+                            <li><a class="rounded-x social_{{ $name }}" data-original-title="{{ ucfirst($name) }}" target="_blank" href="{{ $url }}"></a></li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </div>
                 <p>{{ $member->bio }}</p><br>
 
@@ -62,16 +67,16 @@
             <!-- End Parallax Quote -->
 
     <!-- Portfolio -->
-    @include('Unify::team.elements.portfolio', ['projects' => $member->projects]);
+    @include('Unify::team.elements.portfolio', ['projects' => $member->projects, 'tags' => $member->projects->getUniqueTags()]);
     <!-- End Portfolio -->
 
     <!-- Parallax Counter -->
     @include('Unify::team.elements.counters')
-    <!-- End Parallax Counter -->
+            <!-- End Parallax Counter -->
 
     <!-- Call To Action -->
     @include('Unify::team.elements.hire-me')
-    <!-- End Call To Action -->
+            <!-- End Call To Action -->
 
 
 @stop

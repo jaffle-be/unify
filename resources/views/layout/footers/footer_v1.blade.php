@@ -1,7 +1,3 @@
-@section('styles-footer')
-    <link rel="stylesheet" href="{{ theme_asset('css/footers/footer-v1.css') }}">
-@stop
-
 @section('scripts-footer')
     <script type="text/javascript" src="{{ theme_asset('plugins/back-to-top.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/smoothScroll.js') }}"></script>
@@ -19,6 +15,7 @@
                         <div class="headline"><h2>{{ Theme::setting('footerAboutTitle') }}</h2></div>
                             <p>{{ Theme::setting('footerAboutText') }}</p>
 
+                        @include('Unify::layout.footers.elements.newsletter')
                     </div>
                     <!-- End About -->
 

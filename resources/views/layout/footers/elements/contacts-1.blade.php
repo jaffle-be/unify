@@ -13,10 +13,6 @@
         <i class="fa fa-phone"></i>&nbsp;{{ $contact->phone }}<br>
     @endif
 
-    @if($contact->website)
-        <i class="fa fa-globe"></i>&nbsp;{{ $contact->website }}<br>
-    @endif
-
     @if($contact->vat)
         <i class="fa fa-money"></i>&nbsp;{{ $contact->vat }}<br>
     @endif

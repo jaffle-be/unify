@@ -1,6 +1,7 @@
-<ul class="list-inline shop-social">
-    <li><a href="#"><i class="fb rounded-1x fa fa-facebook"></i></a></li>
-    <li><a href="#"><i class="tw rounded-1x fa fa-twitter"></i></a></li>
-    <li><a href="#"><i class="gp rounded-1x fa fa-google-plus"></i></a></li>
-    <li><a href="#"><i class="yt rounded-1x fa fa-youtube"></i></a></li>
-</ul>
+@if($account->socialLinks)
+    <ul class="list-inline shop-social">
+        @foreach($account->socialLinks->available() as $name => $url)
+            <li><a href="{{ $url }}" target="_blank"><i class="rounded-1x fa fa-{{ $name }}"></i></a></li>
+        @endforeach
+    </ul>
+@endif

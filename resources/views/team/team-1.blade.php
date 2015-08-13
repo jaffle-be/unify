@@ -28,11 +28,13 @@
                         <img class="img-responsive" src="{{ asset($membership->member->thumbnail(380) ? : 'assets/img/team/img1-md.jpg') }}" alt="">
 
                         <div class="team-hover">
+                            @if($membership->member->socialLinks)
                             <ul class="list-inline team-social-v5">
-                                <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a></li>
+                                @foreach($membership->member->socialLinks->available() as $name => $url)
+                                <li><a target="_blank" href="{{ $url }}"><i class="rounded-x fa fa-{{$name}}"></i></a></li>
+                                @endforeach
                             </ul>
+                            @endif
                             <span>
                                 <a href="{{ route('store.team.show', [$membership->member]) }}">{{ Lang::get('Unify::read-more') }}</a>
                             </span>

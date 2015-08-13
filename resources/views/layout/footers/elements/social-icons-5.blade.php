@@ -1,8 +1,7 @@
-<ul class="list-inline dark-social-v2">
-    <li><a href="#"><i class="rounded-sm fa fa-facebook"></i></a></li>
-    <li><a href="#"><i class="rounded-sm fa fa-twitter"></i></a></li>
-    <li><a href="#"><i class="rounded-sm fa fa-google-plus"></i></a></li>
-    <li><a href="#"><i class="rounded-sm fa fa-instagram"></i></a></li>
-    <li><a href="#"><i class="rounded-sm fa fa-tumblr"></i></a></li>
-    <li><a href="#"><i class="rounded-sm fa fa-pinterest"></i></a></li>
-</ul>
+@if($account->socialLinks)
+    <ul class="list-inline dark-social-v2">
+        @foreach($account->socialLinks->available() as $name => $url)
+        <li><a target="_blank" href="{{ $url }}"><i class="rounded-sm fa fa-{{ $name }}"></i></a></li>
+        @endforeach
+    </ul>
+@endif

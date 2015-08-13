@@ -7,11 +7,19 @@
         </tab>
     </tabset>
 
+
+    <tabset>
+
+        <tab heading="test"></tab>
+        <tab heading="test"></tab>
+        <tab heading="test"></tab>
+        <tab heading="test"></tab>
+    </tabset>
+
+
     <div class="row">
 
-
-        <div class="col-md-6 col-lg-3 col-xs-12">
-
+        <div class="col-xs-12 col-md-6">
             <div class="ibox">
 
                 <div class="ibox-title">
@@ -25,17 +33,6 @@
                     @include('Unify::admin.setting-dropdown', ['name' => 'breadcrumbs'])
                     @include('Unify::admin.setting-dropdown', ['name' => 'pagination'])
 
-                </div>
-
-            </div>
-
-            <div class="ibox">
-
-                <div class="ibox-title">
-                    <h5>{{ Lang::get('Unify::admin.text-customisations') }}</h5>
-                </div>
-
-                <div class="ibox-content">
                     @include('Unify::admin.setting-string', ['name' => 'footerContactTitle'])
                     @include('Unify::admin.setting-string', ['name' => 'footerLinksTitle'])
                     @include('Unify::admin.setting-string', ['name' => 'footerPostsTitle'])
@@ -45,6 +42,8 @@
                     @include('Unify::admin.setting-text', ['name' => 'footerAboutText'])
                     @include('Unify::admin.setting-string', ['name' => 'footerNewsletterTitle'])
                     @include('Unify::admin.setting-text', ['name' => 'footerNewsletterText'])
+
+                    <div class="clearfix"></div>
                 </div>
 
             </div>
@@ -52,7 +51,8 @@
         </div>
 
 
-        <div class="col-md-6 col-lg-3 col-xs-12">
+
+        <div class="col-xs-12 col-md-6">
 
             <div class="ibox">
 
@@ -63,14 +63,16 @@
                 <div class="ibox-content">
                     @include('Unify::admin.setting-dropdown', ['name' => 'blogOverview'])
                     @include('Unify::admin.setting-dropdown', ['name' => 'blogDetail'])
+
+                    <div class="clearfix"></div>
                 </div>
 
             </div>
+
         </div>
 
 
-        <div class="col-md-6 col-lg-3 col-xs-12">
-
+        <div class="col-xs-12 col-md-6">
             <div class="ibox">
 
                 <div class="ibox-title">
@@ -86,13 +88,13 @@
                     @include('Unify::admin.setting-string', ['name' => 'contactFormTitle'])
                     @include('Unify::admin.setting-text', ['name' => 'contactFormText'])
 
+                    <div class="clearfix"></div>
                 </div>
 
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 col-xs-12">
-
+        <div class="col-xs-12 col-md-6">
             <div class="ibox">
 
                 <div class="ibox-title">
@@ -105,18 +107,27 @@
                     @include('Unify::admin.setting-dropdown', ['name' => 'teamDetail'])
                     @include('Unify::admin.setting-checkbox', ['name' => 'teamHiring'])
                     @include('Unify::admin.setting-checkbox', ['name' => 'teamHireMe'])
+                    @include('Unify::admin.setting-checkbox', ['name' => 'teamLightQuote'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamMemberCounterLabel1'])
+                    @include('Unify::admin.setting-numeric', ['name' => 'teamMemberCounterValue1'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamMemberCounterLabel2'])
+                    @include('Unify::admin.setting-numeric', ['name' => 'teamMemberCounterValue2'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamMemberCounterLabel3'])
+                    @include('Unify::admin.setting-numeric', ['name' => 'teamMemberCounterValue3'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamMemberCounterLabel4'])
+                    @include('Unify::admin.setting-numeric', ['name' => 'teamMemberCounterValue4'])
 
+                    <div class="clearfix"></div>
                 </div>
 
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 col-xs-12">
-
+        <div class="col-xs-12 col-md-6">
             <div class="ibox">
 
                 <div class="ibox-title">
-                    <h5>{{ Lang::get('Unify::admin.team-layout') }}</h5>
+                    <h5>{{ Lang::get('Unify::admin.portfolio-layout') }}</h5>
                 </div>
 
                 <div class="ibox-content">
@@ -125,13 +136,16 @@
                     @include('Unify::admin.setting-checkbox', ['name' => 'portfolioGrid'])
                     @include('Unify::admin.setting-checkbox', ['name' => 'portfolioSpaced'])
 
+                    <div class="clearfix"></div>
                 </div>
 
             </div>
         </div>
 
 
+
     </div>
+
 
 
 </div>

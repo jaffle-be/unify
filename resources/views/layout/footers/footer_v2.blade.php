@@ -1,7 +1,3 @@
-@section('styles-footer')
-    <link rel="stylesheet" href="{{ theme_asset('css/footers/footer-v2.css') }}">
-@stop
-
 @section('scripts-footer')
 
     <script type="text/javascript" src="{{ theme_asset('plugins/back-to-top.js') }}"></script>

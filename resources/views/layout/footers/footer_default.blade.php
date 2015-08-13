@@ -1,6 +1,3 @@
-@section('styles-footer')
-    <link rel="stylesheet" href="{{ theme_asset('css/footers/footer-default.css') }}">
-@stop
 
             <!-- JS Implementing Plugins -->
 @section('scripts-footer')
@@ -22,19 +19,7 @@
                         <p class="margin-bottom-25 md-margin-bottom-40">{{ Theme::setting('footerAboutText') }}</p>
                         <!-- End About -->
 
-                        <!-- Monthly Newsletter -->
-                        <div class="headline"><h2>{{ Theme::setting('footerNewsletterTitle') }}</h2></div>
-                        <p>{{ Theme::setting('footerNewsletterText') }}</p>
-
-                        <form class="footer-subsribe">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Email Address">
-                                <span class="input-group-btn">
-                                    <button class="btn-u" type="button">Subscribe</button>
-                                </span>
-                            </div>
-                        </form>
-                        <!-- End Monthly Newsletter -->
+                        @include('Unify::layout.footers.elements.newsletter')
                     </div>
                     <!--/col-md-4-->
 

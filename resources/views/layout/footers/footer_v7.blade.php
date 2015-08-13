@@ -1,7 +1,3 @@
-@section('styles-footer')
-    <link rel="stylesheet" href="{{ theme_asset('css/footers/footer-v7.css') }}">
-@stop
-
 @section('footer')
 
     <!--=== Footer v7 ===-->
