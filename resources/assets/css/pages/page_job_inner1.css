@@ -1,0 +1,297 @@
+/*Text Colors
+------------------------------------*/
+.color-sea {
+  color: #1abc9c;
+}
+.color-red {
+  color: #e74c3c;
+}
+.color-aqua {
+  color: #27d7e7;
+}
+.color-blue {
+  color: #3498db;
+}
+.color-grey {
+  color: #95a5a6;
+}
+.color-dark {
+  color: #555555;
+}
+.color-green {
+  color: #72c02c;
+}
+.color-brown {
+  color: #9c8061;
+}
+.color-light {
+  color: #ffffff;
+}
+.color-orange {
+  color: #e67e22;
+}
+.color-yellow {
+  color: #f1c40f;
+}
+.color-green1 {
+  color: #2ecc71;
+}
+.color-purple {
+  color: #9b6bcc;
+}
+.color-inherit {
+  color: inherit;
+}
+.color-dark-blue {
+  color: #4765a0;
+}
+.color-light-grey {
+  color: #585f69;
+}
+.color-light-green {
+  color: #79d5b3;
+}
+/*Background Colors
+------------------------------------*/
+.bg-color-dark,
+.bg-color-sea,
+.bg-color-red,
+.bg-color-aqua,
+.bg-color-blue,
+.bg-color-grey,
+.bg-color-light,
+.bg-color-green,
+.bg-color-brown,
+.bg-color-orange,
+.bg-color-green1,
+.bg-color-purple,
+.bg-color-dark-blue,
+.bg-color-light-grey,
+.bg-color-light-green {
+  color: #fff;
+}
+.bg-color-white {
+  color: #555;
+}
+.bg-color-dark {
+  background-color: #555 !important;
+}
+.bg-color-white {
+  background-color: #fff !important;
+}
+.bg-color-sea {
+  background-color: #1abc9c !important;
+}
+.bg-color-red {
+  background-color: #e74c3c !important;
+}
+.bg-color-aqua {
+  background-color: #27d7e7 !important;
+}
+.bg-color-blue {
+  background-color: #3498db !important;
+}
+.bg-color-grey {
+  background-color: #95a5a6 !important;
+}
+.bg-color-light {
+  background-color: #f7f7f7 !important;
+}
+.bg-color-green {
+  background-color: #72c02c !important;
+}
+.bg-color-brown {
+  background-color: #9c8061 !important;
+}
+.bg-color-orange {
+  background-color: #e67e22 !important;
+}
+.bg-color-green1 {
+  background-color: #2ecc71 !important;
+}
+.bg-color-purple {
+  background-color: #9b6bcc !important;
+}
+.bg-color-dark-blue {
+  background-color: #4765a0 !important;
+}
+.bg-color-light-grey {
+  background-color: #585f69 !important;
+}
+.bg-color-light-green {
+  background-color: #79d5b3 !important;
+}
+.rgba-red {
+  background-color: rgba(231, 76, 60, 0.8);
+}
+.rgba-blue {
+  background-color: rgba(52, 152, 219, 0.8);
+}
+.rgba-aqua {
+  background-color: rgba(39, 215, 231, 0.8);
+}
+.rgba-yellow {
+  background-color: rgba(241, 196, 15, 0.8);
+}
+.rgba-default {
+  background-color: rgba(114, 192, 44, 0.8);
+}
+.rgba-purple {
+  background-color: rgba(155, 107, 204, 0.8);
+}
+/*Grey Backroud*/
+.bg-grey {
+  background: #f7f7f7;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+/*Job-Description
+------------------------------------*/
+.job-description {
+  padding-bottom: 30px;
+  position: relative;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+/*Visit*/
+.job-description .visit {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.job-description .visit h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+/*Left-Inner*/
+.job-description .left-inner {
+  padding: 20px;
+  background: #fff;
+  position: relative;
+}
+.job-description i.position-top {
+  color: #777;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  min-width: 28px;
+  padding: 5px 4px;
+  position: absolute;
+  text-align: center;
+}
+.job-description i.position-top:hover {
+  color: #fff;
+  background: #585f69;
+}
+.job-description .left-inner img {
+  float: left;
+  width: 80px;
+  height: auto;
+  padding: 3px;
+  margin: 0 10px 10px 0;
+  border: 1px solid #eee;
+}
+.job-description .left-inner h3 {
+  margin: 0 0 5px;
+}
+.job-description .left-inner p.hex {
+  margin-bottom: 5px;
+}
+.job-description .star-vote {
+  float: left;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.job-description .star-vote li {
+  padding: 0;
+}
+/*Progresses*/
+.job-description .progression span {
+  float: left;
+  width: 150px;
+  margin: -8px 15px 0 0;
+}
+/*Right-Inner*/
+.job-description .right-inner {
+  padding: 20px;
+  background: #fff;
+}
+.job-description .right-inner img {
+  float: left;
+  width: 90px;
+  height: auto;
+  margin-right: 10px;
+}
+.job-description .right-inner .font-s {
+  font-size: 18px;
+}
+.job-description .right-inner hr {
+  margin: 15px 0;
+}
+/*P-chart-v2*/
+.job-description .p-chart {
+  overflow: hidden;
+}
+.job-description .p-chart h3 {
+  font-size: 16px;
+}
+.job-description .p-chart .circle {
+  float: left;
+  margin-right: 10px;
+}
+.job-description .p-chart .overflow-h li i,
+.job-description .p-chart .overflow-h li a {
+  color: #72c02c;
+}
+.job-description .p-chart .overflow-h li a {
+  font-size: 11px;
+}
+/*Circle in Responsive*/
+@media (max-width: 450px) {
+  .job-description .p-chart.col-xs-6 {
+    width: 100%;
+  }
+}
+/*Save-Job*/
+.job-description .save-job li {
+  padding: 2px 0;
+}
+.job-description .save-job i {
+  color: #555;
+  min-width: 25px;
+  text-align: center;
+}
+.job-description .save-job a {
+  color: #555;
+}
+.job-description .save-job a:hover {
+  color: #72c02c;
+}
+/*Overview*/
+.job-description .overview i {
+  color: #fff;
+  float: left;
+  min-width: 38px;
+  font-size: 20px;
+  padding: 10px 3px;
+  text-align: center;
+  margin-right: 10px;
+  background: #585f69;
+}
+/*People-Say*/
+.job-description .people-say img {
+  float: left;
+  width: 40px;
+  height: auto;
+  margin: 6px 10px 0 0;
+}
+.job-description .people-say .overflow-h span {
+  font-weight: 700;
+}
+.job-description .people-say .overflow-h p {
+  font-style: italic;
+  line-height: 1.2;
+}
+.job-description .people-say .overflow-h small {
+  text-align: right;
+  font-style: italic;
+}

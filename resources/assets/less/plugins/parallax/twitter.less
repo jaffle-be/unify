@@ -1,0 +1,72 @@
+/*Parallax Twitter (Owl Carousel)
+------------------------------------*/
+.parallax-twitter {
+  color: #fff;
+  padding: 100px 0;
+  position: relative;
+  text-align: center;
+  background: #333 url(../img/bg/19.jpg) 50% 0 fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.parallax-twitter:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+}
+
+.parallax-twitter:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  position: absolute;
+  background: url(../img/patterns/gridtile.png) repeat;
+}
+
+.parallax-twitter-in {
+  z-index: 1;
+  position: relative;
+}
+
+/*Twitter Block (owl-controls)*/
+.parallax-twitter-in ul {
+  margin: 0;
+}
+
+.parallax-twitter-in li {
+  color: #fff;
+}
+
+.parallax-twitter-in li p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.parallax-twitter-in li a {
+  color: #eee;
+  text-decoration: underline;
+}
+
+.parallax-twitter-in li a:hover {
+  text-decoration: none;
+}
+
+.parallax-twitter-in li span {
+  color: #ddd;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.parallax-twitter-in .owl-page {
+  width: 18px;
+}
