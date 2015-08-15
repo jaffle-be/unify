@@ -114,7 +114,7 @@
             <!--/col-md-3-->
         </div>
         <!--/row-->
-        @include('Unify::marketing.widgets.clients')
+        @include('Unify::layout.widgets.clients')
 
     </div>
 

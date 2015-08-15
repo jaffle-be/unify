@@ -16,14 +16,7 @@
             <div class="news-v2-desc">
                 <h3><a href=" {{ route('store.blog.show', [$post]) }}">{{ $post->title}}</a></h3>
                 <small>By <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a> |
-                    <? $teller = 0 ?>
-                    @foreach($post->tags as $tag)
-                        <? $teller++ ?>
-                        <a href="#">{{ $tag->name }}</a>
-                        @if($teller != $post->tags->count())
-                            ,
-                        @endif
-                    @endforeach
+                    {!! $post->tags->format(null, ', ') !!}
                 </small>
                 <p>{{ $post->extract }}</p>
             </div>

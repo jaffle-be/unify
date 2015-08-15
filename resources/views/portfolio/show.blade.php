@@ -48,10 +48,22 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="headline"><h2>{{ Lang::get('Unify::portfolio.project-details') }}</h2></div>
+                    @if($project->client && $project->client->images)
+                        <div class="text-center margin-bottom-20">
+                        <img src="{{ asset($project->client->images->thumbnail(null, 90)) }}" alt="{{$project->client->images->name}}">
+                        </div>
+                    @endif
+
                     <ul class="list-unstyled project-details">
-                        <li><strong>Client:</strong>{{ $project->client_name }}</li>
+                        @if($project->client)
+                            <li><strong>Client:</strong> {{ $project->client->name }}</li>
+                        @endif
                         <li><strong>Date:</strong> {{ $project->date->format('d F Y') }}</li>
-                        <li><strong>Categories:</strong> <a href="#">Web Design,</a> <a href="#">Graphic</a></li>
+                        @if($project->tags->count())
+                            <li>
+                                <strong>Categories:</strong> {!! $project->tags->format('<a href=":url">:name</a>', ', ') !!}
+                            </li>
+                        @endif
                         <li><strong>Website:</strong>
                             <a target="_blank" href="{{ $project->website }}">{{ $project->website }}</a></li>
                         @if($project->collaborators->count())

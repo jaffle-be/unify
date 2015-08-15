@@ -113,7 +113,7 @@
         </div>
         <!--/row-->
 
-        @include('Unify::marketing.widgets.clients')
+        @include('Unify::layout.widgets.clients')
     </div>
 
 @stop

@@ -15,9 +15,7 @@
         <ul class="list-unstyled list-inline blog-tags">
             <li>
                 <i class="fa fa-tags"></i>
-                @foreach($post->tags as $tag)
-                    <a href="#">{{ $tag->name }}</a>
-                @endforeach
+                {!!  $post->tags->format() !!}
             </li>
         </ul>
     </div>

@@ -56,9 +56,9 @@
         <div class="timeline-footer">
             <ul class="list-unstyled list-inline blog-info">
                 <li><i class="fa fa-clock-o"></i> {{ $post->publish_at->format('d M, Y') }}</li>
-                <li><i class="fa fa-tag"></i> {{ implode(', ', $post->tags->lists('name')->toArray()) }}</li>
+                <li><i class="fa fa-tag"></i> {!!  $post->tags->format() !!}</li>
+                <li><a href="{{ route('store.team.show',[$post->user]) }}"><i class="fa fa-pencil"></i> {{ $post->user->name }}</a></li>
             </ul>
-            <a class="likes" href="#"><i class="fa fa-pencil"></i> <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></a>
         </div>
     </div>
 </li>

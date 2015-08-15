@@ -8,9 +8,9 @@
 
             <h4>{{ $post->user->name }}</h4>
             <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                @foreach($post->user->socialLinks->available() as $name => $url)
+                    <li><a target="_blank" href="{{ $url }}"><i class="fa fa-{{ $name }}"></i></a></li>
+                @endforeach
             </ul>
         </div>
         <p>{{$post->user->bio}}</p>

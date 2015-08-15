@@ -51,9 +51,7 @@
         <div class="news-v3-in-sm no-padding">
             <ul class="list-inline posted-info">
                 <li>{{ Lang::get('Unify::blog.post-by') }} <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
-                @foreach($post->tags as $tag)
-                    <li>In <a href="#">{{ $tag->name }}</a></li>
-                @endforeach
+                    <li>In {!!  $post->tags->format(null, ', ') !!}</li>
                 <li>Posted {{ $post->publish_at->format('d M, Y') }}</li>
             </ul>
             <h2><a href="{{ route('store.blog.show', [$post]) }}">{{$post->title}}</a></h2>

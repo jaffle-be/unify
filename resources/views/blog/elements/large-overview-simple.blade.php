@@ -81,7 +81,7 @@
             {{--<li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>--}}
             <li><i class="fa fa-tags"></i>
 
-                {{ implode(', ', $post->tags->lists('name')->toArray()) }}
+                {!! $post->tags->format() !!}
 
 
             </li>

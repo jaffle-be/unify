@@ -19,6 +19,6 @@
     </div>
     <div class="cbp-title-dark">
         <div class="cbp-l-grid-agency-title">{{ $project->title }}</div>
-        <div class="cbp-l-grid-agency-desc">Web Design / Graphic</div>
+        <div class="cbp-l-grid-agency-desc">{!! $project->tags->format() !!}</div>
     </div>
 </div>

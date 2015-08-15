@@ -66,7 +66,7 @@
                 <li>|</li>
                 <li><i class="fa fa-clock-o"></i> {{ $post->publish_at->format('d M, Y') }}</li>
                 <li>|</li>
-                <li><a href="#"><i class="fa fa-tag"></i> {{ implode(', ', $post->tags->lists('name')->toArray()) }}</a>
+                <li><a href="#"><i class="fa fa-tag"></i> {!!  $post->tags->format() !!}</a>
                 </li>
             </ul>
             <p>{{ $post->extract }}</p>
