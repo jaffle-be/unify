@@ -40,7 +40,9 @@
                             <li class="menu-icons">
                                 <i class="menu-icons-style search search-close search-btn fa fa-search"></i>
                                 <div class="search-open">
-                                    <input type="text" class="animated fadeIn form-control" placeholder="Start searching ...">
+                                    <form action="{{ route('store.search.index') }}">
+                                        <input type="text" name="query" class="animated fadeIn form-control" placeholder="Start searching ...">
+                                    </form>
                                 </div>
                             </li>
                         </ul>    

@@ -74,7 +74,9 @@
 
                         <div class="search-open">
                             <div class="input-group animated fadeInDown">
-                                <input type="text" class="form-control" placeholder="Search">
+                                <form action="{{ route('store.search.index') }}">
+                                    <input type="text" name="query" class="form-control" placeholder="Search">
+                                </form>
                                 <span class="input-group-btn">
                                     <button class="btn-u" type="button">Go</button>
                                 </span>

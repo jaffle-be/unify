@@ -1,6 +1,6 @@
 <div class="blog-author margin-bottom-30">
     <a href="{{ route('store.team.show',[$post->user]) }}">
-        <img src="{{ asset($user->thumbnail(80)) }}" alt="">
+        <img src="{{ asset($post->user->thumbnail(80)) }}" alt="">
     </a>
 
     <div class="blog-author-desc">
