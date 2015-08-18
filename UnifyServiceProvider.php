@@ -57,16 +57,20 @@ class UnifyServiceProvider extends ServiceProvider
             $view->with('posts', $posts);
         });
 
-
         $this->app['view']->composer('Unify::layout.widgets.clients', function(View $view){
 
             $clients = Client::has('images', '>', 0)
                 ->take(30)
                 ->get();
 
-            $amount = $clients->count() > 10 ? 10 : $clients->count();
+            if($clients->count())
+            {
+                $amount = $clients->count() > 10 ? 10 : $clients->count();
 
-            $view->with('clients', $clients->shuffle()->random($amount));
+                $clients = $clients->shuffle()->random($amount);
+            }
+
+            $view->with('clients', $clients);
 
         });
 

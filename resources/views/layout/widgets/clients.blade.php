@@ -1,3 +1,4 @@
+@if($clients->count())
 <!-- Owl Clients v1 -->
 <div class="headline"><h2>{{ Lang::get('Unify::widgets.our_clients') }}</h2></div>
 <div class="owl-clients-v1">
@@ -8,3 +9,4 @@
     @endforeach
 </div>
 <!-- End Owl Clients v1 -->
+@endif
