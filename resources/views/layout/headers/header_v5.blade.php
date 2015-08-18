@@ -9,7 +9,9 @@
         <div class="topbar-v3">
             <div class="search-open">
                 <div class="container">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <form action="{{ route('store.search.index') }}">
+                        <input type="text" class="form-control" name="query" placeholder="Search">
+                    </form>
 
                     <div class="search-close"><i class="icon-close"></i></div>
                 </div>

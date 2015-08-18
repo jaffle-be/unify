@@ -85,8 +85,7 @@
                 <div id="grid-container" class="cbp-l-grid-agency">
 
                     @foreach($relatedProjects as $project)
-                        <? $image = $project->images->first() ?>
-                        @include('Unify::portfolio.elements.related-item', ['project' => $project, 'image' => $image])
+                        @include('Unify::portfolio.elements.related-item', ['project' => $project])
                     @endforeach
 
                 </div>
