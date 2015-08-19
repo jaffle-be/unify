@@ -21,7 +21,7 @@
                                         <span class="heading">Languages</span>
                                     </a>
                                     <ul class="languages-dropdown" role="menu">
-                                        @foreach(config('blog.locales') as $locale)
+                                        @foreach(config('system.locales') as $locale)
                                             @if(App::getLocale() == $locale)
                                             <li class="active"><a>{{ $locale }}</a></li>
                                             @else
