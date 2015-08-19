@@ -34,7 +34,7 @@
                     <a href="{{ route('store.team.show', [$membership->member]) }}" class="cbp-caption"
                        data-title="World Clock Widget<br>by Paul Flavius Nechita">
                         <div class="cbp-caption-defaultWrap">
-                            <img src="{{ asset($membership->member->thumbnail(380) ? : 'assets/img/team/img2-md.jpg') }}" alt="">
+                            <img src="{{ asset($membership->member->thumbnail(380)) ? : theme_asset('img/team/img2-md.jpg') }}" alt="">
                         </div>
                         <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignLeft">
