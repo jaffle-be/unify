@@ -28,7 +28,12 @@
         <!--/end Grid Container-->
     </div>
     <!--=== End Cube-Portfdlio ===-->
+    @else
+        <div class="wrapper wrapper-content">
 
+            {{ Lang::get('Unify::portfolio.no-projects') }}
+
+        </div>
     @endif
 
 @stop
