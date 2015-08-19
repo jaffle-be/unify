@@ -22,11 +22,11 @@ gulp.task('default', ['admin-theme', 'theme-page-styles']);
 gulp.task('admin-theme', function()
 {
     return gulp.src([
-            'resources/assets/js/dist/admin/config.js',
-            'resources/assets/js/dist/admin/services.js',
-            'resources/assets/js/dist/admin/directives.js',
-            'resources/assets/js/dist/admin/translations.js',
-            'resources/assets/js/dist/admin/controllers.js',
+            'resources/assets/js/admin/config.js',
+            'resources/assets/js/admin/services.js',
+            'resources/assets/js/admin/directives.js',
+            'resources/assets/js/admin/translations.js',
+            'resources/assets/js/admin/controllers.js',
         ])
         .pipe(plumber())
         .pipe(concat('unify.js'))
