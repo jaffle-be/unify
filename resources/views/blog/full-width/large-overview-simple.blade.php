@@ -9,16 +9,19 @@
 @section('content')
     <div class="container content blog-full-width">
 
-        <? $counter = 0 ?>
-        <? $posts->loadImageSizes(1140) ?>
-        @foreach($posts as $post)
+        @if($posts->count())
+            <? $counter = 0 ?>
+            <? $posts->loadImageSizes(1140) ?>
+            @foreach($posts as $post)
 
-            @include('Unify::blog.elements.large-overview-simple', ['post' => $post, 'counter' => $counter])
+                @include('Unify::blog.elements.large-overview-simple', ['post' => $post, 'counter' => $counter])
 
-            <? $counter++ ?>
+                <? $counter++ ?>
 
-        @endforeach
+            @endforeach
 
-        @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+            @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+
+        @endif
     </div>
 @stop

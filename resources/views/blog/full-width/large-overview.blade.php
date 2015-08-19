@@ -6,12 +6,15 @@
     <div class="bg-color-light">
         <div class="container content-sm">
 
-            <? $posts->loadImageSizes(1140) ?>
-            @foreach($posts as $post)
-                @include('Unify::blog.elements.large-overview')
-            @endforeach
+            @if($posts->count())
 
-            @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+                <? $posts->loadImageSizes(1140) ?>
+                @foreach($posts as $post)
+                    @include('Unify::blog.elements.large-overview')
+                @endforeach
+
+                @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+            @endif
         </div>
 
     </div>

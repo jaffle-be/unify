@@ -12,22 +12,25 @@
         <div class="row blog-page">
             <!-- Left Sidebar -->
             @include('Unify::blog.elements.sidebars.large-overview-simple')
-            <!-- End Left Sidebar -->
+                    <!-- End Left Sidebar -->
 
             <!-- Right Sidebar -->
             <div class="col-md-9">
 
-                <? $counter = 0 ?>
-                <? $posts->loadImageSizes('850') ?>
+                @if($posts->count())
 
-                @foreach($posts as $post)
+                    <? $counter = 0 ?>
+                    <? $posts->loadImageSizes('850') ?>
 
-                @include('Unify::blog.elements.large-overview-simple-with-sidebar', ['counter' => $counter])
-                    <? $counter++ ?>
-                @endforeach
+                    @foreach($posts as $post)
+
+                        @include('Unify::blog.elements.large-overview-simple-with-sidebar', ['counter' => $counter])
+                        <? $counter++ ?>
+                    @endforeach
 
 
                     @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+                @endif
             </div>
             <!-- End Right Sidebar -->
         </div>

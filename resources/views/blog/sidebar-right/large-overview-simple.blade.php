@@ -13,6 +13,7 @@
             <!-- Left Sidebar -->
             <div class="col-md-9">
 
+                @if($posts->count())
                 <? $counter = 0 ?>
 
                 <? $posts->loadImageSizes(850) ?>
@@ -25,13 +26,14 @@
 
 
                 @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
-                <!--End Pagination-->
+                        <!--End Pagination-->
+                @endif
             </div>
             <!-- End Left Sidebar -->
 
             <!-- Right Sidebar -->
             @include('Unify::blog.elements.sidebars.large-overview-simple')
-            <!-- End Right Sidebar -->
+                    <!-- End Right Sidebar -->
         </div>
         <!--/row-->
     </div><!--/container-->

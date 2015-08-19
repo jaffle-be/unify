@@ -30,15 +30,7 @@
     <!--=== End Cube-Portfdlio ===-->
     @else
 
-        <div class="container">
-
-            <div class="content-sm">
-
-                {{ Lang::get('Unify::portfolio.no-projects') }}
-
-            </div>
-
-        </div>
+        <div class="container content"></div>
     @endif
 
 @stop

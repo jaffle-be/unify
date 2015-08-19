@@ -14,23 +14,27 @@
                 <!-- Blog All Posts -->
                 <div class="col-md-9">
 
-                    <? $counter = 0 ?>
-                    <? $posts->loadImageSizes(850) ?>
-                    @foreach($posts as $post)
+                    @if($posts->count())
 
-                    @include('Unify::blog.elements.large-overview-with-sidebar', ['counter' => $counter])
+                        <? $counter = 0 ?>
+                        <? $posts->loadImageSizes(850) ?>
+                        @foreach($posts as $post)
 
-                    <? $counter++ ?>
+                            @include('Unify::blog.elements.large-overview-with-sidebar', ['counter' => $counter])
 
-                    @endforeach
+                            <? $counter++ ?>
+
+                        @endforeach
 
                         @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+
+                    @endif
                 </div>
                 <!-- End Blog All Posts -->
 
                 <!-- Blog Sidebar -->
                 @include('Unify::blog.elements.sidebars.large-overview')
-                <!-- End Blog Sidebar -->
+                        <!-- End Blog Sidebar -->
             </div>
         </div>
     </div>

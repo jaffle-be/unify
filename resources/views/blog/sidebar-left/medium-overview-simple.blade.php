@@ -17,6 +17,8 @@
             <!-- Right Sidebar -->
             <div class="col-md-9 md-margin-bottom-40">
 
+                @if($posts->count())
+
                 <? $counter = 0 ?>
                 <? $posts->loadImageSizes(340) ?>
                 @foreach($posts as $post)
@@ -28,6 +30,8 @@
                 @endforeach
 
                 @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+
+                @endif
 
 
             </div>

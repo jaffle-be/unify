@@ -12,17 +12,20 @@
             <!-- Left Sidebar -->
             <div class="col-md-9 md-margin-bottom-40">
 
-                <? $counter = 0 ?>
-                <? $posts->loadImageSizes(340) ?>
-                @foreach($posts as $post)
+                @if($posts->count())
 
-                    @include('Unify::blog.elements.medium-overview-simple', ['counter' => $counter])
+                    <? $counter = 0 ?>
+                    <? $posts->loadImageSizes(340) ?>
+                    @foreach($posts as $post)
 
-                    <? $counter++?>
+                        @include('Unify::blog.elements.medium-overview-simple', ['counter' => $counter])
 
-                @endforeach
+                        <? $counter++?>
 
-                @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+                    @endforeach
+
+                    @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+                @endif
 
 
             </div>

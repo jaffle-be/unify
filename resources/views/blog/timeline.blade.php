@@ -8,6 +8,7 @@
 
 @section('content')
     <div class="container content">
+        @if($posts->count())
         <ul class="timeline-v1">
 
 
@@ -23,6 +24,7 @@
             <li class="clearfix" style="float: none;"></li>
         </ul>
 
+        @endif
         @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
 
     </div>

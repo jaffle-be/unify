@@ -11,81 +11,92 @@
 @section('content')
 
 
-    <div class="container-fluid">
-        <!-- Team Blocks -->
-        <? $counter = 0 ?>
-        @foreach($account->members as $member)
+    @if(!$account->members->count())
+        <div class="container content"></div>
+    @else
 
-            @if($counter % 2 == 0)
-                <div class="row team-v7 no-gutter equal-height-columns">
-                    <div class="col-md-6 team-arrow-right">
-                        <div class="dp-table">
-                            <div class="equal-height-column dp-table-cell team-v7-in">
-                                <span class="team-v7-name">{{$member->name}}</span>
-                                <span class="team-v7-position">{{$member->function}}</span>
 
-                                <p>{{$member->bio}}
-                                    <br>
-                                    <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
-                                </p>
+        <div class="container-fluid">
+            <!-- Team Blocks -->
+            <? $counter = 0 ?>
+            @foreach($account->members as $member)
 
-                                @if($member->socialLinks)
-                                    <ul class="list-inline social-icons-v1">
-                                        @foreach($member->socialLinks->available() as $name => $url)
-                                            <li><a target="_blank" href="{{ $url }}"><i class="fa fa-{{ $name }}"></i></a></li>
-                                        @endforeach
-                                    </ul>
-                                @endif
+                @if($counter % 2 == 0)
+                    <div class="row team-v7 no-gutter equal-height-columns">
+                        <div class="col-md-6 team-arrow-right">
+                            <div class="dp-table">
+                                <div class="equal-height-column dp-table-cell team-v7-in">
+                                    <span class="team-v7-name">{{$member->name}}</span>
+                                    <span class="team-v7-position">{{$member->function}}</span>
 
+                                    <p>{{$member->bio}}
+                                        <br>
+                                        <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
+                                    </p>
+
+                                    @if($member->socialLinks)
+                                        <ul class="list-inline social-icons-v1">
+                                            @foreach($member->socialLinks->available() as $name => $url)
+                                                <li>
+                                                    <a target="_blank" href="{{ $url }}"><i class="fa fa-{{ $name }}"></i></a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 team-v7-img">
-                        <a href="{{ route('store.team.show', [$member]) }}">
-                            <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280) ? : 'assets/img/team/img-v1.jpg') }}" alt="">
-                        </a>
-                    </div>
-                </div>
-
-                @else
-                        <!-- Team Blocks -->
-                <div class="row team-v7 no-gutter equal-height-columns">
-                    <div class="col-md-6 col-md-push-6 team-arrow-left">
-                        <div class="dp-table">
-                            <div class="equal-height-column dp-table-cell team-v7-in">
-                                <span class="team-v7-name">{{$member->name}}</span>
-                                <span class="team-v7-position">{{ $member->function }}</span>
-
-                                <p>{{$member->bio}}
-                                    <br>
-                                    <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
-                                </p>
-
-                                @if($member->socialLinks)
-                                    <ul class="list-inline social-icons-v1">
-                                        @foreach($member->socialLinks->available() as $name => $url)
-                                            <li><a href="{{ $url }}" target="_blank"><i class="fa fa-{{ $name }}"></i></a></li>
-                                        @endforeach
-                                    </ul>
-                                @endif
-                            </div>
+                        <div class="col-md-6 team-v7-img">
+                            <a href="{{ route('store.team.show', [$member]) }}">
+                                <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280) ? : 'assets/img/team/img-v1.jpg') }}" alt="">
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-md-pull-6 team-v7-img">
-                        <a href="{{ route('store.team.show', [$member]) }}">
-                            <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280) ? : 'assets/img/team/img-v2.jpg') }}" alt="">
-                        </a>
+
+                    @else
+                            <!-- Team Blocks -->
+                    <div class="row team-v7 no-gutter equal-height-columns">
+                        <div class="col-md-6 col-md-push-6 team-arrow-left">
+                            <div class="dp-table">
+                                <div class="equal-height-column dp-table-cell team-v7-in">
+                                    <span class="team-v7-name">{{$member->name}}</span>
+                                    <span class="team-v7-position">{{ $member->function }}</span>
+
+                                    <p>{{$member->bio}}
+                                        <br>
+                                        <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
+                                    </p>
+
+                                    @if($member->socialLinks)
+                                        <ul class="list-inline social-icons-v1">
+                                            @foreach($member->socialLinks->available() as $name => $url)
+                                                <li>
+                                                    <a href="{{ $url }}" target="_blank"><i class="fa fa-{{ $name }}"></i></a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-pull-6 team-v7-img">
+                            <a href="{{ route('store.team.show', [$member]) }}">
+                                <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280) ? : 'assets/img/team/img-v2.jpg') }}" alt="">
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <!-- End Team Blocks -->
+                    <!-- End Team Blocks -->
 
-                @endif
+                    @endif
 
-                <? $counter++ ?>
-                @endforeach
-                        <!-- End Team Blocks -->
+                    <? $counter++ ?>
+                    @endforeach
+                            <!-- End Team Blocks -->
 
-    </div>
+        </div>
+
+    @endif
 
     @if(Theme::setting('teamHiring'))
         @include('Unify::team.elements.hiring')

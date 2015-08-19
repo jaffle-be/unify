@@ -11,14 +11,17 @@
 
         <div class="container content grid-boxes">
 
-            <? $counter = 0 ?>
-            <? $posts->loadImageSizes(360) ?>
-            @foreach($posts as $post)
+            @if($posts->count())
 
-                @include('Unify::blog.elements.masonry')
+                <? $counter = 0 ?>
+                <? $posts->loadImageSizes(360) ?>
+                @foreach($posts as $post)
 
-                <? $counter++ ?>
-            @endforeach
+                    @include('Unify::blog.elements.masonry')
+
+                    <? $counter++ ?>
+                @endforeach
+            @endif
 
         </div>
         <!--/container-->
