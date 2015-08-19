@@ -3,9 +3,9 @@
 use App\Account\Client;
 use App\Blog\Post;
 use App\Blog\PostTranslation;
+use App\System\ServiceProvider;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Jaffle\Tools\ServiceProvider;
 
 class UnifyServiceProvider extends ServiceProvider
 {
