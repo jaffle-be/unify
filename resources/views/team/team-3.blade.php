@@ -49,7 +49,7 @@
                         </div>
                         <div class="col-md-6 team-v7-img">
                             <a href="{{ route('store.team.show', [$member]) }}">
-                                <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280)) ? : theme_asset('img/team/img-v1.jpg') }}" alt="">
+                                <img class="img-responsive full-width equal-height-column" src="{{ $member->thumbnail(1280) ? asset($member->thumbnail(1280)) : theme_asset('img/team/img-v1.jpg') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="col-md-6 col-md-pull-6 team-v7-img">
                             <a href="{{ route('store.team.show', [$member]) }}">
-                                <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280)) ? : theme_asset('img/team/img-v2.jpg') }}" alt="">
+                                <img class="img-responsive full-width equal-height-column" src="{{ $member->thumbnail(1280) ? asset($member->thumbnail(1280)) : theme_asset('img/team/img-v2.jpg') }}" alt="">
                             </a>
                         </div>
                     </div>
