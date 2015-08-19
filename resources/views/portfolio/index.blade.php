@@ -31,8 +31,8 @@
     @else
 
         <div class="container">
-            
-            <div class="wrapper wrapper-content">
+
+            <div class="content-sm">
 
                 {{ Lang::get('Unify::portfolio.no-projects') }}
 
