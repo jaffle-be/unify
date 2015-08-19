@@ -11,7 +11,9 @@
 
 @section('content')
 
-    <!--=== Cube-Portfdlio ===-->
+    @if($projects->count())
+
+            <!--=== Cube-Portfdlio ===-->
     <div class="cube-portfolio {{ $options['grid'] ? 'container': null }} margin-bottom-40">
         @include('Unify::portfolio.elements.filters')
 
@@ -26,6 +28,8 @@
         <!--/end Grid Container-->
     </div>
     <!--=== End Cube-Portfdlio ===-->
+
+    @endif
 
 @stop
 
