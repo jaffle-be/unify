@@ -25,7 +25,7 @@
                             <li>
                                 <a>Language ({{ App::getLocale() }})</a>
                                 <ul class="language">
-                                    @foreach(config('blog.locales') as $locale)
+                                    @foreach(config('system.locales') as $locale)
                                         @if($locale == App::getLocale())
                                             <li class="active">
                                                 <a href="#">{{ $locale }}<i class="fa fa-check"></i></a>

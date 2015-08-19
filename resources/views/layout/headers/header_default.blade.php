@@ -20,7 +20,7 @@
                         <i class="fa fa-globe"></i>
                         <a>Languages</a>
                         <ul class="languages hoverSelectorBlock">
-                            @foreach(config('blog.locales') as $locale)
+                            @foreach(config('system.locales') as $locale)
                                 @if(App::getLocale() == $locale)
                                     <li class="active">
                                         <a href="#">{{$locale}} <i class="fa fa-check"></i></a>
