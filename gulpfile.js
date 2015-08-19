@@ -17,14 +17,32 @@ var gulp = require('gulp'),
 
 
 
-gulp.task('default', ['theme-page-styles']);
+gulp.task('default', ['admin-theme', 'theme-page-styles']);
+
+gulp.task('admin-theme', function()
+{
+    return gulp.src([
+            'resources/assets/js/dist/admin/config.js',
+            'resources/assets/js/dist/admin/services.js',
+            'resources/assets/js/dist/admin/directives.js',
+            'resources/assets/js/dist/admin/translations.js',
+            'resources/assets/js/dist/admin/controllers.js',
+        ])
+        .pipe(plumber())
+        .pipe(concat('unify.js'))
+        .pipe(rename(function(path){
+            path.extname = '.min.js';
+        }))
+        //do not mangle, or function names etc will fail.
+        .pipe(uglify({mangle:false}))
+        .pipe(gulp.dest('resources/assets/js/admin'));
+});
 
 //global startup compiler
 gulp.task('theme-page-styles', function()
 {
     gulp.src('resources/assets/less/pages/**/*.less')
         .pipe(plumber())
-        //.pipe(debug({title: 'compile page styles'}))
         .pipe(less())
         .pipe(rename(function(path){
             path.extname = '.css';
