@@ -49,7 +49,7 @@
                         </div>
                         <div class="col-md-6 team-v7-img">
                             <a href="{{ route('store.team.show', [$member]) }}">
-                                <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280) ? : 'assets/img/team/img-v1.jpg') }}" alt="">
+                                <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280)) ? : theme_asset('img/team/img-v1.jpg') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="col-md-6 col-md-pull-6 team-v7-img">
                             <a href="{{ route('store.team.show', [$member]) }}">
-                                <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280) ? : 'assets/img/team/img-v2.jpg') }}" alt="">
+                                <img class="img-responsive full-width equal-height-column" src="{{ asset($member->thumbnail(1280)) ? : theme_asset('img/team/img-v2.jpg') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -109,25 +109,25 @@
 @section('scripts-plugins')
     @parent
 
-    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-    <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+    <script type="text/javascript" src="{{ theme_asset('plugins/back-to-top.js') }}"></script>
+    <script type="text/javascript" src="{{ theme_asset('plugins/smoothScroll.js') }}"></script>
     <!-- JS Customization -->
-    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="{{ theme_asset('js/custom.js') }}"></script>
 
 @stop
 
 @section('scripts-app')
 
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="{{ theme_asset('js/app.js') }}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             App.init();
         });
     </script>
     <!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+    <script src="{{ theme_asset('plugins/respond.js') }}"></script>
+    <script src="{{ theme_asset('plugins/html5shiv.js') }}"></script>
+    <script src="{{ theme_asset('plugins/placeholder-IE-fixes.js') }}"></script>
     <![endif]-->
 
 
