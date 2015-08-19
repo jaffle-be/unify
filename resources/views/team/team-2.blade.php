@@ -4,8 +4,8 @@
 
 @section('styles-content')
 
-    <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
-    <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+    <link rel="stylesheet" href="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css') }}">
+    <link rel="stylesheet" href="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css') }}">
 
 
     @stop
@@ -69,19 +69,19 @@
 @section('scripts-plugins')
     @parent
 
-    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-    <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery.parallax.js"></script>
-    <script type="text/javascript" src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <script type="text/javascript" src="{{ theme_asset('plugins/back-to-top.js') }}"></script>
+    <script type="text/javascript" src="{{ theme_asset('plugins/smoothScroll.js') }}"></script>
+    <script type="text/javascript" src="{{ theme_asset('plugins/jquery.parallax.js') }}"></script>
+    <script type="text/javascript" src="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js') }}"></script>
     <!-- JS Customization -->
-    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="{{ theme_asset('js/custom.js') }}"></script>
 
 @stop
 
 @section('scripts-app')
 
-    <script type="text/javascript" src="assets/js/app.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
+    <script type="text/javascript" src="{{ theme_asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ theme_asset('js/plugins/cube-portfolio/cube-portfolio-lightbox.js') }}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             App.init();
