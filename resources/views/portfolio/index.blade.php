@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css') }}">
     <link rel="stylesheet" href="{{ theme_asset('plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css') }}">
 
-@stop
+    @stop
 
-@section('content')
+    @section('content')
 
     @if($projects->count())
 
@@ -29,9 +29,14 @@
     </div>
     <!--=== End Cube-Portfdlio ===-->
     @else
-        <div class="wrapper wrapper-content">
 
-            {{ Lang::get('Unify::portfolio.no-projects') }}
+        <div class="container">
+            
+            <div class="wrapper wrapper-content">
+
+                {{ Lang::get('Unify::portfolio.no-projects') }}
+
+            </div>
 
         </div>
     @endif
