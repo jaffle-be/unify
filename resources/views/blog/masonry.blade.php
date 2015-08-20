@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('Unify::blog.titles.overview'))
+@section('title', Theme::setting('blogMainTitleOverview'))
 
 @section('styles-content')
     <link href="{{ theme_asset('css/pages/blog_masonry_3col.min.css') }}" rel="stylesheet">

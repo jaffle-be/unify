@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('Unify::portfolio.titles.detail'))
+@section('title', Theme::setting('portfolioMainTitleDetail'))
 
 @section('styles-content')
 
@@ -17,20 +17,20 @@
 
         <div class="content">
 
-            <div class="headline"><h2>{{ Lang::get('Unify::search.search-result') . ' ' . Input::get('query')}}</h2>
+            <div class="headline">
+                <h2>{{ Lang::get('Unify::front.search.search-result') . ' ' . Input::get('query')}}</h2>
             </div>
 
             @if(!$projects->count() && !$posts->count())
 
-                <div class="alert alert-warning">{{ Lang::get('Unify::search.nothing-found') }}</div>
+                <div class="alert alert-warning">{{ Lang::get('Unify::front.search.nothing-found') }}</div>
 
             @endif
-
 
             <form action="{{ route('store.search.index') }}">
 
                 <div class="form-group">
-                	<label for="query" class="control-label">{{ Lang::get('Unify::search.search-for-something') }}</label>
+                	<label for="query" class="control-label">{{ Lang::get('Unify::front.search.search-for-something') }}</label>
 
                     <div class="input-group">
                         <div class="input-group-addon">
@@ -47,7 +47,8 @@
 
 
             @if($posts->count())
-                <div class="headline-v2 bg-color-light margin-bottom-40"><h2>{{ Lang::get('Unify::tags.posts') }}</h2>
+                <div class="headline-v2 bg-color-light margin-bottom-40">
+                    <h2>{{ Lang::get('Unify::front.tags.posts') }}</h2>
                 </div>
 
                 <? $counter = 0 ?>
@@ -70,13 +71,19 @@
                     <? $counter++ ?>
                 @endforeach
 
+                @if($counter % 2 != 0)
+                    {{--//always close when uneven amount--}}
+                    </div>
+                @endif
+
             @endif
 
         </div>
 
         @if($projects->count())
 
-            <div class="headline-v2 bg-color-light margin-bottom-40"><h2>{{ Lang::get('Unify::tags.projects') }}</h2>
+            <div class="headline-v2 bg-color-light margin-bottom-40">
+                <h2>{{ Lang::get('Unify::front.tags.projects') }}</h2>
             </div>
 
             <div class="cube-portfolio margin-bottom-40">
@@ -96,8 +103,6 @@
         @endif
 
     </div>
-
-
 @stop
 
 

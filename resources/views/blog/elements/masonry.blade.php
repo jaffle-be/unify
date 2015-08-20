@@ -62,7 +62,7 @@
         <div class="grid-boxes-caption">
             <h3><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h3>
             <ul class="list-inline grid-boxes-news">
-                <li><span>{{ Lang::get('Unify::blog.by') }}</span> <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
+                <li><span>{{ Lang::get('Unify::front.post-by') }}</span> <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                 <li>|</li>
                 <li><i class="fa fa-clock-o"></i> {{ $post->publish_at->format('d M, Y') }}</li>
                 <li>|</li>

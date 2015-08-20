@@ -17,12 +17,12 @@
                     <input value="{{csrf_token()}}" name="_token" type="hidden"/>
 
                     <div class="reg-header">
-                        <h2>{{ Lang::get('Unify::users.general.signin') }}</h2>
+                        <h2>{{ Lang::get('Unify::front.login') }}</h2>
                     </div>
 
                     <div class="input-group margin-bottom-20">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input name="email" id="email" type="text" placeholder="{{ Lang::get('Unify::users.general.email') }}" value="{{ Input::old('email') }}" class="form-control">
+                        <input name="email" id="email" type="text" placeholder="{{ Lang::get('Unify::front.email') }}" value="{{ Input::old('email') }}" class="form-control">
                     </div>
 
                     @if($errors->has('email'))
@@ -33,7 +33,7 @@
 
                     <div class="input-group margin-bottom-20">
                         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input name="password" id="password" type="password" placeholder="{{ Lang::get('Unify::users.general.password') }}" class="form-control">
+                        <input name="password" id="password" type="password" placeholder="{{ Lang::get('Unify::front.password') }}" class="form-control">
                     </div>
 
                     @if($errors->has('password'))
@@ -44,11 +44,11 @@
 
                     <div class="row">
                         <div class="col-md-6 checkbox">
-                            <label><input type="checkbox" name="remember_me" value="1" {{Input::old('remember_me') ? 'checked': ''}}>{{ Lang::get('Unify::users.general.remember-me') }}
+                            <label><input type="checkbox" name="remember_me" value="1" {{Input::old('remember_me') ? 'checked': ''}}>{{ Lang::get('Unify::front.remember-me') }}
                             </label>
                         </div>
                         <div class="col-md-6">
-                            <button class="btn-u pull-right" type="submit">{{ Lang::get('Unify::users.general.signin') }}</button>
+                            <button class="btn-u pull-right" type="submit">{{ Lang::get('Unify::front.login') }}</button>
                         </div>
                     </div>
 
@@ -64,10 +64,10 @@
 
                     <hr>
 
-                    <h4>{{ Lang::get('Unify::users.general.forgot-password') }}</h4>
+                    <h4>{{ Lang::get('Unify::front.forgot-password') }}</h4>
 
                     <p>
-                        {!! Lang::get('Unify::users.general.forgot-password-text', ['url' => route('store.auth.forgot-password.index')]) !!}
+                        {!! Lang::get('Unify::front.forgot-password-text', ['url' => route('store.auth.forgot-password.index')]) !!}
                     </p>
                 </form>
             </div>

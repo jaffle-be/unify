@@ -1,6 +1,6 @@
 @if($clients->count())
 <!-- Owl Clients v1 -->
-<div class="headline"><h2>{{ Lang::get('Unify::widgets.our_clients') }}</h2></div>
+<div class="headline"><h2>{{ Theme::setting('widgetOurClientsTitle') }}</h2></div>
 <div class="owl-clients-v1">
     @foreach($clients as $client)
     <div class="item">

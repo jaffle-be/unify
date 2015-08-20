@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('Unify::account.about-our-team'))
+@section('title', Theme::setting('teamAboutTitle'))
 
 @section('styles-content')
 
@@ -42,14 +42,14 @@
                                     </ul>
                                 @endif
                                 <span>
-                                <a href="{{ route('store.team.show', [$membership->member]) }}">{{ Lang::get('Unify::read-more') }}</a>
+                                <a href="{{ route('store.team.show', [$membership->member]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
                             </span>
                             </div>
                         </div>
                         <span>{{ $membership->member->function }}</span>
                         <small>{{ implode(', ', $membership->member->skills->lists('name')->toArray()) }}</small>
                         <p>{{ $membership->member->bio }}</p>
-                        <a href="{{ route('store.team.show', [$membership->member]) }}">{{ Lang::get('Unify::read-more') }}</a>
+                        <a href="{{ route('store.team.show', [$membership->member]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
                     </div>
                 @endforeach
             </div>

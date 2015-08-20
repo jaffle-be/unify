@@ -63,6 +63,8 @@
                 <div class="ibox-content">
                     @include('Unify::admin.setting-dropdown', ['name' => 'blogOverview'])
                     @include('Unify::admin.setting-dropdown', ['name' => 'blogDetail'])
+                    @include('Unify::admin.setting-string', ['name' => 'blogMainTitleDetail'])
+                    @include('Unify::admin.setting-string', ['name' => 'blogMainTitleOverview'])
 
                     <div class="clearfix"></div>
                 </div>
@@ -87,6 +89,8 @@
                     @include('Unify::admin.setting-text', ['name' => 'contactWidgetText'])
                     @include('Unify::admin.setting-string', ['name' => 'contactFormTitle'])
                     @include('Unify::admin.setting-text', ['name' => 'contactFormText'])
+                    @include('Unify::admin.setting-string', ['name' => 'contactHoursTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'contactMainTitle'])
 
                     <div class="clearfix"></div>
                 </div>
@@ -116,6 +120,12 @@
                     @include('Unify::admin.setting-numeric', ['name' => 'teamMemberCounterValue3'])
                     @include('Unify::admin.setting-string', ['name' => 'teamMemberCounterLabel4'])
                     @include('Unify::admin.setting-numeric', ['name' => 'teamMemberCounterValue4'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamAboutMemberMainTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamAboutTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamMemberAboutTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamMemberPortfolioText'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamMemberPortfolioTitle'])
+                    @include('Unify::admin.setting-string', ['name' => 'teamMemberSkillsTitle'])
 
                     <div class="clearfix"></div>
                 </div>
@@ -135,6 +145,28 @@
                     @include('Unify::admin.setting-dropdown', ['name' => 'portfolioColumns'])
                     @include('Unify::admin.setting-checkbox', ['name' => 'portfolioGrid'])
                     @include('Unify::admin.setting-checkbox', ['name' => 'portfolioSpaced'])
+
+                    @include('Unify::admin.setting-string', ['name' => 'portfolioMainTitleDetail'])
+                    @include('Unify::admin.setting-string', ['name' => 'portfolioMainTitleOverview'])
+                    @include('Unify::admin.setting-string', ['name' => 'portfolioProjectDescription'])
+                    @include('Unify::admin.setting-string', ['name' => 'portfolioProjectDetails'])
+
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6">
+            <div class="ibox">
+
+                <div class="ibox-title">
+                    <h5>{{ Lang::get('Unify::admin.widgets-layout') }}</h5>
+                </div>
+
+                <div class="ibox-content">
+
+                    @include('Unify::admin.setting-string', ['name' => 'widgetOurClientsTitle'])
 
                     <div class="clearfix"></div>
                 </div>

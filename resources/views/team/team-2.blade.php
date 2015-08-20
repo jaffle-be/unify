@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('Unify::account.about-our-team'))
+@section('title', Theme::setting('teamAboutTitle'))
 
 @section('styles-content')
 

@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('Unify::blog.titles.overview'))
+@section('title', Theme::setting('blogMainTitleOverview'))
 
 @section('styles-content')
     <link rel="stylesheet" href="{{ theme_asset('css/pages/shortcode_timeline1.min.css') }}">

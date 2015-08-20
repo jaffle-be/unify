@@ -50,7 +50,7 @@
     <div class="col-sm-7 news-v3">
         <div class="news-v3-in-sm no-padding">
             <ul class="list-inline posted-info">
-                <li>{{ Lang::get('Unify::blog.post-by') }} <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
+                <li>{{ Lang::get('Unify::front.post-by') }} <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                     <li>In {!!  $post->tags->format(null, ', ') !!}</li>
                 <li>Posted {{ $post->publish_at->format('d M, Y') }}</li>
             </ul>

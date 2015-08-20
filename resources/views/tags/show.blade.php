@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('Unify::portfolio.titles.detail'))
+@section('title', Theme::setting('portfolioMainTitleDetail'))
 
 @section('styles-content')
 
@@ -17,10 +17,10 @@
 
         <div class="content">
 
-            <div class="headline"><h2>{{ Lang::get('Unify::tags.tag-detail') . ' ' . $tag->name }}</h2></div>
+            <div class="headline"><h2>{{ Lang::get('Unify::front.tags.tag-detail') . ' ' . $tag->name }}</h2></div>
 
 
-            <div class="headline-v2 bg-color-light margin-bottom-40"><h2>{{ Lang::get('Unify::tags.posts') }}</h2></div>
+            <div class="headline-v2 bg-color-light margin-bottom-40"><h2>{{ Lang::get('Unify::front.tags.posts') }}</h2></div>
 
                 <? $counter = 0 ?>
                 @foreach($tag->posts as $post)
@@ -44,7 +44,7 @@
 
             </div>
 
-            <div class="headline-v2 bg-color-light margin-bottom-40"><h2>{{ Lang::get('Unify::tags.projects') }}</h2></div>
+            <div class="headline-v2 bg-color-light margin-bottom-40"><h2>{{ Lang::get('Unify::front.tags.projects') }}</h2></div>
 
             <div class="cube-portfolio margin-bottom-40">
                 <div id="grid-container" class="cbp-l-grid-agency">

@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Lang::get('Unify::portfolio.titles.detail'))
+@section('title', Theme::setting('portfolioMainTitleDetail'))
 
 @section('styles-content')
 
@@ -43,11 +43,11 @@
 
             <div class="row margin-bottom-60">
                 <div class="col-sm-8">
-                    <div class="headline"><h2>{{ Lang::get('Unify::portfolio.project-description') }}</h2></div>
+                    <div class="headline"><h2>{{ Theme::setting('portfolioProjectDescription') }}</h2></div>
                     <p>{{ $project->description }}</p>
                 </div>
                 <div class="col-sm-4">
-                    <div class="headline"><h2>{{ Lang::get('Unify::portfolio.project-details') }}</h2></div>
+                    <div class="headline"><h2>{{ Theme::setting('portfolioProjectDetails') }}</h2></div>
                     @if($project->client && $project->client->images)
                         <div class="text-center margin-bottom-20">
                         <img src="{{ asset($project->client->images->thumbnail(null, 90)) }}" alt="{{$project->client->images->name}}">
