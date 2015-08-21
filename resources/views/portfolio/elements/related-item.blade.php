@@ -19,6 +19,8 @@
     </div>
     <div class="cbp-title-dark">
         <div class="cbp-l-grid-agency-title">{{ $project->title }}</div>
+        @if($project->tags && $project->tags->count())
         <div class="cbp-l-grid-agency-desc">{!! $project->tags->format() !!}</div>
+        @endif
     </div>
 </div>
