@@ -10,11 +10,11 @@
 
 @section('content')
 
-    @if(!$account->teams->count())
+    @if(!$teams->count())
         <div class="container content"></div>
     @endif
 
-        @foreach($account->teams as $team)
+        @foreach($teams as $team)
                 <!--=== Team v5 ===-->
         <div class="container content">
             <div class="headline-center margin-bottom-60">
@@ -26,7 +26,15 @@
             </div>
 
             <div class="row team-v5 margin-bottom-30">
-                @foreach($team->memberships as $membership)
+                @foreach($team->memberships as $teamMembership)
+
+
+                    <?
+                    //member info was loaded through the memberships array
+                    //so use that instead of triggering endless db queries
+                    $membership = $memberships->find($teamMembership)
+                    ?>
+
                     <div class="col-sm-4 sm-margin-bottom-50">
                         <div class="team-img">
                             <img class="img-responsive" src="{{ asset($membership->member->thumbnail(380) ? : theme_asset('img/team/img1-md.jpg')) }}" alt="">
