@@ -6,6 +6,7 @@ use App\Blog\PostTranslation;
 use App\System\ServiceProvider;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Collection;
 
 class UnifyServiceProvider extends ServiceProvider
 {
@@ -39,29 +40,35 @@ class UnifyServiceProvider extends ServiceProvider
         /** @var Factory $view */
         $this->app['view']->composer('Unify::layout.footers.*', function(View $view)
         {
-            $translations = PostTranslation::lastPublished()->take(3)->lists('post_id');
+            $cache = app('cache')->driver();
 
-            if($translations->count() == 0)
-            {
-                $view->with('posts', []);
+            $posts = $cache->sear('footer-posts', function(){
 
-                return;
-            }
+                $translations = PostTranslation::lastPublished()->take(3)->lists('post_id');
 
-            $posts = Post::with(['translations', 'images'])
-                ->whereIn('id', $translations->toArray())
-                ->get();
+                if($translations->count() == 0)
+                {
+                    return new Collection();
+                }
 
-            $posts = $posts->sortBy('publish_at')->reverse();
+                $posts = Post::with(['translations', 'images', 'images.sizes'])
+                    ->whereIn('id', $translations->toArray())
+                    ->get();
+
+                return $posts->sortBy('publish_at')->reverse();
+            });
 
             $view->with('posts', $posts);
         });
 
         $this->app['view']->composer('Unify::layout.widgets.clients', function(View $view){
 
-            $clients = Client::has('images', '>', 0)
-                ->take(30)
-                ->get();
+            $clients = app('cache')->sear('widget-clients', function(){
+
+                return Client::has('images', '>', 0)
+                    ->take(30)
+                    ->get();
+            });
 
             if($clients->count())
             {
