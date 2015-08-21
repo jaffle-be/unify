@@ -27,13 +27,7 @@
         <link rel="stylesheet" href="{{theme_asset('css/styles.min.css') }}">
     @show
 
-        {{--we preinclude the header and footer here so we can adjust the styles and scripts accordingly in the proper sections of the html--}}
-        {{--if we didn't do this, styles would not be in the head section, thus slowing down the site.--}}
-        @include('Unify::layout.headers.' . Theme::setting('header'))
-        @include('Unify::layout.footers.' . Theme::setting('footer'))
-
-
-                <!-- CSS page/content level -->
+            <!-- CSS page/content level -->
         @yield('styles-content')
 
                 <!-- CSS Implementing Plugins -->
@@ -44,40 +38,9 @@
 
 </head>
 
-<body class="header-fixed">
-
-<div class="wrapper">
-
-    @yield('header')
-
-    @section('slider')
-            <!-- Interactive Slider v2 -->
-    <div class="interactive-slider-v2">
-        <div class="container">
-            <h1>Welcome to Unify</h1>
-
-            <p>Clean and fully responsive Template.</p>
-        </div>
-    </div>
-    <!-- End Interactive Slider v2 -->
-    @stop
-
-    @yield('slider')
-
-    @section('breadcrumb')
-
-        {!! Breadcrumbs::render() !!}
-
-    @stop
-
-    @yield('breadcrumb')
+<body>
 
     @yield('content')
-
-    @yield('footer')
-
-</div>
-
 
 <!-- JS Global Compulsory -->
 <script src="{{ theme_asset('plugins/jquery/jquery.min.js') }}"></script>

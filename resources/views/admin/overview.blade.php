@@ -32,6 +32,7 @@
                     @include('Unify::admin.setting-dropdown', ['name' => 'footer'])
                     @include('Unify::admin.setting-dropdown', ['name' => 'breadcrumbs'])
                     @include('Unify::admin.setting-dropdown', ['name' => 'pagination'])
+                    @include('Unify::admin.setting-dropdown', ['name' => 'errorPage'])
 
                     @include('Unify::admin.setting-string', ['name' => 'footerContactTitle'])
                     @include('Unify::admin.setting-string', ['name' => 'footerLinksTitle'])
