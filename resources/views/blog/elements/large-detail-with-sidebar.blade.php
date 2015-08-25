@@ -1,7 +1,7 @@
 <div class="col-md-9">
     <!-- News v3 -->
     <div class="news-v3 margin-bottom-30">
-        <img class="img-responsive full-width" src="{{ asset($post->thumbnail(850)) }}" alt="">
+        <img class="img-responsive full-width" src="{{ asset($post->thumbnail(1140)) }}" alt="">
 
         <div class="news-v3-in">
             <ul class="list-inline posted-info">

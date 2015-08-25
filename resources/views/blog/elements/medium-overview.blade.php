@@ -25,7 +25,7 @@
 
                             <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
                                 <a href="{{ route('store.blog.show', [$post]) }}">
-                                    <img class="img-responsive full-width" alt="" src="{{ asset($image->thumbnail(340)) }}">
+                                    <img class="img-responsive full-width" alt="" src="{{ asset($image->thumbnail(460)) }}">
                                 </a>
 
                                 {{--<div class="carousel-caption">
@@ -41,7 +41,7 @@
 
         @else
             <a href="{{ route('store.blog.show', [$post]) }}">
-                <img class="img-responsive" src="{{ asset($post->thumbnail(340)) }}" alt="">
+                <img class="img-responsive" src="{{ asset($post->thumbnail(460)) }}" alt="">
             </a>
 
         @endif

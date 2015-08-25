@@ -5,7 +5,7 @@
             <div class="news-v2-badge">
 
                 <a href="{{ route('store.blog.show', [$post]) }}">
-                    <img class="img-responsive" src="{{ asset($post->thumbnail(360)) }}" alt="">
+                    <img class="img-responsive" src="{{ asset($post->thumbnail(460)) }}" alt="">
                 </a>
 
                 <p>

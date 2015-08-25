@@ -19,7 +19,7 @@
             </ul>
         </div>
         <div class="blog-img">
-            <img class="img-responsive" src="{{ asset($post->thumbnail(850)) }}" alt="">
+            <img class="img-responsive" src="{{ asset($post->thumbnail(1140)) }}" alt="">
         </div>
         <p>{{ $post->extract }}</p>
         <br>

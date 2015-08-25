@@ -39,7 +39,7 @@
 
                             <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
                                 <a href="{{ route('store.blog.show', [$post]) }}">
-                                    <img alt="" src="{{ asset($image->thumbnail(850)) }}">
+                                    <img alt="" src="{{ asset($image->thumbnail(1140)) }}">
                                 </a>
 
                                 {{--<div class="carousel-caption">
