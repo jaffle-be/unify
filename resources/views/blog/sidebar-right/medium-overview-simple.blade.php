@@ -24,7 +24,7 @@
 
                     @endforeach
 
-                    @include('Unify::layout.paginators.' . Theme::setting('pagination'), ['pager' => $posts])
+                    @include('Unify::layout.paginators.' . Theme::setting('layoutPagination'), ['pager' => $posts])
                 @endif
 
 

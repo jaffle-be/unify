@@ -12,8 +12,8 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2>{{ Theme::setting('footerAboutTitle') }}</h2></div>
-                            <p>{{ Theme::setting('footerAboutText') }}</p>
+                        <div class="headline"><h2>{{ Theme::setting('layoutFooterAboutTitle') }}</h2></div>
+                            <p>{{ Theme::setting('layoutFooterAboutText') }}</p>
 
                         @include('Unify::layout.footers.elements.newsletter')
                     </div>
@@ -22,7 +22,7 @@
                     <!-- Latest -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="posts">
-                            <div class="headline"><h2>{{ Theme::setting('footerPostsTitle') }}</h2></div>
+                            <div class="headline"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
                             <ul class="list-unstyled latest-list">
                                 @foreach($posts as $post)
                                     <li>
@@ -37,7 +37,7 @@
 
                     <!-- Link List -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2>{{ Theme::setting('footerLinksTitle') }}</h2></div>
+                        <div class="headline"><h2>{{ Theme::setting('layoutFooterLinksTitle') }}</h2></div>
                         <ul class="list-unstyled link-list">
                             @foreach(Menu::get('primary menu')->items as $item)
                             <li><a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a><i class="fa fa-angle-right"></i></li>

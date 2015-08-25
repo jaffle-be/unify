@@ -13,13 +13,13 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2 class="heading-sm">{{ Theme::setting('footerAboutTitle') }}</h2></div>
+                        <div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterAboutTitle') }}</h2></div>
 
-                        <p class="margin-bottom-20">{{ Theme::setting('footerAboutText') }}</p>
+                        <p class="margin-bottom-20">{{ Theme::setting('layoutFooterAboutText') }}</p>
 
-                        <div class="headline"><h2 class="heading-sm">{{ Theme::setting('footerNewsletterTitle') }}</h2></div>
+                        <div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterNewsletterTitle') }}</h2></div>
 
-                        <p>{{ Theme::setting('footerNewsletterText') }}</p>
+                        <p>{{ Theme::setting('layoutFooterNewsletterText') }}</p>
 
                         <form class="footer-subsribe">
                             <div class="input-group">
@@ -34,7 +34,7 @@
 
                     <!-- Link List -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2 class="heading-sm">{{ Theme::setting('footerLinksTitle') }}</h2></div>
+                        <div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterLinksTitle') }}</h2></div>
                         <ul class="list-unstyled link-list">
                             @foreach(Menu::get('primary menu')->items as $item)
                             <li><a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a><i class="fa fa-angle-right"></i></li>
@@ -46,7 +46,7 @@
                     <!-- Latest Tweets -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="latest-tweets">
-                            <div class="headline"><h2 class="heading-sm">{{ Theme::setting('footerTweetsTitle') }}</h2></div>
+                            <div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterTweetsTitle') }}</h2></div>
                             <div class="latest-tweets-inner">
                                 <i class="fa fa-twitter"></i>
 

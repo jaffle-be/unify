@@ -29,8 +29,8 @@
 
         {{--we preinclude the header and footer here so we can adjust the styles and scripts accordingly in the proper sections of the html--}}
         {{--if we didn't do this, styles would not be in the head section, thus slowing down the site.--}}
-        @include('Unify::layout.headers.' . Theme::setting('header'))
-        @include('Unify::layout.footers.' . Theme::setting('footer'))
+        @include('Unify::layout.headers.' . Theme::setting('layoutHeader'))
+        @include('Unify::layout.footers.' . Theme::setting('layoutFooter'))
 
 
                 <!-- CSS page/content level -->

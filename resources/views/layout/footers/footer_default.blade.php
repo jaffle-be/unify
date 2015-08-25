@@ -15,8 +15,8 @@
                 <div class="row">
                     <div class="col-md-4 md-margin-bottom-40">
                         <!-- About -->
-                        <div class="headline"><h2>{{ Theme::setting('footerAboutTitle') }}</h2></div>
-                        <p class="margin-bottom-25 md-margin-bottom-40">{{ Theme::setting('footerAboutText') }}</p>
+                        <div class="headline"><h2>{{ Theme::setting('layoutFooterAboutTitle') }}</h2></div>
+                        <p class="margin-bottom-25 md-margin-bottom-40">{{ Theme::setting('layoutFooterAboutText') }}</p>
                         <!-- End About -->
 
                         @include('Unify::layout.footers.elements.newsletter')
@@ -26,7 +26,7 @@
                     <div class="col-md-4 md-margin-bottom-40">
                         <!-- Recent Blogs -->
                         <div class="posts">
-                            <div class="headline"><h2>{{ Theme::setting('footerPostsTitle') }}</h2></div>
+                            <div class="headline"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
                             @foreach($posts as $post)
                             <dl class="dl-horizontal">
                                 <dt><a href="{{ route('store.blog.show', [$post]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a></dt>
@@ -46,7 +46,7 @@
                         @include('Unify::layout.footers.elements.contacts-1', ['contact' => $account->contactInformation->first()])
 
                         <!-- Social Links -->
-                        <div class="headline"><h2>{{ Theme::setting('footerSocialIconsTitle') }}</h2></div>
+                        <div class="headline"><h2>{{ Theme::setting('layoutFooterSocialIconsTitle') }}</h2></div>
                         @include('Unify::layout.footers.elements.social-icons-1')
                         <!-- End Social Links -->
                     </div>

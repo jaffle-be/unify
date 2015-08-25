@@ -15,7 +15,7 @@ class UnifyServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $view = 'Unify::layout.breadcrumbs.' . $this->app['theme']->setting('breadcrumbs');
+        $view = 'Unify::layout.breadcrumbs.' . $this->app['theme']->setting('layoutBreadcrumbs');
 
         $this->app['config']->set('breadcrumbs.view', $view);
 

@@ -1,6 +1,6 @@
 <? $memberView = Theme::setting('teamDetail') ?>
 
-@if(Theme::setting('breadcrumbs') == 'breadcrumbs-2' && $memberView == 'member-2')
+@if(Theme::setting('layoutBreadcrumbs') == 'breadcrumbs-2' && $memberView == 'member-2')
 
 @section('breadcrumb')
     {!! Breadcrumbs::render(['noImage' => true]) !!}

@@ -1,5 +1,5 @@
 <!-- Contact Us -->
-<div class="headline"><h2 class="{{isset($small) && $small ? 'heading-sm': ''}}">{{ Theme::setting('footerContactTitle') }}</h2></div>
+<div class="headline"><h2 class="{{isset($small) && $small ? 'heading-sm': ''}}">{{ Theme::setting('layoutFooterContactTitle') }}</h2></div>
 <address class="contact-address-footer md-margin-bottom-40">
     @if($contact->address->format())
         <i class="fa fa-home"></i>&nbsp;{{$contact->address->format() }}<br>

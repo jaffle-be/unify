@@ -15,13 +15,13 @@
                 <div class="row">
                     <!-- About Us -->
                     <div class="col-md-3 sm-margin-bottom-40">
-                        <div class="heading-footer"><h2>{{ Theme::setting('footerAboutTitle') }}</h2></div>
-                        <p class="margin-bottom-20">{{ Theme::setting('footerAboutText') }}</p>
+                        <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterAboutTitle') }}</h2></div>
+                        <p class="margin-bottom-20">{{ Theme::setting('layoutFooterAboutText') }}</p>
 
 
-                        <div class="heading-footer"><h2>{{ Theme::setting('footerNewsletterTitle') }}</h2></div>
+                        <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterNewsletterTitle') }}</h2></div>
 
-                        <p>{{ Theme::setting('footerNewsletterText') }}</p>
+                        <p>{{ Theme::setting('layoutFooterNewsletterText') }}</p>
 
                         <form class="footer-subsribe">
                             <div class="input-group">
@@ -36,7 +36,7 @@
 
                     <!-- Recent News -->
                     <div class="col-md-3 sm-margin-bottom-40">
-                        <div class="heading-footer"><h2>{{ Theme::setting('footerPostsTitle') }}</h2></div>
+                        <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
                         <ul class="list-unstyled link-news">
                             @foreach($posts as $post)
                                 <li>
@@ -50,7 +50,7 @@
 
                     <!-- Useful Links -->
                     <div class="col-md-3 sm-margin-bottom-40">
-                        <div class="heading-footer"><h2>{{ Theme::setting('footerLinksTitle') }}</h2></div>
+                        <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterLinksTitle') }}</h2></div>
                         <ul class="list-unstyled footer-link-list">
                             @foreach(Menu::get('primary menu')->items as $item)
                             <li><a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a></li>
@@ -61,7 +61,7 @@
 
                     <!-- Contacts -->
                     <div class="col-md-3">
-                        <div class="heading-footer"><h2>{{ Theme::setting('footerContactTitle') }}</h2></div>
+                        <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterContactTitle') }}</h2></div>
                         @include('Unify::layout.footers.elements.contacts-3', ['contact' => $account->contactInformation->first()])
                     </div>
                     <!-- End Contacts -->

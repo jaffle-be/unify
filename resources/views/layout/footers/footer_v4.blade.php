@@ -15,7 +15,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <h2 class="thumb-headline">{{ Theme::setting('footerContactTitle') }}</h2>
+                        <h2 class="thumb-headline">{{ Theme::setting('layoutFooterContactTitle') }}</h2>
                         @include('Unify::layout.footers.elements.contacts-2', ['contact' => $account->contactInformation->first()])
 
                         @include('Unify::layout.footers.elements.social-icons-4')
@@ -24,7 +24,7 @@
 
                     <!-- Simple List -->
                     <div class="col-md-3">
-                        <h2 class="thumb-headline">{{ Theme::setting('footerLinksTitle') }}</h2>
+                        <h2 class="thumb-headline">{{ Theme::setting('layoutFooterLinksTitle') }}</h2>
                         <ul class="list-unstyled simple-list">
                             @foreach(Menu::get('primary menu')->items as $item)
                             <li><a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a></li>
@@ -34,7 +34,7 @@
 
                     <div class="col-md-3">
                         <div class="posts">
-                            <h2 class="thumb-headline">{{ Theme::setting('footerPostsTitle') }}</h2>
+                            <h2 class="thumb-headline">{{ Theme::setting('layoutFooterPostsTitle') }}</h2>
                             @foreach($posts as $post)
                                 <dl class="dl-horizontal">
                                     <dt>
@@ -51,13 +51,13 @@
                     </div>
 
                     <div class="col-md-3">
-                        <h2 class="thumb-headline">{{ Theme::setting('footerAboutTitle') }}</h2>
+                        <h2 class="thumb-headline">{{ Theme::setting('layoutFooterAboutTitle') }}</h2>
 
-                        <p class="margin-bottom-20">{{ Theme::setting('footerAboutText') }}</p>
+                        <p class="margin-bottom-20">{{ Theme::setting('layoutFooterAboutText') }}</p>
 
-                        <h2 class="thumb-headline">{{ Theme::setting('footerNewsletterTitle') }}</h2>
+                        <h2 class="thumb-headline">{{ Theme::setting('layoutFooterNewsletterTitle') }}</h2>
 
-                        <p>{{ Theme::setting('footerNewsletterText') }}</p>
+                        <p>{{ Theme::setting('layoutFooterNewsletterText') }}</p>
 
                         <form class="footer-subsribe">
                             <div class="input-group">

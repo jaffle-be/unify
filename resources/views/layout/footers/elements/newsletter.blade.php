@@ -1,6 +1,6 @@
 <!-- Monthly Newsletter -->
-<div class="headline"><h2>{{ Theme::setting('footerNewsletterTitle') }}</h2></div>
-<p>{{ Theme::setting('footerNewsletterText') }}</p>
+<div class="headline"><h2>{{ Theme::setting('layoutFooterNewsletterTitle') }}</h2></div>
+<p>{{ Theme::setting('layoutFooterNewsletterText') }}</p>
 
 <form class="footer-subsribe">
     <div class="input-group">
