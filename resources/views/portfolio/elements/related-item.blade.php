@@ -1,7 +1,7 @@
 <div class="cbp-item">
     <div class="cbp-caption margin-bottom-20">
         <div class="cbp-caption-defaultWrap">
-            <img src="{{ asset($project->thumbnail()) }}" alt="">
+            <img src="{{ asset($project->thumbnail(270)) }}" alt="">
         </div>
         <div class="cbp-caption-activeWrap">
             <div class="cbp-l-caption-alignCenter">
@@ -10,7 +10,7 @@
                         <li><a href="{{ route('store.portfolio.show', [$project->id]) }}"><i class="rounded-x fa fa-link"></i></a>
                         </li>
                         <li>
-                            <a href="{{ asset($project->thumbnail()) }}" class="cbp-lightbox" data-title="Design Object"><i class="rounded-x fa fa-search"></i></a>
+                            <a href="{{ asset($project->thumbnail(270)) }}" class="cbp-lightbox" data-title="Design Object"><i class="rounded-x fa fa-search"></i></a>
                         </li>
                     </ul>
                 </div>

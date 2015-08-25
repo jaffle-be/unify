@@ -20,7 +20,6 @@
         <div id="grid-container" class="cbp-l-grid-agency">
 
             @foreach($projects as $project)
-
                 @include('Unify::portfolio.elements.overview-item')
             @endforeach
 
