@@ -16,7 +16,7 @@
                 @if($posts->count())
                 <? $counter = 0 ?>
 
-                <? $posts->loadImageSizes(850) ?>
+                <? $posts->loadImageSizes(460) ?>
 
                 @foreach($posts as $post)
 

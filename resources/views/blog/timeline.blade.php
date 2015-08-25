@@ -13,7 +13,7 @@
 
 
             <? $counter = 0 ?>
-            <? $posts->loadImageSizes(850) ?>
+            <? $posts->loadImageSizes(1140) ?>
             @foreach($posts as $post)
 
                 @include('Unify::blog.elements.timeline')

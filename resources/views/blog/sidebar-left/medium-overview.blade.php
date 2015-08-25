@@ -22,7 +22,7 @@
 
                 @if($posts->count())
                     <? $counter = 0 ?>
-                    <? $posts->loadImageSizes(340) ?>
+                    <? $posts->loadImageSizes(460) ?>
                     @foreach($posts as $post)
 
                         @include('Unify::blog.elements.medium-overview', ['counter' => $counter])

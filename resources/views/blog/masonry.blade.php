@@ -14,7 +14,7 @@
             @if($posts->count())
 
                 <? $counter = 0 ?>
-                <? $posts->loadImageSizes(360) ?>
+                <? $posts->loadImageSizes(460) ?>
                 @foreach($posts as $post)
 
                     @include('Unify::blog.elements.masonry')
