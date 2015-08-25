@@ -76,7 +76,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <!-- Badge -->
-                    <ul class="list-inline shop-badge badge-lists badge-icons pull-right">
+                    {{--<ul class="list-inline shop-badge badge-lists badge-icons pull-right">
                         <li>
                             <a href="#"><i class="fa fa-shopping-cart"></i></a>
                             <span class="badge badge-sea rounded-x">3</span>
@@ -97,7 +97,7 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul>--}}
                     <!-- End Badge -->
 
                     <ul class="nav navbar-nav">
