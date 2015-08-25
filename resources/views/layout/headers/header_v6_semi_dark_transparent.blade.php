@@ -1,8 +1,8 @@
 @section('styles-header')
     <link rel="stylesheet" href="{{ theme_asset('css/headers/header-v6.css') }}">
-@stop
-@section('header')
-    <!--=== Header v6 ===-->
+    @stop
+    @section('header')
+            <!--=== Header v6 ===-->
     <div class="header-v6 header-dark-transparent header-sticky">
         <!-- Navbar -->
         <div class="navbar mega-menu" role="navigation">
@@ -59,18 +59,40 @@
                         <ul class="nav navbar-nav">
                             @foreach(Menu::get('primary menu')->items as $item)
                                 @if($item->children->count() == 0)
-                                    <li><a href="{{ $item->url }}"  target="{{ $item->target }}">{{ $item->name }}</a></li>
+                                    <li><a href="{{ $item->url }}" target="{{ $item->target }}">{{ $item->name }}</a>
+                                    </li>
                                 @else
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
                                         <ul class="dropdown-menu">
                                             @foreach($item->children as $child)
-                                                <li><a href="{{ $child->url }}"  target="{{ $child->target }}">{{ $child->name }}</a></li>
+                                                <li>
+                                                    <a href="{{ $child->url }}" target="{{ $child->target }}">{{ $child->name }}</a>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </li>
                                 @endif
                             @endforeach
+
+                            @if($account->locales->count() > 1)
+
+                                <li class="dropdown">
+                                    <a href="#">{{ app()->getLocale() }}</a>
+                                    <ul class="dropdown-menu">
+                                        @foreach($account->locales as $locale)
+                                            @if(app()->getLocale() == $locale->slug)
+                                                <li class="active"><a href="#">{{ $locale->name }}</a></li>
+                                            @else
+                                                <li>
+                                                    <a href="{{ route('store.locale', ['locale' => $locale->slug]) }}">{{ $locale->name }}</a>
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </li>
+
+                            @endif
                         </ul>
                     </div>
                 </div>

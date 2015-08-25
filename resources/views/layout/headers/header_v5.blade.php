@@ -22,20 +22,24 @@
                     <div class="col-sm-6">
                         <!-- Topbar Navigation -->
                         <ul class="left-topbar">
-                            <li>
-                                <a>Language ({{ App::getLocale() }})</a>
-                                <ul class="language">
-                                    @foreach(config('system.locales') as $locale)
-                                        @if($locale == App::getLocale())
-                                            <li class="active">
-                                                <a href="#">{{ $locale }}<i class="fa fa-check"></i></a>
-                                            </li>
-                                        @else
-                                            <li><a href="#">{{ $locale }}</a></li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            </li>
+                            @if($account->locales->count() > 1)
+                                <li>
+                                    <a>{{ app()->getLocale() }}</a>
+                                    <ul class="language">
+                                        @foreach($account->locales as $locale)
+                                            @if($locale == app()->getLocale())
+                                                <li class="active">
+                                                    <a href="#">{{ $locale->name }}<i class="fa fa-check"></i></a>
+                                                </li>
+                                            @else
+                                                <li>
+                                                    <a href="{{ route('store.locale', ['locale' => $locale->slug]) }}">{{ $locale->name }}</a>
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @endif
                         </ul>
                         <!--/end left-topbar-->
                     </div>

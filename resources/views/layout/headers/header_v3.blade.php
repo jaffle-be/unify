@@ -4,65 +4,88 @@
 
 @section('header')
 
-<div class="header-v3">
-    <!-- Navbar -->
-    <div class="navbar navbar-default mega-menu" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="fa fa-bars"></span>
-                </button>
-                <a class="navbar-brand" href="{{ route('store.home') }}">
-                    <img id="logo-header" src="{{ asset($account->logo()) }}" alt="Logo">
-                </a>
-            </div>
+    <div class="header-v3">
+        <!-- Navbar -->
+        <div class="navbar navbar-default mega-menu" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ route('store.home') }}">
+                        <img id="logo-header" src="{{ asset($account->logo()) }}" alt="Logo">
+                    </a>
+                </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
-                <div class="container">
-                    <ul class="nav navbar-nav">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+                    <div class="container">
+                        <ul class="nav navbar-nav">
 
-                        @foreach(Menu::get('primary menu')->items as $item)
-                            @if($item->children->count() == 0)
-                                <li><a href="{{ $item->url }}"  target="{{ $item->target }}">{{ $item->name }}</a></li>
-                            @else
+                            @foreach(Menu::get('primary menu')->items as $item)
+                                @if($item->children->count() == 0)
+                                    <li><a href="{{ $item->url }}" target="{{ $item->target }}">{{ $item->name }}</a>
+                                    </li>
+                                @else
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
+                                        <ul class="dropdown-menu">
+                                            @foreach($item->children as $child)
+                                                <li>
+                                                    <a href="{{ $child->url }}" target="{{ $child->target }}">{{ $child->name }}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                @endif
+                            @endforeach
+
+
+                            @if($account->locales->count() > 1)
+
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ app()->getLocale() }}</a>
                                     <ul class="dropdown-menu">
-                                        @foreach($item->children as $child)
-                                            <li><a href="{{ $child->url }}"  target="{{ $child->target }}">{{ $child->name }}</a></li>
+                                        @foreach($account->locales as $locale)
+                                            @if($locale->slug == app()->getLocale())
+                                                <li class="active"><a href="#">{{ $locale->name }}</a></li>
+                                            @else
+                                                <li>
+                                                    <a href="{{ route('store.locale', ['locale' => $locale->slug]) }}">{{ $locale->name }}</a>
+                                                </li>
+                                            @endif
                                         @endforeach
                                     </ul>
                                 </li>
-                            @endif
-                        @endforeach
 
-                        <!-- Search Block -->
-                        <li>
-                            <i class="search fa fa-search search-btn"></i>
+                                @endif
 
-                            <div class="search-open">
-                                <form action="{{ route('store.search.index') }}">
-                                <div class="input-group animated fadeInDown">
-                                    <input type="text" name="query" class="form-control" placeholder="Search">
+                                        <!-- Search Block -->
+                                <li>
+                                    <i class="search fa fa-search search-btn"></i>
+
+                                    <div class="search-open">
+                                        <form action="{{ route('store.search.index') }}">
+                                            <div class="input-group animated fadeInDown">
+                                                <input type="text" name="query" class="form-control" placeholder="Search">
                                         <span class="input-group-btn">
                                             <button class="btn-u" type="button">Go</button>
                                         </span>
-                                </div>
-                                </form>
-                            </div>
-                        </li>
-                        <!-- End Search Block -->
-                    </ul>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <!-- End Search Block -->
+                        </ul>
+                    </div>
+                    <!--/end container-->
                 </div>
-                <!--/end container-->
+                <!--/navbar-collapse-->
             </div>
-            <!--/navbar-collapse-->
         </div>
+        <!-- End Navbar -->
     </div>
-    <!-- End Navbar -->
-</div>
-<!--=== End Header v3 ===-->
+    <!--=== End Header v3 ===-->
 @stop

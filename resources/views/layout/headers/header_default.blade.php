@@ -1,9 +1,9 @@
 @section('styles-header')
     <link rel="stylesheet" href="{{ theme_asset('css/headers/header-default.css') }}">
-@stop
+    @stop
 
-@section('header')
-    <!--=== Header ===-->
+    @section('header')
+            <!--=== Header ===-->
     <div class="header">
 
         <div class="container">
@@ -16,22 +16,31 @@
             <!-- Topbar -->
             <div class="topbar">
                 <ul class="loginbar pull-right">
-                    <li class="hoverSelector">
-                        <i class="fa fa-globe"></i>
-                        <a>Languages</a>
-                        <ul class="languages hoverSelectorBlock">
-                            @foreach(config('system.locales') as $locale)
-                                @if(App::getLocale() == $locale)
-                                    <li class="active">
-                                        <a href="#">{{$locale}} <i class="fa fa-check"></i></a>
-                                    </li>
-                                @else
-                                    <li><a href="#">{{ $locale }}</a></li>
-                                @endif
-                            @endforeach
-                        </ul>
-                    </li>
-                    <li class="topbar-devider"></li>
+
+                    @if($account->locales->count() > 1)
+                        <li class="hoverSelector">
+                            <i class="fa fa-globe"></i>
+                            <a>Languages</a>
+                            <ul class="languages hoverSelectorBlock">
+
+                                @foreach($account->locales as $locale)
+                                    @if(App::getLocale() == $locale->slug)
+                                        <li class="active">
+                                            <a href="#">{{$locale->name}} <i class="fa fa-check"></i></a>
+                                        </li>
+                                    @else
+                                        <li>
+                                            <a href="{{ route('store.locale', ['locale' => $locale->slug]) }}">{{ $locale->name }}</a>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            </ul>
+
+                        </li>
+                        <li class="topbar-devider"></li>
+                    @endif
+
+
                     <li><a href="{{ route('store.shop.checkout.index') }}">Cart (3)</a></li>
                     <li class="topbar-devider"></li>
                     <li><a href="{{ route('store.shop.login') }}">Login</a></li>
@@ -55,35 +64,37 @@
 
                     @foreach(Menu::get('primary menu')->items as $item)
                         @if($item->children->count() == 0)
-                        <li><a href="{{ $item->url }}"  target="{{ $item->target }}">{{ $item->name }}</a></li>
+                            <li><a href="{{ $item->url }}" target="{{ $item->target }}">{{ $item->name }}</a></li>
                         @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
-                            <ul class="dropdown-menu">
-                                @foreach($item->children as $child)
-                                <li><a href="{{ $child->url }}"  target="{{ $child->target }}">{{ $child->name }}</a></li>
-                                @endforeach
-                            </ul>
-                        </li>
-                        @endif
-                    @endforeach
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
+                                <ul class="dropdown-menu">
+                                    @foreach($item->children as $child)
+                                        <li>
+                                            <a href="{{ $child->url }}" target="{{ $child->target }}">{{ $child->name }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                            @endif
+                            @endforeach
 
-                    <!-- Search Block -->
-                    <li>
-                        <i class="search fa fa-search search-btn"></i>
+                                    <!-- Search Block -->
+                            <li>
+                                <i class="search fa fa-search search-btn"></i>
 
-                        <div class="search-open">
-                            <div class="input-group animated fadeInDown">
-                                <form action="{{ route('store.search.index') }}">
-                                    <input type="text" name="query" class="form-control" placeholder="Search">
-                                </form>
+                                <div class="search-open">
+                                    <div class="input-group animated fadeInDown">
+                                        <form action="{{ route('store.search.index') }}">
+                                            <input type="text" name="query" class="form-control" placeholder="Search">
+                                        </form>
                                 <span class="input-group-btn">
                                     <button class="btn-u" type="button">Go</button>
                                 </span>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- End Search Block -->
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- End Search Block -->
                 </ul>
             </div>
             <!--/end container-->

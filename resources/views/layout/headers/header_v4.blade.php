@@ -26,20 +26,27 @@
 
                     <div class="col-md-6">
                         <ul class="list-inline top-v1-data">
-                            <li class="hoverSelector">
-                                <a href="#"><i class="fa fa-globe"></i></a>
-                                <ul class="languages hoverSelectorBlock">
-                                    @foreach(config('system.locales') as $locale)
-                                        @if(App::getLocale() == $locale)
-                                            <li class="active">
-                                                <a href="#">{{$locale}} <i class="fa fa-check"></i></a>
-                                            </li>
-                                        @else
-                                            <li><a href="#">{{ $locale }}</a></li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            </li>
+
+                            @if($account->locales->count() > 1)
+
+                                <li class="hoverSelector">
+                                    <a href="#"><i class="fa fa-globe"></i></a>
+                                    <ul class="languages hoverSelectorBlock">
+                                        @foreach($account->locales as $locale)
+                                            @if(app()->getLocale() == $locale->slug)
+                                                <li class="active">
+                                                    <a href="#">{{$locale->name}} <i class="fa fa-check"></i></a>
+                                                </li>
+                                            @else
+                                                <li>
+                                                    <a href="{{ route('store.locale', ['locale' => $locale->slug]) }}">{{ $locale->name }}</a>
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </li>
+
+                            @endif
                             <li>
                                 <a href="{{ route('store.shop.checkout.index') }}"><i class="fa fa-shopping-cart"></i></a>
                             </li>

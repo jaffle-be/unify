@@ -1,9 +1,9 @@
 @section('styles-header')
-<link rel="stylesheet" href="{{ theme_asset('css/headers/header-v2.css') }}">
-@stop
+    <link rel="stylesheet" href="{{ theme_asset('css/headers/header-v2.css') }}">
+    @stop
 
-@section('header')
-    <!--=== Header v2 ===-->
+    @section('header')
+            <!--=== Header v2 ===-->
     <div class="header-v2 header-sticky">
         <div class="container container-space">
             <!-- Topbar v2 -->
@@ -11,26 +11,35 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <ul class="list-inline top-v2-contacts">
-                            <li>Email: <a href="mailto:info@htmlstream.com">{{ $account->contactInformation->first()->email }}</a></li>
-                            @if($account->contactInformation->first()->phone)
-                            <li><a href="tel:{{ $account->contactInformation->first()->phone }}">{{ $account->contactInformation->first()->phone }}</a></li>
-                            @endif
-                            <li>
-                                <div class="language-bar">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <span class="heading">Languages</span>
-                                    </a>
-                                    <ul class="languages-dropdown" role="menu">
-                                        @foreach(config('system.locales') as $locale)
-                                            @if(App::getLocale() == $locale)
-                                            <li class="active"><a>{{ $locale }}</a></li>
-                                            @else
-                                            <li><a href="">{{ $locale }}</a></li>
-                                            @endif
-                                        @endforeach
-                                    </ul>
-                                </div>
+                            <li>Email:
+                                <a href="mailto:info@htmlstream.com">{{ $account->contactInformation->first()->email }}</a>
                             </li>
+                            @if($account->contactInformation->first()->phone)
+                                <li>
+                                    <a href="tel:{{ $account->contactInformation->first()->phone }}">{{ $account->contactInformation->first()->phone }}</a>
+                                </li>
+                            @endif
+
+                            @if($account->locales->count() > 1)
+                                <li>
+                                    <div class="language-bar">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="heading">Languages</span>
+                                        </a>
+                                        <ul class="languages-dropdown" role="menu">
+                                            @foreach($account->locales as $locale)
+                                                @if(App::getLocale() == $locale->slug)
+                                                    <li class="active"><a>{{ $locale->name }}</a></li>
+                                                @else
+                                                    <li>
+                                                        <a href="{{ route('store.locale', ['locale' => $locale->slug]) }}">{{ $locale->name }}</a>
+                                                    </li>
+                                                @endif
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                     <div class="col-sm-4">
@@ -63,13 +72,15 @@
                     <ul class="nav navbar-nav">
                         @foreach(Menu::get('primary menu')->items as $item)
                             @if($item->children->count() == 0)
-                                <li><a href="{{ $item->url }}"  target="{{ $item->target }}">{{ $item->name }}</a></li>
+                                <li><a href="{{ $item->url }}" target="{{ $item->target }}">{{ $item->name }}</a></li>
                             @else
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
                                     <ul class="dropdown-menu">
                                         @foreach($item->children as $child)
-                                            <li><a href="{{ $child->url }}"  target="{{ $child->target }}">{{ $child->name }}</a></li>
+                                            <li>
+                                                <a href="{{ $child->url }}" target="{{ $child->target }}">{{ $child->name }}</a>
+                                            </li>
                                         @endforeach
                                     </ul>
                                 </li>

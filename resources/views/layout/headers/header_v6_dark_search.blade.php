@@ -1,8 +1,8 @@
 @section('styles-header')
     <link rel="stylesheet" href="{{ theme_asset('css/headers/header-v6.css') }}">
-@stop
-@section('header')
-    <!--=== Header v6 ===-->
+    @stop
+    @section('header')
+            <!--=== Header v6 ===-->
     <div class="header-v6 header-dark-search header-sticky">
         <!-- Navbar -->
         <div class="navbar mega-menu" role="navigation">
@@ -31,21 +31,24 @@
                             <li class="menu-icons shopping-cart">
                                 <i class="menu-icons-style radius-x fa fa-shopping-cart"></i>
                                 <span class="badge">0</span>
+
                                 <div class="shopping-cart-open">
                                     <span class="shc-title">No products in the Cart</span>
-                                    <button type="button" class="btn-u"><i class="fa fa-shopping-cart"></i> Cart</button>
+                                    <button type="button" class="btn-u"><i class="fa fa-shopping-cart"></i> Cart
+                                    </button>
                                     <span class="shc-total">Total: <strong>$0.00</strong></span>
                                 </div>
                             </li>
                             <li class="menu-icons">
                                 <i class="menu-icons-style search search-close search-btn fa fa-search"></i>
+
                                 <div class="search-open">
                                     <form action="{{ route('store.search.index') }}">
                                         <input type="text" name="query" class="animated fadeIn form-control" placeholder="Start searching ...">
                                     </form>
                                 </div>
                             </li>
-                        </ul>    
+                        </ul>
                     </div>
                     <!-- End Header Inner Right -->
                 </div>
@@ -56,23 +59,46 @@
                         <ul class="nav navbar-nav">
                             @foreach(Menu::get('primary menu')->items as $item)
                                 @if($item->children->count() == 0)
-                                    <li><a href="{{ $item->url }}"  target="{{ $item->target }}">{{ $item->name }}</a></li>
+                                    <li><a href="{{ $item->url }}" target="{{ $item->target }}">{{ $item->name }}</a>
+                                    </li>
                                 @else
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
                                         <ul class="dropdown-menu">
                                             @foreach($item->children as $child)
-                                                <li><a href="{{ $child->url }}"  target="{{ $child->target }}">{{ $child->name }}</a></li>
+                                                <li>
+                                                    <a href="{{ $child->url }}" target="{{ $child->target }}">{{ $child->name }}</a>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </li>
                                 @endif
                             @endforeach
+
+                            @if($account->locales->count() > 1)
+
+                                <li class="dropdown">
+                                    <a href="#">{{ app()->getLocale() }}</a>
+                                    <ul class="dropdown-menu">
+                                        @foreach($account->locales as $locale)
+                                            @if(app()->getLocale() == $locale->slug)
+                                                <li class="active"><a href="#">{{ $locale->name }}</a></li>
+                                            @else
+                                                <li>
+                                                    <a href="{{ route('store.locale', ['locale' => $locale->slug]) }}">{{ $locale->name }}</a>
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </li>
+
+                            @endif
                         </ul>
                     </div>
-                </div><!--/navbar-collapse-->
-            </div>    
-        </div>            
+                </div>
+                <!--/navbar-collapse-->
+            </div>
+        </div>
         <!-- End Navbar -->
     </div>
     <!--=== End Header v6 ===-->
