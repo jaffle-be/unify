@@ -87,12 +87,12 @@
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <ul class="list-inline sponsors-icons pull-right">
+                        {{--<ul class="list-inline sponsors-icons pull-right">
                             <li><i class="fa fa-cc-paypal"></i></li>
                             <li><i class="fa fa-cc-visa"></i></li>
                             <li><i class="fa fa-cc-mastercard"></i></li>
                             <li><i class="fa fa-cc-discover"></i></li>
-                        </ul>
+                        </ul>--}}
                     </div>
                 </div>
             </div>
