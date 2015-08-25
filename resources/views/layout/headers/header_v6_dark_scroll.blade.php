@@ -26,7 +26,7 @@
                     <!-- Header Inner Right -->
                     <div class="header-inner-right">
                         <ul class="menu-icons-list">
-                            <li class="menu-icons shopping-cart">
+                            {{--<li class="menu-icons shopping-cart">
                                 <i class="menu-icons-style radius-x fa fa-shopping-cart"></i>
                                 <span class="badge">0</span>
 
@@ -36,7 +36,7 @@
                                     </button>
                                     <span class="shc-total">Total: <strong>$0.00</strong></span>
                                 </div>
-                            </li>
+                            </li>--}}
                             <li class="menu-icons">
                                 <i class="menu-icons-style search search-close search-btn fa fa-search"></i>
 

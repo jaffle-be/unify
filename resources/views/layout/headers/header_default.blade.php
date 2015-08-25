@@ -37,13 +37,14 @@
                             </ul>
 
                         </li>
-                        <li class="topbar-devider"></li>
                     @endif
 
+                        {{--<li class="topbar-devider"></li>--}}
 
-                    <li><a href="{{ route('store.shop.checkout.index') }}">Cart (3)</a></li>
+
+                    {{--<li><a href="{{ route('store.shop.checkout.index') }}">Cart (3)</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href="{{ route('store.shop.login') }}">Login</a></li>
+                    <li><a href="{{ route('store.shop.login') }}">Login</a></li>--}}
                 </ul>
             </div>
             <!-- End Topbar -->

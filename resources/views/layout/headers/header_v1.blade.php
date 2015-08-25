@@ -50,10 +50,10 @@
 
                             @endif
 
-                            <li>
+                            {{--<li>
                                 <a href="{{ route('store.shop.checkout.index') }}"><i class="fa fa-shopping-cart"></i></a>
                             </li>
-                            <li><a href="{{ route('store.shop.login') }}">Login</a></li>
+                            <li><a href="{{ route('store.shop.login') }}">Login</a></li>--}}
                         </ul>
                     </div>
                 </div>

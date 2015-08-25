@@ -45,9 +45,9 @@
                     </div>
                     <div class="col-sm-6">
                         <ul class="list-inline right-topbar pull-right">
-                            <li><a href="{{ route('store.shop.login') }}">Login</a> |
+                            {{--<li><a href="{{ route('store.shop.login') }}">Login</a> |
                                 <a href="{{ route('store.shop.register') }}">Register</a>
-                            </li>
+                            </li>--}}
                             <li><i class="search fa fa-search search-button"></i></li>
                         </ul>
                     </div>
