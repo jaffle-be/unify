@@ -13,7 +13,7 @@
                     <span>That’s an error!</span>
 
                     <p>The requested URL was not found on this server. That’s all we know.</p>
-                    <a class="btn-u btn-bordered" href="index.html">Back Home</a>
+                    <a class="btn-u btn-bordered" href="/">Back Home</a>
                 </div>
             </div>
         </div>

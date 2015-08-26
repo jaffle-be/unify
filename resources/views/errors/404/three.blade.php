@@ -28,7 +28,7 @@
                     <h4>Not what you were looking for?</h4>
 
                     <p>If the page is not what you are looking for, try searching the page on the search page and find out new things.</p>
-                    <a class="btn-u btn-brd btn-u-light" href="#"> Discover More</a>
+                    <a class="btn-u btn-brd btn-u-light" href="/blog"> Discover More</a>
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
                     <h4>Possible cause of the problem</h4>
 
                     <p>The page you requested could not be found. However, the requested resource may be available again in the future.</p>
-                    <a class="btn-u btn-brd btn-u-light" href="#"> Go back to Home Page</a>
+                    <a class="btn-u btn-brd btn-u-light" href="/"> Go back to Home Page</a>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                     <h4>Contact us</h4>
 
                     <p>If you have a problem with the website, please contact us, our support team will help you to solve the problem.</p>
-                    <a class="btn-u btn-brd btn-u-light" href="#"> Contact Us</a>
+                    <a class="btn-u btn-brd btn-u-light" href="/contact"> Contact Us</a>
                 </div>
             </div>
         </div>

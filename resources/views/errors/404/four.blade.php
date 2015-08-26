@@ -16,7 +16,7 @@
                 <span class="sorry">Sorry, the page you were looking for could not be found!</span>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <a class="btn-u btn-brd btn-u-light" href="#"> Go Back to Main Page</a>
+                        <a class="btn-u btn-brd btn-u-light" href="/"> Go Back to Main Page</a>
                     </div>
                 </div>
             </div>
