@@ -18,7 +18,7 @@
         <div class="content">
 
             <div class="headline">
-                <h2>{{ Lang::get('Unify::front.search.search-result') . ' ' . Input::get('query')}}</h2>
+                <h2>{{ Lang::get('Unify::front.search.search-result')}}</h2>
             </div>
 
             @if(!$projects->count() && !$posts->count())
