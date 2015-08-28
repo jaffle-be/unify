@@ -16,9 +16,38 @@ var gulp = require('gulp'),
     glob = require('glob');
 
 
-gulp.task('default', ['admin-theme', 'theme-page-styles']);
+gulp.task('default', ['admin-scripts', 'theme-style', 'theme-page-styles']);
 
-gulp.task('admin-theme', function () {
+gulp.task('watch', ['watch-admin-scripts', 'watch-theme-style', 'watch-theme-page-styles']);
+
+
+gulp.task('watch-admin-scripts', function()
+{
+
+    watch('resources/assets/js/admin/**/*.js', function()
+    {
+        gulp.start('admin-scripts');
+    });
+
+});
+
+gulp.task('watch-theme-style', function()
+{
+    watch('resources/assets/less/**/*.less', function()
+    {
+        gulp.start('theme-style');
+    });
+});
+
+gulp.task('watch-theme-page-styles', function()
+{
+    watch('resources/assets/less/pages/**/*.less', function()
+    {
+        gulp.start('theme-page-styles');
+    });
+});
+
+gulp.task('admin-scripts', function () {
     return gulp.src([
         'resources/assets/js/admin/config.js',
         'resources/assets/js/admin/models.js',
@@ -35,6 +64,22 @@ gulp.task('admin-theme', function () {
         //do not mangle, or function names etc will fail.
         .pipe(uglify({mangle: false}))
         .pipe(gulp.dest('resources/assets/js/admin'));
+});
+
+gulp.task('theme-style', function()
+{
+    gulp.src('resources/assets/less/styles.less')
+        .pipe(plumber())
+        .pipe(less())
+        .pipe(rename(function(path){
+            path.extname = '.css';
+        }))
+        .pipe(gulp.dest('resources/assets/css/'))
+        .pipe(minify())
+        .pipe(rename(function (path) {
+            path.extname = '.min.css';
+        }))
+        .pipe(gulp.dest('resources/assets/css/'));
 });
 
 //global startup compiler
