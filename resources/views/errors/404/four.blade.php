@@ -11,12 +11,13 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="error-v4">
-                <a href="#"><img src="{{ theme_asset('img/logo2-default.png') }}" alt=""></a>
+                <a href="#"><img src="{{ asset($account->logo()) }}" alt=""></a>
                 <h1>404</h1>
-                <span class="sorry">Sorry, the page you were looking for could not be found!</span>
+                <span class="sorry">{{ Lang::get('Unify::front.errors.error-happened') }}</span>
+                <span class="sorry">{{ Lang::get('Unify::front.errors.url-not-found') }}</span>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <a class="btn-u btn-brd btn-u-light" href="/"> Go Back to Main Page</a>
+                        <a class="btn-u btn-brd btn-u-light" href="/"> {{ Lang::get('Unify::front.errors.back-home-button') }}</a>
                     </div>
                 </div>
             </div>

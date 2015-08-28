@@ -10,10 +10,10 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="error-v1">
                     <span class="error-v1-title">404</span>
-                    <span>That’s an error!</span>
+                    <span>{{ Lang::get('Unify::front.errors.error-happened') }}</span>
 
-                    <p>The requested URL was not found on this server. That’s all we know.</p>
-                    <a class="btn-u btn-bordered" href="/">Back Home</a>
+                    <p>{{ Lang::get('Unify::front.errors.url-not-found') }}</p>
+                    <a class="btn-u btn-bordered" href="/">{{ Lang::get('Unify::front.errors.back-home-button') }}</a>
                 </div>
             </div>
         </div>
