@@ -76,7 +76,7 @@
                     <div class="col-md-8 sm-margon-bottom-10">
                         <ul class="list-inline terms-menu">
                             <li class="silver">
-                                {{ Carbon\Carbon::now()->format('Y') }} &copy; <a target="_blank" href="http://digiredo.be">Digiredo</a> All Rights Reserved.
+                                @copyright
                             </li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms of Service</a></li>

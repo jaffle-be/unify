@@ -5,7 +5,7 @@
 
         <div class="copyright-section">
             <p>
-                {{ Carbon\Carbon::now()->format('Y') }} &copy; <a target="_blank" href="http://digiredo.be">Digiredo</a> All Rights Reserved.
+                @copyright
                 <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
             </p>
 

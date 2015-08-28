@@ -81,9 +81,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p>
-                            {{ Carbon\Carbon::now()->format('Y') }} &copy;
-                            <a target="_blank" href="http://digiredo.be">Digiredo</a> All Rights Reserved.
-                            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                            @copyright
                         </p>
                     </div>
                     <div class="col-md-6">
