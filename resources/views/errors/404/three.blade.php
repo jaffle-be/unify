@@ -61,7 +61,7 @@
     <!--=== Sticky Footer ===-->
     <div class="container sticky-footer">
         <p class="copyright-space">
-            2015 &copy; Unify Template. ALL Rights Reserved.
+            @copyright
         </p>
     </div>
     <!--=== End Sticky-Footer ===-->
