@@ -18,7 +18,7 @@
                 <small>By <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a> |
                     {!! $post->tags->format(null, ', ') !!}
                 </small>
-                <p>{{ $post->extract }}</p>
+                <p>{!!  $post->extract !!}</p>
             </div>
         </div>
     @endforeach

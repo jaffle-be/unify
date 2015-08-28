@@ -65,7 +65,7 @@
     @endif
 
 
-    <p>{{ $post->extract }}</p>
+    <p>{!!  $post->extract !!}</p>
 
     <p>
         <a class="btn-u btn-u-small" href="{{ route('store.blog.show', [$post]) }}"><i class="fa fa-plus-sign"></i> Read More</a>

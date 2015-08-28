@@ -11,7 +11,7 @@
             </ul>
             <h2>{{$post->title}}</h2>
 
-            <p>{{ $post->extract }}</p>
+            <p>{!!  $post->extract !!}</p>
 
             <p>{{ $post->content }}</p>
             <ul class="post-shares post-shares-lg">

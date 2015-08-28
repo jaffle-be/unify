@@ -25,7 +25,7 @@
 
                     <blockquote class="hero">
                         <p>
-                            <em>{{ $post->extract }}</em>
+                            <em>{!!  $post->extract !!}</em>
                         </p>
                     </blockquote>
 

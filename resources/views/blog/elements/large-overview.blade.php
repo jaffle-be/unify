@@ -12,7 +12,7 @@
         </ul>
         <h2><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h2>
 
-        <p>{{ $post->extract }}</p>
+        <p>{!!  $post->extract !!}</p>
         <ul class="post-shares">
             <li>
                 <a href="#">
