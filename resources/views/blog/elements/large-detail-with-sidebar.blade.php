@@ -13,7 +13,7 @@
 
             <p>{!!  $post->extract !!}</p>
 
-            <p>{{ $post->content }}</p>
+            <p>{!!  $post->content !!}</p>
             <ul class="post-shares post-shares-lg">
                 <li>
                     <a href="#">

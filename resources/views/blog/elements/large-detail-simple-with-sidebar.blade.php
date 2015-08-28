@@ -24,7 +24,7 @@
         <p>{!!  $post->extract !!}</p>
         <br>
 
-        <p>{{$post->content}}</p>
+        <p>{!! $post->content !!}</p>
     </div>
     <!--End Blog Post-->
 

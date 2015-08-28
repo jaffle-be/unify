@@ -30,7 +30,7 @@
             <p>{!! $post->extract !!}</p>
             <br>
 
-            {{ $post->content }}
+            {!!  $post->content !!}
         </div>
         <!--End Blog Post-->
 

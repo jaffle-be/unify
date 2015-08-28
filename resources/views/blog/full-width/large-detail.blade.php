@@ -30,7 +30,7 @@
                     </blockquote>
 
                     <p>
-                        {{ $post->content }}
+                        {!!  $post->content !!}
                     </p>
 
                     <ul class="post-shares post-shares-lg">
