@@ -66,7 +66,7 @@
 
     @section('breadcrumb')
 
-        {!! Breadcrumbs::render() !!}
+        {!! app('breadcrumbs')->render() !!}
 
     @stop
 

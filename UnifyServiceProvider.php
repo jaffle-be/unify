@@ -15,11 +15,9 @@ class UnifyServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $view = 'Unify::layout.breadcrumbs.' . $this->app['theme']->setting('layoutBreadcrumbs');
-
-        $this->app['config']->set('breadcrumbs.view', $view);
-
         parent::boot();
+
+        $this->viewComposers();
     }
 
     /**
@@ -29,6 +27,7 @@ class UnifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->breadcrumbs();
     }
 
     protected function observers()
@@ -37,17 +36,19 @@ class UnifyServiceProvider extends ServiceProvider
 
     protected function listeners()
     {
+    }
+
+    protected function viewComposers()
+    {
         /** @var Factory $view */
-        $this->app['view']->composer('Unify::layout.footers.*', function(View $view)
-        {
+        $this->app['view']->composer('Unify::layout.footers.*', function (View $view) {
             $cache = app('cache')->driver();
 
-            $posts = $cache->sear('footer-posts', function(){
+            $posts = $cache->sear('footer-posts', function () {
 
                 $translations = PostTranslation::lastPublished()->take(3)->lists('post_id');
 
-                if($translations->count() == 0)
-                {
+                if ($translations->count() == 0) {
                     return new Collection();
                 }
 
@@ -61,26 +62,35 @@ class UnifyServiceProvider extends ServiceProvider
             $view->with('posts', $posts);
         });
 
-        $this->app['view']->composer('Unify::layout.widgets.clients', function(View $view){
+        $this->app['view']->composer('Unify::layout.widgets.clients', function (View $view) {
 
-            $clients = app('cache')->sear('widget-clients', function(){
+            $clients = app('cache')->sear('widget-clients', function () {
 
                 return Client::has('images', '>', 0)
                     ->take(30)
                     ->get();
             });
 
-            if($clients->count())
-            {
+            if ($clients->count()) {
                 $amount = $clients->count() > 10 ? 10 : $clients->count();
 
                 $clients = $clients->shuffle()->random($amount);
             }
 
             $view->with('clients', $clients);
-
         });
+    }
 
+    protected function breadcrumbs()
+    {
+        $this->app->extend('breadcrumbs', function ($breadcrumbs) {
+
+            $view = 'Unify::layout.breadcrumbs.' . $this->app['theme']->setting('layoutBreadcrumbs');
+
+            $breadcrumbs->setView($view);
+
+            return $breadcrumbs;
+        });
     }
 
 }
