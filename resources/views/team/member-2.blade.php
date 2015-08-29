@@ -29,7 +29,7 @@
                 <div class="headline-left margin-bottom-30">
                     <h2 class="headline-brd heading-md">{{ Theme::setting('teamMemberAboutTitle') }}</h2>
                 </div>
-                <p>{{ $member->bio }}</p>
+                <p>{!!  $member->bio !!}</p>
 
                 @if($member->socialLinks)
                     <ul class="list-inline social-icons-v1">

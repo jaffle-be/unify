@@ -40,7 +40,7 @@
                         </ul>
                     @endif
                 </div>
-                <p>{{ $member->bio }}</p><br>
+                <p>{!!  $member->bio !!}</p><br>
 
                 <div class="row">
                     @foreach($member->skills as $skill)

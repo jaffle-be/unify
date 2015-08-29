@@ -15,7 +15,7 @@
                 </ul>
             @endif
         </div>
-        <p>{{$post->user->bio}}</p>
+        <p>{!! $post->user->bio !!}</p>
 
         <p><a href="{{ route('store.team.show', [$post->user]) }}">{{ Lang::get('Unify::front.more-about') }}</a></p>
     </div>

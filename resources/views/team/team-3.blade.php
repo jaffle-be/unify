@@ -29,7 +29,7 @@
                                     <span class="team-v7-name">{{$member->name}}</span>
                                     <span class="team-v7-position">{{$member->function}}</span>
 
-                                    <p>{{$member->bio}}
+                                    <p>{!! $member->bio !!}
                                         <br>
                                         <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
                                     </p>
@@ -63,7 +63,7 @@
                                     <span class="team-v7-name">{{$member->name}}</span>
                                     <span class="team-v7-position">{{ $member->function }}</span>
 
-                                    <p>{{$member->bio}}
+                                    <p>{!! $member->bio !!}
                                         <br>
                                         <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
                                     </p>
