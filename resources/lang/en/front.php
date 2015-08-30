@@ -93,6 +93,11 @@ return [
         "try-again-title"  => "Hmm, perhaps you can give it another shot",
         "url-not-found"    => "Sorry to say this, but the 'thing' you are looking for can not be found",
 
+    ],
+
+    'newsletter' => [
+        'email' => 'Email address',
+        'subscribe' => 'subscribe',
     ]
 
 ];

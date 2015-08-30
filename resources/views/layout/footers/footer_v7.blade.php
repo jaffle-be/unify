@@ -6,7 +6,7 @@
         <div class="copyright-section">
             <p>
                 @copyright
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                {{--<a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>--}}
             </p>
 
             @include('Unify::layout.footers.elements.social-icons-7')

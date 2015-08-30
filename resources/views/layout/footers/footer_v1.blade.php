@@ -58,7 +58,7 @@
                     <div class="col-md-6">
                         <p>
                             @copyright
-                            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                            {{--<a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>--}}
                         </p>
                     </div>
 

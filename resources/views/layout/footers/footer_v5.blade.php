@@ -47,9 +47,9 @@
 
                         <form class="footer-subsribe margin-bottom-20">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Email Address">
+                                <input type="text" class="form-control" placeholder="{{ Lang::get('Unify::front.newsletter.email') }}">
                                 <span class="input-group-btn">
-                                    <button class="btn-u" type="button">Go</button>
+                                    <button class="btn-u" type="button">{{ Lang::get('Unify::front.newsletter.subscribe') }}</button>
                                 </span>
                             </div>
                         </form>
@@ -97,8 +97,8 @@
                     <li class="silver">
                         @copyright
                     </li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    {{--<li><a href="#">Privacy Policy</a></li>--}}
+                    {{--<li><a href="#">Terms of Service</a></li>--}}
                 </ul>
             </div>
         </div>
