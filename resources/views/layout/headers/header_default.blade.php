@@ -20,7 +20,7 @@
                     @if($account->locales->count() > 1)
                         <li class="hoverSelector">
                             <i class="fa fa-globe"></i>
-                            <a>Languages</a>
+                            <a>{{ Lang::get('Unify::front.languages') }}</a>
                             <ul class="languages hoverSelectorBlock">
 
                                 @foreach($account->locales as $locale)
@@ -51,7 +51,7 @@
 
             <!-- Toggle get grouped for better mobile display -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">{{ Lang::get('Unify::front.toggle-navigation') }}</span>
                 <span class="fa fa-bars"></span>
             </button>
             <!-- End Toggle -->
@@ -87,10 +87,10 @@
                                 <div class="search-open">
                                     <div class="input-group animated fadeInDown">
                                         <form action="{{ route('store.search.index') }}">
-                                            <input type="text" name="query" class="form-control" placeholder="Search">
+                                            <input type="text" name="query" class="form-control" placeholder="{{ Lang::get('Unify::front.search.placeholder') }}">
                                         </form>
                                 <span class="input-group-btn">
-                                    <button class="btn-u" type="button">Go</button>
+                                    <button class="btn-u" type="button">{{ Lang::get('Unify::front.search.go') }}</button>
                                 </span>
                                     </div>
                                 </div>

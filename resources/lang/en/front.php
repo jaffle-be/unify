@@ -51,7 +51,17 @@ return [
 
     'reset-password'             => 'reset password',
 
+    'menu'                       => 'menu',
+
+    'languages'                  => 'languages',
+
+    'toggle-navigation'          => 'toggle navigation',
+
     'search'                     => [
+
+        'placeholder'          => 'search for something',
+
+        'go'                   => 'search',
 
         'nothing-found'        => 'Nothing found',
 
@@ -95,8 +105,8 @@ return [
 
     ],
 
-    'newsletter' => [
-        'email' => 'Email address',
+    'newsletter'                 => [
+        'email'     => 'Email address',
         'subscribe' => 'subscribe',
     ]
 

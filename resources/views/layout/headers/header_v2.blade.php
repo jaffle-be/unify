@@ -11,8 +11,8 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <ul class="list-inline top-v2-contacts">
-                            <li>Email:
-                                <a href="mailto:info@htmlstream.com">{{ $account->contactInformation->first()->email }}</a>
+                            <li>
+                                <a href="mailto:{{ $account->contactInformation->first()->email }}">{{ $account->contactInformation->first()->email }}</a>
                             </li>
                             @if($account->contactInformation->first()->phone)
                                 <li>
@@ -24,7 +24,7 @@
                                 <li>
                                     <div class="language-bar">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            <span class="heading">Languages</span>
+                                            <span class="heading">{{ Lang::get('Unify::front.languages') }}</span>
                                         </a>
                                         <ul class="languages-dropdown" role="menu">
                                             @foreach($account->locales as $locale)
@@ -43,6 +43,7 @@
                         </ul>
                     </div>
                     <div class="col-sm-4">
+
                         {{--<div class="topbar-buttons pull-right">
                             <a href="{{ route('store.shop.checkout.index') }}" class="btn-u btn-brd btn-brd-hover btn-u-light margin-right-5">Cart (3)</a>
                             <a href="{{ route('store.shop.login') }}" class="btn-u">Login</a>
@@ -59,7 +60,7 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">{{ Lang::get('Unify::front.toggle-navigation') }}</span>
                         <span class="fa fa-bars"></span>
                     </button>
                     <a class="navbar-brand brand-style" href="{{ route('store.home') }}">

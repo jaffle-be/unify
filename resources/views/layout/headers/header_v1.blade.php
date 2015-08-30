@@ -14,7 +14,7 @@
                         <ul class="list-inline top-v1-contacts">
                             <li>
                                 <i class="fa fa-envelope"></i>
-                                <a href="mailto:info@htmlstream.com">{{ $account->contactInformation->first()->email }}</a>
+                                <a href="mailto:{{ $account->contactInformation->first()->email }}">{{ $account->contactInformation->first()->email }}</a>
                             </li>
                             @if($account->contactInformation->first()->phone)
                                 <li>
@@ -67,7 +67,7 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">{{ Lang::get('Unify::front.toggle-navigation') }}</span>
                         <span class="fa fa-bars"></span>
                     </button>
                     <a class="navbar-brand" href="{{ route('store.home') }}">
@@ -103,9 +103,9 @@
                                     <div class="search-open">
                                         <form action="{{ route('store.search.index') }}">
                                             <div class="input-group animated fadeInDown">
-                                                <input type="text" name="query" class="form-control" placeholder="Search">
+                                                <input type="text" name="query" class="form-control" placeholder="{{ Lang::get('Unify::front.search.placeholder') }}">
                                                 <span class="input-group-btn">
-                                                    <button class="btn-u" type="button">Go</button>
+                                                    <button class="btn-u" type="button">{{ Lang::get('Unify::front.search.go') }}</button>
                                                 </span>
                                             </div>
                                         </form>
