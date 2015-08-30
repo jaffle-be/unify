@@ -59,6 +59,8 @@ return [
 
         'search-result'        => 'What we found',
 
+        'search-page-title'    => 'Search results',
+
     ],
 
     'store'                      => '',
@@ -79,17 +81,17 @@ return [
 
     'errors'                     => [
 
-        "back-home-button"   => "Go to main page",
-        "back-home-text"     => "Perhaps its better if you start from the beginning",
-        "back-home-title"    => "Problem still happening ",
-        "contact-button"     => "Ok",
-        "contact-text"       => "If the problem persists, please can drop us a quick note of what went wrong and how/when it happened so we can fix it",
-        "contact-title"      => "Let us know",
-        "error-happened"     => "Hmm, this wasn't supposed to happen",
+        "back-home-button" => "Go to main page",
+        "back-home-text"   => "Perhaps its better if you start from the beginning",
+        "back-home-title"  => "Problem still happening ",
+        "contact-button"   => "Ok",
+        "contact-text"     => "If the problem persists, please can drop us a quick note of what went wrong and how/when it happened so we can fix it",
+        "contact-title"    => "Let us know",
+        "error-happened"   => "Hmm, this wasn't supposed to happen",
         "try-again-button" => "Perhaps you can give it another shot",
         "try-again-text"   => "Just go back and try again. There might have been some sort of connection issue",
         "try-again-title"  => "Hmm, perhaps you can give it another shot",
-        "url-not-found"      => "Sorry to say this, but the 'thing' you are looking for can not be found",
+        "url-not-found"    => "Sorry to say this, but the 'thing' you are looking for can not be found",
 
     ]
 

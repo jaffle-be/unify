@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Theme::setting('portfolioMainTitleDetail'))
+@section('title', Lang::get('Unify::front.search.search-page-title'))
 
 @section('styles-content')
 
