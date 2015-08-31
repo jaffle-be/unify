@@ -1,10 +1,10 @@
 <!--=== Call To Action v2 ===-->
 <div class="call-action-v2 parallaxBg">
     <div class="container">
-        <h2>We are Hiring!</h2>
+        <h2>{{ Theme::setting('teamHiringTitle') }}</h2>
 
-        <p>Curabitur hendrerit, lectus in bibendum pellentesque, lacus eros rutrum ligula</p>
-        <a href="#" class="btn-u">Join Now</a>
+        <p>{{ Theme::setting('teamHiringText') }}</p>
+        <a href="{{ route('store.contact.index') }}" class="btn-u">{{ Theme::setting('teamHiringButton') }}</a>
     </div>
 </div>
 <!--=== End Call To Action v2 ===-->
