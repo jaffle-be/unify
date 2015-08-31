@@ -83,6 +83,19 @@ class UnifyServiceProvider extends ServiceProvider
 
             $view->with('clients', $clients);
         });
+
+        $this->app['view']->composer('Unify::blog.elements.sidebars.*', function(View $view)
+        {
+            //latest posts ?
+            $posts = app('App\Blog\PostRepositoryInterface');
+
+            $latest = $posts->getLatestPosts(3);
+
+            //all tags
+            $tags = \App\Tags\Tag::has('posts')->limit(15)->get();
+
+            $view->with(['latest' => $latest, 'tags' => $tags]);
+        });
     }
 
     protected function breadcrumbs()
