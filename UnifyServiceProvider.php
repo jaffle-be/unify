@@ -17,7 +17,11 @@ class UnifyServiceProvider extends ServiceProvider
     {
         parent::boot();
 
-        $this->viewComposers();
+        $this->app->booted(function()
+        {
+            $this->viewComposers();
+        });
+
     }
 
     /**
@@ -44,7 +48,7 @@ class UnifyServiceProvider extends ServiceProvider
         $this->app['view']->composer('Unify::layout.footers.*', function (View $view) {
             $cache = app('cache')->driver();
 
-            $posts = $cache->sear('footer-posts', function () {
+            $posts = $cache->sear('footer-posts:' . app()->getLocale(), function () {
 
                 $translations = PostTranslation::lastPublished()->take(3)->lists('post_id');
 
