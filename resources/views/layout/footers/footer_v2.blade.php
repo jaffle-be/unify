@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="row">
                     <!-- About -->
-                    <div class="col-md-3 md-margin-bottom-40">
+                    <div class="col-md-4 md-margin-bottom-40">
                         <div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterAboutTitle') }}</h2></div>
 
                         <p class="margin-bottom-20">{{ Theme::setting('layoutFooterAboutText') }}</p>
@@ -33,7 +33,7 @@
                     <!-- End About -->
 
                     <!-- Link List -->
-                    <div class="col-md-3 md-margin-bottom-40">
+                    <div class="col-md-4 md-margin-bottom-40">
                         <div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterLinksTitle') }}</h2></div>
                         <ul class="list-unstyled link-list">
                             @foreach(Menu::get('primary menu')->items as $item)
@@ -44,7 +44,7 @@
                     <!-- End Link List -->
 
                     <!-- Latest Tweets -->
-                    {{--<div class="col-md-3 md-margin-bottom-40">--}}
+                    {{--<div class="col-md-4 md-margin-bottom-40">--}}
                         {{--<div class="latest-tweets">--}}
                             {{--<div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterTweetsTitle') }}</h2></div>--}}
                             {{--<div class="latest-tweets-inner">--}}
@@ -72,7 +72,7 @@
                     <!-- End Latest Tweets -->
 
                     <!-- Address -->
-                    <div class="col-md-3 md-margin-bottom-40">
+                    <div class="col-md-4 md-margin-bottom-40">
 
                         @include('Unify::layout.footers.elements.contacts-1', ['contact' => $account->contactInformation->first(), 'small' => true])
 

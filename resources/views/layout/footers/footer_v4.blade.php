@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row">
                     <!-- About -->
-                    <div class="col-md-3 md-margin-bottom-40">
+                    <div class="col-md-4 md-margin-bottom-40">
                         <h2 class="thumb-headline">{{ Theme::setting('layoutFooterContactTitle') }}</h2>
                         @include('Unify::layout.footers.elements.contacts-2', ['contact' => $account->contactInformation->first()])
 
@@ -22,17 +22,7 @@
                     </div>
                     <!-- End About -->
 
-                    <!-- Simple List -->
-                    <div class="col-md-3">
-                        <h2 class="thumb-headline">{{ Theme::setting('layoutFooterLinksTitle') }}</h2>
-                        <ul class="list-unstyled simple-list">
-                            @foreach(Menu::get('primary menu')->items as $item)
-                            <li><a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="posts">
                             <h2 class="thumb-headline">{{ Theme::setting('layoutFooterPostsTitle') }}</h2>
                             @foreach($posts as $post)
@@ -48,9 +38,16 @@
                                 </dl>
                             @endforeach
                         </div>
+
+                        <h2 class="thumb-headline">{{ Theme::setting('layoutFooterLinksTitle') }}</h2>
+                        <ul class="list-unstyled simple-list">
+                            @foreach(Menu::get('primary menu')->items as $item)
+                                <li><a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a></li>
+                            @endforeach
+                        </ul>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <h2 class="thumb-headline">{{ Theme::setting('layoutFooterAboutTitle') }}</h2>
 
                         <p class="margin-bottom-20">{{ Theme::setting('layoutFooterAboutText') }}</p>

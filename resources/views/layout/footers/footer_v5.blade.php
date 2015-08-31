@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="row">
                     <!-- About Us -->
-                    <div class="col-md-3 sm-margin-bottom-40">
+                    <div class="col-md-4 sm-margin-bottom-40">
                         <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterAboutTitle') }}</h2></div>
                         <p class="margin-bottom-20">{{ Theme::setting('layoutFooterAboutText') }}</p>
 
@@ -25,7 +25,7 @@
                     <!-- End About Us -->
 
                     <!-- Recent News -->
-                    <div class="col-md-3 sm-margin-bottom-40">
+                    <div class="col-md-4 sm-margin-bottom-40">
 
                         <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
                         <ul class="list-unstyled link-news">
@@ -40,7 +40,7 @@
                     <!-- End Recent News -->
 
                     <!-- Recent Blog Entries -->
-                    <div class="col-md-3 sm-margin-bottom-40">
+                    <div class="col-md-4 sm-margin-bottom-40">
                         <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterNewsletterTitle') }}</h2></div>
 
                         <p>{{ Theme::setting('layoutFooterNewsletterText') }}</p>
@@ -60,7 +60,7 @@
                     <!-- End Recent Blog Entries -->
 
                     <!-- Latest Tweets -->
-                    {{--<div class="col-md-3">--}}
+                    {{--<div class="col-md-4">--}}
                         {{--<div class="heading-footer"><h2>{{ Theme::setting('layoutFooterTweetsTitle') }}</h2></div>--}}
                         {{--<ul class="list-unstyled tweets">--}}
                             {{--<li>--}}

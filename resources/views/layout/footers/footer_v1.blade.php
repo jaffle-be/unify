@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="row">
                     <!-- About -->
-                    <div class="col-md-3 md-margin-bottom-40">
+                    <div class="col-md-4 md-margin-bottom-40">
                         <div class="headline"><h2>{{ Theme::setting('layoutFooterAboutTitle') }}</h2></div>
                             <p>{{ Theme::setting('layoutFooterAboutText') }}</p>
 
@@ -20,7 +20,7 @@
                     <!-- End About -->
 
                     <!-- Latest -->
-                    <div class="col-md-3 md-margin-bottom-40">
+                    <div class="col-md-4 md-margin-bottom-40">
                         <div class="posts">
                             <div class="headline"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
                             <ul class="list-unstyled latest-list">
@@ -32,11 +32,13 @@
                                 @endforeach
                             </ul>
                         </div>
+
+                        @include('Unify::layout.footers.elements.contacts-1', ['contact' => $account->contactInformation->first()])
                     </div>
                     <!-- End Latest -->
 
                     <!-- Link List -->
-                    <div class="col-md-3 md-margin-bottom-40">
+                    <div class="col-md-4 md-margin-bottom-40">
                         <div class="headline"><h2>{{ Theme::setting('layoutFooterLinksTitle') }}</h2></div>
                         <ul class="list-unstyled link-list">
                             @foreach(Menu::get('primary menu')->items as $item)
@@ -45,8 +47,6 @@
                         </ul>
                     </div>
                     <!-- End Link List -->
-
-                    @include('Unify::layout.footers.elements.contacts-1', ['contact' => $account->contactInformation->first()])
                 </div>
             </div>
         </div>
