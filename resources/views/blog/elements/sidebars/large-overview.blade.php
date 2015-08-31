@@ -120,17 +120,17 @@
     </ul>
     <!-- End Photostream -->
 
-    <div class="headline-v2"><h2>Newsletter</h2></div>
-    <!-- Blog Newsletter -->
-    <div class="blog-newsletter">
-        <p>Subscribe to our newsletter for good news, sent out every month.</p>
+    {{--<div class="headline-v2"><h2>Newsletter</h2></div>--}}
+    {{--<!-- Blog Newsletter -->--}}
+    {{--<div class="blog-newsletter">--}}
+        {{--<p>Subscribe to our newsletter for good news, sent out every month.</p>--}}
 
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Email">
-                            <span class="input-group-btn">
-                                <button class="btn-u" type="button">Subscribe</button>
-                            </span>
-        </div>
-    </div>
+        {{--<div class="input-group">--}}
+            {{--<input type="text" class="form-control" placeholder="Email">--}}
+                            {{--<span class="input-group-btn">--}}
+                                {{--<button class="btn-u" type="button">Subscribe</button>--}}
+                            {{--</span>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <!-- End Blog Newsletter -->
 </div>
