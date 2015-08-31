@@ -36,7 +36,7 @@
 
     @include('Unify::blog.elements.author-articles', ['posts' => $related])
 
-    <hr>
+    {{--<hr>--}}
 
-    @include('Unify::blog.elements.comments-simple')
+    {{--@include('Unify::blog.elements.comments-simple')--}}
 </div>

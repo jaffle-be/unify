@@ -50,7 +50,7 @@
     @include('Unify::blog.elements.author-articles', ['posts' => $related])
     <!-- End News v2 -->
 
-    <hr>
+    {{--<hr>--}}
 
-    @include('Unify::blog.elements.comments')
+    {{--@include('Unify::blog.elements.comments')--}}
 </div>

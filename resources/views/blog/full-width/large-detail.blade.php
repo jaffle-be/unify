@@ -68,9 +68,9 @@
             @include('Unify::blog.elements.author-articles', ['posts' => $related])
             <!-- End Authored Blog -->
 
-            <hr>
+            {{--<hr>--}}
 
-            @include('Unify::blog.elements.comments')
+            {{--@include('Unify::blog.elements.comments')--}}
         </div>
         <!--/end container-->
     </div>
