@@ -44,31 +44,31 @@
                     <!-- End Link List -->
 
                     <!-- Latest Tweets -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <div class="latest-tweets">
-                            <div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterTweetsTitle') }}</h2></div>
-                            <div class="latest-tweets-inner">
-                                <i class="fa fa-twitter"></i>
+                    {{--<div class="col-md-3 md-margin-bottom-40">--}}
+                        {{--<div class="latest-tweets">--}}
+                            {{--<div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterTweetsTitle') }}</h2></div>--}}
+                            {{--<div class="latest-tweets-inner">--}}
+                                {{--<i class="fa fa-twitter"></i>--}}
 
-                                <p>
-                                    <a href="#">@htmlstream</a>
-                                    At vero seos etodela ccusamus et
-                                    <a href="#">http://t.co/sBav7dm</a>
-                                    <small class="twitter-time">2 hours ago</small>
-                                </p>
-                            </div>
-                            <div class="latest-tweets-inner">
-                                <i class="fa fa-twitter"></i>
+                                {{--<p>--}}
+                                    {{--<a href="#">@htmlstream</a>--}}
+                                    {{--At vero seos etodela ccusamus et--}}
+                                    {{--<a href="#">http://t.co/sBav7dm</a>--}}
+                                    {{--<small class="twitter-time">2 hours ago</small>--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                            {{--<div class="latest-tweets-inner">--}}
+                                {{--<i class="fa fa-twitter"></i>--}}
 
-                                <p>
-                                    <a href="#">@htmlstream</a>
-                                    At vero seos etodela ccusamus et
-                                    <a href="#">http://t.co/sBav7dm</a>
-                                    <small class="twitter-time">4 hours ago</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                                {{--<p>--}}
+                                    {{--<a href="#">@htmlstream</a>--}}
+                                    {{--At vero seos etodela ccusamus et--}}
+                                    {{--<a href="#">http://t.co/sBav7dm</a>--}}
+                                    {{--<small class="twitter-time">4 hours ago</small>--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                     <!-- End Latest Tweets -->
 
                     <!-- Address -->
