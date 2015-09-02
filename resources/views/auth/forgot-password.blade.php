@@ -32,13 +32,15 @@
                     @endif
 
                     <div class="row">
-                        <div class="col-md-6">
-                            <button class="btn-u btn-lg" type="submit">{{ Lang::get('Unify::front.submit') }}</button>
-                        </div>
 
                         <div class="col-md-6">
                             <a class="pull-right btn-u btn-lg btn-default" href="{{ route('store.auth.signin.index') }}">{{ Lang::get('Unify::front.back') }}</a>
                         </div>
+
+                        <div class="col-md-6 text-right">
+                            <button class="btn-u btn-lg" type="submit">{{ Lang::get('Unify::front.submit') }}</button>
+                        </div>
+
                     </div>
 
                 </form>

@@ -50,11 +50,11 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <button class="btn-u" type="submit">{{ Lang::get('Unify::front.submit') }}</button>
+                            <a class="pull-right btn-u" href="{{ route('store.auth.signin.index') }}">{{ Lang::get('Unify::front.back') }}</a>
                         </div>
 
-                        <div class="col-md-6">
-                            <a class="pull-right btn-u" href="{{ route('store.auth.signin.index') }}">{{ Lang::get('Unify::front.back') }}</a>
+                        <div class="col-md-6 text-right">
+                            <button class="btn-u" type="submit">{{ Lang::get('Unify::front.submit') }}</button>
                         </div>
 
                     </div>
