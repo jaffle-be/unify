@@ -19,7 +19,7 @@
   color: #555555;
 }
 .color-green {
-  color: #72c02c;
+  color: #74C52C;
 }
 .color-brown {
   color: #9c8061;
@@ -98,7 +98,7 @@
   background-color: #f7f7f7 !important;
 }
 .bg-color-green {
-  background-color: #72c02c !important;
+  background-color: #3498db !important;
 }
 .bg-color-brown {
   background-color: #9c8061 !important;
@@ -159,7 +159,7 @@
   line-height: 32px;
 }
 .blog h2 a:hover {
-  color: #72c02c;
+  color: #3498db;
   text-decoration: none;
 }
 .blog .blog-img {
@@ -197,7 +197,7 @@
   background: #f4f4f4;
 }
 .blog-post-tags ul.blog-tags a:hover {
-  background: #72c02c;
+  background: #3498db;
 }
 /*Blog Item Page
 ------------------------------------*/
@@ -209,7 +209,7 @@
 }
 .post-comment h3,
 .blog-item .media h3 {
-  color: #72c02c;
+  color: #3498db;
   font-size: 21px;
   margin-bottom: 25px;
 }
@@ -226,7 +226,7 @@
   position: absolute;
 }
 .blog-item .media h4.media-heading span a {
-  color: #72c02c;
+  color: #3498db;
 }
 /*Blog Medium
 ------------------------------------*/

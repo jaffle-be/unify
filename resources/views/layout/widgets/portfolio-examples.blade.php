@@ -7,6 +7,7 @@
 </div><!--/container-->
 
 <!--=== Portfolio Box V2 ===-->
+
 <ul class="list-unstyled row portfolio-box-v2">
 
     @foreach($projects as $project)

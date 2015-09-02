@@ -19,7 +19,7 @@
   color: #555555;
 }
 .color-green {
-  color: #72c02c;
+  color: #74C52C;
 }
 .color-brown {
   color: #9c8061;
@@ -98,7 +98,7 @@
   background-color: #f7f7f7 !important;
 }
 .bg-color-green {
-  background-color: #72c02c !important;
+  background-color: #3498db !important;
 }
 .bg-color-brown {
   background-color: #9c8061 !important;
@@ -163,8 +163,8 @@
   display: inline-block;
 }
 .sorting-block .sorting-nav li.active {
-  color: #72c02c;
-  border-bottom: solid 1px #72c02c;
+  color: #3498db;
+  border-bottom: solid 1px #3498db;
 }
 /*Sorting Navigation v1*/
 .sorting-block .sorting-nav-v1 li {
@@ -198,7 +198,7 @@
   font-size: 16px;
 }
 .sorting-block .sorting-grid li a:hover .sorting-cover {
-  background: #72c02c;
+  background: #3498db;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;

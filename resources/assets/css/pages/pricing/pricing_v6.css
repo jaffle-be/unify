@@ -19,7 +19,7 @@
   color: #555555;
 }
 .color-green {
-  color: #72c02c;
+  color: #74C52C;
 }
 .color-brown {
   color: #9c8061;
@@ -98,7 +98,7 @@
   background-color: #f7f7f7 !important;
 }
 .bg-color-green {
-  background-color: #72c02c !important;
+  background-color: #3498db !important;
 }
 .bg-color-brown {
   background-color: #9c8061 !important;
@@ -210,7 +210,7 @@
   margin-right: 5px;
 }
 .pricing-table-v6 .service-block-u {
-  background-color: #72c02c !important;
+  background-color: #3498db !important;
 }
 /* Devices (Large Screen Mode, 1200px more) */
 /* Devices (Desktop Mode, 992px and 1200px) */

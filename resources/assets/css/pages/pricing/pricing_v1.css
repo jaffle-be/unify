@@ -19,7 +19,7 @@
   color: #555555;
 }
 .color-green {
-  color: #72c02c;
+  color: #74C52C;
 }
 .color-brown {
   color: #9c8061;
@@ -98,7 +98,7 @@
   background-color: #f7f7f7 !important;
 }
 .bg-color-green {
-  background-color: #72c02c !important;
+  background-color: #3498db !important;
 }
 .bg-color-brown {
   background-color: #9c8061 !important;
@@ -220,7 +220,7 @@
 }
 .pricing-table-v1 .pricing-v1-head {
   padding: 1px 0;
-  background: #74C52C;
+  background: #3498db;
 }
 .pricing-table-v1 .pricing-v1-head h4,
 .pricing-table-v1 .pricing-v1-head h5 {
@@ -260,10 +260,10 @@
 }
 .pricing-table-v1 .pricing-v1-content li i {
   margin-right: 10px;
-  color: #74C52C;
+  color: #3498db;
 }
 .pricing-table-v1 .pricing-v1-green .btn-u {
-  background: #72c02c !important;
+  background: #3498db !important;
 }
 .pricing-table-v1 .pricing-v1-blue .pricing-v1-head {
   background: #3498db;

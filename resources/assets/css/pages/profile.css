@@ -19,7 +19,7 @@
   color: #555555;
 }
 .color-green {
-  color: #72c02c;
+  color: #74C52C;
 }
 .color-brown {
   color: #9c8061;
@@ -98,7 +98,7 @@
   background-color: #f7f7f7 !important;
 }
 .bg-color-green {
-  background-color: #72c02c !important;
+  background-color: #3498db !important;
 }
 .bg-color-brown {
   background-color: #9c8061 !important;
@@ -236,7 +236,7 @@
   padding: 7px 7px 7px 0;
 }
 .profile .profile-post.color-one {
-  border-left: 2px solid #72c02c;
+  border-left: 2px solid #3498db;
 }
 .profile .profile-post.color-two {
   border-left: 2px solid #3498db;
@@ -264,7 +264,7 @@
   padding: 5px 12px;
 }
 .profile .profile-post:hover span.profile-post-numb {
-  color: #72c02c;
+  color: #3498db;
 }
 .profile .profile-post-in {
   overflow: hidden;
@@ -295,7 +295,7 @@
   color: #fff;
   float: left;
   text-align: center;
-  background: #72c02c;
+  background: #3498db;
   margin: 7px 13px 0 0;
   padding: 7px 10px 4px;
 }
@@ -374,7 +374,7 @@
   text-decoration: none;
 }
 .profile .comment-list li:hover i {
-  color: #72c02c;
+  color: #3498db;
 }
 /*Image Post*/
 .profile .img-post {
@@ -418,7 +418,7 @@
   text-decoration: none;
 }
 .profile .img-post-list li a:hover i {
-  color: #72c02c;
+  color: #3498db;
 }
 /*Media*/
 .profile .media.media-v2 {
@@ -715,10 +715,10 @@
   color: #555;
 }
 .profile .name-location span a:hover {
-  color: #72c02c;
+  color: #3498db;
 }
 .profile .name-location span i {
-  color: #72c02c;
+  color: #3498db;
   font-size: 18px;
   margin-right: 5px;
 }
@@ -782,7 +782,7 @@
   text-decoration: none;
 }
 .profile .comment-list-v2 li:hover i {
-  color: #72c02c;
+  color: #3498db;
 }
 .profile .star-vote li {
   padding: 0;

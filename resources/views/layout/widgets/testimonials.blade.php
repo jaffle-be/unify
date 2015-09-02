@@ -7,7 +7,7 @@
                         <h2>{{ Theme::setting('widgetsTestimonialsTitle1') }}</h2>
                         <span class="bordered-icon"><i class="fa fa-th-large"></i></span>
                         <p>{{ Theme::setting('widgetsTestimonialsText1') }}</p>
-                        <span class="author">{{ Theme::setting('widgetsTestimonialsName1') }}, <a href="#">{{ Theme::setting('widgetsTestimonialsFunction1') }}</a></span>
+                        <span class="author">{{ Theme::setting('widgetsTestimonialsName1') }}, <span class="colored">{{ Theme::setting('widgetsTestimonialsFunction1') }}</span></span>
                     </div>
                 </div>
                 <div class="item">
@@ -15,7 +15,7 @@
                         <h2>{{ Theme::setting('widgetsTestimonialsTitle2') }}</h2>
                         <span class="bordered-icon"><i class="fa fa-th-large"></i></span>
                         <p>{{ Theme::setting('widgetsTestimonialsText2') }}</p>
-                        <span class="author">{{ Theme::setting('widgetsTestimonialsName2') }}, <a href="#">{{ Theme::setting('widgetsTestimonialsFunction2') }}</a></span>
+                        <span class="author">{{ Theme::setting('widgetsTestimonialsName2') }}, <span class="colored">{{ Theme::setting('widgetsTestimonialsFunction2') }}</span></span>
                     </div>
                 </div>
                 <div class="item">
@@ -23,7 +23,7 @@
                         <h2>{{ Theme::setting('widgetsTestimonialsTitle3') }}</h2>
                         <span class="bordered-icon"><i class="fa fa-th-large"></i></span>
                         <p>{{ Theme::setting('widgetsTestimonialsText3') }}</p>
-                        <span class="author">{{ Theme::setting('widgetsTestimonialsName3') }}, <a href="#">{{ Theme::setting('widgetsTestimonialsFunction3') }}</a></span>
+                        <span class="author">{{ Theme::setting('widgetsTestimonialsName3') }}, <span class="colored">{{ Theme::setting('widgetsTestimonialsFunction3') }}</span></span>
                     </div>
                 </div>
             </div>

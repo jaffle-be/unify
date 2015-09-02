@@ -19,7 +19,7 @@
   color: #555555;
 }
 .color-green {
-  color: #72c02c;
+  color: #74C52C;
 }
 .color-brown {
   color: #9c8061;
@@ -98,7 +98,7 @@
   background-color: #f7f7f7 !important;
 }
 .bg-color-green {
-  background-color: #72c02c !important;
+  background-color: #3498db !important;
 }
 .bg-color-brown {
   background-color: #9c8061 !important;
@@ -160,7 +160,7 @@
   box-shadow: 0 0 15px #b5b5b5;
 }
 .pricing-bg-colored .pricing:hover h4 {
-  color: #74C52C;
+  color: #3498db;
 }
 .pricing-bg-colored .pricing-head {
   text-align: center;
@@ -187,7 +187,7 @@
   padding: 12px 0;
   font-size: 35px;
   font-family: Arial;
-  background: #74C52C;
+  background: #3498db;
   border-radius: 3px 3px 0 0;
   text-shadow: 0 1px 0 #32a20f;
 }
@@ -202,7 +202,7 @@
   border-bottom: solid 1px #f5f9e7;
 }
 .pricing-bg-colored .pricing-content li i {
-  color: #72c02c;
+  color: #3498db;
   font-size: 16px;
   margin-right: 5px;
   position: relative;
@@ -223,7 +223,7 @@
   margin-top: -15px;
 }
 .pricing-bg-colored .price-active h4 {
-  color: #74C52C;
+  color: #3498db;
 }
 /*Pricing Extra*/
 .pricing-bg-colored .bg-color {
@@ -277,7 +277,7 @@
   border: 1px solid #EEEEEE;
 }
 .pricing-bg-colored .pricing:hover {
-  background: #74C52C;
+  background: #3498db;
 }
 .pricing-bg-colored .pricing:hover li,
 .pricing-bg-colored .pricing:hover li i,
@@ -285,7 +285,7 @@
   color: #fff;
 }
 .pricing-bg-colored .pricing-head i {
-  color: #74C52C;
+  color: #3498db;
   padding-top: 20px;
   margin-top: 10px 0px;
 }

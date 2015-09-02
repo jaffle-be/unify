@@ -19,7 +19,7 @@
   color: #555555;
 }
 .color-green {
-  color: #72c02c;
+  color: #74C52C;
 }
 .color-brown {
   color: #9c8061;
@@ -98,7 +98,7 @@
   background-color: #f7f7f7 !important;
 }
 .bg-color-green {
-  background-color: #72c02c !important;
+  background-color: #3498db !important;
 }
 .bg-color-brown {
   background-color: #9c8061 !important;
@@ -245,7 +245,7 @@
   width: 10px;
   height: 10px;
   position: absolute;
-  background: #72c02c;
+  background: #3498db;
   margin: 0 0 0 -17px;
   box-shadow: 0 0 0 4px #f3f3f3;
   -webkit-font-smoothing: antialiased;

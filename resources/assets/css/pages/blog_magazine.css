@@ -19,7 +19,7 @@
   color: #555555;
 }
 .color-green {
-  color: #72c02c;
+  color: #74C52C;
 }
 .color-brown {
   color: #9c8061;
@@ -98,7 +98,7 @@
   background-color: #f7f7f7 !important;
 }
 .bg-color-green {
-  background-color: #72c02c !important;
+  background-color: #3498db !important;
 }
 .bg-color-brown {
   background-color: #9c8061 !important;
@@ -157,7 +157,7 @@
   text-decoration: none;
 }
 .magazine-page h3 a:hover {
-  color: #72c02c;
+  color: #3498db;
 }
 .magazine-page span.magazine-badge {
   top: 0;
@@ -188,13 +188,13 @@
   margin: 15px 0 10px;
 }
 .magazine-news .by-author strong {
-  color: #72c02c;
+  color: #3498db;
 }
 .magazine-news .by-author span {
   color: #777;
 }
 .magazine-news a.read-more {
-  color: #72c02c;
+  color: #3498db;
 }
 .magazine-news .by-author {
   margin-bottom: 8px;
@@ -221,7 +221,7 @@
   color: #555;
 }
 .magazine-mini-news .post-author strong {
-  color: #72c02c;
+  color: #3498db;
 }
 .news-read-more {
   margin: 20px 0;
@@ -236,7 +236,7 @@
   color: #fff;
   padding: 2px 3px;
   font-size: 14px;
-  background: #72c02c;
+  background: #3498db;
 }
 /*Sidebar Posts*/
 .magazine-posts h2,
@@ -267,7 +267,7 @@
   margin-bottom: 5px;
 }
 .magazine-sb-categories ul i {
-  color: #72c02c;
+  color: #3498db;
   font-size: 14px;
 }
 /*Sidebar Social*/
