@@ -46,9 +46,8 @@ class UnifyServiceProvider extends ServiceProvider
     {
         /** @var Factory $view */
         $this->app['view']->composer('Unify::layout.footers.*', function (View $view) {
-            $cache = app('cache')->driver();
 
-            $posts = $cache->sear('footer-posts:' . app()->getLocale(), function () {
+            $posts = app('cache')->sear('footer-posts:' . app()->getLocale(), function () {
 
                 $translations = PostTranslation::lastPublished()->take(3)->lists('post_id');
 
@@ -95,6 +94,23 @@ class UnifyServiceProvider extends ServiceProvider
             $tags = \App\Tags\Tag::has('posts')->limit(15)->get();
 
             $view->with(['latest' => $latest, 'tags' => $tags]);
+        });
+
+        $this->app['view']->composer('Unify::layout.widgets.recent-posts', function(View $view){
+            $posts = app('App\Blog\PostRepositoryInterface');
+
+            $latest = $posts->getLatestPosts(3);
+
+            $view->with(['latest' => $latest]);
+        });
+
+        $this->app['view']->composer('Unify::layout.widgets.portfolio-examples', function(View $view)
+        {
+            $projects = app('App\Portfolio\PortfolioRepositoryInterface');
+
+            $projects = $projects->getExamples(4);
+
+            $view->with(['projects' => $projects]);
         });
     }
 

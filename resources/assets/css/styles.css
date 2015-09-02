@@ -11123,7 +11123,6 @@ topbar including in mobile version*/
   margin-bottom: 15px;
   padding-bottom: 20px;
   text-transform: uppercase;
-  font-family: "Open Sans", Arial, sans-serif;
 }
 .title-v1 h1:after,
 .title-v1 h2:after {
@@ -14595,7 +14594,7 @@ img.image-md {
   text-transform: uppercase;
 }
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h1,
 h2,

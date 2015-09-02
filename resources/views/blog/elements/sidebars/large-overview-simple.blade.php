@@ -6,7 +6,7 @@
         <div class="headline headline-md"><h2>{{ Theme::setting('blogSidebarRecentPostsTitle') }}</h2></div>
         @foreach($latest as $post)
         <dl class="dl-horizontal">
-            <dt><a href="{{ route('store.blog.show', [$post]) }}"><img src="{{ theme_asset('img/sliders/elastislide/6.jpg') }}" alt=""/></a>
+            <dt><a href="{{ route('store.blog.show', [$post]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a>
             </dt>
             <dd>
                 <p><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></p>
