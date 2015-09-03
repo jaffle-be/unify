@@ -1,0 +1,1 @@
+@extends('Unify::unify', ['hideNavigation' => true])
