@@ -31,7 +31,7 @@
 
                     <div class="col-sm-4 sm-margin-bottom-50">
                         <div class="team-img">
-                            <img class="img-responsive" src="{{ asset($membership->member->thumbnail(380) ? : theme_asset('img/team/img1-md.jpg')) }}" alt="">
+                            <img class="img-responsive" src="{{ asset($membership->member->thumbnail(512) ? : theme_asset('img/team/img1-md.jpg')) }}" alt="">
 
                             <div class="team-hover">
                                 @if($membership->member->socialLinks)

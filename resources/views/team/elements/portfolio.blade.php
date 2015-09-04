@@ -36,7 +36,7 @@
                     <a href="{{ route('store.portfolio.show', [$project]) }}" class="cbp-caption"
                        data-title="World Clock Widget<br>by Paul Flavius Nechita">
                         <div class="cbp-caption-defaultWrap">
-                            <img src="{{ asset($project->thumbnail(380)) }}" alt="">
+                            <img src="{{ asset($project->thumbnail(1280)) }}" alt="">
                         </div>
                         <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignLeft">

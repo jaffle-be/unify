@@ -24,8 +24,13 @@
     <!--=== Container Part ===-->
     <div class="container content-sm">
         <div class="row">
+
+            <div class="col-xs-4 col-md-4">
+                <img class="img-responsive" src="{{ asset($user->thumbnail(1280)) }}" alt="">
+            </div>
+
             <!-- Social Network -->
-            <div class="col-md-6 md-margin-bottom-50">
+            <div class="col-md-4 md-margin-bottom-50">
                 <div class="headline-left margin-bottom-30">
                     <h2 class="headline-brd heading-md">{{ Theme::setting('teamMemberAboutTitle') }}</h2>
                 </div>
@@ -42,7 +47,7 @@
             <!-- End Social Network -->
 
             <!-- Progress Bar -->
-            <div class="col-md-6 progress-box md-margin-bottom-50">
+            <div class="col-md-4 progress-box md-margin-bottom-50">
                 <div class="headline-left margin-bottom-30">
                     <h2 class="headline-brd heading-md">{{ Theme::setting('teamMemberSkillsTitle') }}</h2>
                 </div>
