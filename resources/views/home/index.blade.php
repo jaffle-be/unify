@@ -11,9 +11,14 @@
 
 @stop
 
+
+@section('breadcrumb')
+{{--disable breadcrumbs--}}
+@stop
+
 @section('content')
 
-{{--    @include('Unify::layout.sliders.revolution-1')--}}
+    @include('Unify::layout.sliders.revolution-1')
     <!--=== End Slider ===-->
 
     <!--=== Service Block ===-->
