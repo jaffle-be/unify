@@ -11,7 +11,6 @@
                 <i class="rounded-x icon-eye"></i>
                 <h3 class="title-v3-bg text-uppercase">{{ Theme::setting('widgetsServicesOverviewSubTitle1') }}</h3>
                 <p>{{ Theme::setting('widgetsServicesOverviewSubText1') }}</p>
-                <a class="text-uppercase" href="#">{{ Lang::get('Unify::front.read-more') }}</a>
             </div>
         </div>
         <div class="col-sm-4">
@@ -19,7 +18,6 @@
                 <i class="rounded-x icon-pointer"></i>
                 <h3 class="title-v3-bg text-uppercase">{{ Theme::setting('widgetsServicesOverviewSubTitle2') }}</h3>
                 <p>{{ Theme::setting('widgetsServicesOverviewSubText2') }}</p>
-                <a class="text-uppercase" href="#">{{ Lang::get('Unify::front.read-more') }}</a>
             </div>
         </div>
         <div class="col-sm-4">
@@ -27,7 +25,6 @@
                 <i class="rounded-x icon-cloud-upload"></i>
                 <h3 class="title-v3-bg text-uppercase">{{ Theme::setting('widgetsServicesOverviewSubTitle3') }}</h3>
                 <p>{{ Theme::setting('widgetsServicesOverviewSubText3') }}</p>
-                <a class="text-uppercase" href="#">{{ Lang::get('Unify::front.read-more') }}</a>
             </div>
         </div>
     </div><!--/row-->
