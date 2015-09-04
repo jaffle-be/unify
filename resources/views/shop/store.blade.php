@@ -11,9 +11,9 @@
 @section('breadcrumb')
 @stop
 
-@include('Unify::shop.elements.slider-home')
-
 @section('content')
+
+    @include('Unify::shop.elements.slider-home')
 
     @include('Unify::shop.elements.product-content')
 

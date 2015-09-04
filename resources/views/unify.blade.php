@@ -50,20 +50,6 @@
 
     @yield('header')
 
-    @section('slider')
-            <!-- Interactive Slider v2 -->
-    <div class="interactive-slider-v2">
-        <div class="container">
-            <h1>{{ Theme::setting('widgetsMasterSliderTitle') }}</h1>
-
-            <p>{{ Theme::setting('widgetsMasterSliderText') }}</p>
-        </div>
-    </div>
-    <!-- End Interactive Slider v2 -->
-    @stop
-
-    @yield('slider')
-
     @section('breadcrumb')
 
         {!! app('breadcrumbs')->render() !!}
