@@ -56,6 +56,8 @@
     </div><!--/container-->
     <!--=== End Owl Carousel v6 ===-->
 
+    @include('Unify::layout.widgets.call-out')
+
 @stop
 
 
