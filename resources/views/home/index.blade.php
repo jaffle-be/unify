@@ -51,6 +51,11 @@
     <!--=== Owl Carousel v6 ===-->
     <div class="container margin-bottom-60">
 
+        <div class="headline-center-v2 headline-center-v2-dark margin-bottom-60">
+            <h2>{{ Theme::setting('widgetsOurClientsTitle') }}</h2>
+            <span class="bordered-icon"><i class="fa fa-th-large"></i></span>
+        </div>
+
         @include('Unify::layout.widgets.clients', ['title' => false])
 
     </div><!--/container-->
