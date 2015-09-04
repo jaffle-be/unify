@@ -48,9 +48,7 @@
 
 <div class="wrapper">
 
-    @if(!isset($hideNavigation) || !$hideNavigation)
-        @yield('header')
-    @endif
+    @yield('header')
 
     @section('slider')
             <!-- Interactive Slider v2 -->

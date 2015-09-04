@@ -13,7 +13,7 @@ return [
 
     'forgot-password-text'       => 'You forgot your password? Reset it <a href=":url">here</a>',
 
-    'already-signed-up'          => 'You shouldn\'t signup twice, <a href=":url">login</a> instead',
+    'already-signed-up'          => 'If you already have an account in the digiredo platform, <a href=":url">use those credentials</a> instead',
 
     'login'                      => 'login',
 

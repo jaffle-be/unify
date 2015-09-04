@@ -17,13 +17,7 @@
                         <table  border="0" cellpadding="0" cellspacing="0" align="right" class="deviceWidth">
                             <tr>
                                 <td  class="center" style="font-size: 13px; color: #272727; font-weight: light; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 25px; vertical-align: middle; padding: 10px 0px 10px 0px;">
-                                    <a href="#" style="text-decoration: none; color: #3b3b3b;">PRODUCTS</a>
-                                    &nbsp; &nbsp;
-                                    <a href="#" style="text-decoration: none; color: #3b3b3b;">SERVICES</a>
-                                    &nbsp; &nbsp;
-                                    <a href="#" style="text-decoration: none; color: #3b3b3b;">WORK</a>
-                                    &nbsp; &nbsp;
-                                    <a href="#" style="text-decoration: none; color: #3b3b3b;">BLOG</a>
+                                    
                                 </td>
                             </tr>
                         </table><!--End nav-->
