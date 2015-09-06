@@ -29,76 +29,7 @@
                 {!! Theme::setting('contactFormText') !!}
                 </div>
 
-                @if($success)
-                    <form method="post" id="sky-form3"
-                          class="sky-form contact-style">
-                        <p class="text-center">
-                            <i style="font-size:5em; color: #72c02c;" class="rounded-x icon icon-check"></i>
-                        </p>
-                    </form>
-                @else
-
-                    <form action="{{ route('store.contact.store') }}" method="post" id="sky-form3"
-                          class="sky-form contact-style">
-
-                        {!! csrf_field() !!}
-                        <input name="_id" type="hidden" value="{{ $contact->id }}"/>
-
-                        <fieldset class="no-padding">
-                            <label>Name <span class="color-red">*</span></label>
-
-                            <div class="row sky-space-20">
-                                <div class="col-md-7 col-md-offset-0">
-                                    <div>
-                                        <input type="text" name="name" id="name" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <label>Email <span class="color-red">*</span></label>
-
-                            <div class="row sky-space-20">
-                                <div class="col-md-7 col-md-offset-0">
-                                    <div>
-                                        <input type="text" name="email" id="email" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <label>Message <span class="color-red">*</span></label>
-
-                            <div class="row sky-space-20">
-                                <div class="col-md-11 col-md-offset-0">
-                                    <div>
-                                        <textarea rows="8" name="message" id="message" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <label>Captcha <span class="color-red">*</span></label>
-
-                            <div class="row sky-space-20">
-                                <div class="col-md-11 col-md-offset-0">
-                                    <div style="position:relative;" class="input-captcha">
-                                        <img src="{{ captcha_src() }}" width="120" height="32"/>
-                                        <input type="text" name="captcha" id="captcha" class="form-control"/>
-                                    </div>
-                                </div>
-                            </div>
-
-                            @if($errors->has('captcha'))
-                                <label class="error">{{ $errors->first('captcha') }}</label>
-                            @endif
-
-                            <p>
-                                <button type="submit" class="btn-u">Send Message</button>
-                            </p>
-                        </fieldset>
-
-                    </form>
-
-                @endif
+                @include('Unify::contact.elements.form')
             </div>
             <!--/col-md-9-->
 
@@ -132,14 +63,13 @@
 
 @section('scripts-app')
     <script type="text/javascript" src="{{ theme_asset('js/app.js') }}"></script>
-    <script type="text/javascript" src="{{ theme_asset('js/forms/login.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('js/pages/page_contacts.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('js/plugins/owl-carousel.js') }}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             App.init();
             ContactPage.initMap();
-            ContactPage.initPageContactForm();
+            ContactPage.initForm();
             OwlCarousel.initOwlCarousel();
         });
     </script>

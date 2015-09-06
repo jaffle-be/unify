@@ -32,7 +32,7 @@ var ContactPage = function () {
             });
         },
 
-        initPageContactForm: function () {
+        initForm: function () {
             // Validation
             $("#sky-form3").validate({
                 // Rules for form validation
@@ -44,13 +44,15 @@ var ContactPage = function () {
                         required: true,
                         email: true
                     },
+                    subject: {
+                        required: true,
+                    },
                     message: {
                         required: true,
                         minlength: 10
                     },
                     captcha: {
                         required: true,
-                        remote: 'assets/plugins/sky-forms-pro/skyforms/captcha/process.php'
                     }
                 },
 
@@ -63,26 +65,15 @@ var ContactPage = function () {
                         required: 'Please enter your email address',
                         email: 'Please enter a VALID email address'
                     },
+                    subject: {
+                        required: 'Please enter a subject',
+                    },
                     message: {
                         required: 'Please enter your message'
                     },
                     captcha: {
                         required: 'Please enter characters',
-                        remote: 'Correct captcha is required'
                     }
-                },
-
-                // Ajax form submition
-                submitHandler: function (form) {
-                    $(form).ajaxSubmit(
-                        {
-                            beforeSend: function () {
-                                $('#sky-form3 button[type="submit"]').attr('disabled', true);
-                            },
-                            success: function () {
-                                $("#sky-form3").addClass('submited');
-                            }
-                        });
                 },
 
                 // Do not change code below
