@@ -2,7 +2,7 @@
     <!--Blog Post-->
     <div class="blog margin-bottom-40">
         <h2>
-            <a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a>
+            <a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a>
         </h2>
 
         <div class="blog-post-tags">

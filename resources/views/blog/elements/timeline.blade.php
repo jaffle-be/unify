@@ -16,7 +16,7 @@
                             @if($img = $image->sizes->first())
 
                                 <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
-                                    <a href="{{ route('store.blog.show', [$post]) }}">
+                                    <a href="{{ route('store.blog.show', [$post->translate()]) }}">
                                         <img class="img-responsive" alt="" src="{{ asset($image->thumbnail(1140)) }}">
                                     </a>
 
@@ -40,18 +40,17 @@
                     </div>
                 </div>
 
-
             @else
-                <a href="{{ route('store.blog.show', [$post]) }}">
+                <a href="{{ route('store.blog.show', [$post->translate()]) }}">
                     <img class="img-responsive" src="{{ asset($post->thumbnail(1140)) }}" alt="">
                 </a>
             @endif
         </div>
         <div class="timeline-body">
-            <h2 class="font-light"><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h2>
+            <h2 class="font-light"><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h2>
 
             <p>{!!  $post->extract !!}</p>
-            <a class="btn-u btn-u-sm" href="{{ route('store.blog.show', [$post]) }}">Read More</a>
+            <a class="btn-u btn-u-sm" href="{{ route('store.blog.show', [$post->translate()]) }}">Read More</a>
         </div>
         <div class="timeline-footer">
             <ul class="list-unstyled list-inline blog-info">

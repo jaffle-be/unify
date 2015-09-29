@@ -12,17 +12,17 @@
             <div class="col-sm-4">
                 <div class="thumbnails-v1">
                     <div class="thumbnail-img">
-                        <a href="{{ route('store.blog.show', [$post]) }}">
+                        <a href="{{ route('store.blog.show', [$post->translate()]) }}">
                             <img class="img-responsive" src="{{ asset($post->thumbnail(460)) }}" alt="">
                         </a>
                     </div>
                     <div class="caption">
-                        <h3><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h3>
+                        <h3><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h3>
 
                         <p>{{ $post->extract }}</p>
 
                         <p>
-                            <a class="read-more" href="{{ route('store.blog.show', [$post]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
+                            <a class="read-more" href="{{ route('store.blog.show', [$post->translate()]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
                         </p>
                     </div>
                 </div>

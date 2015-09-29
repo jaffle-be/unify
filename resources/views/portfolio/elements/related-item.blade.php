@@ -7,7 +7,7 @@
             <div class="cbp-l-caption-alignCenter">
                 <div class="cbp-l-caption-body">
                     <ul class="link-captions no-bottom-space">
-                        <li><a href="{{ route('store.portfolio.show', [$project->id]) }}"><i class="rounded-x fa fa-link"></i></a>
+                        <li><a href="{{ route('store.portfolio.show', [$project->translate()]) }}"><i class="rounded-x fa fa-link"></i></a>
                         </li>
                         <li>
                             <a href="{{ asset($project->thumbnail(270)) }}" class="cbp-lightbox" data-title="Design Object"><i class="rounded-x fa fa-search"></i></a>

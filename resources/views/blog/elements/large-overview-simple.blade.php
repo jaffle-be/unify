@@ -8,7 +8,7 @@
 {{--</div>--}}
 {{--</div>--}}
 {{--<h2>--}}
-{{--<a href="{{ route('store.blog.show', [$post]) }}">Template comes with developer friendly and easy to customizable code</a>--}}
+{{--<a href="{{ route('store.blog.show', [$post->translate()]) }}">Template comes with developer friendly and easy to customizable code</a>--}}
 {{--</h2>--}}
 
 {{--<div class="blog-post-tags">--}}
@@ -38,7 +38,7 @@
                         @if($img = $image->sizes->first())
 
                             <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
-                                <a href="{{ route('store.blog.show', [$post]) }}">
+                                <a href="{{ route('store.blog.show', [$post->translate()]) }}">
                                     <img alt="" src="{{ asset($image->thumbnail(1140)) }}">
                                 </a>
 
@@ -66,13 +66,13 @@
         </div>
     @else
         <div class="blog-img">
-            <a href="{{ route('store.blog.show', [$post]) }}">
+            <a href="{{ route('store.blog.show', [$post->translate()]) }}">
                 <img class="img-responsive" src="{{ asset($post->thumbnail(1140)) }}" alt="">
             </a>
         </div>
     @endif
 
-    <h2><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h2>
+    <h2><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h2>
 
     <div class="blog-post-tags">
         <ul class="list-unstyled list-inline blog-info">
@@ -90,7 +90,7 @@
 
     <p>{!!  $post->extract !!}</p>
 
-    <p><a class="btn-u btn-u-small" href="{{ route('store.blog.show', [$post]) }}"><i class="fa fa-plus"></i> Read More</a>
+    <p><a class="btn-u btn-u-small" href="{{ route('store.blog.show', [$post->translate()]) }}"><i class="fa fa-plus"></i> Read More</a>
     </p>
 </div>
 <!--End Blog Post-->
@@ -136,7 +136,7 @@
             </div>
         </div>
     </div>
-    <h2><a href="{{ route('store.blog.show', [$post]) }}">Unify Template works on all main web browsers, tablets and phones.</a>
+    <h2><a href="{{ route('store.blog.show', [$post->translate()]) }}">Unify Template works on all main web browsers, tablets and phones.</a>
     </h2>
 
     <div class="blog-post-tags">

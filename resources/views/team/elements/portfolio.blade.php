@@ -33,7 +33,7 @@
             @foreach($projects as $project)
 
                 <div class="cbp-item {{ implode(' ', $project->tags->lists('name')->toArray()) }}">
-                    <a href="{{ route('store.portfolio.show', [$project]) }}" class="cbp-caption"
+                    <a href="{{ route('store.portfolio.show', [$project->translate()]) }}" class="cbp-caption"
                        data-title="World Clock Widget<br>by Paul Flavius Nechita">
                         <div class="cbp-caption-defaultWrap">
                             <img src="{{ asset($project->thumbnail(1280)) }}" alt="">

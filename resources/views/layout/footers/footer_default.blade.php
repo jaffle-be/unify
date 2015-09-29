@@ -29,10 +29,10 @@
                             <div class="headline"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
                             @foreach($posts as $post)
                             <dl class="dl-horizontal">
-                                <dt><a href="{{ route('store.blog.show', [$post]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a></dt>
+                                <dt><a href="{{ route('store.blog.show', [$post->translate()]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a></dt>
                                 <dd>
                                     <p>
-                                        <a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a>
+                                        <a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a>
                                     </p>
                                 </dd>
                             </dl>

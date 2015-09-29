@@ -7,7 +7,7 @@
 
     <div class="grid-boxes-in grid-boxes-qoute">
         <div class="grid-boxes-caption grid-boxes-quote {{ $color }}">
-            <p><a href="{{ route('store.blog.show', [$post]) }}">{!! $post->extract !!}</a></p>
+            <p><a href="{{ route('store.blog.show', [$post->translate()]) }}">{!! $post->extract !!}</a></p>
             <span>- <a class="{{ $color }}" href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a> -</span>
         </div>
     </div>
@@ -27,7 +27,7 @@
                         @if($img = $image->sizes->first())
 
                             <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
-                                <a href="{{ route('store.blog.show', [$post]) }}">
+                                <a href="{{ route('store.blog.show', [$post->translate()]) }}">
                                     <img class="img-responsive full-width" alt="" src="{{ asset($image->thumbnail(1140)) }}">
                                 </a>
 
@@ -54,13 +54,13 @@
 
         @else
 
-            <a href="{{ route('store.blog.show', [$post]) }}">
+            <a href="{{ route('store.blog.show', [$post->translate()]) }}">
                 <img class="img-responsive" src="{{ asset($post->thumbnail(460)) }}" alt="">
             </a>
         @endif
 
         <div class="grid-boxes-caption">
-            <h3><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h3>
+            <h3><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h3>
             <ul class="list-inline grid-boxes-news">
                 <li><span>{{ Lang::get('Unify::front.post-by') }}</span> <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                 <li>|</li>

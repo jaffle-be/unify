@@ -26,7 +26,7 @@
                             <ul class="list-unstyled latest-list">
                                 @foreach($posts as $post)
                                     <li>
-                                        <a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a>
+                                        <a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a>
                                         <small>{{ $post->publish_at->format('M d, Y') }}</small>
                                     </li>
                                 @endforeach

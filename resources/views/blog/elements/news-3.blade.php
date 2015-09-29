@@ -1,7 +1,7 @@
 <!-- News v3 -->
 <div class="row margin-bottom-20">
     <div class="col-sm-5 sm-margin-bottom-20">
-        <a href="{{ route('store.blog.show', [$post]) }}">
+        <a href="{{ route('store.blog.show', [$post->translate()]) }}">
             <img class="img-responsive" src="{{ asset($post->thumbnail(460)) }}" alt="">
         </a>
     </div>
@@ -13,7 +13,7 @@
                 <li>Posted {{ $post->publish_at->format('d M, Y') }}</li>
             </ul>
 
-            <h2><a href="{{ route('store.blog.show', [$post]) }}">{{ $post->title }}</a></h2>
+            <h2><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h2>
 
             <p>{!!  $post->extract !!}</p>
             <ul class="post-shares">
