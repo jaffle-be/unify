@@ -29,9 +29,8 @@
                         </p>
                     </blockquote>
 
-                    <p>
-                        {!!  $post->content !!}
-                    </p>
+
+                    {!!  Markdown::convertToHtml($post->content) !!}
 
                     <ul class="post-shares post-shares-lg">
                         <li>

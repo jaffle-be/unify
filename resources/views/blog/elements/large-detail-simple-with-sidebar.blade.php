@@ -24,7 +24,7 @@
         <p>{!!  $post->extract !!}</p>
         <br>
 
-        <p>{!! $post->content !!}</p>
+        {!! Markdown::convertToHtml($post->content) !!}
     </div>
     <!--End Blog Post-->
 

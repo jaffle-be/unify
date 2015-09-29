@@ -44,7 +44,9 @@
             <div class="row margin-bottom-60">
                 <div class="col-sm-8">
                     <div class="headline"><h2>{{ Theme::setting('portfolioProjectDescription') }}</h2></div>
-                    <p>{!!  $project->description !!}</p>
+
+                    {!!  Markdown::convertToHtml($project->description) !!}
+
                 </div>
                 <div class="col-sm-4">
                     <div class="headline"><h2>{{ Theme::setting('portfolioProjectDetails') }}</h2></div>

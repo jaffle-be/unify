@@ -17,9 +17,6 @@
 
         <div class="content">
 
-            <div class="headline"><h2>{{ Lang::get('Unify::front.tags.tag-detail')}}</h2></div>
-
-
             <div class="headline-v2 bg-color-light margin-bottom-40"><h2>{{ Lang::get('Unify::front.tags.posts') }}</h2></div>
 
                 <? $counter = 0 ?>

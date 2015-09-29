@@ -13,7 +13,7 @@
     @section('content')
 
 
-            <!-- About Me Block -->
+    <!-- About Me Block -->
     <div class="container content-sm">
         <div class="text-center margin-bottom-40">
             <h2 class="title-v2 title-center">{{ Theme::setting('teamMemberAboutTitle') }}</h2>
@@ -40,7 +40,7 @@
                         </ul>
                     @endif
                 </div>
-                <p>{!!  $member->bio !!}</p><br>
+                <p>{!!  Markdown::convertToHtml($member->bio) !!}</p><br>
 
                 <div class="row">
                     @foreach($member->skills as $skill)

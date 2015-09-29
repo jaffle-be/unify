@@ -30,7 +30,7 @@
             <p>{!! $post->extract !!}</p>
             <br>
 
-            {!!  $post->content !!}
+            {!!  Markdown::convertToHtml($post->content) !!}
         </div>
         <!--End Blog Post-->
 

@@ -15,7 +15,7 @@
 
                 <h2>{{ $team->name }}</h2>
 
-                {!!  $team->description !!}
+                {!!  Markdown::convertToHtml($team->description) !!}
 
             </div>
 
