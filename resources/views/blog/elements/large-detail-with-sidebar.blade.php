@@ -13,7 +13,7 @@
 
             <p>{!!  $post->extract !!}</p>
 
-            {!!  Markdown::convertToHtml($post->content) !!}
+            {!!  $post->present()->content !!}
 
             <ul class="post-shares post-shares-lg">
                 <li>
