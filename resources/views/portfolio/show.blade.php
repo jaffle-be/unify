@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Theme::setting('portfolioMainTitleDetail'))
+@section('title', $project->title)
 
 @section('styles-content')
 
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="content">
             <!-- Magazine Slider -->
-            <div class="carousel slide carousel-v2 margin-bottom-40" id="portfolio-carousel">
+            <div class="carousel slide carousel-v1 margin-bottom-40" id="portfolio-carousel">
                 <ol class="carousel-indicators">
                     @foreach($project->images as $index => $image)
                         <li class="{{$index === 0 ? 'active' : ''}} rounded-x" data-target="#portfolio-carousel" data-slide-to="{{ $index }}"></li>
@@ -32,12 +32,14 @@
                     @endforeach
                 </div>
 
-                <a class="left carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="prev">
-                    <i class="fa fa-angle-left arrow-prev"></i>
-                </a>
-                <a class="right carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="next">
-                    <i class="fa fa-angle-right arrow-next"></i>
-                </a>
+                <div class="carousel-arrow">
+                    <a data-slide="prev" href="#portfolio-carousel" class="left carousel-control">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a data-slide="next" href="#portfolio-carousel" class="right carousel-control">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
             </div>
             <!-- End Magazine Slider -->
 

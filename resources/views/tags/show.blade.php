@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Theme::setting('portfolioMainTitleDetail'))
+@section('title', $tag->name)
 
 @section('styles-content')
 
