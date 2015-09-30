@@ -248,3 +248,25 @@
 .blog-full-width ul.blog-info {
   margin-bottom: 0;
 }
+/**
+ *Blog Inline images
+------------------------------------*/
+.blog img.pull-left {
+  margin-right: 1.4em;
+  margin-bottom: 1.4em;
+}
+.blog img.pull-right {
+  margin-left: 1.4em;
+  margin-bottom: 1.4em;
+}
+.blog img.pull-left,
+.blog img.pull-right {
+  max-width: 40%;
+}
+@media screen and (max-width: 480px) {
+  .blog img.pull-left,
+  .blog img.pull-right {
+    float: none !important;
+    max-width: 100%;
+  }
+}
