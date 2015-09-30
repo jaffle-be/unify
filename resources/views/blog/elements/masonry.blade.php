@@ -31,9 +31,6 @@
                                     <img class="img-responsive full-width" alt="" src="{{ asset($image->thumbnail(1140)) }}">
                                 </a>
 
-                                {{--<div class="carousel-caption">
-                                    <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
-                                </div>--}}
                             </div>
                             <? $imgCounter++ ?>
                         @endif
@@ -74,30 +71,3 @@
     </div>
 
 @endif
-
-
-{{--
-<div class="grid-boxes-in">
-    <div class="responsive-video">
-        <iframe frameborder="0" src="//player.vimeo.com/video/70528799" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-    </div>
-    <div class="grid-boxes-caption">
-        <h3><a href="#">Unify Fully Responsive Bootstrap Template</a></h3>
-        <ul class="list-inline grid-boxes-news">
-            <li><span>By</span> <a href="#">Kathy Reyes</a></li>
-            <li>|</li>
-            <li><i class="fa fa-clock-o"></i> July 24, 2014</li>
-            <li>|</li>
-            <li><a href="#"><i class="fa fa-comments-o"></i> 32</a></li>
-        </ul>
-        <p>Donec semper tempus nisi, non gravida augue iaculis ate. Maecenas pharetra turpis est, vitae venenatis eleifend itae amet. Mauris sit amet sapien eget lacus posuere.</p>
-    </div>
-</div>--}}
-{{--
-
-<div class="grid-boxes-in grid-boxes-qoute">
-    <div class="grid-boxes-caption grid-boxes-quote">
-        <p>Photography is more than a medium for factual communication of ideas. It is a creative art.</p>
-        <span>- Ansel Adams -</span>
-    </div>
-</div>--}}

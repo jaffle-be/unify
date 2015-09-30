@@ -1,21 +1,4 @@
 <div class="col-md-3">
-    {{--<div class="headline-v2 bg-color-light"><h2>Trending</h2></div>--}}
-    {{--<!-- Trending -->--}}
-    {{--<ul class="list-unstyled blog-trending margin-bottom-50">--}}
-    {{--<li>--}}
-    {{--<h3><a href="#">Proin dapibus ornare magna.</a></h3>--}}
-    {{--<small>19 Jan, 2015 / <a href="#">Hi-Tech,</a> <a href="#">Technology</a></small>--}}
-    {{--</li>--}}
-    {{--<li>--}}
-    {{--<h3><a href="#">Fusce at diam ante.</a></h3>--}}
-    {{--<small>17 Jan, 2015 / <a href="#">Artificial Intelligence</a></small>--}}
-    {{--</li>--}}
-    {{--<li>--}}
-    {{--<h3><a href="#">Donec quis consequat magna...</a></h3>--}}
-    {{--<small>5 Jan, 2015 / <a href="#">Web,</a> <a href="#">Webdesign</a></small>--}}
-    {{--</li>--}}
-    {{--</ul>--}}
-    <!-- End Trending -->
 
     @if($latest->count())
         <div class="headline-v2 bg-color-light"><h2>{{ Theme::setting('blogSidebarRecentPostsTitle') }}</h2></div>

@@ -20,9 +20,6 @@
                                         <img class="img-responsive" alt="" src="{{ asset($image->thumbnail(1140)) }}">
                                     </a>
 
-                                    {{--<div class="carousel-caption">
-                                        <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
-                                    </div>--}}
                                 </div>
                                 <? $imgCounter++ ?>
                             @endif
