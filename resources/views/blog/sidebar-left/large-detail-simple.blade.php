@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Theme::setting('blogMainTitleDetail'))
+@section('title', $post->title)
 
 @section('styles-content')
     <link rel="stylesheet" href="{{ theme_asset('css/pages/blog.min.css') }}">

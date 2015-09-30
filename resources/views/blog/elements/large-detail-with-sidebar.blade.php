@@ -9,7 +9,6 @@
                 <li>In {!! $post->tags->format(null, ', ') !!}</li>
                 <li>{{ $post->publish_at->format('d M, Y') }}</li>
             </ul>
-            <h2>{{$post->title}}</h2>
 
             <p>{!!  $post->extract !!}</p>
 

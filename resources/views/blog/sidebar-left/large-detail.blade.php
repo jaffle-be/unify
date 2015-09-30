@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Theme::setting('blogMainTitleDetail'))
+@section('title', $post->title)
 
 @section('styles-plugins')
     @parent

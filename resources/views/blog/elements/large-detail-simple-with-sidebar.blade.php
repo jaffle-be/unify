@@ -1,10 +1,6 @@
 <div class="col-md-9 md-margin-bottom-60">
     <!--Blog Post-->
     <div class="blog margin-bottom-40">
-        <h2>
-            <a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a>
-        </h2>
-
         <div class="blog-post-tags">
             <ul class="list-unstyled list-inline blog-info">
                 <li><i class="fa fa-calendar"></i> {{ $post->publish_at->format('d M, Y') }}</li>

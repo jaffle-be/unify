@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Theme::setting('blogMainTitleDetail'))
+@section('title', $post->title)
 
 @section('styles-plugins')
     @parent
@@ -21,7 +21,6 @@
                         <li>In {!!  $post->tags->format(null, ', ') !!}</li>
                         <li>Posted {{ $post->publish_at->format('d M, Y') }}</li>
                     </ul>
-                    <h2><a href="#">{{ $post->title }}</a></h2>
 
                     <blockquote class="hero">
                         <p>

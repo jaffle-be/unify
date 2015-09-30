@@ -1,6 +1,6 @@
 @extends('Unify::unify')
 
-@section('title', Theme::setting('blogMainTitleDetail'))
+@section('title', $post->title)
 
 @section('styles-content')
     <link rel="stylesheet" href="{{ theme_asset('css/pages/blog.min.css') }}">
@@ -15,9 +15,6 @@
             <div class="blog-img">
                 <img class="img-responsive" src="{{ asset($post->thumbnail(1140)) }}" alt="">
             </div>
-            <h2>
-                {{ $post->title }}
-            </h2>
 
             <div class="blog-post-tags">
                 <ul class="list-unstyled list-inline blog-info">
