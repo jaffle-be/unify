@@ -90,8 +90,8 @@ class UnifyServiceProvider extends ServiceProvider
 
             $latest = $posts->getLatestPosts(3);
 
-            //all tags
-            $tags = \App\Tags\Tag::has('posts')->limit(15)->get();
+            //problem with this is it can still show tags without content for the current locale
+            $tags = \App\Tags\Tag::has('content')->limit(15)->get();
 
             $view->with(['latest' => $latest, 'tags' => $tags]);
         });
