@@ -10,7 +10,7 @@
                 <li>{{ $post->publish_at->format('d M, Y') }}</li>
             </ul>
 
-            <p>{!!  $post->extract !!}</p>
+            <p>{!!  $post->present()->extract !!}</p>
 
             {!!  $post->present()->content !!}
 

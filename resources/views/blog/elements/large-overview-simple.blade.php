@@ -54,7 +54,7 @@
         </ul>
     </div>
 
-    <p>{!!  $post->extract !!}</p>
+    <p>{!!  $post->present()->extract !!}</p>
 
     <p><a class="btn-u btn-u-small" href="{{ route('store.blog.show', [$post->translate()]) }}"><i class="fa fa-plus"></i> Read More</a>
     </p>

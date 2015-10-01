@@ -46,7 +46,7 @@
         <div class="timeline-body">
             <h2 class="font-light"><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h2>
 
-            <p>{!!  $post->extract !!}</p>
+            <p>{!!  $post->present()->extract !!}</p>
             <a class="btn-u btn-u-sm" href="{{ route('store.blog.show', [$post->translate()]) }}">Read More</a>
         </div>
         <div class="timeline-footer">

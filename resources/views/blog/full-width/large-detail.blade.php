@@ -24,7 +24,7 @@
 
                     <blockquote class="hero">
                         <p>
-                            <em>{!!  $post->extract !!}</em>
+                            <em>{!!  $post->present()->extract !!}</em>
                         </p>
                     </blockquote>
 

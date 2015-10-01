@@ -7,7 +7,7 @@
 
     <div class="grid-boxes-in grid-boxes-qoute">
         <div class="grid-boxes-caption grid-boxes-quote {{ $color }}">
-            <p><a href="{{ route('store.blog.show', [$post->translate()]) }}">{!! $post->extract !!}</a></p>
+            <p><a href="{{ route('store.blog.show', [$post->translate()]) }}">{!! $post->present()->extract !!}</a></p>
             <span>- <a class="{{ $color }}" href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a> -</span>
         </div>
     </div>
@@ -66,7 +66,7 @@
                 <li><a href="#"><i class="fa fa-tag"></i> {!!  $post->tags->format() !!}</a>
                 </li>
             </ul>
-            <p>{!!  $post->extract !!}</p>
+            <p>{!!  $post->present()->extract !!}</p>
         </div>
     </div>
 

@@ -45,7 +45,7 @@
             <li><i class="fa fa-tags"></i> {!!  $post->tags->format() !!}</li>
             <li>{{ Lang::get('Unify::front.post-by') }} <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
         </ul>
-        <p>{!!  $post->extract !!}</p>
+        <p>{!!  $post->present()->extract !!}</p>
 
         <p><a class="btn-u btn-u-sm" href="{{ route('store.blog.show', [$post->translate()]) }}">Read More
                 <i class="fa fa-angle-double-right margin-left-5"></i></a></p>

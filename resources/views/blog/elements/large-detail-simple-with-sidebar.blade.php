@@ -17,7 +17,7 @@
         <div class="blog-img">
             <img class="img-responsive" src="{{ asset($post->thumbnail(1140)) }}" alt="">
         </div>
-        <p>{!!  $post->extract !!}</p>
+        <p>{!!  $post->present()->extract !!}</p>
         <br>
 
         {!! $post->present()->content !!}

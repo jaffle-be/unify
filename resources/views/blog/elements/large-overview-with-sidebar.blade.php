@@ -57,7 +57,7 @@
 
         <h2><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h2>
 
-        <p>{!!  $post->extract !!}</p>
+        <p>{!!  $post->present()->extract !!}</p>
 
         <ul class="post-shares">
             <li>

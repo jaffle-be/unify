@@ -8,7 +8,7 @@
         <li>
             <h3><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h3>
             <small>{{ $post->publish_at->format('d M, Y') }} / {!! $post->tags->format(null, ', ') !!}</small>
-            <p>{!! $post->extract !!}</p>
+            <p>{!! $post->present()->extract !!}</p>
         </li>
         @endforeach
     </ul>
