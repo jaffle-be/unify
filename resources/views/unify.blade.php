@@ -25,7 +25,7 @@
 
     @section('styles-style')
         <link rel="stylesheet" href="{{theme_asset('css/styles.min.css') }}">
-    @show
+        @show
 
         {{--we preinclude the header and footer here so we can adjust the styles and scripts accordingly in the proper sections of the html--}}
         {{--if we didn't do this, styles would not be in the head section, thus slowing down the site.--}}
@@ -75,6 +75,7 @@
     <script src="{{theme_asset('plugins/back-to-top.js')}}"></script>
     <script src="{{theme_asset('plugins/smoothScroll.js')}}"></script>
     <script src="{{theme_asset('plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{theme_asset('plugins/jquery.parallax.js')}}"></script>
     @show
 
             <!-- JS Customization -->
