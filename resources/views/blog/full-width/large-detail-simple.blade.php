@@ -24,8 +24,6 @@
                     <li><i class="fa fa-tags"></i> {!!  $post->tags->format() !!}</li>
                 </ul>
             </div>
-            <p>{!! $post->present()->extract !!}</p>
-            <br>
 
             {!!  $post->present()->content !!}
         </div>

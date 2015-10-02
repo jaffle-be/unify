@@ -22,13 +22,6 @@
                         <li>Posted {{ $post->publish_at->format('d M, Y') }}</li>
                     </ul>
 
-                    <blockquote class="hero">
-                        <p>
-                            <em>{!!  $post->present()->extract !!}</em>
-                        </p>
-                    </blockquote>
-
-
                     {!!  $post->present()->content !!}
 
                     <ul class="post-shares post-shares-lg">

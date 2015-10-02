@@ -10,8 +10,6 @@
                 <li>{{ $post->publish_at->format('d M, Y') }}</li>
             </ul>
 
-            <p>{!!  $post->present()->extract !!}</p>
-
             {!!  $post->present()->content !!}
 
             <ul class="post-shares post-shares-lg">
