@@ -72,11 +72,23 @@
 
     <!-- Parallax Counter -->
     @include('Unify::team.elements.counters')
-            <!-- End Parallax Counter -->
+    <!-- End Parallax Counter -->
+
+    <div class="container content">
+
+        <div class="text-center margin-bottom-40">
+            <h2 class="title-v2 title-center">{{ Theme::setting('teamMemberMyPosts') }}</h2>
+        </div>
+
+        @foreach($posts->chunk(3) as $chunk)
+            @include('Unify::blog.elements.author-articles', ['posts' => $chunk])
+        @endforeach
+
+    </div>
 
     <!-- Call To Action -->
     @include('Unify::team.elements.hire-me')
-            <!-- End Call To Action -->
+    <!-- End Call To Action -->
 
 
 @stop
