@@ -56,7 +56,7 @@ class UnifyServiceProvider extends ServiceProvider
                 }
 
                 $posts = Post::with(['translations', 'images', 'images.sizes'])
-                    ->whereIn('id', $translations->toArray())
+                    ->whereIn('posts.id', $translations->toArray())
                     ->get();
 
                 return $posts->sortBy('publish_at')->reverse();
