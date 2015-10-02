@@ -6,6 +6,7 @@
     @parent
     <link rel="stylesheet" href="{{ theme_asset('plugins/sky-forms-pro/skyforms/css/sky-forms.css') }}">
     <link rel="stylesheet" href="{{ theme_asset('plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css') }}">
+    <link rel="stylesheet" href="{{ theme_asset('plugins/prism/prism.css') }}">
 @stop
 
 @section('content')
@@ -76,6 +77,7 @@
 @section('scripts-app')
     <script type="text/javascript" src="{{ theme_asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('js/forms/login.js') }}"></script>
+    <script src="{{ theme_asset('plugins/prism/prism.js') }}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             App.init();
