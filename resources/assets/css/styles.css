@@ -12898,6 +12898,7 @@ img.image-md {
   position: relative;
   padding-bottom: 56.25%;
   /*16:9*/
+  margin-bottom: 20px;
 }
 .responsive-video iframe {
   top: 0;
