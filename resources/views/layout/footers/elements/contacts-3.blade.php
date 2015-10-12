@@ -1,8 +1,8 @@
 <ul class="list-unstyled contacts">
-    @if($contact->address)
+    @if($contact->address->format())
     <li>
         <i class="radius-3x fa fa-map-marker"></i>
-        {{$contact->address->format()}}
+        {!! $contact->address->format() !!}
     </li>
     @endif
     @if($contact->phone)
