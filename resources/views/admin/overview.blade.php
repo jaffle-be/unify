@@ -1,33 +1,34 @@
-<div class="wrapper wrapper-content" ng-controller="UnifyController as vm" ng-init="vm.options = {{ system_options() }}">
+<div class="row wrapper-content" ng-controller="UnifyController as vm" ng-init="vm.options = {{ system_options() }}">
 
     @include('system::admin.locale-tabs')
 
-    <tabset>
-        @foreach($theme->settings->byModule() as $module => $group)
-            <tab heading="{{ $module }}">
-                <div class="ibox">
+    <div class="ibox">
 
-                    <div class="ibox-title">
-                        <h5>{{ Lang::get('Unify::admin.customize') }}</h5>
-                    </div>
+        <div class="ibox-tabs">
 
-                    <div class="ibox-content">
+            <tabset>
 
-                        @foreach($group as $setting)
+                @foreach($theme->settings->byModule() as $module => $group)
+                    <tab heading="{{ $module }}">
 
-                            @include('Unify::admin.setting-' . $setting->type->name, ['name' => $setting->key])
+                        <div class="ibox-content">
 
-                        @endforeach
+                            @foreach($group as $setting)
+
+                                @include('Unify::admin.setting-' . $setting->type->name, ['name' => $setting->key])
+
+                            @endforeach
 
 
-                        <div class="clearfix"></div>
-                    </div>
+                            <div class="clearfix"></div>
 
-                </div>
-            </tab>
+                        </div>
+                    </tab>
+                @endforeach
 
-        @endforeach
-    </tabset>
+            </tabset>
+        </div>
 
+    </div>
 
 </div>
