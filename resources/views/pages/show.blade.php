@@ -1,0 +1,75 @@
+@extends('Unify::unify')
+
+@section('title', $page->title)
+
+@section('styles-plugins')
+    @parent
+    <link rel="stylesheet" href="{{ theme_asset('plugins/prism/prism.css') }}">
+@stop
+
+@section('content')
+    <div class="bg-color-light">
+        <div class="container content-sm">
+            <div class="row">
+
+                @include('Unify::blog.elements.sidebars.large-overview')
+
+                <div class="col-md-9">
+                    <!-- News v3 -->
+                    <div class="news-v3 margin-bottom-30">
+                        <img class="img-responsive full-width" src="{{ asset($page->thumbnail(1140)) }}" alt="">
+
+                        <div class="news-v3-in">
+                            <ul class="list-inline posted-info">
+                                <li>By <a href="{{ route('store.team.show',[$page->user]) }}">{{ $page->user->name }}</a></li>
+                            </ul>
+
+                            {!!  $page->present()->content !!}
+
+                            <ul class="post-shares post-shares-lg">
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-speech"></i>
+                                        <span>28</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-share"></i>
+                                        <span>355</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-heart"></i>
+                                        <span>107</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End News v3 -->
+
+                </div>
+            </div>
+        </div>
+        <!--/end container-->
+    </div>
+@stop
+
+<body>
+
+@section('scripts-plugins')
+    @parent
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-561b7a06755cdd66" async="async"></script>
+@stop
+
+@section('scripts-app')
+    <script type="text/javascript" src="{{ theme_asset('js/app.js') }}"></script>
+    <script src="{{ theme_asset('plugins/prism/prism.js') }}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+        });
+    </script>
+@stop
