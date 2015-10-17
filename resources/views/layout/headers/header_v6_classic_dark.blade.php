@@ -58,23 +58,7 @@
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <div class="menu-container">
                         <ul class="nav navbar-nav">
-                            @foreach(Menu::get('primary menu')->items as $item)
-                                @if($item->children->count() == 0)
-                                    <li><a href="{{ $item->url }}" target="{{ $item->target }}">{{ $item->name }}</a>
-                                    </li>
-                                @else
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
-                                        <ul class="dropdown-menu">
-                                            @foreach($item->children as $child)
-                                                <li>
-                                                    <a href="{{ $child->url }}" target="{{ $child->target }}">{{ $child->name }}</a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </li>
-                                @endif
-                            @endforeach
+                            @include('Unify::layout.headers.primary-menu')
 
                             @if($account->locales->count() > 1)
 

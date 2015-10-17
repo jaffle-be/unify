@@ -79,39 +79,24 @@
                 <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
 
-                        @foreach(Menu::get('primary menu')->items as $item)
-                            @if($item->children->count() == 0)
-                                <li><a href="{{ $item->url }}" target="{{ $item->target }}">{{ $item->name }}</a></li>
-                            @else
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ $item->name }}</a>
-                                    <ul class="dropdown-menu">
-                                        @foreach($item->children as $child)
-                                            <li>
-                                                <a href="{{ $child->url }}" target="{{ $child->target }}">{{ $child->name }}</a>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                </li>
-                                @endif
-                                @endforeach
+                        @include('Unify::layout.headers.primary-menu')
 
-                                        <!-- Search Block -->
-                                <li>
-                                    <i class="search fa fa-search search-btn"></i>
+                                <!-- Search Block -->
+                        <li>
+                            <i class="search fa fa-search search-btn"></i>
 
-                                    <div class="search-open">
-                                        <form action="{{ route('store.search.index') }}">
-                                            <div class="input-group animated fadeInDown">
-                                                <input type="text" name="query" class="form-control" placeholder="{{ Lang::get('Unify::front.search.placeholder') }}">
+                            <div class="search-open">
+                                <form action="{{ route('store.search.index') }}">
+                                    <div class="input-group animated fadeInDown">
+                                        <input type="text" name="query" class="form-control" placeholder="{{ Lang::get('Unify::front.search.placeholder') }}">
                                                 <span class="input-group-btn">
                                                     <button class="btn-u" type="button">{{ Lang::get('Unify::front.search.go') }}</button>
                                                 </span>
-                                            </div>
-                                        </form>
                                     </div>
-                                </li>
-                                <!-- End Search Block -->
+                                </form>
+                            </div>
+                        </li>
+                        <!-- End Search Block -->
                     </ul>
                 </div>
                 <!--/navbar-collapse-->
