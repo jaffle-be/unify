@@ -59,11 +59,6 @@
 
 <body>
 
-@section('scripts-plugins')
-    @parent
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-561b7a06755cdd66" async="async"></script>
-@stop
-
 @section('scripts-app')
     <script type="text/javascript" src="{{ theme_asset('js/app.js') }}"></script>
     <script src="{{ theme_asset('plugins/prism/prism.js') }}"></script>
