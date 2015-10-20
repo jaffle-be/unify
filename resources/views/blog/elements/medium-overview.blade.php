@@ -54,16 +54,6 @@
             <h2><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{$post->title}}</a></h2>
 
             <p>{!!  $post->present()->extract !!}</p>
-            <ul class="post-shares">
-                <li>
-                    <a href="#">
-                        <i class="rounded-x icon-speech"></i>
-                        <span>5</span>
-                    </a>
-                </li>
-                <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
-                <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
-            </ul>
         </div>
     </div>
 </div>

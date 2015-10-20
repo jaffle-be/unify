@@ -25,26 +25,6 @@
 
                     {!!  $post->present()->content !!}
 
-                    <ul class="post-shares post-shares-lg">
-                        <li>
-                            <a href="#">
-                                <i class="rounded-x icon-speech"></i>
-                                <span>28</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="rounded-x icon-share"></i>
-                                <span>355</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="rounded-x icon-heart"></i>
-                                <span>107</span>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <!-- End News v3 -->

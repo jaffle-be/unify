@@ -59,26 +59,6 @@
 
         <p>{!!  $post->present()->extract !!}</p>
 
-        <ul class="post-shares">
-            <li>
-                <a href="#">
-                    <i class="rounded-x icon-speech"></i>
-                    <span>26</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="rounded-x icon-share"></i>
-                    <span>98</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="rounded-x icon-heart"></i>
-                    <span>30</span>
-                </a>
-            </li>
-        </ul>
     </div>
 </div>
 <!-- End Blog Posts -->
