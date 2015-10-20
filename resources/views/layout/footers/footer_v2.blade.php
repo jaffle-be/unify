@@ -30,13 +30,7 @@
                 <div class="col-md-4 md-margin-bottom-40">
                     <div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterLinksTitle') }}</h2>
                     </div>
-                    <ul class="list-unstyled link-list">
-                        @foreach(Menu::get('primary menu')->items as $item)
-                            <li>
-                                <a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a><i class="fa fa-angle-right"></i>
-                            </li>
-                        @endforeach
-                    </ul>
+                    @include('Unify::layout.footers.menu', ['optional_class'=> 'link-list'])
                 </div>
                 <!-- End Link List -->
 

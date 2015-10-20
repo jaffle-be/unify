@@ -31,13 +31,7 @@
                 <div class="col-sm-3 md-margin-bottom-40">
 
                     <div class="thumb-headline"><h2>{{ Theme::setting('layoutFooterLinksTitle') }}</h2></div>
-                    <ul class="list-unstyled simple-list">
-                        @foreach(Menu::get('primary menu')->items as $item)
-                            <li>
-                                <a target="{{ $item->target_blank ? '_blank' : '' }}" href="{{ $item->url }}">{{ $item->name }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
+                    @include('Unify::layout.footers.menu', ['optional_class'=> 'simple-list'])
                 </div>
                 <!--/col-md-3-->
 
