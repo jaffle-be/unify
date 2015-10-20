@@ -6,7 +6,7 @@
     <ul class="list-unstyled blog-latest-posts margin-bottom-50">
         @foreach($latest as $post)
         <li>
-            <h3><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h3>
+            <h3><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h3>
             <small>{{ $post->publish_at->format('d M, Y') }} / {!! $post->tags->format(null, ', ') !!}</small>
             <p>{!! $post->present()->extract !!}</p>
         </li>

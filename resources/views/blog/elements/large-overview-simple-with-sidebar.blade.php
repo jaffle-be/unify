@@ -1,7 +1,7 @@
 <!--Blog Post-->
 <div class="blog margin-bottom-40">
     <h2>
-        <a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a>
+        <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
     </h2>
 
     <div class="blog-post-tags">
@@ -30,7 +30,7 @@
                     @foreach($post->images as $image)
 
                         <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
-                            <a href="{{ route('store.blog.show', [$post->translate()]) }}">
+                            <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
                                 <img alt="" src="{{ $image->thumbnail(1140) }}">
                             </a>
 
@@ -54,7 +54,7 @@
     @else
 
         <div class="blog-img">
-            <a href="{{ route('store.blog.show', [$post->translate()]) }}">
+            <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
                 <img class="img-responsive" src="{{ $post->thumbnail(1140) }}" alt="">
             </a>
         </div>
@@ -65,7 +65,7 @@
     <p>{!!  $post->present()->extract !!}</p>
 
     <p>
-        <a class="btn-u btn-u-small" href="{{ route('store.blog.show', [$post->translate()]) }}"><i class="fa fa-plus-sign"></i> Read More</a>
+        <a class="btn-u btn-u-small" href="{{ route('store.uri.show', [$post->translate()->uri]) }}"><i class="fa fa-plus-sign"></i> Read More</a>
     </p>
 </div>
 <!--End Blog Post-->

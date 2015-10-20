@@ -10,7 +10,7 @@
                         @if($img = $image->sizes->first())
 
                             <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
-                                <a href="{{ route('store.blog.show', [$post->translate()]) }}">
+                                <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
                                     <img alt="" src="{{ asset($image->thumbnail(1140)) }}">
                                 </a>
                             </div>
@@ -32,13 +32,13 @@
         </div>
     @else
         <div class="blog-img">
-            <a href="{{ route('store.blog.show', [$post->translate()]) }}">
+            <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
                 <img class="img-responsive" src="{{ asset($post->thumbnail(1140)) }}" alt="">
             </a>
         </div>
     @endif
 
-    <h2><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h2>
+    <h2><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h2>
 
     <div class="blog-post-tags">
         <ul class="list-unstyled list-inline blog-info">
@@ -56,7 +56,7 @@
 
     <p>{!!  $post->present()->extract !!}</p>
 
-    <p><a class="btn-u btn-u-small" href="{{ route('store.blog.show', [$post->translate()]) }}"><i class="fa fa-plus"></i> Read More</a>
+    <p><a class="btn-u btn-u-small" href="{{ route('store.uri.show', [$post->translate()->uri]) }}"><i class="fa fa-plus"></i> Read More</a>
     </p>
 </div>
 <!--End Blog Post-->

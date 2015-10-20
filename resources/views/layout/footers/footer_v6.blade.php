@@ -32,7 +32,7 @@
                     <ul class="list-unstyled link-news">
                         @foreach($posts as $post)
                             <li>
-                                <a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a>
+                                <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
                                 <small>{{ $post->publish_at->format('d M, Y') }}</small>
                             </li>
                         @endforeach

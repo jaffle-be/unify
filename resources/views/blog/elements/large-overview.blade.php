@@ -1,6 +1,6 @@
 <!-- Blog Posts -->
 <div class="news-v3 margin-bottom-60">
-    <a href="{{ route('store.blog.show', [$post->translate()]) }}">
+    <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
         <img class="img-responsive full-width" src="{{ asset($post->thumbnail(1140)) }}" alt="">
     </a>
 
@@ -10,7 +10,7 @@
                 <li>In {!! $post->tags->format(null, ', ') !!}</li>
             <li>Posted {{ $post->publish_at->format('d M, Y') }}</li>
         </ul>
-        <h2><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h2>
+        <h2><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h2>
 
         <p>{!!  $post->present()->extract !!}</p>
         <ul class="post-shares">

@@ -20,7 +20,7 @@
                     @if($img = $image->sizes->first())
 
                         <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
-                            <a href="{{ route('store.blog.show', [$post->translate()]) }}">
+                            <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
                                 <img class="img-responsive full-width" alt="" src="{{ asset($image->thumbnail(1140)) }}">
                             </a>
 
@@ -42,7 +42,7 @@
             </div>
         </div>
     @else
-        <a href="{{ route('store.blog.show', [$post->translate()]) }}">
+        <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
             <img class="img-responsive full-width" src="{{ asset($post->thumbnail(1140)) }}" alt="">
         </a>
     @endif
@@ -55,7 +55,7 @@
         </ul>
 
 
-        <h2><a href="{{ route('store.blog.show', [$post->translate()]) }}">{{ $post->title }}</a></h2>
+        <h2><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h2>
 
         <p>{!!  $post->present()->extract !!}</p>
 
