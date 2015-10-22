@@ -9,7 +9,7 @@
         <div class="topbar-v3">
             <div class="search-open">
                 <div class="container">
-                    <form action="{{ route('store.search.index') }}">
+                    <form action="{{ store_route('store.search.index') }}">
                         <input type="text" class="form-control" name="query" placeholder="Search">
                     </form>
 
@@ -45,8 +45,8 @@
                     </div>
                     <div class="col-sm-6">
                         <ul class="list-inline right-topbar pull-right">
-                            {{--<li><a href="{{ route('store.shop.login') }}">Login</a> |
-                                <a href="{{ route('store.shop.register') }}">Register</a>
+                            {{--<li><a href="{{ store_route('store.shop.login') }}">Login</a> |
+                                <a href="{{ store_route('store.shop.register') }}">Register</a>
                             </li>--}}
                             <li><i class="search fa fa-search search-button"></i></li>
                         </ul>
@@ -68,7 +68,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ route('store.home') }}">
+                    <a class="navbar-brand" href="{{ store_route('store.home') }}">
                         <img id="logo-header" src="{{ asset($account->logo()) }}" alt="Logo">
                     </a>
                 </div>
@@ -88,7 +88,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-6">
-                                            <a href="{{ route('store.shop.checkout.index' ) }}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
+                                            <a href="{{ store_route('store.shop.checkout.index' ) }}" class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">View Cart</a>
                                         </div>
                                         <div class="col-xs-6 text-right padding-top-5">
                                             <strong>TOTAL: $0.00</strong>

@@ -26,7 +26,7 @@
             <div class="blog-post-tags">
                 <ul class="list-unstyled list-inline blog-info">
                     <li><i class="fa fa-calendar"></i> {{ $post->publish_at->format('d M, Y') }}</li>
-                    <li><i class="fa fa-pencil"></i> <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
+                    <li><i class="fa fa-pencil"></i> <a href="{{ store_route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
                     {{--<li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>--}}
                     <li><i class="fa fa-tags"></i> {!!  $post->tags->format() !!}</li>
                 </ul>

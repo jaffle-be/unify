@@ -48,9 +48,9 @@
 
                             @endif
                             {{--<li>
-                                <a href="{{ route('store.shop.checkout.index') }}"><i class="fa fa-shopping-cart"></i></a>
+                                <a href="{{ store_route('store.shop.checkout.index') }}"><i class="fa fa-shopping-cart"></i></a>
                             </li>
-                            <li><a href="{{ route('store.shop.login') }}">Login</a></li>--}}
+                            <li><a href="{{ store_route('store.shop.login') }}">Login</a></li>--}}
                         </ul>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="navbar-header">
                     <div class="row">
                         <div class="col-md-2">
-                            <a class="navbar-brand" href="{{ route('store.home') }}">
+                            <a class="navbar-brand" href="{{ store_route('store.home') }}">
                                 <img id="logo-header" src="{{ asset($account->logo()) }}" alt="Logo">
                             </a>
                         </div>
@@ -99,7 +99,7 @@
                             <i class="search fa fa-search search-btn"></i>
 
                             <div class="search-open">
-                                <form action="{{ route('store.search.index') }}">
+                                <form action="{{ store_route('store.search.index') }}">
                                     <div class="input-group animated fadeInDown">
                                         <input type="text" name="query" class="form-control" placeholder="{{ Lang::get('Unify::front.search.placeholder') }}">
                                     <span class="input-group-btn">

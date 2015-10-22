@@ -31,7 +31,7 @@
 
                                     <p>{!! $member->bio !!}
                                         <br>
-                                        <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
+                                        <a href="{{ store_route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
                                     </p>
 
                                     @if($member->socialLinks)
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 team-v7-img">
-                            <a href="{{ route('store.team.show', [$member]) }}">
+                            <a href="{{ store_route('store.team.show', [$member]) }}">
                                 <img class="img-responsive full-width equal-height-column" src="{{ $member->thumbnail(1280) ? asset($member->thumbnail(1280)) : theme_asset('img/team/img-v1.jpg') }}" alt="">
                             </a>
                         </div>
@@ -65,7 +65,7 @@
 
                                     <p>{!! $member->bio !!}
                                         <br>
-                                        <a href="{{ route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
+                                        <a href="{{ store_route('store.team.show', [$member]) }}">{{ Lang::get('Unify::front.more-about') }}</a>
                                     </p>
 
                                     @if($member->socialLinks)
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-md-pull-6 team-v7-img">
-                            <a href="{{ route('store.team.show', [$member]) }}">
+                            <a href="{{ store_route('store.team.show', [$member]) }}">
                                 <img class="img-responsive full-width equal-height-column" src="{{ $member->thumbnail(1280) ? asset($member->thumbnail(1280)) : theme_asset('img/team/img-v2.jpg') }}" alt="">
                             </a>
                         </div>

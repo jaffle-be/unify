@@ -18,7 +18,7 @@
 
                     <!-- Navbar Brand -->
                     <div class="navbar-brand">
-                        <a href="{{ route('store.home') }}">
+                        <a href="{{ store_route('store.home') }}">
                             <img class="shrink-logo" src="{{ asset($account->logo()) }}" alt="Logo">
                         </a>
                     </div>
@@ -42,7 +42,7 @@
                                 <i class="menu-icons-style search search-close search-btn fa fa-search"></i>
 
                                 <div class="search-open">
-                                    <form action="{{ route('store.search.index') }}">
+                                    <form action="{{ store_route('store.search.index') }}">
                                         <input type="text" name="query" class="animated fadeIn form-control" placeholder="{{ Lang::get('Unify::front.search.placeholder') }}">
                                     </form>
                                 </div>

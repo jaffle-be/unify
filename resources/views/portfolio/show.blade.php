@@ -75,7 +75,7 @@
 
                                 @foreach($project->collaborators as $collaborator)
 
-                                    <a href="{{ route('store.team.show',[$collaborator]) }}">{{ $collaborator->name }}</a>
+                                    <a href="{{ store_route('store.team.show',[$collaborator]) }}">{{ $collaborator->name }}</a>
 
                                 @endforeach
 

@@ -21,7 +21,7 @@
 
                         <div class="news-v3-in">
                             <ul class="list-inline posted-info">
-                                <li>By <a href="{{ route('store.team.show',[$page->user]) }}">{{ $page->user->name }}</a></li>
+                                <li>By <a href="{{ store_route('store.team.show',[$page->user]) }}">{{ $page->user->name }}</a></li>
                             </ul>
 
                             {!!  $page->present()->content !!}

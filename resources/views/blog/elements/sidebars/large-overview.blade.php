@@ -6,7 +6,7 @@
     <ul class="list-unstyled blog-latest-posts margin-bottom-50">
         @foreach($latest as $post)
         <li>
-            <h3><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h3>
+            <h3><a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h3>
             <small>{{ $post->publish_at->format('d M, Y') }} / {!! $post->tags->format(null, ', ') !!}</small>
             <p>{!! $post->present()->extract !!}</p>
         </li>
@@ -35,7 +35,7 @@
     <!-- Tags v2 -->
     <ul class="list-inline tags-v2 margin-bottom-50">
         @foreach($tags as $tag)
-        <li><a href="{{ route('store.tags.show', [$tag]) }}">{{ $tag->name }}</a></li>
+        <li><a href="{{ store_route('store.tags.show', [$tag]) }}">{{ $tag->name }}</a></li>
         @endforeach
     </ul>
     @endif

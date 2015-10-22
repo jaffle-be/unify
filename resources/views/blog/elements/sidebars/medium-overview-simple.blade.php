@@ -6,10 +6,10 @@
         <div class="headline headline-md"><h2>{{ Theme::setting('blogSidebarRecentPostsTitle') }}</h2></div>
         @foreach($latest as $post)
             <dl class="dl-horizontal">
-                <dt><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a>
+                <dt><a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a>
                 </dt>
                 <dd>
-                    <p><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></p>
+                    <p><a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></p>
                 </dd>
             </dl>
         @endforeach
@@ -38,7 +38,7 @@
     <div class="headline headline-md"><h2>{{ Theme::setting('blogSidebarTagsTitle') }}</h2></div>
     <ul class="list-unstyled blog-tags margin-bottom-30">
         @foreach($tags as $tag)
-            <li><a href="{{ route('store.tags.show', [$tag]) }}"><i class="fa fa-tags"></i> {{ $tag->name }}</a></li>
+            <li><a href="{{ store_route('store.tags.show', [$tag]) }}"><i class="fa fa-tags"></i> {{ $tag->name }}</a></li>
         @endforeach
     </ul>
     <!-- End Blog Tags -->

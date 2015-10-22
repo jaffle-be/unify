@@ -10,7 +10,7 @@
                         @if($img = $image->sizes->first())
 
                             <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
-                                <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
+                                <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">
                                     <img alt="" src="{{ asset($image->thumbnail(1140)) }}">
                                 </a>
                             </div>
@@ -32,18 +32,18 @@
         </div>
     @else
         <div class="blog-img">
-            <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
+            <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">
                 <img class="img-responsive" src="{{ asset($post->thumbnail(1140)) }}" alt="">
             </a>
         </div>
     @endif
 
-    <h2><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h2>
+    <h2><a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h2>
 
     <div class="blog-post-tags">
         <ul class="list-unstyled list-inline blog-info">
             <li><i class="fa fa-calendar"></i> {{ $post->publish_at->format('d M, Y') }}</li>
-            <li><i class="fa fa-pencil"></i> <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
+            <li><i class="fa fa-pencil"></i> <a href="{{ store_route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
             {{--<li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>--}}
             <li><i class="fa fa-tags"></i>
 
@@ -56,7 +56,7 @@
 
     <p>{!!  $post->present()->extract !!}</p>
 
-    <p><a class="btn-u btn-u-small" href="{{ route('store.uri.show', [$post->translate()->uri]) }}"><i class="fa fa-plus"></i> Read More</a>
+    <p><a class="btn-u btn-u-small" href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}"><i class="fa fa-plus"></i> Read More</a>
     </p>
 </div>
 <!--End Blog Post-->

@@ -31,7 +31,7 @@
             @foreach($memberships as $membership)
 
                 <div class="cbp-item {{ implode(' ', $membership->teams->lists('cubeportfolio')->toArray()) }}">
-                    <a href="{{ route('store.team.show', [$membership->member]) }}" class="cbp-caption"
+                    <a href="{{ store_route('store.team.show', [$membership->member]) }}" class="cbp-caption"
                        data-title="World Clock Widget<br>by Paul Flavius Nechita">
                         <div class="cbp-caption-defaultWrap">
                             <img src="{{ $membership->member->thumbnail(512) ? asset($membership->member->thumbnail(512)): theme_asset('img/team/img2-md.jpg') }}" alt="">

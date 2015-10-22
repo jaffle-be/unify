@@ -44,14 +44,14 @@
                                     </ul>
                                 @endif
                                 <span>
-                                <a href="{{ route('store.team.show', [$membership->member]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
+                                <a href="{{ store_route('store.team.show', [$membership->member]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
                             </span>
                             </div>
                         </div>
                         <span>{{ $membership->member->function }}</span>
                         <small>{{ implode(', ', $membership->member->skills->lists('name')->toArray()) }}</small>
                         <p>{!!  $membership->member->bio !!}</p>
-                        <a href="{{ route('store.team.show', [$membership->member]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
+                        <a href="{{ store_route('store.team.show', [$membership->member]) }}">{{ Lang::get('Unify::front.read-more') }}</a>
                     </div>
                 @endforeach
             </div>

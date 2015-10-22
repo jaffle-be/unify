@@ -6,7 +6,7 @@
         </p>
     </form>
 @else
-    <form action="{{ route('store.contact.store') }}" method="post"
+    <form action="{{ store_route('store.contact.store') }}" method="post"
           id="sky-form3" class="sky-form sky-changes-3">
 
         {!! csrf_field() !!}

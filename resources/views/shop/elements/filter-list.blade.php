@@ -5,14 +5,14 @@
         <div class="list-product-description product-description-brd margin-bottom-30">
             <div class="row">
                 <div class="col-sm-4">
-                    <a href="{{ route('store.shop.product', [$product]) }}"><img class="img-responsive sm-margin-bottom-20" src="{{ theme_asset('img/blog/16.jpg') }}" alt=""></a>
+                    <a href="{{ store_route('store.shop.product', [$product]) }}"><img class="img-responsive sm-margin-bottom-20" src="{{ theme_asset('img/blog/16.jpg') }}" alt=""></a>
                 </div>
                 <div class="col-sm-8 product-description">
 
                     <div class="overflow-h margin-bottom-5">
 
                         <ul class="list-inline overflow-h">
-                            <li><h4 class="title-price"><a href="{{ route('store.shop.product', [$product]) }}">{{ $product->name }}</a></h4></li>
+                            <li><h4 class="title-price"><a href="{{ store_route('store.shop.product', [$product]) }}">{{ $product->name }}</a></h4></li>
                             <li><span class="gender text-uppercase">Men</span></li>
                             <li class="pull-right">
                                 <ul class="list-inline product-ratings">

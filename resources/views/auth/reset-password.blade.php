@@ -12,7 +12,7 @@
     <div class="container content">
         <div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                <form class="reg-page" action="{{ route('store.auth.reset-password.update', [$token]) }}" method="POST">
+                <form class="reg-page" action="{{ store_route('store.auth.reset-password.update', [$token]) }}" method="POST">
 
                     <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                     <input type="hidden" name="_method" value="put"/>
@@ -50,7 +50,7 @@
 
                     <div class="row">
                         <div class="col-md-6 text-left">
-                            <a class="btn-u" href="{{ route('store.auth.signin.index') }}">{{ Lang::get('Unify::front.back') }}</a>
+                            <a class="btn-u" href="{{ store_route('store.auth.signin.index') }}">{{ Lang::get('Unify::front.back') }}</a>
                         </div>
 
                         <div class="col-md-6 text-right">

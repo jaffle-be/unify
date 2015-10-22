@@ -5,7 +5,7 @@
                 <h2>{{ Theme::setting('widgetsCalloutTitle') }}</h2>
             </div>
             <div class="col-md-4">
-                <a href="{{ route('store.contact.index') }}" class="btn-u btn-brd btn-brd-hover btn-u-light">{{ Theme::setting('widgetsCalloutButton') }}</a>
+                <a href="{{ store_route('store.contact.index') }}" class="btn-u btn-brd btn-brd-hover btn-u-light">{{ Theme::setting('widgetsCalloutButton') }}</a>
             </div>
         </div>
     </div><!--/end container-->

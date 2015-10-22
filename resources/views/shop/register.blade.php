@@ -136,7 +136,7 @@
                     </form>
 
                     <div class="margin-bottom-20"></div>
-                    <p class="text-center">Already you have an account? <a href="{{ route('store.shop.login') }}">Sign In</a></p>
+                    <p class="text-center">Already you have an account? <a href="{{ store_route('store.shop.login') }}">Sign In</a></p>
                 </div>
             </div>
             <!--/end row-->

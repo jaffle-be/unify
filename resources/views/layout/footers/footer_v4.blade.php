@@ -19,11 +19,11 @@
                         @foreach($posts as $post)
                             <dl class="dl-horizontal">
                                 <dt>
-                                    <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a>
+                                    <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a>
                                 </dt>
                                 <dd>
                                     <p>
-                                        <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
+                                        <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
                                     </p>
                                 </dd>
                             </dl>

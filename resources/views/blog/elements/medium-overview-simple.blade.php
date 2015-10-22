@@ -10,7 +10,7 @@
                         @if($img = $image->sizes->first())
 
                             <div class="item {{ $imgCounter == 0 ? 'active' : '' }}">
-                                <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
+                                <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">
                                     <img class="img-responsive full-width" alt="" src="{{ asset($image->thumbnail(460)) }}">
                                 </a>
 
@@ -31,7 +31,7 @@
             </div>
         @else
             
-            <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
+            <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">
                 <img class="img-responsive" src="{{ asset($post->thumbnail(460)) }}" alt="">
             </a>
 
@@ -39,15 +39,15 @@
 
     </div>
     <div class="col-md-7">
-        <h2><a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h2>
+        <h2><a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h2>
         <ul class="list-unstyled list-inline blog-info">
             <li><i class="fa fa-calendar"></i> {{ $post->publish_at->format('d M, Y') }}</li>
             <li><i class="fa fa-tags"></i> {!!  $post->tags->format() !!}</li>
-            <li>{{ Lang::get('Unify::front.post-by') }} <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
+            <li>{{ Lang::get('Unify::front.post-by') }} <a href="{{ store_route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
         </ul>
         <p>{!!  $post->present()->extract !!}</p>
 
-        <p><a class="btn-u btn-u-sm" href="{{ route('store.uri.show', [$post->translate()->uri]) }}">Read More
+        <p><a class="btn-u btn-u-sm" href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">Read More
                 <i class="fa fa-angle-double-right margin-left-5"></i></a></p>
     </div>
 </div>

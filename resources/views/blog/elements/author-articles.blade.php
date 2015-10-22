@@ -4,7 +4,7 @@
         <div class="col-sm-4">
             <div class="news-v2-badge">
 
-                <a href="{{ route('store.uri.show', [$post->translate()->uri]) }}">
+                <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">
                     <img class="img-responsive" src="{{ asset($post->thumbnail(460)) }}" alt="">
                 </a>
 
@@ -14,8 +14,8 @@
                 </p>
             </div>
             <div class="news-v2-desc">
-                <h3><a href=" {{ route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title}}</a></h3>
-                <small>By <a href="{{ route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a> |
+                <h3><a href=" {{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title}}</a></h3>
+                <small>By <a href="{{ store_route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a> |
                     {!! $post->tags->format(null, ', ') !!}
                 </small>
                 <p>{!!  $post->present()->extract !!}</p>

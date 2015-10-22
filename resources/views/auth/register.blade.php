@@ -11,7 +11,7 @@
     <div class="container content">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <form class="reg-page" action="{{ route('store.auth.signup.store') }}" method="POST">
+                <form class="reg-page" action="{{ store_route('store.auth.signup.store') }}" method="POST">
 
                     <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
                     @if(isset($invitation))
@@ -23,7 +23,7 @@
                     <div class="reg-header">
                         <h2>{{ Lang::get('Unify::front.register') }}</h2>
 
-                        <p>{!! Lang::get('Unify::front.already-signed-up', ['url' => route('store.auth.signin.index')]) !!}</p>
+                        <p>{!! Lang::get('Unify::front.already-signed-up', ['url' => store_route('store.auth.signin.index')]) !!}</p>
                     </div>
 
                     <label>{{ Lang::get('Unify::front.email') }} <span class="color-red">*</span></label>
@@ -57,7 +57,7 @@
 
                     <div class="row">
                         <div class="col-lg-6">
-                            <a class="btn-lg btn-u" href="{{ route('store.auth.signin.index') }}">{{ Lang::get('Unify::front.back') }}</a>
+                            <a class="btn-lg btn-u" href="{{ store_route('store.auth.signin.index') }}">{{ Lang::get('Unify::front.back') }}</a>
                         </div>
 
                         <div class="col-lg-6  text-right">

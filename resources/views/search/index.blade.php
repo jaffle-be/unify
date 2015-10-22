@@ -27,7 +27,7 @@
 
             @endif
 
-            <form action="{{ route('store.search.index') }}">
+            <form action="{{ store_route('store.search.index') }}">
 
                 <div class="form-group">
                 	<label for="query" class="control-label">{{ Lang::get('Unify::front.search.search-for-something') }}</label>

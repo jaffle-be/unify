@@ -8,7 +8,7 @@
 
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="{{ route('store.home') }}">
+            <a class="logo" href="{{ store_route('store.home') }}">
                 <img src="{{ asset($account->logo()) }}" alt="Logo">
             </a>
             <!-- End Logo -->
@@ -39,12 +39,12 @@
                         </li>
                     @endif
 
-                    {{--<li class="topbar-devider"></li>--}}
-
-
-                    {{--<li><a href="{{ route('store.shop.checkout.index') }}">Cart (3)</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href="{{ route('store.shop.login') }}">Login</a></li>--}}
+
+
+                    <li><a href="{{ store_route('store.shop.checkout.index') }}">Cart (3)</a></li>
+                    <li class="topbar-devider"></li>
+                    <li><a href="{{ store_route('store.shop.login') }}">Login</a></li>
                 </ul>
             </div>
             <!-- End Topbar -->
@@ -71,7 +71,7 @@
 
                         <div class="search-open">
                             <div class="input-group animated fadeInDown">
-                                <form action="{{ route('store.search.index') }}">
+                                <form action="{{ store_route('store.search.index') }}">
                                     <input type="text" name="query" class="form-control" placeholder="{{ Lang::get('Unify::front.search.placeholder') }}">
                                 </form>
                                 <span class="input-group-btn">

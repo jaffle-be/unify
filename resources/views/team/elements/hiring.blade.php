@@ -4,7 +4,7 @@
         <h2>{{ Theme::setting('teamHiringTitle') }}</h2>
 
         <p>{{ Theme::setting('teamHiringText') }}</p>
-        <a href="{{ route('store.contact.index') }}" class="btn-u">{{ Theme::setting('teamHiringButton') }}</a>
+        <a href="{{ store_route('store.contact.index') }}" class="btn-u">{{ Theme::setting('teamHiringButton') }}</a>
     </div>
 </div>
 <!--=== End Call To Action v2 ===-->

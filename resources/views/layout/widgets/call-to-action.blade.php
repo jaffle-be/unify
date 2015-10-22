@@ -4,7 +4,7 @@
             <h2>{{ Theme::setting('widgetsCallToActionTitle') }}</h2>
             <span class="bordered-icon"><i class="fa fa-th-large"></i></span>
             <p>{{ Theme::setting('widgetsCallToActionText') }}</p><br><br>
-            <a href="{{ route('store.contact.index') }}" class="btn-u btn-brd btn-brd-hover btn-u-light">{{ Theme::setting('widgetsCallToActionButton') }}</a>
+            <a href="{{ store_route('store.contact.index') }}" class="btn-u btn-brd btn-brd-hover btn-u-light">{{ Theme::setting('widgetsCallToActionButton') }}</a>
         </div><!--/Headline Center V2-->
     </div><!--/container-->
 </div>

@@ -100,7 +100,7 @@
 
                     <div class="margin-bottom-20"></div>
                     <p class="text-center">Don't have account yet? Learn more and
-                        <a href="{{ route('store.shop.register') }}">Sign Up</a></p>
+                        <a href="{{ store_route('store.shop.register') }}">Sign Up</a></p>
                 </div>
             </div>
             <!--/end row-->

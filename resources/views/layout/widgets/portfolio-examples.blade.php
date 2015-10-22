@@ -3,7 +3,7 @@
         <h2>{{ Theme::setting('widgetsPortfolioTitle') }}</h2>
         <span class="bordered-icon"><i class="fa fa-th-large"></i></span>
         <p>{{ Theme::setting('widgetsPortfolioIntro') }}</p>
-        <a class="btn-u btn-brd btn-brd-hover btn-u-dark" href="{{ route('store.portfolio.index') }}">{{ Theme::setting('widgetsPortfolioSeeAll') }}</a>
+        <a class="btn-u btn-brd btn-brd-hover btn-u-dark" href="{{ store_route('store.portfolio.index') }}">{{ Theme::setting('widgetsPortfolioSeeAll') }}</a>
     </div><!--/Headline Center V2-->
 </div><!--/container-->
 

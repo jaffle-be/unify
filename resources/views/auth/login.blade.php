@@ -12,7 +12,7 @@
     <div class="container content">
         <div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                <form class="reg-page" action="{{ route('store.auth.signin.store') }}" method="POST">
+                <form class="reg-page" action="{{ store_route('store.auth.signin.store') }}" method="POST">
 
                     <input value="{{csrf_token()}}" name="_token" type="hidden"/>
 
@@ -67,7 +67,7 @@
                     <h4>{{ Lang::get('Unify::front.forgot-password') }}</h4>
 
                     <p>
-                        {!! Lang::get('Unify::front.forgot-password-text', ['url' => route('store.auth.forgot-password.index')]) !!}
+                        {!! Lang::get('Unify::front.forgot-password-text', ['url' => store_route('store.auth.forgot-password.index')]) !!}
                     </p>
                 </form>
             </div>
