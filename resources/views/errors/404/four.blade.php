@@ -17,7 +17,7 @@
                 <span class="sorry">{{ Lang::get('Unify::front.errors.url-not-found') }}</span>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <a class="btn-u btn-brd btn-u-light" href="/"> {{ Lang::get('Unify::front.errors.back-home-button') }}</a>
+                        <a class="btn-u btn-brd btn-u-light" href="{{ store_route('store.home') }}"> {{ Lang::get('Unify::front.errors.back-home-button') }}</a>
                     </div>
                 </div>
             </div>

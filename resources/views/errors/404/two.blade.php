@@ -14,7 +14,7 @@
                 <span>{{ Lang::get('Unify::front.errors.error-happened') }}</span>
 
                 <p>{{ Lang::get('Unify::front.errors.url-not-found') }}</p>
-                <p><a class="btn-u btn-bordered" href="/">{{ Lang::get('Unify::front.errors.back-home-button') }}</a></p>
+                <p><a class="btn-u btn-bordered" href="{{ store_route('store.home') }}">{{ Lang::get('Unify::front.errors.back-home-button') }}</a></p>
             </div>
         </div>
     </div>

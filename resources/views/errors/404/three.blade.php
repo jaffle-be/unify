@@ -44,7 +44,7 @@
 
                     <p>{{ Lang::get('Unify::front.errors.back-home-text') }}</p>
                     <p class="service-block-buttons">
-                        <a class="btn-u btn-brd btn-u-light" href="/">{{ Lang::get('Unify::front.errors.back-home-button') }}</a>
+                        <a class="btn-u btn-brd btn-u-light" href="{{ store_route('store.home') }}">{{ Lang::get('Unify::front.errors.back-home-button') }}</a>
                     </p>
                 </div>
             </div>
