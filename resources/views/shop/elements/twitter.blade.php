@@ -14,7 +14,7 @@
 
             {{--<div class="carousel-inner">--}}
                 {{--<div class="item active">--}}
-                    {{--<p>Unify has reached 10000 plus sales and we just want to thank you to our all customers for being part of the Unify Template success <a href="http://bit.ly/1c0UN3Y">http://bit.ly/1c0UN3Y</a><p>--}}
+                    {{--<p>Unify has reached 10000 plus sales and we just want to thank you to our all customers for being part of the Unify Template success <a href="//bit.ly/1c0UN3Y">//bit.ly/1c0UN3Y</a><p>--}}
                     {{--<p><a href="https://twitter.com/htmlstream">@htmlstream</a></p>--}}
                     {{--<ul class="list-inline twitter-icons">--}}
                         {{--<li><a href="#"><i class="fa fa-reply"></i></a></li>--}}
@@ -32,7 +32,7 @@
                     {{--</ul>--}}
                 {{--</div>--}}
                 {{--<div class="item">--}}
-                    {{--<p>New 100% Free Stock Photos. Every. Single. Day. Everything you need for your creative projects. <a href="#">http://publicdomainarchive.com</a></p>--}}
+                    {{--<p>New 100% Free Stock Photos. Every. Single. Day. Everything you need for your creative projects. <a href="#">//publicdomainarchive.com</a></p>--}}
                     {{--<p><a href="https://twitter.com/htmlstream">@wrapbootstrap</a></p>--}}
                     {{--<ul class="list-inline twitter-icons">--}}
                         {{--<li><a href="#"><i class="fa fa-reply"></i></a></li>--}}

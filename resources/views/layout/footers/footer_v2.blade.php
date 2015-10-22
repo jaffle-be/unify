@@ -44,7 +44,7 @@
                 {{--<p>--}}
                 {{--<a href="#">@htmlstream</a>--}}
                 {{--At vero seos etodela ccusamus et--}}
-                {{--<a href="#">http://t.co/sBav7dm</a>--}}
+                {{--<a href="#">//t.co/sBav7dm</a>--}}
                 {{--<small class="twitter-time">2 hours ago</small>--}}
                 {{--</p>--}}
                 {{--</div>--}}
@@ -54,7 +54,7 @@
                 {{--<p>--}}
                 {{--<a href="#">@htmlstream</a>--}}
                 {{--At vero seos etodela ccusamus et--}}
-                {{--<a href="#">http://t.co/sBav7dm</a>--}}
+                {{--<a href="#">//t.co/sBav7dm</a>--}}
                 {{--<small class="twitter-time">4 hours ago</small>--}}
                 {{--</p>--}}
                 {{--</div>--}}

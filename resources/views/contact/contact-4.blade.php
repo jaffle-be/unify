@@ -41,7 +41,7 @@
 @stop
 
 @section('scripts-plugins')
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/gmap/gmap.js') }}"></script>
     <script type="text/javascript"
             src="{{ theme_asset('plugins/sky-forms-pro/skyforms/js/jquery.form.min.js') }}"></script>

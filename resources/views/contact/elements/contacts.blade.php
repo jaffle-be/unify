@@ -6,9 +6,9 @@
     @include('Unify::contact.elements.map')
 
 @endif
-<ul class="list-unstyled who margin-bottom-30" itemscope itemtype="http://schema.org/Organization">
+<ul class="list-unstyled who margin-bottom-30" itemscope itemtype="//schema.org/Organization">
     @if($contact->address->format())
-        <li><a href="#"><i class="fa fa-home"></i><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{!! $contact->address->format() !!}</span></a></li>
+        <li><a href="#"><i class="fa fa-home"></i><span itemprop="address" itemscope itemtype="//schema.org/PostalAddress">{!! $contact->address->format() !!}</span></a></li>
     @endif
 
     @if($contact->email)
