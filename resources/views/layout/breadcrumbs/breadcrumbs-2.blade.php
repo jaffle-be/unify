@@ -2,13 +2,21 @@
     <div class="container">
         <h1 class="pull-left">@yield('title')</h1>
 
-        <ul class="pull-right breadcrumb">
+        <ul class="pull-right breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <? $counter = 1 ?>
             @foreach($breadcrumbs as $crumb)
                 @if($crumb->last)
-                    <li class="active">{{ $crumb->title }}</li>
+                    <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="{{ $crumb->url }}" itemprop="item"><span itemprop="name">{{ $crumb->title }}</span></a>
+                        <meta itemprop="position" content="{{ $counter }}"/>
+                    </li>
                 @else
-                    <li><a href="{{ $crumb->url }}">{{ $crumb->title }}</a></li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="{{ $crumb->url }}" itemprop="item"><span itemprop="name">{{ $crumb->title }}</span></a>
+                        <meta itemprop="position" content="{{ $counter }}"/>
+                    </li>
                 @endif
+                <? $counter++ ?>
             @endforeach
         </ul>
     </div>

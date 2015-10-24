@@ -6,24 +6,24 @@
     @include('Unify::contact.elements.map')
 
 @endif
-<ul class="list-unstyled who margin-bottom-30" itemscope itemtype="//schema.org/Organization">
+<ul class="list-unstyled who margin-bottom-30">
     @if($contact->address->format())
-        <li><a href="#"><i class="fa fa-home"></i><span itemprop="address" itemscope itemtype="//schema.org/PostalAddress">{!! $contact->address->format() !!}</span></a></li>
+        <li><a href="#"><i class="fa fa-home"></i><span>{!! $contact->address->format(false) !!}</span></a></li>
     @endif
 
     @if($contact->email)
-        <li><a href="#"><i class="fa fa-envelope"></i><span itemprop="email">{{ $contact->email }}</span></a></li>
+        <li><a href="#"><i class="fa fa-envelope"></i><span>{{ $contact->email }}</span></a></li>
     @endif
 
     @if($contact->phone)
-        <li><a href="#"><i class="fa fa-phone"></i><span itemprop="telephone">{{ $contact->phone }}</span></a></li>
+        <li><a href="#"><i class="fa fa-phone"></i><span>{{ $contact->phone }}</span></a></li>
     @endif
 
     @if($contact->website)
-        <li><a href="#"><i class="fa fa-globe"></i><span itemprop="url">{{ $contact->website }}</span></a></li>
+        <li><a href="#"><i class="fa fa-globe"></i><span>{{ $contact->website }}</span></a></li>
     @endif
 
     @if($contact->vat)
-        <li><a href="#"><i class="fa fa-money"></i><span itemprop="vatID">{{ $contact->vat }}</span></a></li>
+        <li><a href="#"><i class="fa fa-money"></i><span>{{ $contact->vat }}</span></a></li>
     @endif
 </ul>

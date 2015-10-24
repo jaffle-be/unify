@@ -9,7 +9,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="{{ store_route('store.home') }}">
-                <img src="{{ asset($account->logo()) }}" alt="Logo">
+                <img src="{{ asset($account->logo()) }}" alt="Logo" id="logo-header">
             </a>
             <!-- End Logo -->
 

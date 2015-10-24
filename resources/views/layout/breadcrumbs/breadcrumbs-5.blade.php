@@ -1,15 +1,22 @@
 <div class="breadcrumbs-v4">
     <div class="container">
-        {{--<span class="page-name">@yield('title')</span>--}}
-
         <h1>@yield('title')</h1>
-        <ul class="breadcrumb-v4-in">
+        <ul class="breadcrumb-v4-in" itemscope itemtype="//schema.org/BreadcrumbList">
+
+            <? $counter = 1 ?>
             @foreach($breadcrumbs as $crumb)
                 @if($crumb->last)
-                    <li class="active">{{ $crumb->title }}</li>
+                    <li class="active" itemprop="itemListElement" itemscope itemtype="//schema.org/ListItem">
+                        <a href="{{ $crumb->url }}" itemprop="item"><span itemprop="name">{{ $crumb->title }}</span></a>
+                        <meta itemprop="position" content="{{ $counter }}"/>
+                    </li>
                 @else
-                    <li><a href="{{ $crumb->url }}">{{ $crumb->title }}</a></li>
+                    <li itemprop="itemListElement" itemscope itemtype="//schema.org/ListItem">
+                        <a href="{{ $crumb->url }}" itemprop="item"><span itemprop="name">{{ $crumb->title }}</span></a>
+                        <meta itemprop="position" content="{{ $counter }}"/>
+                    </li>
                 @endif
+                <? $counter++ ?>
             @endforeach
         </ul>
     </div>

@@ -42,7 +42,7 @@
 
 </head>
 
-<body class="header-fixed">
+<body class="header-fixed" itemscope itemtype="//schema.org/WebPage">
 
 <div class="wrapper">
 
