@@ -16,7 +16,9 @@
 @section('content')
     <div class="container content">
         <div class="row blog-page blog-item">
-            @include('Unify::blog.elements.large-detail-simple-with-sidebar')
+            <div class="col-md-9 md-margin-bottom-60">
+                @include('Unify::blog.details.simple')
+            </div>
 
             @include('Unify::blog.elements.sidebars.large-overview-simple')
         </div>

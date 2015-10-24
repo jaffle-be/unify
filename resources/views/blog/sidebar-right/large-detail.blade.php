@@ -18,7 +18,9 @@
         <div class="container content-sm">
             <div class="row">
 
-            @include('Unify::blog.elements.large-detail-with-sidebar')
+                <div class="col-md-9">
+                    @include('Unify::blog.details.default')
+                </div>
 
                 @include('Unify::blog.elements.sidebars.large-overview')
             </div>

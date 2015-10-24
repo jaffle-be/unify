@@ -20,7 +20,11 @@
 
                 @include('Unify::blog.elements.sidebars.large-overview')
 
-                @include('Unify::blog.elements.large-detail-with-sidebar')
+                <div class="col-md-9">
+
+                    @include('Unify::blog.details.default')
+
+                </div>
             </div>
         </div>
         <!--/end container-->

@@ -1,4 +1,7 @@
-<div class="col-md-9">
+<div itemscope itemtype="//schema.org/BlogPosting">
+
+    <meta itemprop="url" content="{{ store_route('store.uri.show', [$post->uri]) }}"/>
+
     <!-- News v3 -->
     <div class="news-v3 margin-bottom-30">
         <img class="img-responsive full-width" src="{{ asset($post->thumbnail(1140)) }}" alt="">
@@ -9,8 +12,9 @@
                 <li>In {!! $post->tags->format(null, ', ') !!}</li>
                 <li>{{ $post->publish_at->format('d M, Y') }}</li>
             </ul>
-
-            {!!  $post->present()->content !!}
+            <div itemprop="articleBody">
+                {!!  $post->present()->content !!}
+            </div>
         </div>
     </div>
     <!-- End News v3 -->
@@ -19,13 +23,13 @@
 
     <!-- Blog Post Author -->
     @include('Unify::blog.elements.author')
-    <!-- End Blog Post Author -->
+            <!-- End Blog Post Author -->
 
     <hr>
 
     <!-- News v2 -->
     @include('Unify::blog.elements.author-articles', ['posts' => $related])
-    <!-- End News v2 -->
+            <!-- End News v2 -->
 
     {{--<hr>--}}
 
