@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{{ theme_asset('plugins/fancybox/source/jquery.fancybox.css') }}">
 @stop
 
+
 @section('styles-content')
+    <link rel="stylesheet" href="{{ theme_asset('css/pages/blog.min.css') }}">
 @stop
 
 @section('content')

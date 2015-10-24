@@ -4,7 +4,6 @@
 
 @section('styles-content')
     <link rel="stylesheet" href="{{ theme_asset('css/pages/blog.min.css') }}">
-    <link rel="stylesheet" href="{{ theme_asset('css/pages/blog_magazine.min.css') }}">
 @stop
 
 @section('content')
