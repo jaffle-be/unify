@@ -1,15 +1,18 @@
 <div itemscope itemtype="//schema.org/BlogPosting">
+
+    <meta itemprop="url" content="{{ store_route('store.uri.show', [$post->uri]) }}"/>
+
     <!--Blog Post-->
     <div class="blog margin-bottom-40">
         <div class="blog-img">
-            <img class="img-responsive" src="{{ asset($post->thumbnail(1140)) }}" alt="">
+            <img class="img-responsive" itemprop="image" src="{{ asset($post->thumbnail(1140)) }}" alt="post image main">
         </div>
 
         <h2 itemprop="headline">{{ $post->title }}</h2>
 
         <div class="blog-post-tags">
             <ul class="list-unstyled list-inline blog-info">
-                <li><i class="fa fa-calendar"></i> {{ $post->publish_at->format('d M, Y') }}</li>
+                <li><i class="fa fa-calendar"></i> <span itemprop="datePublished">{{ $post->publish_at->format('d M, Y') }}</span></li>
                 {{--<li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>--}}
             </ul>
             <ul class="list-unstyled list-inline blog-tags">

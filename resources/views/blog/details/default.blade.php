@@ -4,7 +4,7 @@
 
     <!-- News v3 -->
     <div class="news-v3 margin-bottom-30">
-        <img class="img-responsive full-width" src="{{ asset($post->thumbnail(1140)) }}" alt="">
+        <img class="img-responsive full-width" itemprop="image" src="{{ asset($post->thumbnail(1140)) }}" alt="post image main">
 
         <div class="news-v3-in">
 
@@ -12,11 +12,11 @@
 
             <ul class="list-inline posted-info">
                 <li><i class="fa fa-tags"></i>&nbsp; {!! $post->tags->format(null, ', ') !!}</li>
-                <li>{{ $post->publish_at->format('d M, Y') }}</li>
+                <li><i class="fa fa-calendar"></i>&nbsp; <span itemprop="datePublished">{{ $post->publish_at->format('d M, Y') }}</span></li>
             </ul>
-            <div itemprop="articleBody">
+            <section itemprop="articleBody">
                 {!!  $post->present()->content !!}
-            </div>
+            </section>
         </div>
     </div>
     <!-- End News v3 -->
