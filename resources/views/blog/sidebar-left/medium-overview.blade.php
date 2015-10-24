@@ -8,6 +8,7 @@
 @stop
 
 @section('styles-content')
+    <link rel="stylesheet" href="{{ theme_asset('css/pages/blog.min.css') }}">
 @stop
 
 @section('content')
@@ -25,7 +26,7 @@
                     <? $posts->loadImageSizes(460) ?>
                     @foreach($posts as $post)
 
-                        @include('Unify::blog.elements.medium-overview', ['counter' => $counter])
+                        @include('Unify::blog.overview.medium', ['counter' => $counter])
 
                         <? $counter++?>
 

@@ -30,7 +30,7 @@
                 </div>
             </div>
         @else
-            
+
             <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">
                 <img class="img-responsive" src="{{ asset($post->thumbnail(460)) }}" alt="">
             </a>

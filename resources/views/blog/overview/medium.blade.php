@@ -48,7 +48,7 @@
         <div class="news-v3-in-sm no-padding">
             <ul class="list-inline posted-info">
                 <li>{{ Lang::get('Unify::front.post-by') }} <a href="{{ store_route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
-                    <li>In {!!  $post->tags->format(null, ', ') !!}</li>
+                <li>In {!!  $post->tags->format(null, ', ') !!}</li>
                 <li>Posted {{ $post->publish_at->format('d M, Y') }}</li>
             </ul>
             <h2><a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{$post->title}}</a></h2>
