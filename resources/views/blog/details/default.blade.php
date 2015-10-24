@@ -7,9 +7,11 @@
         <img class="img-responsive full-width" src="{{ asset($post->thumbnail(1140)) }}" alt="">
 
         <div class="news-v3-in">
+
+            <h2 itemprop="headline">{{ $post->title }}</h2>
+
             <ul class="list-inline posted-info">
-                <li>By <a href="{{ store_route('store.team.show',[$post->user]) }}">{{ $post->user->name }}</a></li>
-                <li>In {!! $post->tags->format(null, ', ') !!}</li>
+                <li><i class="fa fa-tags"></i>&nbsp; {!! $post->tags->format(null, ', ') !!}</li>
                 <li>{{ $post->publish_at->format('d M, Y') }}</li>
             </ul>
             <div itemprop="articleBody">

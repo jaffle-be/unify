@@ -19,7 +19,7 @@
 
                 @foreach($posts as $post)
 
-                @include('Unify::blog.overview.large-simple', ['counter' => $counter])
+                @include('Unify::blog.overviews.large-simple', ['counter' => $counter])
                 <? $counter++ ?>
                 @endforeach
 

@@ -26,7 +26,7 @@
                     <? $posts->loadImageSizes(460) ?>
                     @foreach($posts as $post)
 
-                        @include('Unify::blog.overview.medium', ['counter' => $counter])
+                        @include('Unify::blog.overviews.medium', ['counter' => $counter])
 
                         <? $counter++?>
 
