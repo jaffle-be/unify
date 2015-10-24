@@ -14,7 +14,7 @@
                         <span class="sr-only">{{ Lang::get('Unify::front.toggle-navigation') }}</span>
                         <span class="fa fa-bars"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ store_route('store.home') }}">
+                    <a class="navbar-brand" href="{{ store_route('store.home') }}" id="organisation-url" itemprop="url">
                         <img id="logo-header" src="{{ asset($account->logo()) }}" alt="Logo">
                     </a>
                 </div>

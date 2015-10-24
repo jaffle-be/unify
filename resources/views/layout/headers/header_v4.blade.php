@@ -65,7 +65,7 @@
                 <div class="navbar-header">
                     <div class="row">
                         <div class="col-md-2">
-                            <a class="navbar-brand" href="{{ store_route('store.home') }}">
+                            <a class="navbar-brand" href="{{ store_route('store.home') }}" id="organisation-url" itemprop="url">
                                 <img id="logo-header" src="{{ asset($account->logo()) }}" alt="Logo">
                             </a>
                         </div>

@@ -1,4 +1,5 @@
-<ul class="list-unstyled contacts" itemscope itemtype="//schema.org/Organization" id="contact-organisation" itemref="organisation-social-links logo-header logo-default">
+<ul class="list-unstyled contacts" itemscope itemtype="//schema.org/Organization" itemref="organisation-social-links organisation-url">
+    <meta itemprop="url" content="{{ store_route('store.home') }}"/>
     @if($contact->address->format())
     <li itemprop="address" itemscope itemtype="//schema.org/PostalAddress">
         <i class="radius-3x fa fa-map-marker"></i>

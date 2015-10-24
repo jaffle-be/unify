@@ -2,8 +2,9 @@
 <div class="headline">
     <h2 class="{{isset($small) && $small ? 'heading-sm': ''}}">{{ Theme::setting('layoutFooterContactTitle') }}</h2>
 </div>
-<div itemscope itemtype="//schema.org/Organization" id="contact-organisation" itemref="organisation-social-links logo-header logo-default">
+<div itemscope itemtype="//schema.org/Organization" itemref="organisation-social-links organisation-url">
     <address class="contact-address-footer md-margin-bottom-40">
+        <meta itemprop="url" content="{{ store_route('store.home') }}"/>
         @if($contact->address->format())
             <i class="fa fa-home"></i>&nbsp;<span itemprop="address" itemscope itemtype="//schema.org/PostalAddress">{!! $contact->address->format() !!}</span></span><br>
         @endif

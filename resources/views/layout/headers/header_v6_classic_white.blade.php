@@ -18,7 +18,7 @@
 
                     <!-- Navbar Brand -->
                     <div class="navbar-brand">
-                        <a href="{{ store_route('store.home') }}">
+                        <a href="{{ store_route('store.home') }}" id="organisation-url" itemprop="url">
                             <img class="shrink-logo" src="{{ asset($account->logo()) }}" alt="Logo">
                         </a>
                     </div>

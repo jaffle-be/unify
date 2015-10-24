@@ -68,7 +68,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ store_route('store.home') }}">
+                    <a class="navbar-brand" href="{{ store_route('store.home') }}" id="organisation-url" itemprop="url">
                         <img id="logo-header" src="{{ asset($account->logo()) }}" alt="Logo">
                     </a>
                 </div>

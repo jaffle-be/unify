@@ -1,5 +1,6 @@
-<div itemscope itemtype="//schema.org/Organization" id="contact-organisation" itemref="organisation-social-links logo-header logo-default">
+<div itemscope itemtype="//schema.org/Organization" itemref="organisation-social-links organisation-url">
     <ul class="list-unstyled address-list margin-bottom-20" >
+        <meta itemprop="url" content="{{ store_route('store.home') }}"/>
         @if($contact->address)
             <li itemprop="address" itemscope itemtype="//schema.org/PostalAddress">
                 <i class="fa fa-angle-right"></i>{!! $contact->address->format() !!}
