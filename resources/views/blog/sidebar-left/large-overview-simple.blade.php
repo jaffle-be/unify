@@ -24,7 +24,7 @@
 
                     @foreach($posts as $post)
 
-                        @include('Unify::blog.elements.large-overview-simple-with-sidebar', ['counter' => $counter])
+                        @include('Unify::blog.overview.large-simple', ['counter' => $counter])
                         <? $counter++ ?>
                     @endforeach
 

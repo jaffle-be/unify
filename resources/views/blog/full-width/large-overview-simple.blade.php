@@ -14,7 +14,7 @@
             <? $posts->loadImageSizes(1140) ?>
             @foreach($posts as $post)
 
-                @include('Unify::blog.elements.large-overview-simple', ['post' => $post, 'counter' => $counter])
+                @include('Unify::blog.overview.large-simple', ['post' => $post, 'counter' => $counter])
 
                 <? $counter++ ?>
 

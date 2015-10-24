@@ -9,8 +9,10 @@
             @if($posts->count())
 
                 <? $posts->loadImageSizes(1140) ?>
+            <? $counter = 0 ?>
                 @foreach($posts as $post)
-                    @include('Unify::blog.elements.large-overview')
+                    @include('Unify::blog.overview.large', ['counter' => $counter])
+                    <? $counter++ ?>
                 @endforeach
 
                 @include('Unify::layout.paginators.' . Theme::setting('layoutPagination'), ['pager' => $posts])
