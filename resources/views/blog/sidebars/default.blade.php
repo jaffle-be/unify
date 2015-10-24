@@ -6,8 +6,9 @@
         <ul class="list-unstyled blog-latest-posts margin-bottom-50">
             @foreach($latest as $post)
                 <li>
-                    <h3><a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a></h3>
-                    <small>{{ $post->publish_at->format('d M, Y') }}/ {!! $post->tags->format(null, ', ') !!}</small>
+                    <h3><a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
+                    </h3>
+                    <small>{{ $post->publish_at->format('d M, Y') }} / {!! $post->tags->format(null, ', ') !!}</small>
                     <p>{!! $post->present()->extract !!}</p>
                 </li>
             @endforeach
@@ -22,7 +23,8 @@
 
             <ul class="social-icons social-icons-color">
                 @foreach($account->socialLinks->available() as $name => $url)
-                    <li><a class="social_{{ $name }}" data-original-title="{{ ucfirst($name) }}" href="{{ $url }}"></a></li>
+                    <li><a class="social_{{ $name }}" data-original-title="{{ ucfirst($name) }}" href="{{ $url }}"></a>
+                    </li>
                 @endforeach
             </ul>
             <div class="clearfix"></div>
@@ -38,7 +40,6 @@
                 <li><a href="{{ store_route('store.tags.show', [$tag]) }}">{{ $tag->name }}</a></li>
             @endforeach
         </ul>
-        @endif
-                <!-- End Tags v2 -->
+    @endif
 
 </div>

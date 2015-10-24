@@ -83,7 +83,7 @@ class UnifyServiceProvider extends ServiceProvider
             $view->with('clients', $clients);
         });
 
-        $this->app['view']->composer('Unify::blog.elements.sidebars.*', function(View $view)
+        $this->app['view']->composer('Unify::blog.sidebars.*', function(View $view)
         {
             //latest posts ?
             $posts = app('App\Blog\PostRepositoryInterface');

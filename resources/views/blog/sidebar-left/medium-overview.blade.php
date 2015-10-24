@@ -15,7 +15,7 @@
     <div class="container content-md">
         <div class="row">
             <!-- Blog Sidebar -->
-            @include('Unify::blog.elements.sidebars.medium-overview')
+            @include('Unify::blog.sidebars.default')
                     <!-- End Blog Sidebar -->
 
             <!-- Blog All Posts -->

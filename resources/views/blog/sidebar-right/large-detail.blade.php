@@ -24,7 +24,7 @@
                     @include('Unify::blog.details.default')
                 </div>
 
-                @include('Unify::blog.elements.sidebars.large-overview')
+                @include('Unify::blog.sidebars.default')
             </div>
         </div>
         <!--/end container-->

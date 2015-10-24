@@ -11,7 +11,7 @@
         <div class="row blog-page">
 
             <!-- Left Sidebar -->
-            @include('Unify::blog.elements.sidebars.medium-overview-simple')
+            @include('Unify::blog.sidebars.simple')
                     <!-- End Left Sidebar -->
 
             <!-- Right Sidebar -->

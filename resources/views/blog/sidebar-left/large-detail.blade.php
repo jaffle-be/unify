@@ -20,7 +20,7 @@
         <div class="container content-sm">
             <div class="row">
 
-                @include('Unify::blog.elements.sidebars.large-overview')
+                @include('Unify::blog.sidebars.default')
 
                 <div class="col-md-9">
 

@@ -37,7 +37,7 @@
             <!-- End Blog All Posts -->
 
             <!-- Blog Sidebar -->
-            @include('Unify::blog.elements.sidebars.medium-overview')
+            @include('Unify::blog.sidebars.default')
                     <!-- End Blog Sidebar -->
 
         </div>

@@ -20,7 +20,7 @@
                 @include('Unify::blog.details.simple')
             </div>
 
-            @include('Unify::blog.elements.sidebars.large-overview-simple')
+            @include('Unify::blog.sidebars.simple')
         </div>
         <!--/row-->
     </div><!--/container-->

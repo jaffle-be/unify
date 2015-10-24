@@ -32,7 +32,7 @@
             <!-- End Left Sidebar -->
 
             <!-- Right Sidebar -->
-            @include('Unify::blog.elements.sidebars.medium-overview-simple')
+            @include('Unify::blog.sidebars.simple')
                     <!-- End Right Sidebar -->
         </div>
         <!--/row-->

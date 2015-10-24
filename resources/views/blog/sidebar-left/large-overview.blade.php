@@ -17,7 +17,7 @@
         <div class="container content-sm">
             <div class="row">
                 <!-- Blog Sidebar -->
-                @include('Unify::blog.elements.sidebars.large-overview')
+                @include('Unify::blog.sidebars.default')
                         <!-- End Blog Sidebar -->
 
                 <!-- Blog All Posts -->
