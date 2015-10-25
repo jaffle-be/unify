@@ -1,4 +1,4 @@
-<div itemscope itemtype="//schema.org/BlogPosting">
+<div itemscope itemtype="//schema.org/Article">
 
     <meta itemprop="url" content="{{ store_route('store.uri.show', [$post->uri]) }}"/>
 
