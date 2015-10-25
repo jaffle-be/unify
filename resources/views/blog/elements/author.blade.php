@@ -1,7 +1,10 @@
-<div class="blog-author margin-bottom-30">
+<div class="blog-author margin-bottom-30" itemprop="author" itemscope itemtype="//schema.org/Person">
     <a href="{{ store_route('store.team.show',[$post->user]) }}">
-        <img src="{{ asset($post->user->thumbnail(80)) }}" alt="">
+        <img src="{{ asset($post->user->thumbnail(80)) }}" alt="" itemprop="image">
     </a>
+
+    <meta itemprop="givenName" content="{{ $post->user->firstname }}"/>
+    <meta itemprop="familyName" content="{{ $post->user->lastname }}"/>
 
     <div class="blog-author-desc">
         <div class="overflow-h">
@@ -10,7 +13,7 @@
             @if($post->user->socialLinks)
                 <ul class="list-inline">
                     @foreach($post->user->socialLinks->available() as $name => $url)
-                        <li><a target="_blank" href="{{ $url }}"><i class="fa fa-{{ $name }}"></i></a></li>
+                        <li><a target="_blank" href="{{ $url }}" itemprop="sameAs"><i class="fa fa-{{ $name }}"></i></a></li>
                     @endforeach
                 </ul>
             @endif
