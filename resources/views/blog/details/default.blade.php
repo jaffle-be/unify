@@ -1,6 +1,7 @@
 <div itemscope itemtype="//schema.org/Article">
 
     <meta itemprop="url" content="{{ store_route('store.uri.show', [$post->uri]) }}"/>
+    <meta itemprop="description" content="{{ $post->present()->extract(200) }}"/>
 
     <!-- News v3 -->
     <div class="news-v3 margin-bottom-30">
