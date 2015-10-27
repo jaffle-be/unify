@@ -19,6 +19,7 @@
                 <!-- Recent News -->
                 <div class="col-md-4 sm-margin-bottom-40">
 
+                    @if($account->modules->active('blog'))
                     <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
                     <ul class="list-unstyled link-news">
                         @foreach($posts as $post)
@@ -28,6 +29,7 @@
                             </li>
                         @endforeach
                     </ul>
+                    @endif
                 </div>
                 <!-- End Recent News -->
 

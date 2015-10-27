@@ -27,17 +27,19 @@
                 <!-- End About Us -->
 
                 <!-- Recent News -->
-                <div class="col-md-3 sm-margin-bottom-40">
-                    <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
-                    <ul class="list-unstyled link-news">
-                        @foreach($posts as $post)
-                            <li>
-                                <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
-                                <small>{{ $post->publish_at->format('d M, Y') }}</small>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
+                @if($account->modules->contains())
+                    <div class="col-md-3 sm-margin-bottom-40">
+                        <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
+                        <ul class="list-unstyled link-news">
+                            @foreach($posts as $post)
+                                <li>
+                                    <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
+                                    <small>{{ $post->publish_at->format('d M, Y') }}</small>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <!-- End Recent News -->
 
                 <!-- Useful Links -->

@@ -16,6 +16,8 @@
                 <!--/col-md-4-->
 
                 <div class="col-md-4 md-margin-bottom-40">
+
+                    @if($account->modules->active('blog'))
                     <!-- Recent Blogs -->
                     <div class="posts">
                         <div class="headline"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
@@ -33,6 +35,7 @@
                         @endforeach
                     </div>
                     <!-- End Recent Blogs -->
+                    @endif
                 </div>
                 <!--/col-md-4-->
 

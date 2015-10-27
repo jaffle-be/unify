@@ -15,17 +15,19 @@
 
                 <!-- Latest -->
                 <div class="col-md-4 md-margin-bottom-40">
-                    <div class="posts">
-                        <div class="headline"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
-                        <ul class="list-unstyled latest-list">
-                            @foreach($posts as $post)
-                                <li>
-                                    <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
-                                    <small>{{ $post->publish_at->format('M d, Y') }}</small>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
+                    @if($account->modules->active('blog'))
+                        <div class="posts">
+                            <div class="headline"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
+                            <ul class="list-unstyled latest-list">
+                                @foreach($posts as $post)
+                                    <li>
+                                        <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
+                                        <small>{{ $post->publish_at->format('M d, Y') }}</small>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
 
                     @include('Unify::layout.footers.elements.contacts-1', ['contact' => $account->contactInformation->first()])
                 </div>

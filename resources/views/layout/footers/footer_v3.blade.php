@@ -36,21 +36,24 @@
                 <!--/col-md-3-->
 
                 <div class="col-sm-3">
-                    <div class="posts">
-                        <div class="thumb-headline"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
-                        @foreach($posts as $post)
-                            <dl class="dl-horizontal">
-                                <dt>
-                                    <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a>
-                                </dt>
-                                <dd>
-                                    <p>
-                                        <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
-                                    </p>
-                                </dd>
-                            </dl>
-                        @endforeach
-                    </div>
+
+                    @if($account->modules->active('blog'))
+                        <div class="posts">
+                            <div class="thumb-headline"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
+                            @foreach($posts as $post)
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}"><img src="{{ asset($post->thumbnail(60)) }}" alt=""/></a>
+                                    </dt>
+                                    <dd>
+                                        <p>
+                                            <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
                 <!--/col-md-3-->
 

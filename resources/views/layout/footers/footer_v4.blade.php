@@ -14,6 +14,7 @@
                 <!-- End About -->
 
                 <div class="col-md-4">
+                    @if($account->modules->active('blog'))
                     <div class="posts">
                         <h2 class="thumb-headline">{{ Theme::setting('layoutFooterPostsTitle') }}</h2>
                         @foreach($posts as $post)
@@ -29,6 +30,7 @@
                             </dl>
                         @endforeach
                     </div>
+                    @endif
 
                     <h2 class="thumb-headline">{{ Theme::setting('layoutFooterLinksTitle') }}</h2>
                     @include('Unify::layout.footers.menu', ['optional_class'=> 'simple-list'])
