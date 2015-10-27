@@ -26,7 +26,7 @@
         <div class="row">
 
             <div class="col-xs-4 col-md-4">
-                <img class="img-responsive" src="{{ asset($user->thumbnail(1280)) }}" alt="">
+                <img class="img-responsive" src="{{ asset($member->thumbnail(1280)) }}" alt="">
             </div>
 
             <!-- Social Network -->
