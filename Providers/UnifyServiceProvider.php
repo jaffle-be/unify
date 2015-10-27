@@ -1,9 +1,9 @@
-<?php namespace Themes\Unify;
+<?php namespace Themes\Unify\Providers;
 
-use App\Account\Client;
-use App\Blog\Post;
-use App\Blog\PostTranslation;
-use App\System\ServiceProvider;
+use Modules\Account\Client;
+use Modules\Blog\Post;
+use Modules\Blog\PostTranslation;
+use Pingpong\Modules\ServiceProvider;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
@@ -15,6 +15,8 @@ class UnifyServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        include(__DIR__. '/../helpers.php');
+
         parent::boot();
 
         $this->app->booted(function()
@@ -86,18 +88,18 @@ class UnifyServiceProvider extends ServiceProvider
         $this->app['view']->composer('Unify::blog.sidebars.*', function(View $view)
         {
             //latest posts ?
-            $posts = app('App\Blog\PostRepositoryInterface');
+            $posts = app('Modules\Blog\PostRepositoryInterface');
 
             $latest = $posts->getLatestPosts(3);
 
             //problem with this is it can still show tags without content for the current locale
-            $tags = \App\Tags\Tag::has('content')->limit(15)->get();
+            $tags = \Modules\Tags\Tag::has('content')->limit(15)->get();
 
             $view->with(['latest' => $latest, 'tags' => $tags]);
         });
 
         $this->app['view']->composer('Unify::layout.widgets.recent-posts', function(View $view){
-            $posts = app('App\Blog\PostRepositoryInterface');
+            $posts = app('Modules\Blog\PostRepositoryInterface');
 
             $latest = $posts->getLatestPosts(3);
 
@@ -106,7 +108,7 @@ class UnifyServiceProvider extends ServiceProvider
 
         $this->app['view']->composer('Unify::layout.widgets.portfolio-examples', function(View $view)
         {
-            $projects = app('App\Portfolio\PortfolioRepositoryInterface');
+            $projects = app('Modules\Portfolio\PortfolioRepositoryInterface');
 
             $projects = $projects->getExamples(4);
 
