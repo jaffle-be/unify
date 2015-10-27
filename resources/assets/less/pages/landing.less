@@ -1,0 +1,42 @@
+@import '../colors';
+
+.locales{
+
+  text-align: center;
+
+  position: relative;
+  padding: 30px;
+
+  .locale{
+    width: 40%;
+    margin: 5%;
+    height: 150px;
+    float:left;
+
+    background: rgba(255,255,255, 25%);
+
+    line-height: 150px;
+    font-size: 36px;
+
+    &:after{
+      clear:both;
+    }
+
+    a{
+      color: white;
+      text-transform: capitalize;
+
+      transition: .5s ease;
+
+      &:hover, &:active, &:focus{
+
+        outline: none;
+        color: @brand-primary;
+        text-decoration: none;
+
+      }
+    }
+
+  }
+
+}
