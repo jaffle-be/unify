@@ -1,6 +1,6 @@
 @if($account->socialLinks)
     <div id="organisation-social-links">
-        <ul class="social-icons" itemtype="http://schema.org/Organization" itemscope>
+        <ul class="social-icons" itemtype="//schema.org/Organization" itemscope>
             <meta itemprop="url" content="{{ store_route('store.home') }}"/>
             @foreach($account->socialLinks->available() as $link => $url)
                 <li>
