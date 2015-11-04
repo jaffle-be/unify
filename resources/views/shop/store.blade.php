@@ -10,7 +10,12 @@
 
     @include('Unify::shop.elements.slider-home')
 
-    @include('Unify::shop.elements.product-content')
+    <div class="container content-md">
+        @include('Unify::shop.elements.sales-banner')
+        @include('Unify::shop.elements.featured')
+        @include('Unify::shop.elements.collections')
+        @include('Unify::shop.elements.latest')
+    </div>
 
     @include('Unify::shop.elements.twitter')
 
