@@ -11,18 +11,7 @@
 
                     <p class="margin-bottom-20">{{ Theme::setting('layoutFooterAboutText') }}</p>
 
-                    {{--<div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterNewsletterTitle') }}</h2></div>--}}
-
-                    {{--<p>{{ Theme::setting('layoutFooterNewsletterText') }}</p>--}}
-
-                    {{--<form class="footer-subsribe">--}}
-                    {{--<div class="input-group">--}}
-                    {{--<input type="text" class="form-control" placeholder="{{ Lang::get('Unify::front.newsletter.email') }}">--}}
-                    {{--<span class="input-group-btn">--}}
-                    {{--<button class="btn-u" type="button">{{ Lang::get('Unify::front.newsletter.subscribe') }}</button>--}}
-                    {{--</span>--}}
-                    {{--</div>--}}
-                    {{--</form>--}}
+                    @include('Unify::layout.footers.elements.newsletter', ['small' => true])
                 </div>
                 <!-- End About -->
 
@@ -31,6 +20,12 @@
                     <div class="headline"><h2 class="heading-sm">{{ Theme::setting('layoutFooterLinksTitle') }}</h2>
                     </div>
                     @include('Unify::layout.footers.menu', ['optional_class'=> 'link-list'])
+
+                    @include('Unify::layout.footers.elements.contacts-1', ['contact' => $account->contactInformation->first(), 'small' => true])
+
+                            <!-- Social Links -->
+                    @include('Unify::layout.footers.elements.social-icons-3')
+                            <!-- End Social Links -->
                 </div>
                 <!-- End Link List -->
 
@@ -55,16 +50,6 @@
                 </div>
                 <!-- End Latest Tweets -->
 
-                <!-- Address -->
-                <div class="col-md-4 md-margin-bottom-40">
-
-                    @include('Unify::layout.footers.elements.contacts-1', ['contact' => $account->contactInformation->first(), 'small' => true])
-
-                            <!-- Social Links -->
-                    @include('Unify::layout.footers.elements.social-icons-3')
-                            <!-- End Social Links -->
-                </div>
-                <!-- End Address -->
             </div>
         </div>
     </div>

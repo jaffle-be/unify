@@ -33,6 +33,10 @@
     @include('Unify::layout.widgets.recent-posts')
     <!--=== End Recent Posts ===-->
 
+    <!--=== Shop Subscribe ===-->
+    @include('Unify::layout.widgets.subscribe')
+    <!--=== End Shop Subscribe ===-->
+
     <!--=== Service Info ===-->
     @include('Unify::layout.widgets.services-media')
     <!--=== End Service Info ===-->

@@ -22,7 +22,7 @@
         {{--@include('Unify::shop.elements.tabs')--}}
     </div>
 
-    @include('Unify::shop.elements.subscribe')
+    @include('Unify::layout.widgets.subscribe')
 
 @stop
 

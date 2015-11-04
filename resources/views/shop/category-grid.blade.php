@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    @include('Unify::shop.elements.subscribe')
+    @include('Unify::layout.widgets.subscribe')
 @stop
 
 @section('scripts-plugins')
