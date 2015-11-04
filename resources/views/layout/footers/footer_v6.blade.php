@@ -27,7 +27,7 @@
                 <!-- End About Us -->
 
                 <!-- Recent News -->
-                @if($account->modules->contains())
+                @if($account->modules->contains('blog'))
                     <div class="col-md-3 sm-margin-bottom-40">
                         <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
                         <ul class="list-unstyled link-news">
@@ -39,6 +39,28 @@
                             @endforeach
                         </ul>
                     </div>
+                @endif
+
+                @if(count($tweets))
+                <div class="col-md-3 sm-margin-bottom-40">
+                    <!-- Latest Tweets -->
+
+                        <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterTweetsTitle') }}</h2></div>
+                        <ul class="list-unstyled tweets">
+                            @foreach($tweets as $tweet)
+                                <li>
+                                    <i class="fa fa-twitter"></i>
+
+                                    <div class="overflow-h">
+                                        <p>{!! app('ttwitter')->linkify($tweet->text) !!}</p>
+                                        <small>{{ ago($tweet->created_at) }}</small>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+
+                                <!-- End Latest Tweets -->
+                </div>
                 @endif
                 <!-- End Recent News -->
 

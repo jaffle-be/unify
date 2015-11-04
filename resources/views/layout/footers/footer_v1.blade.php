@@ -10,6 +10,24 @@
                     <p>{{ Theme::setting('layoutFooterAboutText') }}</p>
 
                     @include('Unify::layout.footers.elements.newsletter')
+
+                            <!-- Latest Tweets -->
+                    @if(count($tweets))
+                        <div class="headline"><h2>{{ Theme::setting('layoutFooterTweetsTitle') }}</h2></div>
+                        <ul class="list-unstyled tweets">
+                            @foreach($tweets as $tweet)
+                                <li>
+                                    <i class="fa fa-twitter"></i>
+
+                                    <div class="overflow-h">
+                                        <p>{!! app('ttwitter')->linkify($tweet->text) !!}</p>
+                                        <small>{{ ago($tweet->created_at) }}</small>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                                <!-- End Latest Tweets -->
                 </div>
                 <!-- End About -->
 
