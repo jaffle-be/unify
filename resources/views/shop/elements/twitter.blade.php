@@ -15,7 +15,7 @@
             {{--<div class="carousel-inner">--}}
                 {{--<div class="item active">--}}
                     {{--<p>Unify has reached 10000 plus sales and we just want to thank you to our all customers for being part of the Unify Template success <a href="//bit.ly/1c0UN3Y">//bit.ly/1c0UN3Y</a><p>--}}
-                    {{--<p><a href="https://twitter.com/htmlstream">@htmlstream</a></p>--}}
+                    {{--<p><a href="//twitter.com/htmlstream">@htmlstream</a></p>--}}
                     {{--<ul class="list-inline twitter-icons">--}}
                         {{--<li><a href="#"><i class="fa fa-reply"></i></a></li>--}}
                         {{--<li><a href="#"><i class="fa fa-retweet"></i></a></li>--}}
@@ -24,7 +24,7 @@
                 {{--</div>--}}
                 {{--<div class="item">--}}
                     {{--<p>the majority have suffered #alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>--}}
-                    {{--<p><a href="https://twitter.com/htmlstream">@twbootstrap</a></p>--}}
+                    {{--<p><a href="//twitter.com/htmlstream">@twbootstrap</a></p>--}}
                     {{--<ul class="list-inline twitter-icons">--}}
                         {{--<li><a href="#"><i class="fa fa-reply"></i></a></li>--}}
                         {{--<li><a href="#"><i class="fa fa-retweet"></i></a></li>--}}
@@ -33,7 +33,7 @@
                 {{--</div>--}}
                 {{--<div class="item">--}}
                     {{--<p>New 100% Free Stock Photos. Every. Single. Day. Everything you need for your creative projects. <a href="#">//publicdomainarchive.com</a></p>--}}
-                    {{--<p><a href="https://twitter.com/htmlstream">@wrapbootstrap</a></p>--}}
+                    {{--<p><a href="//twitter.com/htmlstream">@wrapbootstrap</a></p>--}}
                     {{--<ul class="list-inline twitter-icons">--}}
                         {{--<li><a href="#"><i class="fa fa-reply"></i></a></li>--}}
                         {{--<li><a href="#"><i class="fa fa-retweet"></i></a></li>--}}
