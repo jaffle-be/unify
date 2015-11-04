@@ -14,7 +14,7 @@
             @include('Unify::shop.elements.filter-sidebar')
 
             <div class="col-md-9">
-                @include('Unify::shop.elements.category-results')
+                @include('Unify::shop.elements.filters-top')
 
                 @include('Unify::shop.elements.filter-list')
 

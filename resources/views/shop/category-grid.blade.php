@@ -13,7 +13,11 @@
         <div class="row">
             @include('Unify::shop.elements.filter-sidebar')
 
-            @include('Unify::shop.elements.filter-grid')
+            <div class="col-md-9">
+                @include('Unify::shop.elements.filters-top')
+
+                @include('Unify::shop.elements.filter-grid')
+            </div>
         </div>
     </div>
 
