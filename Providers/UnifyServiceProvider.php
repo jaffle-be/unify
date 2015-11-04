@@ -38,10 +38,12 @@ class UnifyServiceProvider extends ServiceProvider
 
     protected function observers()
     {
+
     }
 
     protected function listeners()
     {
+
     }
 
     protected function viewComposers()
@@ -64,7 +66,12 @@ class UnifyServiceProvider extends ServiceProvider
                 return $posts->sortBy('publish_at')->reverse();
             });
 
-            $view->with('posts', $posts);
+            $tweets = latest_tweets();
+
+            $view->with([
+                'posts' => $posts,
+                'tweets' => $tweets,
+            ]);
         });
 
         $this->app['view']->composer('Unify::layout.widgets.clients', function (View $view) {

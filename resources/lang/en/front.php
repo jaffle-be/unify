@@ -108,6 +108,8 @@ return [
     'newsletter'                 => [
         'email'     => 'Email address',
         'subscribe' => 'subscribe',
-    ]
+    ],
+
+    'tweets-about-us' => 'People tweeted'
 
 ];

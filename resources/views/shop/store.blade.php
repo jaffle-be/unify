@@ -17,7 +17,7 @@
         @include('Unify::shop.elements.latest')
     </div>
 
-    @include('Unify::shop.elements.twitter')
+    @include('Unify::layout.widgets.twitter', ['template_title' => '1'])
 
     <div class="container">
         @include('Unify::shop.elements.product-service')

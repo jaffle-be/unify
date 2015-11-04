@@ -20,15 +20,15 @@
                 <div class="col-md-4 sm-margin-bottom-40">
 
                     @if($account->modules->active('blog'))
-                    <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
-                    <ul class="list-unstyled link-news">
-                        @foreach($posts as $post)
-                            <li>
-                                <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
-                                <small>{{ $post->publish_at->format('d M, Y') }}</small>
-                            </li>
-                        @endforeach
-                    </ul>
+                        <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterPostsTitle') }}</h2></div>
+                        <ul class="list-unstyled link-news">
+                            @foreach($posts as $post)
+                                <li>
+                                    <a href="{{ store_route('store.uri.show', [$post->translate()->uri]) }}">{{ $post->title }}</a>
+                                    <small>{{ $post->publish_at->format('d M, Y') }}</small>
+                                </li>
+                            @endforeach
+                        </ul>
                     @endif
                 </div>
                 <!-- End Recent News -->
@@ -54,31 +54,23 @@
                 <!-- End Recent Blog Entries -->
 
                 <!-- Latest Tweets -->
-                {{--<div class="col-md-4">--}}
-                {{--<div class="heading-footer"><h2>{{ Theme::setting('layoutFooterTweetsTitle') }}</h2></div>--}}
-                {{--<ul class="list-unstyled tweets">--}}
-                {{--<li>--}}
-                {{--<i class="fa fa-twitter"></i>--}}
+                <div class="col-md-4">
+                    @if(count($tweets))
+                        <div class="heading-footer"><h2>{{ Theme::setting('layoutFooterTweetsTitle') }}</h2></div>
+                        <ul class="list-unstyled tweets">
+                            @foreach($tweets as $tweet)
+                                <li>
+                                    <i class="fa fa-twitter"></i>
 
-                {{--<div class="overflow-h">--}}
-                {{--<p>--}}
-                {{--<a href="#">&#64;Toronto </a>voluptates repudiandae sint et molestiae non recusandae.--}}
-                {{--</p>--}}
-                {{--<small>3 Hours ago</small>--}}
-                {{--</div>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<i class="fa fa-twitter"></i>--}}
-
-                {{--<div class="overflow-h">--}}
-                {{--<p>--}}
-                {{--<a href="#">&#64;Twitter </a>Maecenas pharetra tellus et fringilla. Praesent ut consectetur diam.--}}
-                {{--</p>--}}
-                {{--<small>7 Hours ago</small>--}}
-                {{--</div>--}}
-                {{--</li>--}}
-                {{--</ul>--}}
-                {{--</div>--}}
+                                    <div class="overflow-h">
+                                        <p>{!! app('ttwitter')->linkify($tweet->text) !!}</p>
+                                        <small>{{ ago($tweet->created_at) }}</small>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
                 <!-- End Latest Tweets -->
             </div>
         </div>

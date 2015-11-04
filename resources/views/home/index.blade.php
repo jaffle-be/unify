@@ -40,6 +40,10 @@
     @include('Unify::layout.widgets.portfolio-examples')
     <!--=== End Portfolio Box V2 ===-->
 
+    <!--=== Tweets Section ===-->
+    @include('Unify::layout.widgets.twitter', ['template_title' => '2'])
+    <!--=== End Section ===-->
+
     <!--=== Service Block ===-->
     @include('Unify::layout.widgets.services-overview')
     <!--=== End Service Block ===-->

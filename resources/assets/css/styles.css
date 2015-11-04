@@ -10525,6 +10525,12 @@ h3.title-v3-xs {
 .headline-center-v2.headline-center-v2-dark span.bordered-icon:after {
   background: #666;
 }
+.headline-center-v2.headline-center-v2-light {
+  color: #fff;
+}
+.headline-center-v2.headline-center-v2-light h2 {
+  color: #fff;
+}
 /*Headline Left*/
 .headline-left {
   position: relative;
