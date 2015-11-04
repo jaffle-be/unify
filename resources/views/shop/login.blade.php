@@ -146,7 +146,6 @@
             App.init();
             Login.initLogin();
             App.initScrollBar();
-            PageContactForm.initPageContactForm();
         });
     </script>
 @stop
