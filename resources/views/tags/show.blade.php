@@ -28,7 +28,7 @@
 
                     <div class="col-md-6">
 
-                        @include('Unify::blog.elements.medium-overview', ['post' => $post, 'counter' => $counter])
+                        @include('Unify::blog.overviews.medium', ['post' => $post, 'counter' => $counter])
 
                     </div>
 

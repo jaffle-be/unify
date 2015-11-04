@@ -60,7 +60,7 @@
 
                             <div class="col-md-6">
 
-                                @include('Unify::blog.elements.medium-overview')
+                                @include('Unify::blog.overviews.medium')
 
                             </div>
 
