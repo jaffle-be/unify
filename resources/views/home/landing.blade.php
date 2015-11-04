@@ -13,7 +13,7 @@
 
                 @foreach($account->locales as $locale)
                     <div class="locale">
-                        <a href="{{ store_route('store.home', [], $locale->slug) }}"> {{ $locale->translate($locale->slug)->name }}</a>
+                        <a href="{{ store_route('store.home', [], [], $locale->slug) }}"> {{ $locale->translate($locale->slug)->name }}</a>
                     </div>
                 @endforeach
         </div>
