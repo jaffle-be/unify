@@ -278,7 +278,7 @@
                                             </div>
                                             <div id="collapseTwo" class="panel-collapse collapse">
                                                 <div class="content margin-left-10">
-                                                    <a href="#"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" alt="PayPal"></a>
+                                                    <a href="#"><img src="//www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" alt="PayPal"></a>
                                                 </div>
                                             </div>
                                         </div>
