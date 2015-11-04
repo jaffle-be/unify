@@ -2,10 +2,6 @@
 
 @section('title', Lang::get('Unify::front.register'))
 
-@section('styles-content')
-    <link rel="stylesheet" href="{{ asset('/assets/css/pages/page_log_reg_v1.css') }}">
-@stop
-
 @section('content')
     <!--=== Content Part ===-->
     <div class="container content">

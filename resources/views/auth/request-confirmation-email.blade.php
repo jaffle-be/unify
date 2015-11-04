@@ -3,10 +3,6 @@
 
 @section('title', Lang::get('Unify::front.confirm-email'))
 
-@section('styles-content')
-    <link rel="stylesheet" href="{{ '/assets/css/pages/page_log_reg_v1.css' }}">
-@stop
-
 @section('content')
     <!--=== Content Part ===-->
     <div class="container content">
