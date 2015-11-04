@@ -69,15 +69,10 @@
 @section('scripts-plugins')
     @parent
 
-    <script type="text/javascript" src="{{ theme_asset('plugins/back-to-top.js') }}"></script>
-    <script type="text/javascript" src="{{ theme_asset('plugins/smoothScroll.js') }}"></script>
-    <script type="text/javascript" src="{{ theme_asset('plugins/jquery.parallax.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/fancybox/source/jquery.fancybox.pack.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/owl-carousel/owl-carousel/owl.carousel.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
     <script type="text/javascript" src="{{ theme_asset('plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
-    <!-- JS Customization -->
-    <script type="text/javascript" src="{{ theme_asset('js/custom.js') }}"></script>
 
 @stop
 
