@@ -19,7 +19,7 @@
 
         @include('Unify::shop.elements.product-service')
 
-        @include('Unify::shop.elements.tabs')
+        {{--@include('Unify::shop.elements.tabs')--}}
     </div>
 
     @include('Unify::shop.elements.subscribe')
