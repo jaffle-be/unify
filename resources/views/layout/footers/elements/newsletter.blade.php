@@ -10,12 +10,16 @@
 </div>
 <p>{{ Theme::setting('layoutFooterNewsletterText') }}</p>
 
-<form class="footer-subsribe">
+<form class="footer-subsribe" action="{{ store_route('store.newsletter.store') }}" method="post">
+    {!! csrf_field() !!}
+    <input name="_form" type="hidden" value="newsletter.subscription"/>
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="{{ Lang::get('Unify::front.newsletter.email') }}">
+        <input type="text" name="email" class="form-control" placeholder="{{ Lang::get('Unify::front.newsletter.email') }}">
                                 <span class="input-group-btn">
-                                    <button class="btn-u" type="button">{{ Lang::get('Unify::front.newsletter.subscribe') }}</button>
+                                    <button class="btn-u" type="submit">{{ Lang::get('Unify::front.newsletter.subscribe') }}</button>
                                 </span>
     </div>
 </form>
 <!-- End Monthly Newsletter -->
+
+@include('Unify::flash.newsletter-subscription')

@@ -56,6 +56,8 @@
 
     @yield('breadcrumb')
 
+    @yield('flash')
+
     @yield('content')
 
     @yield('footer')
